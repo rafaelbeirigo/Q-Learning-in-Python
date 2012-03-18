@@ -5,7 +5,12 @@ import random
 
 class MDP:
     # filePath e o caminho para a pasta que contem os arquivos de configuracao
-    def __init__ (self, S = None, A = None, T = None, R = None, G = None):
+    def __init__ (self, 
+                  S = None, 
+                  A = None, 
+                  T = None, 
+                  R = None, 
+                  G = None):
         self.S = S
         self.A = A
         self.T = T
@@ -45,7 +50,7 @@ class MDP:
             for a in A:
                 T[s][a] = {}
                 for s2 in S:
-                    T[s][a][s2] = 0
+                    T[s][a][s2] = 0.0
 
         #read transitions from file
         f = open(filePath + '/transitions.in')
@@ -63,7 +68,7 @@ class MDP:
         for s in S:
             R[s] = {}
             for a in A:
-                R[s][a] = 0
+                R[s][a] = 0.0
 
         #atualizar os valores das recompensas de acordo com o informado
         #no arquivo
@@ -98,26 +103,20 @@ class MDP:
         return S, A, T, R, G
 
     def executeAction(self, a, s):
-        P = []
-        #obtem o novo estado
-        #toma os estados s' tais que T[s][a][s'] > 0
-        #atribui um valor a cada um deles
         T = self.T
-        acum = 0
+        P = []
+        acum = 0.0
 
         for s1 in T[s][a].iterkeys():
-            if T[s][a][s1] > 0:
-                prob = []
-                prob.append(s1)
+            if T[s][a][s1] > 0.0:
+                p = []
+                p.append(s1)
                 acum = acum + T[s][a][s1]
-                prob.append(acum)
-
-                P.append(prob)
+                p.append(acum)
+                P.append(p)
 
         #sorteia um numero no intervalo [0, 1]
-        x = 0.0
-        while x == 0.0:
-            x = random.random()
+        x = random.random()
 
         #obtem o novo estado s' correspondente ao numero sorteado
         for p in P:

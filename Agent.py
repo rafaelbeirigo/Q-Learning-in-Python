@@ -7,30 +7,59 @@ class Agent:
         self.state = state
         
     def executeAction(self, a):
-        r, s = self.MDP.executeAction(a, self.state)
+        s2, r = self.MDP.executeAction(a, self.state)
 
-        return r, s
+        return s2, r
 
-    def selectAction(self):
-        a = None
+    def selectRandomAction(self):
+        # look at all the possible transitions T[s][a][s']
+        # where s == self.state and then gather the possible
+        # actions for the current state
+        T = self.MDP.T
+        s = self.state
+        A = []
+        for a in T[s].iterkeys():
+            for s2 in T[s][a].iterkeys():
+                if T[s][a][s2] > 0:
+                    A.append(a)
 
-        #look at all the possible transitions T[s][a][s']
-        #where s == self.state
-        #obtem todas as acoes possiveis para o estado atual
-        A = self.MDP.T[self.state]
-        A1 = []
-        for a1 in A.iterkeys():
-            for s1 in A[a1].iterkeys():
-                if A[a1][s1] > 0:
-                    A1.append(a1)
+        # obtain a random action
+        a = random.choice(A)
 
-        print "selectAction"
-        print "s: " + self.state
-        print "acoes possiveis:"
-        print A1
-        #sorteia uma acao dentre as possiveis
-        a = random.choice(A1)
-        print "acao escolhida: " + a
+        return a
+
+    def selectBestAction(self, s = None, Q = None):
+        # look at all the possible transitions T[s][a][s']
+        # where s == self.state and then gather the possible
+        # actions for the current state
+        T = self.MDP.T
+        if s == None:
+            s = self.state
+        A = []
+        for a in T[s].iterkeys():
+            for s2 in T[s][a].iterkeys():
+                if T[s][a][s2] > 0.0:
+                    A.append(a)
+
+        # obtain the best possible value using the possible
+        # actions for the state
+        maxValue = -1.0
+        for a in A:
+            if Q[s][a] > maxValue:
+                maxValue = Q[s][a]
+
+        # obtain all the actions whose value equals the maximum
+        B = []
+        for a in A:
+            if Q[s][a] == maxValue:
+                B.append(a)
+
+        # obtain a random action
+        if len(B) > 0:
+            a = random.choice(B)
+        else:
+            a = '---'
+
         return a
 
     def setInitialState(self):

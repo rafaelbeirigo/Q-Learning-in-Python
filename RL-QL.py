@@ -6,21 +6,39 @@ import MDP
 import Agent
 import QLearning
 import time
+import sys
 
 def main():
     myMDP = MDP.MDP()
-    myMDP.carrega('/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/problems/WTA/19/')
+    myMDP.carrega(sys.argv[1])
 
     myAgent = Agent.Agent(myMDP)
     myAgent.setInitialState()
     
-    alpha = 0.9
-    gamma = 0.9
-    episodes = 1000
-    myQLearning = QLearning.QLearning(myMDP, myAgent, alpha, gamma, episodes)
-    myQLearning.execute()
-    myQLearning.obtainV_star()
+    alpha =            0.75
+    gamma =            0.9
+    epsilon =          0.0
+    epsilonIncrement = 0.000099
+    numberOfSteps =     100000
     
-    print myQLearning.Q
-    print myQLearning.V_star
+    myQLearning = QLearning.QLearning(myMDP, myAgent, \
+                                      alpha = alpha, \
+                                      gamma = gamma, \
+                                      epsilon = epsilon, \
+                                      epsilonIncrement = epsilonIncrement, \
+                                      numberOfSteps = numberOfSteps)
+
+    myQLearning.execute()
+    myQLearning.obtainPolicy()
+
+    myQLearning.printPolicy(sys.argv[1] + 'policy.out')
+    myQLearning.printQ(sys.argv[1] + 'Q.out')
+
+    f = open(sys.argv[1] + 'parameters.out', 'w')
+    f.write('alpha =            ' + str(alpha) + '\n')
+    f.write('gamma =            ' + str(gamma) + '\n')
+    f.write('epsilon =          ' + str(epsilon) + '\n')
+    f.write('epsilonIncrement = ' + str(epsilonIncrement) + '\n')
+    f.write('numberOfSteps =    ' + str(numberOfSteps) + '\n')
+    f.close()
 main()
