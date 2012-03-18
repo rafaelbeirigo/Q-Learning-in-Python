@@ -1,0 +1,468 @@
+
+row1col1
+West -1.0
+East -1.0
+North -1.0
+South -1.0
+
+row1col2
+West 1.0
+East 0.81
+North -1.0
+South 0.81
+
+row1col3
+West 0.9
+East 0.729
+North -1.0
+South 0.729
+
+row1col4
+West 0.81
+East 0.6561
+North -1.0
+South 0.6561
+
+row1col5
+West 0.729
+East -1.0
+North -1.0
+South 0.59049
+
+row1col7
+West -1.0
+East 0.166771816997
+North -1.0
+South 0.166771816997
+
+row1col8
+West 0.150094635297
+East 0.185302018885
+North -1.0
+South 0.185302018885
+
+row1col9
+West 0.166771816997
+East 0.166771816997
+North -1.0
+South 0.205891132095
+
+row1col10
+West 0.185302018885
+East 0.150094635297
+North -1.0
+South 0.185302018885
+
+row1col11
+West 0.166771816997
+East -1.0
+North -1.0
+South 0.166771816997
+
+row2col1
+West -1.0
+East 0.81
+North 1.0
+South 0.81
+
+row2col2
+West 0.9
+East 0.729
+North 0.9
+South 0.729
+
+row2col3
+West 0.81
+East 0.6561
+North 0.81
+South 0.6561
+
+row2col4
+West 0.729
+East 0.59049
+North 0.729
+South 0.59049
+
+row2col5
+West 0.6561
+East -1.0
+North 0.6561
+South 0.531441
+
+row2col7
+West -1.0
+East 0.185302018885
+North 0.150094635297
+South 0.185302018885
+
+row2col8
+West 0.166771816997
+East 0.205891132095
+North 0.166771816997
+South 0.205891132095
+
+row2col9
+West 0.185302018885
+East 0.185302018885
+North 0.185302018885
+South 0.22876792455
+
+row2col10
+West 0.205891132095
+East 0.166771816997
+North 0.166771816997
+South 0.205891132095
+
+row2col11
+West 0.185302018885
+East -1.0
+North 0.150094635297
+South 0.185302018885
+
+row3col1
+West -1.0
+East 0.729
+North 0.9
+South -1.0
+
+row3col2
+West 0.81
+East 0.6561
+North 0.81
+South -1.0
+
+row3col3
+West 0.729
+East 0.59049
+North 0.729
+South -1.0
+
+row3col4
+West 0.6561
+East 0.531441
+North 0.6561
+South -1.0
+
+row3col5
+West 0.59049
+East -1.0
+North 0.59049
+South 0.4782969
+
+row3col7
+West -1.0
+East 0.205891132095
+North 0.166771816997
+South -1.0
+
+row3col8
+West 0.185302018885
+East 0.22876792455
+North 0.185302018885
+South -1.0
+
+row3col9
+West 0.205891132095
+East 0.205891132095
+North 0.205891132095
+South 0.254186582833
+
+row3col10
+West 0.22876792455
+East 0.185302018885
+North 0.185302018885
+South -1.0
+
+row3col11
+West 0.205891132095
+East -1.0
+North 0.166771816997
+South -1.0
+
+row4col5
+West -1.0
+East -1.0
+North 0.531441
+South 0.43046721
+
+row4col9
+West -1.0
+East -1.0
+North 0.22876792455
+South 0.282429536481
+
+row5col1
+West -1.0
+East 0.166771816997
+North -1.0
+South 0.166771816997
+
+row5col2
+West 0.150094635297
+East 0.185302018885
+North -1.0
+South 0.185302018885
+
+row5col3
+West 0.166771816997
+East -1.0
+North -1.0
+South 0.205891132095
+
+row5col5
+West -1.0
+East 0.387420489
+North 0.4782969
+South 0.387420489
+
+row5col6
+West 0.43046721
+East 0.3486784401
+North -1.0
+South 0.3486784401
+
+row5col7
+West 0.387420489
+East 0.31381059609
+North -1.0
+South 0.31381059609
+
+row5col8
+West 0.3486784401
+East 0.282429536481
+North -1.0
+South 0.282429536481
+
+row5col9
+West 0.31381059609
+East 0.254186582833
+North 0.254186582833
+South 0.254186582833
+
+row5col10
+West 0.282429536481
+East 0.22876792455
+North -1.0
+South 0.22876792455
+
+row5col11
+West 0.254186582833
+East -1.0
+North -1.0
+South 0.205891132095
+
+row6col1
+West -1.0
+East 0.185302018885
+North 0.150094635297
+South 0.185302018885
+
+row6col2
+West 0.166771816997
+East 0.205891132095
+North 0.166771816997
+South 0.205891132095
+
+row6col3
+West 0.185302018885
+East -1.0
+North 0.185302018885
+South 0.22876792455
+
+row6col5
+West -1.0
+East 0.3486784401
+North 0.43046721
+South 0.3486784401
+
+row6col6
+West 0.387420489
+East 0.31381059609
+North 0.387420489
+South 0.31381059609
+
+row6col7
+West 0.3486784401
+East 0.282429536481
+North 0.3486784401
+South -1.0
+
+row6col8
+West 0.31381059609
+East 0.254186582833
+North 0.31381059609
+South -1.0
+
+row6col9
+West 0.282429536481
+East 0.22876792455
+North 0.282429536481
+South -1.0
+
+row6col10
+West 0.254186582833
+East 0.205891132095
+North 0.254186582833
+South 0.205891132095
+
+row6col11
+West 0.22876792455
+East -1.0
+North 0.22876792455
+South -1.0
+
+row7col1
+West -1.0
+East 0.205891132095
+North 0.166771816997
+South 0.205891132095
+
+row7col2
+West 0.185302018885
+East 0.22876792455
+North 0.185302018885
+South 0.22876792455
+
+row7col3
+West 0.205891132095
+East -1.0
+North 0.205891132095
+South 0.254186582833
+
+row7col5
+West -1.0
+East 0.31381059609
+North 0.387420489
+South 0.31381059609
+
+row7col6
+West 0.3486784401
+East -1.0
+North 0.3486784401
+South 0.282429536481
+
+row7col10
+West -1.0
+East -1.0
+North 0.22876792455
+South 0.185302018885
+
+row8col1
+West -1.0
+East 0.22876792455
+North 0.185302018885
+South 0.185302018885
+
+row8col2
+West 0.205891132095
+East 0.254186582833
+North 0.205891132095
+South 0.205891132095
+
+row8col3
+West 0.22876792455
+East 0.282429536481
+North 0.22876792455
+South 0.22876792455
+
+row8col4
+West 0.254186582833
+East 0.31381059609
+North -1.0
+South 0.254186582833
+
+row8col5
+West 0.282429536481
+East 0.282429536481
+North 0.3486784401
+South 0.282429536481
+
+row8col6
+West 0.31381059609
+East -1.0
+North 0.31381059609
+South 0.254186582833
+
+row8col8
+West -1.0
+East 0.166771816997
+North -1.0
+South 0.135085171767
+
+row8col9
+West 0.150094635297
+East 0.185302018885
+North -1.0
+South 0.150094635297
+
+row8col10
+West 0.166771816997
+East 0.166771816997
+North 0.205891132095
+South 0.166771816997
+
+row8col11
+West 0.185302018885
+East -1.0
+North -1.0
+South 0.150094635297
+
+row9col1
+West -1.0
+East 0.205891132095
+North 0.205891132095
+South -1.0
+
+row9col2
+West 0.185302018885
+East 0.22876792455
+North 0.22876792455
+South -1.0
+
+row9col3
+West 0.205891132095
+East 0.254186582833
+North 0.254186582833
+South -1.0
+
+row9col4
+West 0.22876792455
+East 0.282429536481
+North 0.282429536481
+South -1.0
+
+row9col5
+West 0.254186582833
+East 0.254186582833
+North 0.31381059609
+South -1.0
+
+row9col6
+West 0.282429536481
+East -1.0
+North 0.282429536481
+South -1.0
+
+row9col8
+West -1.0
+East 0.150094635297
+North 0.150094635297
+South -1.0
+
+row9col9
+West 0.135085171767
+East 0.166771816997
+North 0.166771816997
+South -1.0
+
+row9col10
+West 0.150094635297
+East 0.150094635297
+North 0.185302018885
+South -1.0
+
+row9col11
+West 0.166771816997
+East -1.0
+North 0.166771816997
+South -1.0

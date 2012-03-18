@@ -1,0 +1,96 @@
+
+row1col1
+West -1.0
+East 0.59049
+North -1.0
+South 0.59049
+
+row1col2
+West 0.531441
+East 0.6561
+North -1.0
+South 0.6561
+
+row1col3
+West 0.59049
+East 0.729
+North -1.0
+South 0.729
+
+row1col4
+West 0.6561
+East -1.0
+North -1.0
+South 0.81
+
+row2col1
+West -1.0
+East 0.6561
+North 0.531441
+South 0.6561
+
+row2col2
+West 0.59049
+East 0.729
+North 0.59049
+South 0.729
+
+row2col3
+West 0.6561
+East 0.81
+North 0.6561
+South 0.81
+
+row2col4
+West 0.729
+East -1.0
+North 0.729
+South 0.9
+
+row3col1
+West -1.0
+East 0.729
+North 0.59049
+South 0.729
+
+row3col2
+West 0.6561
+East 0.81
+North 0.6561
+South 0.81
+
+row3col3
+West 0.729
+East 0.9
+North 0.729
+South 0.9
+
+row3col4
+West 0.81
+East -1.0
+North 0.81
+South 1.0
+
+row4col1
+West -1.0
+East 0.81
+North 0.6561
+South -1.0
+
+row4col2
+West 0.729
+East 0.9
+North 0.729
+South -1.0
+
+row4col3
+West 0.81
+East 1.0
+North 0.81
+South -1.0
+
+row4col4
+West -1.0
+East -1.0
+North -1.0
+South -1.0
