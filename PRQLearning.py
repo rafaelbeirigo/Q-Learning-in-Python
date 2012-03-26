@@ -126,6 +126,8 @@ class PRQLearning:
 
             s = self.Agent.state
             for h in range(1, H + 1)
+                # TODO: encapsular o selecionador de melhor ação em uma
+                # classe relacionada a Q-Table
                 randomNumber1 = random()
                 if randomNumber1 <= psi:
                     # With a probability of psi, a = PI_past(s)

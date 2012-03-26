@@ -35,7 +35,7 @@ class QLearning:
         myAgent = self.Agent
         myMDP = self.MDP
         
-        # Initialize
+        # Q-Table initialization
         if self.Q == None:
             # For each state-action pair (s, a), initialize the table entry Q(s, a) to zero
             Q = {}
@@ -50,52 +50,51 @@ class QLearning:
             # If one Q was received, use it
             Q = self.Q
 
-        alpha = self.alpha
-        gamma = self.gamma
-        gammaPRQL = self.gammaPRQL
-        epsilon = self.epsilon
+        alpha            = self.alpha
+        gamma            = self.gamma
+        gammaPRQL        = self.gammaPRQL
+        epsilon          = self.epsilon
         epsilonIncrement = self.epsilonIncrement
         
         W = 0
-        for h in range(self.numberOfSteps):
-            # Do forever:
-            # ---Observe the current state s
-            s = myAgent.state
-            while s in myMDP.G:
-                myAgent.setInitialState()
+        for episode in range(self.numberOfEpisodes):
+            for h in range(self.numberOfSteps):
+                # ---Observe the current state s
                 s = myAgent.state
+                while s in myMDP.G:
+                    myAgent.setInitialState()
+                    s = myAgent.state
 
-            # ---Following epsilon-greedy strategy,
-            # ---Select an action a and execute it
-            # ---Receive immediate reward r
-            # ---Observe the new state s2
-            randomNumber = random()
-            if randomNumber <= epsilon:
-                # greedy
-                a = myAgent.selectBestAction(s, Q)
-            else:
-                # random
-                a = myAgent.selectRandomAction()
+                # ---Following epsilon-greedy strategy,
+                # ---Select an action a and execute it
+                # ---Receive immediate reward r
+                # ---Observe the new state s2
+                randomNumber = random()
+                if randomNumber <= epsilon:
+                    # greedy
+                    a = myAgent.selectBestAction(s, Q)
+                else:
+                    # random
+                    a = myAgent.selectRandomAction()
 
-            s2, r = myAgent.executeAction(a)
+                s2, r = myAgent.executeAction(a)
 
-            maxValue = -1.0
-            for a2 in A:
-                if Q[s2][a2] > maxValue:
-                    maxValue = Q[s2][a2]
+                maxValue = -1.0
+                for a2 in A:
+                    if Q[s2][a2] > maxValue:
+                        maxValue = Q[s2][a2]
 
-            # ---Update the table entry for Q(s, a)
-            Q[s][a] = (1.0 - float(alpha)) * float(Q[s][a]) + \
-                      float(alpha) * (float(r) + float(gamma) * float(maxValue))
+                # ---Update the table entry for Q(s, a)
+                Q[s][a] = (1.0 - float(alpha)) * float(Q[s][a]) + \
+                          float(alpha) * (float(r) + float(gamma) * float(maxValue))
 
-            # ---s=s'
-            myAgent.state = s2
+                # ---s=s'
+                myAgent.state = s2
+                epsilon = epsilon + epsilonIncrement
 
-            epsilon = epsilon + epsilonIncrement
-
-            if gammaPRQL != None:
-                # accumulate gamma on W (this value is used only in PRQLearning)
-                W = float(W) + pow(gammaPRQL, h) * r
+                if gammaPRQL != None:
+                    # accumulate gamma on W (this value is used only in PRQLearning)
+                    W = float(W) + pow(gammaPRQL, h) * r
                 
         self.Q = Q
         return W

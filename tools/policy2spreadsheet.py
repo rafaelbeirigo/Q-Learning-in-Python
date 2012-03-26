@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Read an MDP from a spreadsheet
 #
 # following the instructions present in:

@@ -8,7 +8,6 @@ class Agent:
         
     def executeAction(self, a):
         s2, r = self.MDP.executeAction(a, self.state)
-
         return s2, r
 
     def selectRandomAction(self):

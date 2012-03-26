@@ -243,6 +243,10 @@ row11col5 North row10col5 1.0
 row11col5 South row12col5 1.0
 row11col7 North row10col7 1.0
 row11col7 South row12col7 1.0
+row11col9 North row11col9 1.0
+row11col9 South row11col9 1.0
+row11col9 West row11col9 1.0
+row11col9 East row11col9 1.0
 row11col10 West row11col9 1.0
 row11col10 East row11col11 1.0
 row11col11 West row11col10 1.0

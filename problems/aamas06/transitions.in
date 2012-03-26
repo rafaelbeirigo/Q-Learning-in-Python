@@ -90,6 +90,10 @@ row2col14 North row1col14 1.0
 row2col14 South row3col14 1.0
 row2col14 West row2col13 1.0
 row2col14 East row2col15 1.0
+row2col15 North row2col15 1.0
+row2col15 South row2col15 1.0
+row2col15 West row2col15 1.0
+row2col15 East row2col15 1.0
 row2col16 North row1col16 1.0
 row2col16 South row3col16 1.0
 row2col16 West row2col15 1.0

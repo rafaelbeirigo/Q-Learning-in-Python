@@ -19,7 +19,7 @@ def main():
     gamma =            0.9
     epsilon =          0.0
     epsilonIncrement = 0.000099
-    numberOfSteps =     100000
+    numberOfSteps    =  10000
     
     myQLearning = QLearning.QLearning(myMDP, myAgent, \
                                       alpha = alpha, \
