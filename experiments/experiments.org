@@ -1,0 +1,118 @@
+* 00
+[[~/ql/experiments/00/w.png]]
+** O quê: Reprodução do artigo
+** Resultado: diverso do esperado
+   O Q-Learning apresentou um desempenho extremamente melhor do que o PRQL.
+   Houve um problema: não estava zerando as Q-Tables (QLearning e PRQLearning)
+	 
+
+* 01
+[[~/ql/experiments/01/w.png]]
+Repetição de 00 após correção do problema
+Resultado: PRQL tem o mesmo comportamento de QL, só um pouco pior.
+Hipótese: não está utilizando as políticas antigas
+
+
+* 02 QL vs PRQL no mundo 05x05
+[[~/ql/experiments/02/w.png]]
+Motivo: queria rodar o PRQL sem a parte PR, ou seja, só utilizando
+QLearning, pra ver se estava tudo OK
+Nesse experimento, NÃO utilizava pi-reuse, somente QL
+
+
+* 03 Mesmo experimento de 02, só que para o mundo 06x06
+
+
+* 04 Mesmo experimento de 02, só que para a task omega do artigo
+[[~/ql/experiments/04/w.png]]
+** Resultado:
+   PRQL e QL apresentaram desempenhos compatíveis, o que era esperado
+
+
+* 05 Repetindo 04, só que dessa vez ativando o pi-reuse
+[[~/ql/experiments/05/w.png]]
+  Sucesso: PRQL acelerou QLearning
+
+
+* 06 Repetindo 05 para task omega do artigo reutilizando políticas 2, 3 e 5 (são as que mais ajudam o agente)
+[[~/ql/experiments/06/w.png]]
+  Problema: plotando W[ 1]
+
+
+* 07 Repetindo 06
+[[~/ql/experiments/07/w.png]]
+  Problema: plotando W[ 1]
+
+
+* 08 Repetindo 06, mas reutilizando somente a política ótima
+[[~/ql/experiments/08/w.png]]
+  Problema: plotando W[ 1]
+
+
+* 09 Repetindo 02, após correção do acúmulo de recompensas médias por episódio
+[[~/ql/experiments/09/w.png]]
+Problema: reutilizando políticas subótimas
+
+
+* 10 Repetindo 09, mas reutilizando uma política ótima para o problema de chegar
+  à localização oposta (pior política que poderia reutilizar)
+[[~/ql/experiments/10/w.png]]
+Problema: reutilizando políticas subótimas
+
+
+* 11 Resolver task omega utilizando pols. 2,3,4,5
+[[~/ql/experiments/11/w.png]]
+Problema: reutilizando políticas subótimas
+
+
+* 12 Repetindo 11 reutilizando somente a policy obtida em 11 pelo
+  QLearning (ótima para o problema)
+[[~/ql/experiments/12/w.png]]
+Problema: reutilizando políticas subótimas
+
+
+* 13 Repetindo 12, só que chamei o solveMDP... pra criar os arquivos (tirar a dúvida se
+  arquivos estão corretos)
+[[~/ql/experiments/13/w.png]]
+Problema: reutilizando políticas subótimas
+
+
+* 14 Repetição do 13, só que agora utilizando a política ótima
+[[~/ql/experiments/14/w.png]]
+
+
+* 15 Obtenção de política para task 1
+[[~/ql/experiments/15/w.png]]
+  Consumo de tempo: ~ 10'
+
+
+* 16 Obtenção de política para task 2
+[[~/ql/experiments/16/w.png]]
+  Consumo de tempo: ~ 10'
+
+
+* 17 Obtenção de política para task 3
+[[~/ql/experiments/17/w.png]]
+  Consumo de tempo: ~ 10'
+
+
+* 18 Obtenção de política para task 4
+[[~/ql/experiments/18/w.png]]
+  Consumo de tempo: ~ 10'
+
+
+* 19 Obtenção de política para task 5
+[[~/ql/experiments/19/w.png]]
+  Consumo de tempo: ~ 10'
+
+
+* 20 Resolver task omega utilizando pols. 2,3,4,5 (Repetição do 11)
+[[~/ql/experiments/20/w.png]]
+
+
+* 21 Resolver task omega utilizando pols. 2,3,4
+[[~/ql/experiments/21/w.png]]
+
+
+* 22 Resolver task omega utilizando pols. 1,2,3,4
+[[~/ql/experiments/22/w.png]]

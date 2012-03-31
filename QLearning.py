@@ -14,7 +14,8 @@ class QLearning:
                  gamma,
                  epsilon,
                  epsilonIncrement,
-                 numberOfSteps,
+                 K,
+                 H,
                  Q = None,
                  gammaPRQL = None): #gamma used for PRQLearning algorithm
         
@@ -29,41 +30,34 @@ class QLearning:
         self.gammaPRQL = gammaPRQL
         self.epsilon = epsilon
         self.epsilonIncrement = epsilonIncrement
-        self.numberOfSteps = numberOfSteps
+        self.K = K
+        self.H = H
         
     def execute(self):
         myAgent = self.Agent
         myMDP = self.MDP
-        
-        # Q-Table initialization
-        if self.Q == None:
-            # For each state-action pair (s, a), initialize the table entry Q(s, a) to zero
-            Q = {}
-            S = self.MDP.S
-            A = self.MDP.A
-            for s in S:
-                Q[s] = {}
-                for a in A:
-                    Q[s][a] = 0.00001717
-            self.Q = Q
-        else:
-            # If one Q was received, use it
-            Q = self.Q
+        A = self.MDP.A
+
+        self.initializeQ()
+        Q = self.Q
 
         alpha            = self.alpha
         gamma            = self.gamma
         gammaPRQL        = self.gammaPRQL
         epsilon          = self.epsilon
         epsilonIncrement = self.epsilonIncrement
-        
-        W = 0
-        for episode in range(self.numberOfEpisodes):
-            for h in range(self.numberOfSteps):
+
+        W2 = 0
+        Ws = []
+        for k in range(self.K):
+            W = 0
+            myAgent.setInitialState()
+            for h in range(self.H):
                 # ---Observe the current state s
                 s = myAgent.state
-                while s in myMDP.G:
-                    myAgent.setInitialState()
-                    s = myAgent.state
+
+                # if a goal state is reached the episode ends
+                if s in myMDP.G: break
 
                 # ---Following epsilon-greedy strategy,
                 # ---Select an action a and execute it
@@ -90,14 +84,18 @@ class QLearning:
 
                 # ---s=s'
                 myAgent.state = s2
-                epsilon = epsilon + epsilonIncrement
 
                 if gammaPRQL != None:
                     # accumulate gamma on W (this value is used only in PRQLearning)
                     W = float(W) + pow(gammaPRQL, h) * r
+
+            epsilon = epsilon + epsilonIncrement
+            
+            W2 = ( (W2 * k) + W ) / (k + 1)
+            Ws.append(W2)
                 
         self.Q = Q
-        return W
+        return W2, Ws
 
     def obtainPolicy(self):
         S = self.MDP.S
@@ -115,12 +113,16 @@ class QLearning:
             f = open(fileName, 'w')
 
         for s in self.MDP.S:
-            print '\n', s
-            if fileName != None: f.write('\n' + s + '\n')
-
+            if fileName != None:
+                f.write('\n' + s + '\n')
+            else:
+                print '\n', s
+                
             for a in Q[s].iterkeys():
-                print a, Q[s][a]
-                if fileName != None: f.write(a + ' ' + str(Q[s][a]) + '\n')
+                if fileName != None:
+                    f.write(a + ' ' + str(Q[s][a]) + '\n')
+                else:
+                    print a, Q[s][a]
 
         if fileName != None:
             f.close()
@@ -137,3 +139,15 @@ class QLearning:
 
         if fileName != None:
             f.close()
+
+    def initializeQ(self):
+        if self.Q == None:
+            # For each state-action pair (s, a), initialize the table entry Q(s, a) to zero
+            Q = {}
+            S = self.MDP.S
+            A = self.MDP.A
+            for s in S:
+                Q[s] = {}
+                for a in A:
+                    Q[s][a] = 0.00001717
+            self.Q = Q

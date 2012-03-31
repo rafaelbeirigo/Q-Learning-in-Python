@@ -1,1 +1,4 @@
-row3col4 South 1.0
+row1col2 South 1.0
+row2col1 East 1.0
+row2col3 West 1.0
+row3col2 North 1.0

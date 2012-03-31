@@ -1,44 +1,70 @@
 #!/usr/bin/env python
 
-# o que precisa fazer pra rodar o aprendizado
-# instanciar classes
 import MDP
 import Agent
 import QLearning
 import time
 import sys
+import pylab as pl
 
 def main():
+    filePath = sys.argv[1]
     myMDP = MDP.MDP()
-    myMDP.carrega(sys.argv[1])
+    myMDP.carrega(filePath)
 
     myAgent = Agent.Agent(myMDP)
-    myAgent.setInitialState()
     
-    alpha =            0.75
-    gamma =            0.9
-    epsilon =          0.0
-    epsilonIncrement = 0.000099
-    numberOfSteps    =  10000
-    
-    myQLearning = QLearning.QLearning(myMDP, myAgent, \
-                                      alpha = alpha, \
-                                      gamma = gamma, \
-                                      epsilon = epsilon, \
-                                      epsilonIncrement = epsilonIncrement, \
-                                      numberOfSteps = numberOfSteps)
+    alpha              = 0.05
+    gamma              = 0.95
+    epsilon            = 0.0
+    epsilonIncrement   = 0.0005
+    gammaPRQL          = 0.95
 
-    myQLearning.execute()
+    K                  = 2000       # number of episodes
+    H                  = 100        # number of steps
+    numberOfExecutions = 10
+
+    Wacumulado = 0
+    for i in range(numberOfExecutions):
+        print 'Running experiment ' + str(i + 1) + ' of ' + str(numberOfExecutions)
+        myQLearning = None
+        myQLearning = QLearning.QLearning(myMDP,                               \
+                                          myAgent,                             \
+                                          alpha            = alpha,            \
+                                          gamma            = gamma,            \
+                                          epsilon          = epsilon,          \
+                                          epsilonIncrement = epsilonIncrement, \
+                                          K                = K,                \
+                                          H                = H,                \
+                                          gammaPRQL        = gammaPRQL)
+
+        W, Ws = myQLearning.execute()
+        Wacumulado += pl.array(Ws)
+        
+    Ws = Wacumulado / numberOfExecutions
+
     myQLearning.obtainPolicy()
+    myQLearning.printPolicy(filePath + 'policy.out')
+    myQLearning.printQ(filePath + 'Q.out')
 
-    myQLearning.printPolicy(sys.argv[1] + 'policy.out')
-    myQLearning.printQ(sys.argv[1] + 'Q.out')
-
-    f = open(sys.argv[1] + 'parameters.out', 'w')
-    f.write('alpha =            ' + str(alpha) + '\n')
-    f.write('gamma =            ' + str(gamma) + '\n')
-    f.write('epsilon =          ' + str(epsilon) + '\n')
+    f = open(filePath + 'parameters.out', 'w')
+    f.write('alpha            = ' + str(alpha) + '\n')
+    f.write('gamma            = ' + str(gamma) + '\n')
+    f.write('epsilon          = ' + str(epsilon) + '\n')
     f.write('epsilonIncrement = ' + str(epsilonIncrement) + '\n')
-    f.write('numberOfSteps =    ' + str(numberOfSteps) + '\n')
+    f.write('K                = ' + str(K) + '\n')
+    f.write('H                = ' + str(H) + '\n')
+    f.write('gammaPRQL        = ' + str(gammaPRQL) + '\n')
     f.close()
+
+    f = open(filePath + 'w.out', 'w')
+    for w in Ws:
+        f.write(str(w) + '\n')
+    f.close()
+
+    pl.plot(range(len(Ws)), Ws)
+    pl.savefig(filePath + 'graph')
+    pl.plot(range(len(Ws)), Ws)
+    pl.show()
+    
 main()

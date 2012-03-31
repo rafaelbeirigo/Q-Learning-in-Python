@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os.path
 import Agent
 import string
 import random
@@ -10,19 +11,27 @@ class MDP:
                   A = None, 
                   T = None, 
                   R = None, 
-                  G = None):
+                  G = None,
+                  P = None):
         self.S = S
         self.A = A
         self.T = T
         self.R = R
-        self.G = G #final (goal) states
+        self.G = G
+        self.P = P
 
     def carrega(self, filePath):
-        caminho = '/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python'
+        self.S = self.loadStates(filePath)
+        self.A = self.loadActions(filePath)
+        self.T = self.loadTransitions(filePath)
+        self.R = self.loadRewards(filePath)
+        self.G = self.loadGoals(filePath)
+        if os.path.exists(filePath + '/initialStateProb.in'):
+            self.P = self.loadInitialStateProb(filePath)
+        else:
+            self.P = None
 
-        ##########
-        # States #
-        ##########
+    def loadStates(self, filePath):
         f = open(filePath + '/states.in')
         S = []
         for line in f:
@@ -30,9 +39,9 @@ class MDP:
 
         f.close()
 
-        ###########
-        # Actions #
-        ###########
+        return S
+
+    def loadActions(self, filePath):
         f = open(filePath + '/actions.in')
         A = []
         for line in f:
@@ -40,16 +49,16 @@ class MDP:
 
         f.close()
 
-        ###############
-        # Transitions #
-        ###############
+        return A
+        
+    def loadTransitions(self, filePath):
         #create the hash map with initial values equal to zero
         T = {}
-        for s in S:
+        for s in self.S:
             T[s] = {}
-            for a in A:
+            for a in self.A:
                 T[s][a] = {}
-                for s2 in S:
+                for s2 in self.S:
                     T[s][a][s2] = 0.0
 
         #read transitions from file
@@ -60,14 +69,14 @@ class MDP:
 
         f.close()
 
-        ###########
-        # Rewards #
-        ###########
+        return T
+
+    def loadRewards(self, filePath):
         #create the hash map with initial values equal to zero
         R = {}
-        for s in S:
+        for s in self.S:
             R[s] = {}
-            for a in A:
+            for a in self.A:
                 R[s][a] = 0.0
 
         #atualizar os valores das recompensas de acordo com o informado
@@ -79,14 +88,9 @@ class MDP:
 
         f.close()
 
-        self.S = S
-        self.A = A
-        self.T = T
-        self.R = R
+        return R
         
-        #########
-        # Goals #
-        #########
+    def loadGoals(self, filePath):
         f = open(filePath + '/goals.in')
         G = []
         for line in f:
@@ -94,14 +98,25 @@ class MDP:
 
         f.close()
 
-        self.S = S
-        self.A = A
-        self.T = T
-        self.R = R
-        self.G = G
+        return G
 
-        return S, A, T, R, G
+    def loadInitialStateProb(self, filePath):
+        P = {}
+        for s in self.S:
+            P[s] = 0.0
 
+        f = open(filePath + '/initialStateProb.in')
+        for line in f:
+            s, p = line.rstrip('\n').split(' ')
+            P[s] = float(p)
+
+        f.close()
+
+        return P
+
+    def isFinalState(self, s):
+        return s in self.G
+        
     def executeAction(self, a, s):
         T = self.T
         P = []
@@ -128,6 +143,3 @@ class MDP:
         r = self.R[s][a]
         
         return s2, r
-
-    def isFinalState(self, s):
-        return s in self.G

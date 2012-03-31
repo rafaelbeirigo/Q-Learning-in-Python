@@ -1,0 +1,5 @@
+def plotaOBixin(experimento):
+    ql = loadtxt("./" + experimento + "/QL/w.out")
+    prql = loadtxt("./" + experimento + "/PRQL/w.out")
+    plot(ql)
+    plot(prql)
