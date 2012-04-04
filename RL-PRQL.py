@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import MDP
 import Agent
 import PRQLearning
@@ -24,9 +23,9 @@ def main():
     psi                = 1.0
     v                  = 0.95
 
-    K                  = 2000     # number of episodes
+    K                  = 20       # number of episodes
     H                  = 100      # number of steps
-    numberOfExecutions = 10
+    numberOfExecutions = 1000
     
     Wacumulado = 0
     for i in range(numberOfExecutions):
@@ -68,7 +67,7 @@ def main():
         f.write(str(w) + '\n')
     f.close()
 
-    pl.plot(range(len(Ws)), Ws)
-    pl.show()
+    #pl.plot(range(len(Ws)), Ws)
+    #pl.show()
     
 main()

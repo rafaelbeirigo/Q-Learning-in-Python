@@ -6,7 +6,7 @@ lang="en" xml:lang="en">
 <title>experiments</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-03-30 16:47:31 BRT"/>
+<meta name="generated" content="2012-04-01 22:32:48 BRT"/>
 <meta name="author" content="Rafael Lemes Beirigo"/>
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -71,67 +71,148 @@ lang="en" xml:lang="en">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 00 </a>
+<li><a href="#sec-1">1 00 Experimento da seção 4.3 do artigo </a>
 <ul>
-<li><a href="#sec-1.1">1.1 O quê: Reprodução do artigo </a></li>
-<li><a href="#sec-1.2">1.2 Resultado: diverso do esperado </a></li>
+<li><a href="#sec-1.1">1.1 01 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-1.2">1.2 02 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-1.3">1.3 03 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-1.4">1.4 04 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-1.5">1.5 Comentários </a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2 01 </a></li>
-<li><a href="#sec-3">3 02 QL vs PRQL no mundo 05x05 </a></li>
-<li><a href="#sec-4">4 03 Mesmo experimento de 02, só que para o mundo 06x06 </a></li>
-<li><a href="#sec-5">5 04 Mesmo experimento de 02, só que para a task omega do artigo </a>
+<li><a href="#sec-2">2 01 </a>
 <ul>
-<li><a href="#sec-5.1">5.1 Resultado: </a></li>
+<li><a href="#sec-2.1">2.1 01 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-2.2">2.2 02 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-2.3">2.3 03 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-2.4">2.4 04 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-2.5">2.5 Comentários </a></li>
 </ul>
 </li>
-<li><a href="#sec-6">6 05 Repetindo 04, só que dessa vez ativando o pi-reuse </a></li>
-<li><a href="#sec-7">7 06 Repetindo 05 para task omega do artigo reutilizando políticas 2, 3 e 5 (são as que mais ajudam o agente) </a></li>
-<li><a href="#sec-8">8 07 Repetindo 06 </a></li>
-<li><a href="#sec-9">9 08 Repetindo 06, mas reutilizando somente a política ótima </a></li>
-<li><a href="#sec-10">10 09 Repetindo 02, após correção do acúmulo de recompensas médias por episódio </a></li>
-<li><a href="#sec-11">11 10 Repetindo 09, mas reutilizando uma política ótima para o problema de chegar </a></li>
-<li><a href="#sec-12">12 11 Resolver task omega utilizando pols. 2,3,4,5 </a></li>
-<li><a href="#sec-13">13 12 Repetindo 11 reutilizando somente a policy obtida em 11 pelo </a></li>
-<li><a href="#sec-14">14 13 Repetindo 12, só que chamei o solveMDP&hellip; pra criar os arquivos (tirar a dúvida se </a></li>
+<li><a href="#sec-3">3 02 QL vs PRQL no mundo 05x05 </a>
+<ul>
+<li><a href="#sec-3.1">3.1 Comentários </a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 03 Repetição de 02, só que para o mundo 06x06 </a>
+<ul>
+<li><a href="#sec-4.1">4.1 Comentários </a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 04 Repetição de 02, só que para a task &Omega; do artigo </a>
+<ul>
+<li><a href="#sec-5.1">5.1 Comentários: </a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 05 Repetição de 04, só que dessa vez ativando o &pi;-reuse </a>
+<ul>
+<li><a href="#sec-6.1">6.1 Comentários </a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 06 Repetição de 05 para task &Omega; do artigo reutilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub> e &Pi;<sub>5</sub> (são as que mais ajudam o agente) </a>
+<ul>
+<li><a href="#sec-7.1">7.1 Comentários </a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 07 Repetição de 06 </a>
+<ul>
+<li><a href="#sec-8.1">8.1 Comentários </a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 08 Repetição de 06, mas reutilizando somente a política ótima </a>
+<ul>
+<li><a href="#sec-9.1">9.1 Comentários </a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10 09 Repetição de 02 </a></li>
+<li><a href="#sec-11">11 10 Repetição de 09, mas reutilizando uma política ótima para o problema de chegar à localização oposta (pior política que poderia reutilizar) </a></li>
+<li><a href="#sec-12">12 11 Resolver task &Omega; utilizando  &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-13">13 12 Repetição de 11 reutilizando somente a policy obtida em 11 pelo QLearning (ótima para o problema) </a></li>
+<li><a href="#sec-14">14 13 Repetição de 12, só que chamei o solveMDP&hellip; pra criar os arquivos (tirar a dúvida se </a></li>
 <li><a href="#sec-15">15 14 Repetição do 13, só que agora utilizando a política ótima </a></li>
-<li><a href="#sec-16">16 15 Obtenção de política para task 1 </a></li>
-<li><a href="#sec-17">17 16 Obtenção de política para task 2 </a></li>
-<li><a href="#sec-18">18 17 Obtenção de política para task 3 </a></li>
-<li><a href="#sec-19">19 18 Obtenção de política para task 4 </a></li>
-<li><a href="#sec-20">20 19 Obtenção de política para task 5 </a></li>
-<li><a href="#sec-21">21 20 Resolver task omega utilizando pols. 2,3,4,5 (Repetição do 11) </a></li>
-<li><a href="#sec-22">22 21 Resolver task omega utilizando pols. 2,3,4 </a></li>
-<li><a href="#sec-23">23 22 Resolver task omega utilizando pols. 1,2,3,4 </a></li>
+<li><a href="#sec-16">16 15 Obtenção de &Pi;<sub>1</sub> </a></li>
+<li><a href="#sec-17">17 16 Obtenção de &Pi;<sub>2</sub> </a></li>
+<li><a href="#sec-18">18 17 Obtenção de &Pi;<sub>3</sub> </a></li>
+<li><a href="#sec-19">19 18 Obtenção de &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-20">20 19 Obtenção de &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-21">21 20 Resolver task &Omega; utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> (Repetição do 11) </a></li>
+<li><a href="#sec-22">22 21 Resolver task &Omega; utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-23">23 22 Resolver task &Omega; utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-24">24 23 Repetição do 02 </a></li>
+<li><a href="#sec-25">25 24 Repetição do 22 </a></li>
+<li><a href="#sec-26">26 25 Repetição do 20 </a></li>
+<li><a href="#sec-27">27 26 Repetição do 21 </a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1">1 00 </h2>
+<h2 id="sec-1">1 00 Experimento da seção 4.3 do artigo </h2>
 <div id="text-1">
 
-
-<div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/00/w.png"  alt="/home/rafaelbeirigo/ql/experiments/00/w.png" /></p>
-</div>
 
 </div>
 
 <div id="outline-container-1.1" class="outline-3">
-<h3 id="sec-1.1">1.1 O quê: Reprodução do artigo </h3>
+<h3 id="sec-1.1">1.1 01 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h3>
 <div id="text-1.1">
+
+<p>Esse experimento não está no artigo. Fiz para fins de testes.
+</p>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/00/01/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/00/01/w.png" /></p>
+</div>
 
 </div>
 
 </div>
 
 <div id="outline-container-1.2" class="outline-3">
-<h3 id="sec-1.2">1.2 Resultado: diverso do esperado </h3>
+<h3 id="sec-1.2">1.2 02 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h3>
 <div id="text-1.2">
 
-<p>O Q-Learning apresentou um desempenho extremamente melhor do que o PRQL.
-Houve um problema: não estava zerando as Q-Tables (QLearning e PRQLearning)
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/00/02/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/00/02/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3">1.3 03 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h3>
+<div id="text-1.3">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/00/03/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/00/03/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4" class="outline-3">
+<h3 id="sec-1.4">1.4 04 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h3>
+<div id="text-1.4">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/00/04/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/00/04/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-1.5" class="outline-3">
+<h3 id="sec-1.5">1.5 Comentários </h3>
+<div id="text-1.5">
+
+<p>Q-Learning apresentou um desempenho superior ao de PRQ-Learning.
+Posteriormente descobri que o motivo era que a tabela Q era reiniciada somente para o 
+PRQ-Learning, o que prejudicava o desempenho desse algoritmo.
 </p>
 
 </div>
@@ -143,16 +224,73 @@ Houve um problema: não estava zerando as Q-Tables (QLearning e PRQLearning)
 <h2 id="sec-2">2 01 </h2>
 <div id="text-2">
 
+<p>Repetição de 00 após correção do problema.
+</p>
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1">2.1 01 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h3>
+<div id="text-2.1">
+
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/01/w.png"  alt="/home/rafaelbeirigo/ql/experiments/01/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/01/01/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/01/01/w.png" /></p>
 </div>
-<p>
-Repetição de 00 após correção do problema
-Resultado: PRQL tem o mesmo comportamento de QL, só um pouco pior.
+
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2">2.2 02 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h3>
+<div id="text-2.2">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/01/02/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/01/02/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-2.3" class="outline-3">
+<h3 id="sec-2.3">2.3 03 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h3>
+<div id="text-2.3">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/01/03/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/01/03/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-2.4" class="outline-3">
+<h3 id="sec-2.4">2.4 04 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h3>
+<div id="text-2.4">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/01/04/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/01/04/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-2.5" class="outline-3">
+<h3 id="sec-2.5">2.5 Comentários </h3>
+<div id="text-2.5">
+
+<p>O PRQL apresenta um desempenho similar ao do QL.
+O resultado não foi o esperado: esperava-se um desempenho melhor por parte do PRQL,
+dado que esse possui a reutilização de políticas.
 Hipótese: não está utilizando as políticas antigas
 </p>
 
+</div>
 </div>
 
 </div>
@@ -161,43 +299,75 @@ Hipótese: não está utilizando as políticas antigas
 <h2 id="sec-3">3 02 QL vs PRQL no mundo 05x05 </h2>
 <div id="text-3">
 
-
-<div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/02/w.png"  alt="/home/rafaelbeirigo/ql/experiments/02/w.png" /></p>
-</div>
+<p>Motivo: queria rodar o PRQL sem a parte PR, ou seja, só utilizando
+QLearning, pra ver se estava tudo OK.
+</p>
 <p>
-Motivo: queria rodar o PRQL sem a parte PR, ou seja, só utilizando
-QLearning, pra ver se estava tudo OK
-Nesse experimento, NÃO utilizava pi-reuse, somente QL
+Nesse experimento, o PRQL NÃO utilizava &pi;-reuse, somente QL
 </p>
 
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/02/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/02/w.png" /></p>
+</div>
+
+
+</div>
+
+<div id="outline-container-3.1" class="outline-3">
+<h3 id="sec-3.1">3.1 Comentários </h3>
+<div id="text-3.1">
+
+<p>PRQL apresentou um desempenho bastante similar ao do QL, o que sugere que a execução
+do PRQL sem &pi;-reuse equivale à execução do QL.
+</p>
+<p>
+Isso já era esperado, pois o elemento do PRQL que acelera o aprendizado é justamente
+o &pi;-reuse
+</p>
+
+</div>
 </div>
 
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4">4 03 Mesmo experimento de 02, só que para o mundo 06x06 </h2>
+<h2 id="sec-4">4 03 Repetição de 02, só que para o mundo 06x06 </h2>
 <div id="text-4">
 
 
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/03/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/03/w.png" /></p>
+</div>
 
+
+</div>
+
+<div id="outline-container-4.1" class="outline-3">
+<h3 id="sec-4.1">4.1 Comentários </h3>
+<div id="text-4.1">
+
+<p>O resultado foi compatível com o obtido no experimento 02, conforme esperado
+</p>
+
+</div>
 </div>
 
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5">5 04 Mesmo experimento de 02, só que para a task omega do artigo </h2>
+<h2 id="sec-5">5 04 Repetição de 02, só que para a task &Omega; do artigo </h2>
 <div id="text-5">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/04/w.png"  alt="/home/rafaelbeirigo/ql/experiments/04/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/04/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/04/w.png" /></p>
 </div>
+
 
 </div>
 
 <div id="outline-container-5.1" class="outline-3">
-<h3 id="sec-5.1">5.1 Resultado: </h3>
+<h3 id="sec-5.1">5.1 Comentários: </h3>
 <div id="text-5.1">
 
 <p>PRQL e QL apresentaram desempenhos compatíveis, o que era esperado
@@ -209,12 +379,14 @@ Nesse experimento, NÃO utilizava pi-reuse, somente QL
 </div>
 
 <div id="outline-container-6" class="outline-2">
-<h2 id="sec-6">6 05 Repetindo 04, só que dessa vez ativando o pi-reuse </h2>
+<h2 id="sec-6">6 05 Repetição de 04, só que dessa vez ativando o &pi;-reuse </h2>
 <div id="text-6">
 
+<p>A bilioteca de políticas continha somente a &Pi;<sup>*</sup><sub>&Omega;</sub>.
+</p>
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/05/w.png"  alt="/home/rafaelbeirigo/ql/experiments/05/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/05/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/05/w.png" /></p>
 </div>
 <p>
 Sucesso: PRQL acelerou QLearning
@@ -222,96 +394,154 @@ Sucesso: PRQL acelerou QLearning
 
 </div>
 
+<div id="outline-container-6.1" class="outline-3">
+<h3 id="sec-6.1">6.1 Comentários </h3>
+<div id="text-6.1">
+
+<p>O elevado desempenho do PRQL pode ser explicado pelo fato de que a
+política utilizada é justamente a ótima para o problema.
+</p>
+
+</div>
+</div>
+
 </div>
 
 <div id="outline-container-7" class="outline-2">
-<h2 id="sec-7">7 06 Repetindo 05 para task omega do artigo reutilizando políticas 2, 3 e 5 (são as que mais ajudam o agente) </h2>
+<h2 id="sec-7">7 06 Repetição de 05 para task &Omega; do artigo reutilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub> e &Pi;<sub>5</sub> (são as que mais ajudam o agente) </h2>
 <div id="text-7">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/06/w.png"  alt="/home/rafaelbeirigo/ql/experiments/06/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/06/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/06/w.png" /></p>
 </div>
+
+
+</div>
+
+<div id="outline-container-7.1" class="outline-3">
+<h3 id="sec-7.1">7.1 Comentários </h3>
+<div id="text-7.1">
+
+<p>Problema: plotando W[ 1]
+</p>
 <p>
-Problema: plotando W[ 1]
+Foi plotado somente a recompensa acumulada quando se reutilizava uma
+das políticas possíveis, L[ 1]para uma das políticas
+reutilizadas.
+</p>
+<p>
+Como espera-se um aumento gradual da utilização da política &Pi;<sub>new</sub>, e
+a recompensa acumulada pela utilização de &Pi;<sub>new</sub> se encontra em W[
+0], o valor plotado em W[ 1] não reflete o que esperamos.
 </p>
 
+</div>
 </div>
 
 </div>
 
 <div id="outline-container-8" class="outline-2">
-<h2 id="sec-8">8 07 Repetindo 06 </h2>
+<h2 id="sec-8">8 07 Repetição de 06 </h2>
 <div id="text-8">
 
-
-<div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/07/w.png"  alt="/home/rafaelbeirigo/ql/experiments/07/w.png" /></p>
-</div>
-<p>
-Problema: plotando W[ 1]
+<p>A repetição foi feita para testes
 </p>
 
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/07/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/07/w.png" /></p>
+</div>
+
+
+</div>
+
+<div id="outline-container-8.1" class="outline-3">
+<h3 id="sec-8.1">8.1 Comentários </h3>
+<div id="text-8.1">
+
+<p>Problema: plotando W[ 1]
+A repetição foi feita antes da detecção do problema descrito em 05.
+</p>
+
+</div>
 </div>
 
 </div>
 
 <div id="outline-container-9" class="outline-2">
-<h2 id="sec-9">9 08 Repetindo 06, mas reutilizando somente a política ótima </h2>
+<h2 id="sec-9">9 08 Repetição de 06, mas reutilizando somente a política ótima </h2>
 <div id="text-9">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/08/w.png"  alt="/home/rafaelbeirigo/ql/experiments/08/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/08/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/08/w.png" /></p>
 </div>
+
+
+</div>
+
+<div id="outline-container-9.1" class="outline-3">
+<h3 id="sec-9.1">9.1 Comentários </h3>
+<div id="text-9.1">
+
+<p>O resultado foi diverso do esperado.
+</p>
 <p>
-Problema: plotando W[ 1]
+A recompensa acumulada estaciona em ~ 0.13, um valor extremamente
+baixo, superado pelo Q-Learning durante os experimentos.
 </p>
 
+</div>
 </div>
 
 </div>
 
 <div id="outline-container-10" class="outline-2">
-<h2 id="sec-10">10 09 Repetindo 02, após correção do acúmulo de recompensas médias por episódio </h2>
+<h2 id="sec-10">10 09 Repetição de 02 </h2>
 <div id="text-10">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/09/w.png"  alt="/home/rafaelbeirigo/ql/experiments/09/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/02/w.png" title="02" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/02/w.png" /></p>
 </div>
-<p>
-Problema: reutilizando políticas subótimas
-</p>
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/09/w.png" title="09" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/09/w.png" /></p>
+</div>
+
 
 </div>
 
 </div>
 
 <div id="outline-container-11" class="outline-2">
-<h2 id="sec-11">11 10 Repetindo 09, mas reutilizando uma política ótima para o problema de chegar </h2>
+<h2 id="sec-11">11 10 Repetição de 09, mas reutilizando uma política ótima para o problema de chegar à localização oposta (pior política que poderia reutilizar) </h2>
 <div id="text-11">
 
-<p>à localização oposta (pior política que poderia reutilizar)
-</p>
+
+
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/10/w.png"  alt="/home/rafaelbeirigo/ql/experiments/10/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/09/w.png" title="09" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/09/w.png" /></p>
 </div>
-<p>
-Problema: reutilizando políticas subótimas
-</p>
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/10/w.png" title="10" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/10/w.png" /></p>
+</div>
+
 
 </div>
 
 </div>
 
 <div id="outline-container-12" class="outline-2">
-<h2 id="sec-12">12 11 Resolver task omega utilizando pols. 2,3,4,5 </h2>
+<h2 id="sec-12">12 11 Resolver task &Omega; utilizando  &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h2>
 <div id="text-12">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/11/w.png"  alt="/home/rafaelbeirigo/ql/experiments/11/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/11/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/11/w.png" /></p>
 </div>
 <p>
 Problema: reutilizando políticas subótimas
@@ -322,33 +552,32 @@ Problema: reutilizando políticas subótimas
 </div>
 
 <div id="outline-container-13" class="outline-2">
-<h2 id="sec-13">13 12 Repetindo 11 reutilizando somente a policy obtida em 11 pelo </h2>
+<h2 id="sec-13">13 12 Repetição de 11 reutilizando somente a policy obtida em 11 pelo QLearning (ótima para o problema) </h2>
 <div id="text-13">
 
-<p>QLearning (ótima para o problema)
-</p>
+
+
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/12/w.png"  alt="/home/rafaelbeirigo/ql/experiments/12/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/12/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/12/w.png" /></p>
 </div>
-<p>
-Problema: reutilizando políticas subótimas
-</p>
+
 
 </div>
 
 </div>
 
 <div id="outline-container-14" class="outline-2">
-<h2 id="sec-14">14 13 Repetindo 12, só que chamei o solveMDP&hellip; pra criar os arquivos (tirar a dúvida se </h2>
+<h2 id="sec-14">14 13 Repetição de 12, só que chamei o solveMDP&hellip; pra criar os arquivos (tirar a dúvida se </h2>
 <div id="text-14">
 
 <p>arquivos estão corretos)
 </p>
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/13/w.png"  alt="/home/rafaelbeirigo/ql/experiments/13/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/13/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/13/w.png" /></p>
 </div>
 <p>
-Problema: reutilizando políticas subótimas
+Pude perceber a partir desse experimento que as políticas que estavam
+sendo reutilizadas eram subótimas.
 </p>
 
 </div>
@@ -361,7 +590,7 @@ Problema: reutilizando políticas subótimas
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/14/w.png"  alt="/home/rafaelbeirigo/ql/experiments/14/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/14/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/14/w.png" /></p>
 </div>
 
 
@@ -370,12 +599,12 @@ Problema: reutilizando políticas subótimas
 </div>
 
 <div id="outline-container-16" class="outline-2">
-<h2 id="sec-16">16 15 Obtenção de política para task 1 </h2>
+<h2 id="sec-16">16 15 Obtenção de &Pi;<sub>1</sub> </h2>
 <div id="text-16">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/15/w.png"  alt="/home/rafaelbeirigo/ql/experiments/15/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/15/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/15/w.png" /></p>
 </div>
 <p>
 Consumo de tempo: ~ 10'
@@ -386,12 +615,12 @@ Consumo de tempo: ~ 10'
 </div>
 
 <div id="outline-container-17" class="outline-2">
-<h2 id="sec-17">17 16 Obtenção de política para task 2 </h2>
+<h2 id="sec-17">17 16 Obtenção de &Pi;<sub>2</sub> </h2>
 <div id="text-17">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/16/w.png"  alt="/home/rafaelbeirigo/ql/experiments/16/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/16/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/16/w.png" /></p>
 </div>
 <p>
 Consumo de tempo: ~ 10'
@@ -402,12 +631,12 @@ Consumo de tempo: ~ 10'
 </div>
 
 <div id="outline-container-18" class="outline-2">
-<h2 id="sec-18">18 17 Obtenção de política para task 3 </h2>
+<h2 id="sec-18">18 17 Obtenção de &Pi;<sub>3</sub> </h2>
 <div id="text-18">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/17/w.png"  alt="/home/rafaelbeirigo/ql/experiments/17/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/17/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/17/w.png" /></p>
 </div>
 <p>
 Consumo de tempo: ~ 10'
@@ -418,12 +647,12 @@ Consumo de tempo: ~ 10'
 </div>
 
 <div id="outline-container-19" class="outline-2">
-<h2 id="sec-19">19 18 Obtenção de política para task 4 </h2>
+<h2 id="sec-19">19 18 Obtenção de &Pi;<sub>4</sub> </h2>
 <div id="text-19">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/18/w.png"  alt="/home/rafaelbeirigo/ql/experiments/18/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/18/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/18/w.png" /></p>
 </div>
 <p>
 Consumo de tempo: ~ 10'
@@ -434,12 +663,12 @@ Consumo de tempo: ~ 10'
 </div>
 
 <div id="outline-container-20" class="outline-2">
-<h2 id="sec-20">20 19 Obtenção de política para task 5 </h2>
+<h2 id="sec-20">20 19 Obtenção de &Pi;<sub>5</sub> </h2>
 <div id="text-20">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/19/w.png"  alt="/home/rafaelbeirigo/ql/experiments/19/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/19/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/19/w.png" /></p>
 </div>
 <p>
 Consumo de tempo: ~ 10'
@@ -450,12 +679,12 @@ Consumo de tempo: ~ 10'
 </div>
 
 <div id="outline-container-21" class="outline-2">
-<h2 id="sec-21">21 20 Resolver task omega utilizando pols. 2,3,4,5 (Repetição do 11) </h2>
+<h2 id="sec-21">21 20 Resolver task &Omega; utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> (Repetição do 11) </h2>
 <div id="text-21">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/20/w.png"  alt="/home/rafaelbeirigo/ql/experiments/20/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/20/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/20/w.png" /></p>
 </div>
 
 
@@ -464,12 +693,12 @@ Consumo de tempo: ~ 10'
 </div>
 
 <div id="outline-container-22" class="outline-2">
-<h2 id="sec-22">22 21 Resolver task omega utilizando pols. 2,3,4 </h2>
+<h2 id="sec-22">22 21 Resolver task &Omega; utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h2>
 <div id="text-22">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/21/w.png"  alt="/home/rafaelbeirigo/ql/experiments/21/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/21/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/21/w.png" /></p>
 </div>
 
 
@@ -478,19 +707,59 @@ Consumo de tempo: ~ 10'
 </div>
 
 <div id="outline-container-23" class="outline-2">
-<h2 id="sec-23">23 22 Resolver task omega utilizando pols. 1,2,3,4 </h2>
+<h2 id="sec-23">23 22 Resolver task &Omega; utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h2>
 <div id="text-23">
 
 
 <div class="figure">
-<p><img src="/home/rafaelbeirigo/ql/experiments/22/w.png"  alt="/home/rafaelbeirigo/ql/experiments/22/w.png" /></p>
+<p><img src="/home/rafaelbeirigo/ql/experiments/22/w.png" height="480" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/22/w.png" /></p>
 </div>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-24" class="outline-2">
+<h2 id="sec-24">24 23 Repetição do 02 </h2>
+<div id="text-24">
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-25" class="outline-2">
+<h2 id="sec-25">25 24 Repetição do 22 </h2>
+<div id="text-25">
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-26" class="outline-2">
+<h2 id="sec-26">26 25 Repetição do 20 </h2>
+<div id="text-26">
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-27" class="outline-2">
+<h2 id="sec-27">27 26 Repetição do 21 </h2>
+<div id="text-27">
+
 </div>
 </div>
 <div id="postamble"><p class="author"> Author: Rafael Lemes Beirigo
-<a href="mailto:rafaelbeirigo@LTI-PROJETO-TM">&lt;rafaelbeirigo@LTI-PROJETO-TM&gt;</a>
+<a href="mailto:rafaelbeirigo@fermat">&lt;rafaelbeirigo@fermat&gt;</a>
 </p>
-<p class="date"> Date: 2012-03-30 16:47:31 BRT</p>
+<p class="date"> Date: 2012-04-01 22:32:48 BRT</p>
 <p>HTML generated by org-mode 6.21b in emacs 23</p>
 </div></body>
 </html>

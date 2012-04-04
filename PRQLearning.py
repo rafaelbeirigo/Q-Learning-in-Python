@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-
 import QLearning
 import operator
+import csv
 from math import exp
 from random import random
 from numpy import cumsum
@@ -51,11 +51,23 @@ class PRQLearning:
 
         Q_omega, W, U = self.initializeQ_omegaWU()
 
-        L[0] = Q_omega
-
-        myQLearning = self.initializeQLearning()
+        myQLearning = self.initializeQLearning(Q = Q_omega)
         self.myQLearning = myQLearning
 
+        logStuff = []
+        logStuffTitle = []
+
+        logStuffTitle.append('iteration')
+        logStuffTitle.append('state')
+        logStuffTitle.append('psi')
+        logStuffTitle.append('randomNumber1')
+        logStuffTitle.append('randomNumber2')
+        logStuffTitle.append('epsilon')
+        logStuffTitle.append('a')
+        logStuffTitle.append('r')
+        logStuffTitle.append('W')
+        logStuff.append(logStuffTitle)
+        
         Ws = []
         R_avg = 0.0
         pr = 0
@@ -68,6 +80,7 @@ class PRQLearning:
             k = self.choosePolicy(P)
 
             # Execute the learning episode k
+            # Receive R and the updated Q function (Q_omega)
             if k == 0:
                 # If PI_k == PI_omega then execute QLearning
                 # We are going to dump Ws_dump because the QLearning
@@ -78,74 +91,73 @@ class PRQLearning:
             else:
                 # Else, use the pi-reuse strategy to reuse PI_k
                 # chamar funcao pi_reuse()
-                Q_pi_past = L[k]
-                R = self.pi_reuse(Q_pi_past, 1, self.H, self.psi, self.v, Q_omega)
+                Pi_past = L[k]
+                R = self.pi_reuse(Pi_past, 1, self.H, self.psi, self.v, logStuff, Q_omega)
                 pr += 1
 
-            # Receive R and the updated Q function (Q_omega)
-            W[k] = ( (W[k] * U[k]) + R ) / ( float(U[k] + 1) )
+            W[k] = ( (W[k] * U[k]) + R ) / ( U[k] + 1 )
             U[k] = U[k] + 1
-            self.tau = self.tau + self.deltaTau
-
+            
             self.myQLearning.epsilon = self.myQLearning.epsilon + \
                                        self.myQLearning.epsilonIncrement
+
+            self.tau = self.tau + self.deltaTau
 
             R_avg = ( (R_avg * episode) + R ) / ( episode + 1 )
             Ws.append(R_avg)
 
         print 'pr: ', pr, 'ql: ', ql
+
+        f=open(self.filePath + '/log.txt', 'w')
+        wr = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
+        wr.writerows(logStuff)
+        f.close()
         
         return W[0], Ws
 
     def pi_reuse(self,
-                 Q_pi_past,
+                 Pi_past,
                  K,
                  H,
                  psi,
                  v,
+                 logStuff,
                  Q_pi_new = None):
 
-        S = self.MDP.S
-        A = self.MDP.A
-
-        if Q_pi_new == None:
-            # Initialize Q_pi_new
-            # user didn't provide a table: will have to create one
-            # For each state-action pair (s, a), initialize the table entry Q(s, a) to zero
-            Q_pi_new = {}
-            for s in S:
-                Q_pi_new[s] = {}
-                for a in A:
-                    Q_pi_new[s][a] = 0.0
-
-        alpha            = self.alpha
-        gamma            = self.gamma
-        epsilon          = self.epsilon
-        epsilonIncrement = self.epsilonIncrement
-        psi2             = self.psi
+        Q_pi_new = self.initializeQ_pi_new(Q_pi_new)
         
+        randomNumber1 = -1
+        randomNumber2 = -1
+        epsilon = -1
+
         W = 0
+        numLine = 0
         for k in range(K):
             # Set the initial state, s, randomly
             self.Agent.setInitialState()
-
+            psi = self.psi
+            
             for h in range(1, H + 1):
                 s = self.Agent.state
+
+                logStuffLine = []
+                logStuffLine.append(len(logStuff) + 1)
+                logStuffLine.append(s)
 
                 # if a goal state is reached the episode ends
                 if s in self.MDP.G: break
 
                 randomNumber1 = random()
-                if randomNumber1 <= psi2:
+                if randomNumber1 <= psi:
                     # With a probability of psi, a = PI_past(s)
                     # a = myAgent.selectBestAction(s, Q_pi_past)
-                    a = Q_pi_past[s]
+                    a = Pi_past[s]
                 else:
-                    # With a probability of (1 - psi), a = 
+                    # With a probability of (1 - psi), a =
                     # epsilon_greedy(PI_new(s))
-                    
                     randomNumber2 = random()
-                    epsilon = 1 - psi2
+                    
+                    epsilon = 1 - psi
                     if randomNumber2 <= epsilon:
                         # greedy
                         a = self.Agent.selectBestAction(s, Q_pi_new)
@@ -158,22 +170,32 @@ class PRQLearning:
                 s2, r = self.Agent.executeAction(a)
 
                 maxValue = -1.0
-                for a2 in A:
+                for a2 in self.MDP.A:
                     if Q_pi_new[s2][a2] > maxValue:
                         maxValue = Q_pi_new[s2][a2]
 
                 # Update Q_pi_new(s, a), and therefore, PI_new
-                Q_pi_new[s][a] = (1.0 - float(alpha)) * float(Q_pi_new[s][a]) + \
-                                 float(alpha) * (float(r) + float(gamma) * float(maxValue))
+                Q_pi_new[s][a] = ((1.0 - self.alpha) * Q_pi_new[s][a]) + \
+                                 self.alpha * (r + self.gamma * maxValue)
 
                 # Set psi_(h + 1) = psi_h * v
-                psi2 = psi2 * v
+                psi = psi * v
 
                 # accumulate reward on W
-                W = float(W) + pow(gamma, h) * r
+                W = float(W) + pow(self.gamma, h) * r
 
                 # Set s = s'
                 self.Agent.state = s2
+
+                # prepare stuff to do the log
+                logStuffLine.append(psi)
+                logStuffLine.append(float(randomNumber1))
+                logStuffLine.append(float(randomNumber2))
+                logStuffLine.append(epsilon)
+                logStuffLine.append(a)
+                logStuffLine.append(r)
+                logStuffLine.append(W)
+                logStuff.append(logStuffLine)
 
         # Update W according to the formula
         W = float(W) / float(K)
@@ -252,7 +274,7 @@ class PRQLearning:
 
         return Pi
 
-    def initializeQLearning(self):
+    def initializeQLearning(self, Q = None):
         myQLearning = QLearning.QLearning(self.MDP,                 \
                                           self.Agent,               \
                                           self.alpha,               \
@@ -261,7 +283,20 @@ class PRQLearning:
                                           self.epsilonIncrement,    \
                                           1,                        \
                                           self.H,                   \
-                                          Q          = self.L[0],   \
+                                          Q          = Q,           \
                                           gammaPRQL  = self.gammaPRQL)
 
         return myQLearning
+
+    def initializeQ_pi_new(self, Q_pi_new):
+        if Q_pi_new == None:
+            # Initialize Q_pi_new
+            # user didn't provide a table: will have to create one
+            # For each state-action pair (s, a), initialize the table entry Q(s, a) to zero
+            Q_pi_new = {}
+            for s in S:
+                Q_pi_new[s] = {}
+                for a in A:
+                    Q_pi_new[s][a] = 0.0
+
+        return Q_pi_new
