@@ -66,7 +66,7 @@ class QLearning:
                 randomNumber = random()
                 if randomNumber <= epsilon:
                     # greedy
-                    a = myAgent.selectBestAction(s, Q)
+                    a = myAgent.selectBestAction(s, source = 'Q-Table', Q = Q)
                 else:
                     # random
                     a = myAgent.selectRandomAction()
@@ -101,7 +101,7 @@ class QLearning:
         S = self.MDP.S
         Policy = {}
         for s in S:
-            a = self.Agent.selectBestAction(s, self.Q)
+            a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = self.Q)
             Policy[s] = a
 
         self.Policy = Policy

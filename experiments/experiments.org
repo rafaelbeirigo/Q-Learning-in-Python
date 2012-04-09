@@ -338,3 +338,10 @@ Vale notar que estou supondo que existe uma linha s a s' t para todas
    as combinações de s a s' possíveis.
 É bem provável que isso seja verdade já que a quantidade de linhas do
    arquivo transitions.in é 73984 = 136 * 4 * 136 (|S| * |A| * |S|).
+
+
+* Testes da versão probabilística
+** 49 QL x PRQL determinístico x PRQL probabilístico
+*** Políticas utilizadas 
+**** PRQL determinístico: política obtida pelo QL
+**** PRQL probabilístico: política obtida pelo QL com probabilidade 1.0 para cada linha

@@ -23,9 +23,9 @@ def main():
     psi                = 1.0
     v                  = 0.95
 
-    K                  = 20       # number of episodes
+    K                  = 2000     # number of episodes
     H                  = 100      # number of steps
-    numberOfExecutions = 1000
+    numberOfExecutions = 10
     
     Wacumulado = 0
     for i in range(numberOfExecutions):
