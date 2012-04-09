@@ -20,9 +20,9 @@ def main():
     epsilonIncrement   = 0.0005
     gammaPRQL          = 0.95
 
-    K                  = 100000     # number of episodes
-    H                  = 1000       # number of steps
-    numberOfExecutions = 1 
+    K                  = 2000       # number of episodes
+    H                  = 100        # number of steps
+    numberOfExecutions = 10
 
     Wacumulado = 0
     for i in range(numberOfExecutions):
