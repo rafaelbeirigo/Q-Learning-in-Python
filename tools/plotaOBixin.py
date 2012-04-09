@@ -11,6 +11,6 @@ def plot(experimento = None):
     pl.ylabel("W")
 
     pl.plot(ql, label = 'Q-Learning')
-    pl.plot(prql, label = 'PRQ-Learning')
+    pl.plot(prql, label = 'PRQ-Learning prob')
 
     pl.legend(loc = 0)
