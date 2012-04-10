@@ -1,5 +1,0 @@
-def main():
-    #abre arquivo de grafo
-    #para cada aresta s1-s2 aih presente cria uma linha
-    #  goto_s1_s2
-    #no arquivo de actions

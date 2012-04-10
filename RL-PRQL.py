@@ -8,6 +8,7 @@ import pylab as pl
 
 def main():
     filePath = sys.argv[1]
+
     myMDP = MDP.MDP()
     myMDP.carrega(filePath)
 
@@ -25,7 +26,7 @@ def main():
 
     K                  = 2000     # number of episodes
     H                  = 100      # number of steps
-    numberOfExecutions = 10
+    numberOfExecutions = 100
     
     Wacumulado = 0
     for i in range(numberOfExecutions):

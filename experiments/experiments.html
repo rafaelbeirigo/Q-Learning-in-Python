@@ -6,7 +6,7 @@ lang="en" xml:lang="en">
 <title>experiments</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-04-09 16:20:51 BRT"/>
+<meta name="generated" content="2012-04-10 16:06:18 BRT"/>
 <meta name="author" content="Rafael Lemes Beirigo"/>
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -184,16 +184,40 @@ lang="en" xml:lang="en">
 </ul></li>
 </ul>
 </li>
-<li><a href="#sec-30">30 Aprendizado de política para o problema enviado pelo Marcelo (02/Abril) </a>
+<li><a href="#sec-30">30 IPMU </a>
 <ul>
 <li><a href="#sec-30.1">30.1 42 Com arquivos originais - 2000 episódios, 100 passos </a></li>
 <li><a href="#sec-30.2">30.2 43 Com arquivos originais - 1e05 episódios, 1000 passos </a></li>
 <li><a href="#sec-30.3">30.3 44 Modifiquei o transitions.in </a></li>
+<li><a href="#sec-30.4">30.4 78 Reutilizando políticas probabilísticas </a>
+<ul>
+<li><a href="#sec-30.4.1">30.4.1 PRQL </a></li>
+<li><a href="#sec-30.4.2">30.4.2 QL </a></li>
+</ul></li>
 </ul>
 </li>
-<li><a href="#sec-31">31 Testes da versão probabilística </a>
+<li><a href="#sec-31">31 Testes da versão probabilística do PRQL (PRQL<sub>prob</sub>) </a>
 <ul>
-<li><a href="#sec-31.1">31.1 49 </a></li>
+<li><a href="#sec-31.1">31.1 Reutilizar uma política determinística ótima e sua versão probabilística (1.0 de probabilidade para cada ação ótima) </a>
+<ul>
+<li><a href="#sec-31.1.1">31.1.1 Experimentos </a></li>
+<li><a href="#sec-31.1.2">31.1.2 Discussão: </a></li>
+</ul>
+</li>
+<li><a href="#sec-31.2">31.2 Experimentos de 51 a 55: repetição dos experimentos de 27 a 31 utilizando o PRQL probabilístico </a>
+<ul>
+<li><a href="#sec-31.2.1">31.2.1 As políticas utilizadas são as ótimas com 1.0 para cada ação da política </a></li>
+<li><a href="#sec-31.2.2">31.2.2 Utilizando como referência aprendizado com QL do Experimento 37 </a></li>
+</ul>
+</li>
+<li><a href="#sec-31.3">31.3 Experimentos de 56 a 66: teste de utilização incremental de política probabilística ótima versus <i>péssima</i> </a>
+<ul>
+<li><a href="#sec-31.3.1">31.3.1 Problema: resolver task1 utilizando percentuais variáveis das políticas ótima e péssima </a></li>
+<li><a href="#sec-31.3.2">31.3.2 Descrição: Rodar o PRQL com aproveitamento da política ótima e <i>péssima</i>, onde a <i>péssima</i> sugere sempre o oposto da ótima. </a></li>
+<li><a href="#sec-31.3.3">31.3.3 A utilização da política ótima varia linearmente com o experimento, de 0% (Experimento 56) a 100% (Experimento 66). </a></li>
+<li><a href="#sec-31.3.4">31.3.4 QLearning: foi realizado um novo aprendizado de Q-Learning para o experimento </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1081,7 +1105,7 @@ Dados do Q-Learning obtidos no experimento 37
 </div>
 
 <div id="outline-container-30" class="outline-2">
-<h2 id="sec-30">30 Aprendizado de política para o problema enviado pelo Marcelo (02/Abril) </h2>
+<h2 id="sec-30">30 IPMU </h2>
 <div id="text-30">
 
 
@@ -1123,30 +1147,184 @@ as combinações de s a s' possíveis.
 É bem provável que isso seja verdade já que a quantidade de linhas do
 arquivo transitions.in é 73984 = 136 * 4 * 136 (|S| * |A| * |S|).
 </p>
+</div>
 
+</div>
+
+<div id="outline-container-30.4" class="outline-3">
+<h3 id="sec-30.4">30.4 78 Reutilizando políticas probabilísticas </h3>
+<div id="text-30.4">
+
+
+</div>
+
+<div id="outline-container-30.4.1" class="outline-4">
+<h4 id="sec-30.4.1">30.4.1 PRQL </h4>
+<div id="text-30.4.1">
+
+<ul>
+<li id="sec-30.4.1.1"><i>prob</i>: reutilizando pol. prob. enviada pelo Marcelo <br/>
+</li>
+<li id="sec-30.4.1.2"><i>prob.det</i>: pol. ótima induzida pela pol. enviada pelo Marcelo <br/>
+</li>
+<li id="sec-30.4.1.3"><i>det</i>: reutilizando pol. ótima induzida, só que na versão antiga do PRQL (a versão determinística) <br/>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-30.4.2" class="outline-4">
+<h4 id="sec-30.4.2">30.4.2 QL </h4>
+<div id="text-30.4.2">
+
+
+
+</div>
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-31" class="outline-2">
-<h2 id="sec-31">31 Testes da versão probabilística </h2>
+<h2 id="sec-31">31 Testes da versão probabilística do PRQL (PRQL<sub>prob</sub>) </h2>
 <div id="text-31">
 
 
 </div>
 
 <div id="outline-container-31.1" class="outline-3">
-<h3 id="sec-31.1">31.1 49 </h3>
+<h3 id="sec-31.1">31.1 Reutilizar uma política determinística ótima e sua versão probabilística (1.0 de probabilidade para cada ação ótima) </h3>
 <div id="text-31.1">
 
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/49/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/49/w.png" /></p>
+</div>
+
+
+</div>
+
+<div id="outline-container-31.1.1" class="outline-4">
+<h4 id="sec-31.1.1">31.1.1 Experimentos </h4>
+<div id="text-31.1.1">
+
+<ul>
+<li id="sec-31.1.1.1">49 <br/>
+<ul>
+<li id="sec-31.1.1.1.1">Algoritmo: PRQL<sub>prob</sub> <br/>
+</li>
+<li id="sec-31.1.1.1.2">Task: 1 <br/>
+</li>
+<li id="sec-31.1.1.1.3">Políticas reutilizadas: &Pi;<sub>1</sub><sup>*</sup><sub>prob1</sub> <br/>
+<ul>
+<li id="sec-31.1.1.1.3.1">&Pi;<sub>1</sub><sup>*</sup><sub>prob1</sub> foi obtida colocando 1.0 em cada linha da política ótima determinística induzida por &Pi;<sub>1</sub><sup>*</sup><sub>prob</sub> <br/>
+</li>
+</ul>
+</li>
+<li id="sec-31.1.1.1.4">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/49/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/49/PRQL/parameters.out</a> <br/>
+
+</li>
+</ul>
+</li>
+<li id="sec-31.1.1.2">50 <br/>
+<ul>
+<li id="sec-31.1.1.2.1">Algoritmo: PRQL <br/>
+</li>
+<li id="sec-31.1.1.2.2">Task: 1 <br/>
+</li>
+<li id="sec-31.1.1.2.3">Políticas reutilizadas: &Pi;<sub>1</sub><sup>*</sup> <br/>
+</li>
+<li id="sec-31.1.1.2.4">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/50/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/50/PRQL/parameters.out</a> <br/>
+
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-31.1.2" class="outline-4">
+<h4 id="sec-31.1.2">31.1.2 Discussão: </h4>
+<div id="text-31.1.2">
+
+<p>Os resultados corresponderam ao esperado, pois adicionar a probabilidade 1.0 a cada ação da política determinística deveria gerar um resultado equivalente na versão probabilística.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-31.2" class="outline-3">
+<h3 id="sec-31.2">31.2 Experimentos de 51 a 55: repetição dos experimentos de 27 a 31 utilizando o PRQL probabilístico </h3>
+<div id="text-31.2">
+
+
+</div>
+
+<div id="outline-container-31.2.1" class="outline-4">
+<h4 id="sec-31.2.1">31.2.1 As políticas utilizadas são as ótimas com 1.0 para cada ação da política </h4>
+<div id="text-31.2.1">
+
+</div>
+
+</div>
+
+<div id="outline-container-31.2.2" class="outline-4">
+<h4 id="sec-31.2.2">31.2.2 Utilizando como referência aprendizado com QL do Experimento 37 </h4>
+<div id="text-31.2.2">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-31.3" class="outline-3">
+<h3 id="sec-31.3">31.3 Experimentos de 56 a 66: teste de utilização incremental de política probabilística ótima versus <i>péssima</i> </h3>
+<div id="text-31.3">
+
+
+</div>
+
+<div id="outline-container-31.3.1" class="outline-4">
+<h4 id="sec-31.3.1">31.3.1 Problema: resolver task1 utilizando percentuais variáveis das políticas ótima e péssima </h4>
+<div id="text-31.3.1">
+
+</div>
+
+</div>
+
+<div id="outline-container-31.3.2" class="outline-4">
+<h4 id="sec-31.3.2">31.3.2 Descrição: Rodar o PRQL com aproveitamento da política ótima e <i>péssima</i>, onde a <i>péssima</i> sugere sempre o oposto da ótima. </h4>
+<div id="text-31.3.2">
+
+</div>
+
+</div>
+
+<div id="outline-container-31.3.3" class="outline-4">
+<h4 id="sec-31.3.3">31.3.3 A utilização da política ótima varia linearmente com o experimento, de 0% (Experimento 56) a 100% (Experimento 66). </h4>
+<div id="text-31.3.3">
+
+</div>
+
+</div>
+
+<div id="outline-container-31.3.4" class="outline-4">
+<h4 id="sec-31.3.4">31.3.4 QLearning: foi realizado um novo aprendizado de Q-Learning para o experimento </h4>
+<div id="text-31.3.4">
+
+</div>
 </div>
 </div>
 </div>
 <div id="postamble"><p class="author"> Author: Rafael Lemes Beirigo
 <a href="mailto:rafaelbeirigo@LTI-PROJETO-TM">&lt;rafaelbeirigo@LTI-PROJETO-TM&gt;</a>
 </p>
-<p class="date"> Date: 2012-04-09 16:20:51 BRT</p>
+<p class="date"> Date: 2012-04-10 16:06:18 BRT</p>
 <p>HTML generated by org-mode 6.21b in emacs 23</p>
 </div></body>
 </html>

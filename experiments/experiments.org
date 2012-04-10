@@ -319,7 +319,7 @@ Dados do Q-Learning obtidos no experimento 37
 *** Experimento 41 - em 100% dos episódios
 
 
-* Aprendizado de política para o problema enviado pelo Marcelo (02/Abril)
+* IPMU
 ** 42 Com arquivos originais - 2000 episódios, 100 passos
 w.out completamente zerado.
 
@@ -339,9 +339,43 @@ Vale notar que estou supondo que existe uma linha s a s' t para todas
 É bem provável que isso seja verdade já que a quantidade de linhas do
    arquivo transitions.in é 73984 = 136 * 4 * 136 (|S| * |A| * |S|).
 
+** 78 Reutilizando políticas probabilísticas
+*** PRQL
+**** /prob/: reutilizando pol. prob. enviada pelo Marcelo
+**** /prob.det/: pol. ótima induzida pela pol. enviada pelo Marcelo
+**** /det/: reutilizando pol. ótima induzida, só que na versão antiga do PRQL (a versão determinística)
+*** QL
 
-* Testes da versão probabilística
-** 49 QL x PRQL determinístico x PRQL probabilístico
-*** Políticas utilizadas 
-**** PRQL determinístico: política obtida pelo QL
-**** PRQL probabilístico: política obtida pelo QL com probabilidade 1.0 para cada linha
+
+* Testes da versão probabilística do PRQL (PRQL_prob)
+** Reutilizar uma política determinística ótima e sua versão probabilística (1.0 de probabilidade para cada ação ótima)
+
+#+ATTR_HTML: height="240" style="border:2px solid black;"
+[[/home/rafaelbeirigo/ql/experiments/49/w.png]]
+
+*** Experimentos
+**** 49
+***** Algoritmo: PRQL_prob
+***** Task: 1
+***** Políticas reutilizadas: \Pi_1^*_prob1
+****** \Pi_1^*_prob1 foi obtida colocando 1.0 em cada linha da política ótima determinística induzida por \Pi_1^*_prob
+***** Parâmetros: [[/home/rafaelbeirigo/ql/experiments/49/PRQL/parameters.out]]
+
+**** 50
+***** Algoritmo: PRQL
+***** Task: 1
+***** Políticas reutilizadas: \Pi_1^*
+***** Parâmetros: [[/home/rafaelbeirigo/ql/experiments/50/PRQL/parameters.out]]
+
+*** Discussão:
+Os resultados corresponderam ao esperado, pois adicionar a probabilidade 1.0 a cada ação da política determinística deveria gerar um resultado equivalente na versão probabilística.
+
+
+** Experimentos de 51 a 55: repetição dos experimentos de 27 a 31 utilizando o PRQL probabilístico
+*** As políticas utilizadas são as ótimas com 1.0 para cada ação da política
+*** Utilizando como referência aprendizado com QL do Experimento 37
+** Experimentos de 56 a 66: teste de utilização incremental de política probabilística ótima versus /péssima/
+*** Problema: resolver task1 utilizando percentuais variáveis das políticas ótima e péssima
+*** Descrição: Rodar o PRQL com aproveitamento da política ótima e /péssima/, onde a /péssima/ sugere sempre o oposto da ótima.
+*** A utilização da política ótima varia linearmente com o experimento, de 0% (Experimento 56) a 100% (Experimento 66).
+*** QLearning: foi realizado um novo aprendizado de Q-Learning para o experimento
