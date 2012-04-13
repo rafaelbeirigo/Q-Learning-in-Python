@@ -1,0 +1,2074 @@
+rafaelbeirigo@LTI-PROJETO-TM:~$ cd ql
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/60/PRQL/
+Running experiment 1 of 10
+pr:  1750 ql:  250
+Running experiment 2 of 10
+pr:  1740 ql:  260
+Running experiment 3 of 10
+pr:  759 ql:  1241
+Running experiment 4 of 10
+pr:  1629 ql:  371
+Running experiment 5 of 10
+pr:  1286 ql:  714
+Running experiment 6 of 10
+pr:  992 ql:  1008
+Running experiment 7 of 10
+pr:  1746 ql:  254
+Running experiment 8 of 10
+pr:  586 ql:  1414
+Running experiment 9 of 10
+pr:  643 ql:  1357
+Running experiment 10 of 10
+pr:  960 ql:  1040
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ Running experiment 10 of 10
+Running: command not found
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/71/PRQL/
+Running experiment 1 of 1000
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 74, in <module>
+    main()
+  File "./RL-PRQL.py", line 49, in main
+    W, Ws = myPRQLearning.execute()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 76, in execute
+    P = self.assignProbsToPolicies(W, self.tau)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 206, in assignProbsToPolicies
+    denominator = denominator + exp(tau * W[p])
+OverflowError: math range error
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/71/PRQL/
+Running experiment 1 of 1000
+    denominator = denominator + exp(tau * W[p])  C-c C-cTraceback (most recent call last):
+  File "./RL-PRQL.py", line 74, in <module>
+    main()
+  File "./RL-PRQL.py", line 49, in main
+    W, Ws = myPRQLearning.execute()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 88, in execute
+    R, Ws_dump = myQLearning.execute()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/QLearning.py", line 72, in execute
+    a = myAgent.selectRandomAction()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/Agent.py", line 28, in selectRandomAction
+    A = self.obtainPossibleActions()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/Agent.py", line 18, in obtainPossibleActions
+    if T[s][a][s2] > 0:
+KeyboardInterrupt
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/60/PRQL/
+Running experiment 1 of 1000
+  C-c C-cTraceback (most recent call last):
+  File "./RL-PRQL.py", line 74, in <module>
+    main()
+  File "./RL-PRQL.py", line 49, in main
+    W, Ws = myPRQLearning.execute()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 94, in execute
+    R = self.pi_reuse(Pi_past, 1, self.H, self.psi, self.v, logStuff, Q_omega)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 160, in pi_reuse
+    a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = Q_pi_new)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/Agent.py", line 81, in selectBestAction
+    a = self.selectBestActionFromQTable(s, Q)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/Agent.py", line 34, in selectBestActionFromQTable
+    A = self.obtainPossibleActions()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/Agent.py", line 18, in obtainPossibleActions
+    if T[s][a][s2] > 0:
+KeyboardInterrupt
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/71/PRQL/
+Running experiment 1 of 1000
+pr:  1784 ql:  216
+Running experiment 2 of 1000
+pr:  1279 ql:  721
+Running experiment 3 of 1000
+pr:  1735 ql:  265
+Running experiment 4 of 1000
+pr:  1473 ql:  527
+Running experiment 5 of 1000
+pr:  1773 ql:  227
+Running experiment 6 of 1000
+pr:  1653 ql:  347
+Running experiment 7 of 1000
+pr:  793 ql:  1207
+Running experiment 8 of 1000
+pr:  1743 ql:  257
+Running experiment 9 of 1000
+pr:  1637 ql:  363
+Running experiment 10 of 1000
+pr:  1121 ql:  879
+Running experiment 11 of 1000
+pr:  1768 ql:  232
+Running experiment 12 of 1000
+pr:  1297 ql:  703
+Running experiment 13 of 1000
+pr:  1797 ql:  203
+Running experiment 14 of 1000
+pr:  1737 ql:  263
+Running experiment 15 of 1000
+pr:  751 ql:  1249
+Running experiment 16 of 1000
+pr:  950 ql:  1050
+Running experiment 17 of 1000
+pr:  1643 ql:  357
+Running experiment 18 of 1000
+pr:  1028 ql:  972
+Running experiment 19 of 1000
+pr:  1766 ql:  234
+Running experiment 20 of 1000
+pr:  671 ql:  1329
+Running experiment 21 of 1000
+pr:  514 ql:  1486
+Running experiment 22 of 1000
+pr:  1114 ql:  886
+Running experiment 23 of 1000
+pr:  1033 ql:  967
+Running experiment 24 of 1000
+pr:  1721 ql:  279
+Running experiment 25 of 1000
+pr:  1741 ql:  259
+Running experiment 26 of 1000
+pr:  1375 ql:  625
+Running experiment 27 of 1000
+pr:  520 ql:  1480
+Running experiment 28 of 1000
+pr:  1794 ql:  206
+Running experiment 29 of 1000
+pr:  1257 ql:  743
+Running experiment 30 of 1000
+pr:  1286 ql:  714
+Running experiment 31 of 1000
+pr:  965 ql:  1035
+Running experiment 32 of 1000
+pr:  1342 ql:  658
+Running experiment 33 of 1000
+pr:  1755 ql:  245
+Running experiment 34 of 1000
+pr:  1737 ql:  263
+Running experiment 35 of 1000
+pr:  1735 ql:  265
+Running experiment 36 of 1000
+pr:  1034 ql:  966
+Running experiment 37 of 1000
+pr:  1168 ql:  832
+Running experiment 38 of 1000
+pr:  1557 ql:  443
+Running experiment 39 of 1000
+pr:  862 ql:  1138
+Running experiment 40 of 1000
+pr:  827 ql:  1173
+Running experiment 41 of 1000
+pr:  1144 ql:  856
+Running experiment 42 of 1000
+pr:  1762 ql:  238
+Running experiment 43 of 1000
+pr:  1808 ql:  192
+Running experiment 44 of 1000
+pr:  1740 ql:  260
+Running experiment 45 of 1000
+pr:  1634 ql:  366
+Running experiment 46 of 1000
+pr:  1708 ql:  292
+Running experiment 47 of 1000
+pr:  1710 ql:  290
+Running experiment 48 of 1000
+pr:  1770 ql:  230
+Running experiment 49 of 1000
+pr:  980 ql:  1020
+Running experiment 50 of 1000
+pr:  1660 ql:  340
+Running experiment 51 of 1000
+pr:  1122 ql:  878
+Running experiment 52 of 1000
+pr:  1282 ql:  718
+Running experiment 53 of 1000
+pr:  800 ql:  1200
+Running experiment 54 of 1000
+pr:  1758 ql:  242
+Running experiment 55 of 1000
+pr:  1498 ql:  502
+Running experiment 56 of 1000
+pr:  1326 ql:  674
+Running experiment 57 of 1000
+pr:  1698 ql:  302
+Running experiment 58 of 1000
+pr:  905 ql:  1095
+Running experiment 59 of 1000
+pr:  1239 ql:  761
+Running experiment 60 of 1000
+pr:  1673 ql:  327
+Running experiment 61 of 1000
+pr:  1697 ql:  303
+Running experiment 62 of 1000
+pr:  1723 ql:  277
+Running experiment 63 of 1000
+pr:  1700 ql:  300
+Running experiment 64 of 1000
+pr:  748 ql:  1252
+Running experiment 65 of 1000
+pr:  1737 ql:  263
+Running experiment 66 of 1000
+pr:  887 ql:  1113
+Running experiment 67 of 1000
+pr:  1327 ql:  673
+Running experiment 68 of 1000
+pr:  1770 ql:  230
+Running experiment 69 of 1000
+pr:  753 ql:  1247
+Running experiment 70 of 1000
+pr:  700 ql:  1300
+Running experiment 71 of 1000
+pr:  760 ql:  1240
+Running experiment 72 of 1000
+pr:  1730 ql:  270
+Running experiment 73 of 1000
+pr:  702 ql:  1298
+Running experiment 74 of 1000
+pr:  785 ql:  1215
+Running experiment 75 of 1000
+pr:  1762 ql:  238
+Running experiment 76 of 1000
+pr:  1711 ql:  289
+Running experiment 77 of 1000
+pr:  1645 ql:  355
+Running experiment 78 of 1000
+pr:  1140 ql:  860
+Running experiment 79 of 1000
+pr:  780 ql:  1220
+Running experiment 80 of 1000
+pr:  829 ql:  1171
+Running experiment 81 of 1000
+pr:  1537 ql:  463
+Running experiment 82 of 1000
+pr:  609 ql:  1391
+Running experiment 83 of 1000
+pr:  924 ql:  1076
+Running experiment 84 of 1000
+pr:  1204 ql:  796
+Running experiment 85 of 1000
+pr:  801 ql:  1199
+Running experiment 86 of 1000
+pr:  847 ql:  1153
+Running experiment 87 of 1000
+pr:  967 ql:  1033
+Running experiment 88 of 1000
+pr:  1790 ql:  210
+Running experiment 89 of 1000
+pr:  1776 ql:  224
+Running experiment 90 of 1000
+pr:  971 ql:  1029
+Running experiment 91 of 1000
+pr:  973 ql:  1027
+Running experiment 92 of 1000
+pr:  646 ql:  1354
+Running experiment 93 of 1000
+pr:  772 ql:  1228
+Running experiment 94 of 1000
+pr:  1615 ql:  385
+Running experiment 95 of 1000
+pr:  1311 ql:  689
+Running experiment 96 of 1000
+pr:  1717 ql:  283
+Running experiment 97 of 1000
+pr:  1805 ql:  195
+Running experiment 98 of 1000
+pr:  834 ql:  1166
+Running experiment 99 of 1000
+pr:  1708 ql:  292
+Running experiment 100 of 1000
+pr:  1688 ql:  312
+Running experiment 101 of 1000
+pr:  1295 ql:  705
+Running experiment 102 of 1000
+pr:  424 ql:  1576
+Running experiment 103 of 1000
+pr:  990 ql:  1010
+Running experiment 104 of 1000
+pr:  1074 ql:  926
+Running experiment 105 of 1000
+pr:  876 ql:  1124
+Running experiment 106 of 1000
+pr:  1694 ql:  306
+Running experiment 107 of 1000
+pr:  1668 ql:  332
+Running experiment 108 of 1000
+pr:  1540 ql:  460
+Running experiment 109 of 1000
+pr:  1693 ql:  307
+Running experiment 110 of 1000
+pr:  1801 ql:  199
+Running experiment 111 of 1000
+pr:  1828 ql:  172
+Running experiment 112 of 1000
+pr:  1732 ql:  268
+Running experiment 113 of 1000
+pr:  1103 ql:  897
+Running experiment 114 of 1000
+pr:  1787 ql:  213
+Running experiment 115 of 1000
+pr:  1396 ql:  604
+Running experiment 116 of 1000
+pr:  1697 ql:  303
+Running experiment 117 of 1000
+pr:  1647 ql:  353
+2012 04 10 11:47:18Running experiment 118 of 1000
+pr:  683 ql:  1317
+Running experiment 119 of 1000
+pr:  1649 ql:  351
+Running experiment 120 of 1000
+pr:  905 ql:  1095
+Running experiment 121 of 1000
+pr:  1648 ql:  352
+Running experiment 122 of 1000
+pr:  1831 ql:  169
+Running experiment 123 of 1000
+pr:  1467 ql:  533
+Running experiment 124 of 1000
+pr:  957 ql:  1043
+Running experiment 125 of 1000
+pr:  1192 ql:  808
+Running experiment 126 of 1000
+pr:  1494 ql:  506
+Running experiment 127 of 1000
+pr:  1810 ql:  190
+Running experiment 128 of 1000
+pr:  1682 ql:  318
+Running experiment 129 of 1000
+pr:  1178 ql:  822
+Running experiment 130 of 1000
+pr:  1756 ql:  244
+Running experiment 131 of 1000
+pr:  1783 ql:  217
+Running experiment 132 of 1000
+pr:  1716 ql:  284
+Running experiment 133 of 1000
+pr:  1741 ql:  259
+Running experiment 134 of 1000
+pr:  1795 ql:  205
+Running experiment 135 of 1000
+pr:  1789 ql:  211
+Running experiment 136 of 1000
+pr:  1013 ql:  987
+2012 04 10 12:12:42Running experiment 137 of 1000
+pr:  1749 ql:  251
+Running experiment 138 of 1000
+pr:  1053 ql:  947
+Running experiment 139 of 1000
+pr:  695 ql:  1305
+Running experiment 140 of 1000
+pr:  1648 ql:  352
+Running experiment 141 of 1000
+pr:  1775 ql:  225
+Running experiment 142 of 1000
+pr:  962 ql:  1038
+Running experiment 143 of 1000
+pr:  865 ql:  1135
+Running experiment 144 of 1000
+pr:  1767 ql:  233
+Running experiment 145 of 1000
+pr:  1760 ql:  240
+Running experiment 146 of 1000
+pr:  868 ql:  1132
+Running experiment 147 of 1000
+pr:  1731 ql:  269
+Running experiment 148 of 1000
+pr:  954 ql:  1046
+Running experiment 149 of 1000
+pr:  1059 ql:  941
+Running experiment 150 of 1000
+pr:  933 ql:  1067
+Running experiment 151 of 1000
+pr:  1707 ql:  293
+Running experiment 152 of 1000
+pr:  1018 ql:  982
+Running experiment 153 of 1000
+pr:  1426 ql:  574
+Running experiment 154 of 1000
+pr:  1520 ql:  480
+Running experiment 155 of 1000
+pr:  1767 ql:  233
+Running experiment 156 of 1000
+pr:  732 ql:  1268
+Running experiment 157 of 1000
+pr:  1726 ql:  274
+Running experiment 158 of 1000
+pr:  1354 ql:  646
+Running experiment 159 of 1000
+pr:  1012 ql:  988
+Running experiment 160 of 1000
+pr:  1316 ql:  684
+Running experiment 161 of 1000
+pr:  1261 ql:  739
+Running experiment 162 of 1000
+pr:  1854 ql:  146
+Running experiment 163 of 1000
+pr:  1812 ql:  188
+Running experiment 164 of 1000
+pr:  1749 ql:  251
+Running experiment 165 of 1000
+pr:  1156 ql:  844
+Running experiment 166 of 1000
+pr:  1793 ql:  207
+Running experiment 167 of 1000
+pr:  1767 ql:  233
+Running experiment 168 of 1000
+pr:  1672 ql:  328
+Running experiment 169 of 1000
+pr:  1406 ql:  594
+Running experiment 170 of 1000
+pr:  1705 ql:  295
+Running experiment 171 of 1000
+pr:  1734 ql:  266
+Running experiment 172 of 1000
+pr:  1213 ql:  787
+Running experiment 173 of 1000
+pr:  1638 ql:  362
+Running experiment 174 of 1000
+pr:  1753 ql:  247
+Running experiment 175 of 1000
+pr:  1727 ql:  273
+Running experiment 176 of 1000
+pr:  1755 ql:  245
+Running experiment 177 of 1000
+pr:  1734 ql:  266
+Running experiment 178 of 1000
+pr:  1668 ql:  332
+Running experiment 179 of 1000
+pr:  811 ql:  1189
+Running experiment 180 of 1000
+pr:  1540 ql:  460
+Running experiment 181 of 1000
+pr:  1765 ql:  235
+Running experiment 182 of 1000
+pr:  1780 ql:  220
+Running experiment 183 of 1000
+pr:  730 ql:  1270
+Running experiment 184 of 1000
+pr:  1113 ql:  887
+Running experiment 185 of 1000
+pr:  1739 ql:  261
+Running experiment 186 of 1000
+pr:  937 ql:  1063
+Running experiment 187 of 1000
+pr:  608 ql:  1392
+Running experiment 188 of 1000
+pr:  920 ql:  1080
+Running experiment 189 of 1000
+pr:  1778 ql:  222
+Running experiment 190 of 1000
+pr:  975 ql:  1025
+Running experiment 191 of 1000
+pr:  1698 ql:  302
+Running experiment 192 of 1000
+pr:  680 ql:  1320
+Running experiment 193 of 1000
+pr:  1764 ql:  236
+Running experiment 194 of 1000
+pr:  1792 ql:  208
+Running experiment 195 of 1000
+pr:  887 ql:  1113
+Running experiment 196 of 1000
+pr:  607 ql:  1393
+Running experiment 197 of 1000
+pr:  1200 ql:  800
+Running experiment 198 of 1000
+pr:  1720 ql:  280
+Running experiment 199 of 1000
+pr:  1723 ql:  277
+Running experiment 200 of 1000
+pr:  1255 ql:  745
+Running experiment 201 of 1000
+pr:  1693 ql:  307
+Running experiment 202 of 1000
+pr:  1545 ql:  455
+Running experiment 203 of 1000
+pr:  1730 ql:  270
+Running experiment 204 of 1000
+pr:  1684 ql:  316
+Running experiment 205 of 1000
+pr:  929 ql:  1071
+Running experiment 206 of 1000
+pr:  1725 ql:  275
+Running experiment 207 of 1000
+pr:  751 ql:  1249
+Running experiment 208 of 1000
+pr:  1731 ql:  269
+Running experiment 209 of 1000
+pr:  1628 ql:  372
+Running experiment 210 of 1000
+pr:  1188 ql:  812
+Running experiment 211 of 1000
+pr:  524 ql:  1476
+Running experiment 212 of 1000
+pr:  1763 ql:  237
+Running experiment 213 of 1000
+pr:  1773 ql:  227
+Running experiment 214 of 1000
+pr:  594 ql:  1406
+Running experiment 215 of 1000
+pr:  1672 ql:  328
+Running experiment 216 of 1000
+pr:  1770 ql:  230
+Running experiment 217 of 1000
+pr:  1754 ql:  246
+Running experiment 218 of 1000
+pr:  829 ql:  1171
+Running experiment 219 of 1000
+pr:  1691 ql:  309
+Running experiment 220 of 1000
+pr:  1627 ql:  373
+Running experiment 221 of 1000
+pr:  667 ql:  1333
+Running experiment 222 of 1000
+pr:  1716 ql:  284
+Running experiment 223 of 1000
+pr:  1738 ql:  262
+Running experiment 224 of 1000
+pr:  1758 ql:  242
+Running experiment 225 of 1000
+pr:  1002 ql:  998
+Running experiment 226 of 1000
+pr:  1779 ql:  221
+Running experiment 227 of 1000
+pr:  1707 ql:  293
+Running experiment 228 of 1000
+pr:  1755 ql:  245
+Running experiment 229 of 1000
+pr:  1722 ql:  278
+Running experiment 230 of 1000
+pr:  1727 ql:  273
+Running experiment 231 of 1000
+pr:  1150 ql:  850
+Running experiment 232 of 1000
+pr:  1804 ql:  196
+Running experiment 233 of 1000
+pr:  716 ql:  1284
+Running experiment 234 of 1000
+pr:  1806 ql:  194
+Running experiment 235 of 1000
+pr:  1778 ql:  222
+Running experiment 236 of 1000
+pr:  519 ql:  1481
+Running experiment 237 of 1000
+pr:  987 ql:  1013
+Running experiment 238 of 1000
+pr:  1169 ql:  831
+Running experiment 239 of 1000
+pr:  1727 ql:  273
+Running experiment 240 of 1000
+pr:  708 ql:  1292
+Running experiment 241 of 1000
+pr:  1641 ql:  359
+Running experiment 242 of 1000
+pr:  1083 ql:  917
+Running experiment 243 of 1000
+pr:  1770 ql:  230
+Running experiment 244 of 1000
+pr:  1809 ql:  191
+Running experiment 245 of 1000
+pr:  1074 ql:  926
+Running experiment 246 of 1000
+pr:  1504 ql:  496
+Running experiment 247 of 1000
+pr:  1673 ql:  327
+Running experiment 248 of 1000
+pr:  1692 ql:  308
+Running experiment 249 of 1000
+pr:  1830 ql:  170
+Running experiment 250 of 1000
+pr:  731 ql:  1269
+Running experiment 251 of 1000
+pr:  1634 ql:  366
+Running experiment 252 of 1000
+pr:  1847 ql:  153
+Running experiment 253 of 1000
+pr:  1799 ql:  201
+Running experiment 254 of 1000
+pr:  1684 ql:  316
+Running experiment 255 of 1000
+pr:  1714 ql:  286
+Running experiment 256 of 1000
+pr:  1688 ql:  312
+Running experiment 257 of 1000
+pr:  674 ql:  1326
+Running experiment 258 of 1000
+pr:  1305 ql:  695
+Running experiment 259 of 1000
+pr:  1788 ql:  212
+Running experiment 260 of 1000
+pr:  1720 ql:  280
+Running experiment 261 of 1000
+pr:  1723 ql:  277
+Running experiment 262 of 1000
+pr:  1794 ql:  206
+Running experiment 263 of 1000
+pr:  1735 ql:  265
+Running experiment 264 of 1000
+pr:  1225 ql:  775
+Running experiment 265 of 1000
+pr:  726 ql:  1274
+Running experiment 266 of 1000
+pr:  634 ql:  1366
+Running experiment 267 of 1000
+pr:  1743 ql:  257
+Running experiment 268 of 1000
+pr:  1550 ql:  450
+Running experiment 269 of 1000
+pr:  1201 ql:  799
+Running experiment 270 of 1000
+pr:  1474 ql:  526
+Running experiment 271 of 1000
+pr:  1682 ql:  318
+Running experiment 272 of 1000
+pr:  1217 ql:  783
+Running experiment 273 of 1000
+pr:  1034 ql:  966
+Running experiment 274 of 1000
+pr:  1636 ql:  364
+Running experiment 275 of 1000
+pr:  1717 ql:  283
+Running experiment 276 of 1000
+pr:  869 ql:  1131
+Running experiment 277 of 1000
+pr:  1766 ql:  234
+Running experiment 278 of 1000
+pr:  1248 ql:  752
+Running experiment 279 of 1000
+pr:  1694 ql:  306
+Running experiment 280 of 1000
+pr:  1711 ql:  289
+Running experiment 281 of 1000
+pr:  1794 ql:  206
+Running experiment 282 of 1000
+pr:  1312 ql:  688
+Running experiment 283 of 1000
+pr:  1750 ql:  250
+Running experiment 284 of 1000
+pr:  870 ql:  1130
+Running experiment 285 of 1000
+pr:  1715 ql:  285
+Running experiment 286 of 1000
+pr:  1701 ql:  299
+Running experiment 287 of 1000
+pr:  1597 ql:  403
+Running experiment 288 of 1000
+pr:  1657 ql:  343
+Running experiment 289 of 1000
+pr:  1348 ql:  652
+Running experiment 290 of 1000
+pr:  1712 ql:  288
+Running experiment 291 of 1000
+pr:  1771 ql:  229
+Running experiment 292 of 1000
+pr:  1617 ql:  383
+Running experiment 293 of 1000
+pr:  1802 ql:  198
+Running experiment 294 of 1000
+pr:  1040 ql:  960
+Running experiment 295 of 1000
+pr:  1677 ql:  323
+Running experiment 296 of 1000
+pr:  1180 ql:  820
+Running experiment 297 of 1000
+pr:  1699 ql:  301
+Running experiment 298 of 1000
+pr:  1776 ql:  224
+Running experiment 299 of 1000
+pr:  1120 ql:  880
+Running experiment 300 of 1000
+pr:  1850 ql:  150
+Running experiment 301 of 1000
+pr:  1739 ql:  261
+Running experiment 302 of 1000
+pr:  1767 ql:  233
+Running experiment 303 of 1000
+pr:  1311 ql:  689
+Running experiment 304 of 1000
+pr:  1652 ql:  348
+Running experiment 305 of 1000
+pr:  1021 ql:  979
+Running experiment 306 of 1000
+pr:  1164 ql:  836
+Running experiment 307 of 1000
+pr:  802 ql:  1198
+Running experiment 308 of 1000
+pr:  382 ql:  1618
+Running experiment 309 of 1000
+pr:  1752 ql:  248
+Running experiment 310 of 1000
+pr:  994 ql:  1006
+Running experiment 311 of 1000
+pr:  1832 ql:  168
+Running experiment 312 of 1000
+pr:  1610 ql:  390
+Running experiment 313 of 1000
+pr:  1747 ql:  253
+Running experiment 314 of 1000
+pr:  1793 ql:  207
+Running experiment 315 of 1000
+pr:  1790 ql:  210
+Running experiment 316 of 1000
+pr:  1430 ql:  570
+Running experiment 317 of 1000
+pr:  1107 ql:  893
+Running experiment 318 of 1000
+pr:  1723 ql:  277
+Running experiment 319 of 1000
+pr:  1790 ql:  210
+Running experiment 320 of 1000
+pr:  886 ql:  1114
+Running experiment 321 of 1000
+pr:  1165 ql:  835
+Running experiment 322 of 1000
+pr:  1724 ql:  276
+Running experiment 323 of 1000
+pr:  1080 ql:  920
+Running experiment 324 of 1000
+pr:  898 ql:  1102
+Running experiment 325 of 1000
+pr:  1779 ql:  221
+Running experiment 326 of 1000
+pr:  1752 ql:  248
+Running experiment 327 of 1000
+pr:  1714 ql:  286
+Running experiment 328 of 1000
+pr:  1436 ql:  564
+Running experiment 329 of 1000
+pr:  1675 ql:  325
+Running experiment 330 of 1000
+pr:  1780 ql:  220
+Running experiment 331 of 1000
+pr:  888 ql:  1112
+Running experiment 332 of 1000
+pr:  1046 ql:  954
+Running experiment 333 of 1000
+pr:  1695 ql:  305
+Running experiment 334 of 1000
+pr:  1370 ql:  630
+Running experiment 335 of 1000
+pr:  1742 ql:  258
+Running experiment 336 of 1000
+pr:  876 ql:  1124
+Running experiment 337 of 1000
+pr:  857 ql:  1143
+Running experiment 338 of 1000
+pr:  1864 ql:  136
+Running experiment 339 of 1000
+pr:  1740 ql:  260
+Running experiment 340 of 1000
+pr:  1780 ql:  220
+Running experiment 341 of 1000
+pr:  785 ql:  1215
+Running experiment 342 of 1000
+pr:  1802 ql:  198
+Running experiment 343 of 1000
+pr:  1744 ql:  256
+Running experiment 344 of 1000
+pr:  645 ql:  1355
+Running experiment 345 of 1000
+pr:  1768 ql:  232
+Running experiment 346 of 1000
+pr:  1618 ql:  382
+Running experiment 347 of 1000
+pr:  1141 ql:  859
+Running experiment 348 of 1000
+pr:  1271 ql:  729
+Running experiment 349 of 1000
+pr:  1707 ql:  293
+Running experiment 350 of 1000
+pr:  867 ql:  1133
+Running experiment 351 of 1000
+pr:  954 ql:  1046
+Running experiment 352 of 1000
+pr:  1699 ql:  301
+Running experiment 353 of 1000
+pr:  1696 ql:  304
+Running experiment 354 of 1000
+pr:  938 ql:  1062
+Running experiment 355 of 1000
+pr:  1369 ql:  631
+Running experiment 356 of 1000
+pr:  822 ql:  1178
+Running experiment 357 of 1000
+pr:  1743 ql:  257
+Running experiment 358 of 1000
+pr:  705 ql:  1295
+Running experiment 359 of 1000
+pr:  1723 ql:  277
+Running experiment 360 of 1000
+pr:  1688 ql:  312
+Running experiment 361 of 1000
+pr:  1694 ql:  306
+Running experiment 362 of 1000
+pr:  866 ql:  1134
+Running experiment 363 of 1000
+pr:  1752 ql:  248
+Running experiment 364 of 1000
+pr:  1682 ql:  318
+Running experiment 365 of 1000
+pr:  1836 ql:  164
+Running experiment 366 of 1000
+pr:  1337 ql:  663
+Running experiment 367 of 1000
+pr:  1756 ql:  244
+Running experiment 368 of 1000
+pr:  1756 ql:  244
+Running experiment 369 of 1000
+pr:  954 ql:  1046
+Running experiment 370 of 1000
+pr:  1710 ql:  290
+Running experiment 371 of 1000
+pr:  1121 ql:  879
+Running experiment 372 of 1000
+pr:  1241 ql:  759
+Running experiment 373 of 1000
+pr:  1342 ql:  658
+Running experiment 374 of 1000
+pr:  840 ql:  1160
+Running experiment 375 of 1000
+pr:  745 ql:  1255
+Running experiment 376 of 1000
+pr:  1823 ql:  177
+Running experiment 377 of 1000
+pr:  1733 ql:  267
+Running experiment 378 of 1000
+pr:  1630 ql:  370
+Running experiment 379 of 1000
+pr:  1213 ql:  787
+Running experiment 380 of 1000
+pr:  1109 ql:  891
+Running experiment 381 of 1000
+pr:  1077 ql:  923
+Running experiment 382 of 1000
+pr:  1763 ql:  237
+Running experiment 383 of 1000
+pr:  1075 ql:  925
+Running experiment 384 of 1000
+pr:  1777 ql:  223
+Running experiment 385 of 1000
+pr:  1716 ql:  284
+Running experiment 386 of 1000
+pr:  569 ql:  1431
+Running experiment 387 of 1000
+pr:  1308 ql:  692
+Running experiment 388 of 1000
+pr:  780 ql:  1220
+Running experiment 389 of 1000
+pr:  698 ql:  1302
+Running experiment 390 of 1000
+pr:  1812 ql:  188
+Running experiment 391 of 1000
+pr:  907 ql:  1093
+Running experiment 392 of 1000
+pr:  804 ql:  1196
+Running experiment 393 of 1000
+pr:  730 ql:  1270
+Running experiment 394 of 1000
+pr:  856 ql:  1144
+Running experiment 395 of 1000
+pr:  999 ql:  1001
+Running experiment 396 of 1000
+pr:  762 ql:  1238
+Running experiment 397 of 1000
+pr:  1696 ql:  304
+Running experiment 398 of 1000
+pr:  1715 ql:  285
+Running experiment 399 of 1000
+pr:  827 ql:  1173
+Running experiment 400 of 1000
+pr:  1660 ql:  340
+Running experiment 401 of 1000
+pr:  1668 ql:  332
+Running experiment 402 of 1000
+pr:  1676 ql:  324
+Running experiment 403 of 1000
+pr:  1795 ql:  205
+Running experiment 404 of 1000
+pr:  766 ql:  1234
+Running experiment 405 of 1000
+pr:  1156 ql:  844
+Running experiment 406 of 1000
+pr:  1741 ql:  259
+Running experiment 407 of 1000
+pr:  1713 ql:  287
+Running experiment 408 of 1000
+pr:  1734 ql:  266
+Running experiment 409 of 1000
+pr:  1740 ql:  260
+Running experiment 410 of 1000
+pr:  1097 ql:  903
+Running experiment 411 of 1000
+pr:  1746 ql:  254
+Running experiment 412 of 1000
+pr:  938 ql:  1062
+Running experiment 413 of 1000
+pr:  1666 ql:  334
+Running experiment 414 of 1000
+pr:  1672 ql:  328
+Running experiment 415 of 1000
+pr:  1234 ql:  766
+Running experiment 416 of 1000
+pr:  1738 ql:  262
+Running experiment 417 of 1000
+pr:  1703 ql:  297
+Running experiment 418 of 1000
+pr:  1766 ql:  234
+Running experiment 419 of 1000
+pr:  1703 ql:  297
+Running experiment 420 of 1000
+pr:  1485 ql:  515
+Running experiment 421 of 1000
+pr:  1748 ql:  252
+Running experiment 422 of 1000
+pr:  1789 ql:  211
+Running experiment 423 of 1000
+pr:  1784 ql:  216
+Running experiment 424 of 1000
+pr:  699 ql:  1301
+Running experiment 425 of 1000
+pr:  872 ql:  1128
+Running experiment 426 of 1000
+pr:  1735 ql:  265
+Running experiment 427 of 1000
+pr:  729 ql:  1271
+Running experiment 428 of 1000
+pr:  935 ql:  1065
+Running experiment 429 of 1000
+pr:  1793 ql:  207
+Running experiment 430 of 1000
+pr:  1725 ql:  275
+Running experiment 431 of 1000
+pr:  1767 ql:  233
+Running experiment 432 of 1000
+pr:  1753 ql:  247
+Running experiment 433 of 1000
+pr:  1741 ql:  259
+Running experiment 434 of 1000
+pr:  869 ql:  1131
+Running experiment 435 of 1000
+pr:  540 ql:  1460
+Running experiment 436 of 1000
+pr:  1757 ql:  243
+Running experiment 437 of 1000
+pr:  858 ql:  1142
+Running experiment 438 of 1000
+pr:  1720 ql:  280
+Running experiment 439 of 1000
+pr:  1045 ql:  955
+Running experiment 440 of 1000
+pr:  635 ql:  1365
+Running experiment 441 of 1000
+pr:  1373 ql:  627
+Running experiment 442 of 1000
+pr:  1474 ql:  526
+Running experiment 443 of 1000
+pr:  1713 ql:  287
+Running experiment 444 of 1000
+pr:  1692 ql:  308
+Running experiment 445 of 1000
+pr:  957 ql:  1043
+Running experiment 446 of 1000
+pr:  1411 ql:  589
+Running experiment 447 of 1000
+pr:  1774 ql:  226
+Running experiment 448 of 1000
+pr:  1723 ql:  277
+Running experiment 449 of 1000
+pr:  1724 ql:  276
+Running experiment 450 of 1000
+pr:  731 ql:  1269
+Running experiment 451 of 1000
+pr:  1783 ql:  217
+Running experiment 452 of 1000
+pr:  1286 ql:  714
+Running experiment 453 of 1000
+pr:  1694 ql:  306
+Running experiment 454 of 1000
+pr:  1804 ql:  196
+Running experiment 455 of 1000
+pr:  1771 ql:  229
+Running experiment 456 of 1000
+pr:  1386 ql:  614
+Running experiment 457 of 1000
+pr:  1155 ql:  845
+Running experiment 458 of 1000
+pr:  838 ql:  1162
+Running experiment 459 of 1000
+pr:  1775 ql:  225
+Running experiment 460 of 1000
+pr:  1800 ql:  200
+Running experiment 461 of 1000
+pr:  1345 ql:  655
+Running experiment 462 of 1000
+pr:  1599 ql:  401
+Running experiment 463 of 1000
+pr:  1513 ql:  487
+Running experiment 464 of 1000
+pr:  663 ql:  1337
+Running experiment 465 of 1000
+pr:  1763 ql:  237
+Running experiment 466 of 1000
+pr:  1823 ql:  177
+Running experiment 467 of 1000
+pr:  1648 ql:  352
+Running experiment 468 of 1000
+pr:  1173 ql:  827
+Running experiment 469 of 1000
+pr:  1675 ql:  325
+Running experiment 470 of 1000
+pr:  1721 ql:  279
+Running experiment 471 of 1000
+pr:  1160 ql:  840
+Running experiment 472 of 1000
+pr:  1712 ql:  288
+Running experiment 473 of 1000
+pr:  1685 ql:  315
+Running experiment 474 of 1000
+pr:  1144 ql:  856
+Running experiment 475 of 1000
+pr:  1671 ql:  329
+Running experiment 476 of 1000
+pr:  1833 ql:  167
+Running experiment 477 of 1000
+pr:  936 ql:  1064
+Running experiment 478 of 1000
+pr:  1739 ql:  261
+Running experiment 479 of 1000
+pr:  922 ql:  1078
+Running experiment 480 of 1000
+pr:  1500 ql:  500
+Running experiment 481 of 1000
+pr:  1501 ql:  499
+Running experiment 482 of 1000
+pr:  1672 ql:  328
+Running experiment 483 of 1000
+pr:  1742 ql:  258
+Running experiment 484 of 1000
+pr:  1711 ql:  289
+Running experiment 485 of 1000
+pr:  895 ql:  1105
+Running experiment 486 of 1000
+pr:  731 ql:  1269
+Running experiment 487 of 1000
+pr:  1779 ql:  221
+Running experiment 488 of 1000
+pr:  514 ql:  1486
+Running experiment 489 of 1000
+pr:  1743 ql:  257
+Running experiment 490 of 1000
+pr:  1775 ql:  225
+Running experiment 491 of 1000
+pr:  1786 ql:  214
+Running experiment 492 of 1000
+pr:  746 ql:  1254
+Running experiment 493 of 1000
+pr:  1747 ql:  253
+Running experiment 494 of 1000
+pr:  726 ql:  1274
+Running experiment 495 of 1000
+pr:  1713 ql:  287
+Running experiment 496 of 1000
+pr:  860 ql:  1140
+Running experiment 497 of 1000
+pr:  1703 ql:  297
+Running experiment 498 of 1000
+pr:  1729 ql:  271
+Running experiment 499 of 1000
+pr:  513 ql:  1487
+Running experiment 500 of 1000
+pr:  652 ql:  1348
+Running experiment 501 of 1000
+pr:  1837 ql:  163
+Running experiment 502 of 1000
+pr:  1851 ql:  149
+Running experiment 503 of 1000
+pr:  1594 ql:  406
+Running experiment 504 of 1000
+pr:  1809 ql:  191
+Running experiment 505 of 1000
+pr:  1209 ql:  791
+Running experiment 506 of 1000
+pr:  786 ql:  1214
+Running experiment 507 of 1000
+pr:  1744 ql:  256
+Running experiment 508 of 1000
+pr:  1705 ql:  295
+Running experiment 509 of 1000
+pr:  1083 ql:  917
+Running experiment 510 of 1000
+pr:  1400 ql:  600
+Running experiment 511 of 1000
+pr:  1311 ql:  689
+Running experiment 512 of 1000
+pr:  696 ql:  1304
+Running experiment 513 of 1000
+pr:  1391 ql:  609
+Running experiment 514 of 1000
+pr:  493 ql:  1507
+Running experiment 515 of 1000
+pr:  1726 ql:  274
+Running experiment 516 of 1000
+pr:  1234 ql:  766
+Running experiment 517 of 1000
+pr:  1727 ql:  273
+Running experiment 518 of 1000
+pr:  1771 ql:  229
+Running experiment 519 of 1000
+pr:  1719 ql:  281
+Running experiment 520 of 1000
+pr:  1781 ql:  219
+Running experiment 521 of 1000
+pr:  1707 ql:  293
+Running experiment 522 of 1000
+pr:  1477 ql:  523
+Running experiment 523 of 1000
+pr:  1837 ql:  163
+Running experiment 524 of 1000
+pr:  1710 ql:  290
+Running experiment 525 of 1000
+pr:  1746 ql:  254
+Running experiment 526 of 1000
+pr:  756 ql:  1244
+Running experiment 527 of 1000
+pr:  1784 ql:  216
+Running experiment 528 of 1000
+pr:  1172 ql:  828
+Running experiment 529 of 1000
+pr:  1566 ql:  434
+Running experiment 530 of 1000
+pr:  1805 ql:  195
+Running experiment 531 of 1000
+pr:  945 ql:  1055
+Running experiment 532 of 1000
+pr:  566 ql:  1434
+Running experiment 533 of 1000
+pr:  1761 ql:  239
+Running experiment 534 of 1000
+pr:  527 ql:  1473
+Running experiment 535 of 1000
+pr:  1707 ql:  293
+Running experiment 536 of 1000
+pr:  1722 ql:  278
+Running experiment 537 of 1000
+pr:  1727 ql:  273
+Running experiment 538 of 1000
+pr:  1779 ql:  221
+Running experiment 539 of 1000
+pr:  1787 ql:  213
+Running experiment 540 of 1000
+pr:  972 ql:  1028
+Running experiment 541 of 1000
+pr:  1010 ql:  990
+Running experiment 542 of 1000
+pr:  742 ql:  1258
+Running experiment 543 of 1000
+pr:  1088 ql:  912
+Running experiment 544 of 1000
+pr:  1319 ql:  681
+Running experiment 545 of 1000
+pr:  730 ql:  1270
+Running experiment 546 of 1000
+pr:  1286 ql:  714
+Running experiment 547 of 1000
+pr:  1801 ql:  199
+Running experiment 548 of 1000
+pr:  1021 ql:  979
+Running experiment 549 of 1000
+pr:  1046 ql:  954
+Running experiment 550 of 1000
+pr:  703 ql:  1297
+Running experiment 551 of 1000
+pr:  790 ql:  1210
+Running experiment 552 of 1000
+pr:  1726 ql:  274
+Running experiment 553 of 1000
+pr:  1712 ql:  288
+Running experiment 554 of 1000
+pr:  1240 ql:  760
+Running experiment 555 of 1000
+pr:  1664 ql:  336
+Running experiment 556 of 1000
+pr:  1779 ql:  221
+Running experiment 557 of 1000
+pr:  1613 ql:  387
+Running experiment 558 of 1000
+pr:  1670 ql:  330
+Running experiment 559 of 1000
+pr:  1798 ql:  202
+Running experiment 560 of 1000
+pr:  965 ql:  1035
+Running experiment 561 of 1000
+pr:  1745 ql:  255
+Running experiment 562 of 1000
+pr:  1669 ql:  331
+Running experiment 563 of 1000
+pr:  620 ql:  1380
+Running experiment 564 of 1000
+pr:  1583 ql:  417
+Running experiment 565 of 1000
+pr:  573 ql:  1427
+Running experiment 566 of 1000
+pr:  1408 ql:  592
+Running experiment 567 of 1000
+pr:  1073 ql:  927
+Running experiment 568 of 1000
+pr:  638 ql:  1362
+Running experiment 569 of 1000
+pr:  1660 ql:  340
+Running experiment 570 of 1000
+pr:  1722 ql:  278
+Running experiment 571 of 1000
+pr:  915 ql:  1085
+Running experiment 572 of 1000
+pr:  1769 ql:  231
+Running experiment 573 of 1000
+pr:  1745 ql:  255
+Running experiment 574 of 1000
+pr:  1100 ql:  900
+Running experiment 575 of 1000
+pr:  1798 ql:  202
+Running experiment 576 of 1000
+pr:  757 ql:  1243
+Running experiment 577 of 1000
+pr:  983 ql:  1017
+Running experiment 578 of 1000
+pr:  1114 ql:  886
+Running experiment 579 of 1000
+pr:  1417 ql:  583
+Running experiment 580 of 1000
+pr:  1077 ql:  923
+Running experiment 581 of 1000
+pr:  1737 ql:  263
+Running experiment 582 of 1000
+pr:  716 ql:  1284
+Running experiment 583 of 1000
+pr:  1675 ql:  325
+Running experiment 584 of 1000
+pr:  1661 ql:  339
+Running experiment 585 of 1000
+pr:  1386 ql:  614
+Running experiment 586 of 1000
+pr:  804 ql:  1196
+Running experiment 587 of 1000
+pr:  1708 ql:  292
+Running experiment 588 of 1000
+pr:  942 ql:  1058
+Running experiment 589 of 1000
+pr:  1719 ql:  281
+Running experiment 590 of 1000
+pr:  888 ql:  1112
+Running experiment 591 of 1000
+pr:  1821 ql:  179
+Running experiment 592 of 1000
+pr:  1082 ql:  918
+Running experiment 593 of 1000
+pr:  1621 ql:  379
+Running experiment 594 of 1000
+pr:  1263 ql:  737
+Running experiment 595 of 1000
+pr:  1836 ql:  164
+Running experiment 596 of 1000
+pr:  1707 ql:  293
+Running experiment 597 of 1000
+pr:  1173 ql:  827
+Running experiment 598 of 1000
+pr:  1759 ql:  241
+Running experiment 599 of 1000
+pr:  882 ql:  1118
+Running experiment 600 of 1000
+pr:  570 ql:  1430
+Running experiment 601 of 1000
+pr:  1194 ql:  806
+Running experiment 602 of 1000
+pr:  1740 ql:  260
+Running experiment 603 of 1000
+pr:  920 ql:  1080
+Running experiment 604 of 1000
+pr:  1765 ql:  235
+Running experiment 605 of 1000
+pr:  1675 ql:  325
+Running experiment 606 of 1000
+pr:  967 ql:  1033
+Running experiment 607 of 1000
+pr:  1761 ql:  239
+Running experiment 608 of 1000
+pr:  1785 ql:  215
+Running experiment 609 of 1000
+pr:  1715 ql:  285
+Running experiment 610 of 1000
+pr:  769 ql:  1231
+Running experiment 611 of 1000
+pr:  1157 ql:  843
+Running experiment 612 of 1000
+pr:  1775 ql:  225
+Running experiment 613 of 1000
+pr:  825 ql:  1175
+Running experiment 614 of 1000
+pr:  1741 ql:  259
+Running experiment 615 of 1000
+pr:  1075 ql:  925
+Running experiment 616 of 1000
+pr:  1259 ql:  741
+Running experiment 617 of 1000
+pr:  812 ql:  1188
+Running experiment 618 of 1000
+pr:  1690 ql:  310
+Running experiment 619 of 1000
+pr:  808 ql:  1192
+Running experiment 620 of 1000
+pr:  1583 ql:  417
+Running experiment 621 of 1000
+pr:  1765 ql:  235
+Running experiment 622 of 1000
+pr:  1670 ql:  330
+Running experiment 623 of 1000
+pr:  1738 ql:  262
+Running experiment 624 of 1000
+pr:  1751 ql:  249
+Running experiment 625 of 1000
+pr:  639 ql:  1361
+Running experiment 626 of 1000
+pr:  1388 ql:  612
+Running experiment 627 of 1000
+pr:  1214 ql:  786
+Running experiment 628 of 1000
+pr:  1781 ql:  219
+Running experiment 629 of 1000
+pr:  1742 ql:  258
+Running experiment 630 of 1000
+pr:  1806 ql:  194
+Running experiment 631 of 1000
+pr:  844 ql:  1156
+Running experiment 632 of 1000
+pr:  958 ql:  1042
+Running experiment 633 of 1000
+pr:  1810 ql:  190
+Running experiment 634 of 1000
+pr:  714 ql:  1286
+Running experiment 635 of 1000
+pr:  907 ql:  1093
+Running experiment 636 of 1000
+pr:  1685 ql:  315
+Running experiment 637 of 1000
+pr:  1306 ql:  694
+Running experiment 638 of 1000
+pr:  671 ql:  1329
+Running experiment 639 of 1000
+pr:  1807 ql:  193
+Running experiment 640 of 1000
+pr:  786 ql:  1214
+Running experiment 641 of 1000
+pr:  1650 ql:  350
+Running experiment 642 of 1000
+pr:  1757 ql:  243
+Running experiment 643 of 1000
+pr:  1205 ql:  795
+Running experiment 644 of 1000
+pr:  1781 ql:  219
+Running experiment 645 of 1000
+pr:  680 ql:  1320
+Running experiment 646 of 1000
+pr:  1723 ql:  277
+Running experiment 647 of 1000
+pr:  1333 ql:  667
+Running experiment 648 of 1000
+pr:  1076 ql:  924
+Running experiment 649 of 1000
+pr:  1741 ql:  259
+Running experiment 650 of 1000
+pr:  1805 ql:  195
+Running experiment 651 of 1000
+pr:  1790 ql:  210
+Running experiment 652 of 1000
+pr:  1803 ql:  197
+Running experiment 653 of 1000
+pr:  1660 ql:  340
+Running experiment 654 of 1000
+pr:  1747 ql:  253
+Running experiment 655 of 1000
+pr:  1259 ql:  741
+Running experiment 656 of 1000
+pr:  1684 ql:  316
+Running experiment 657 of 1000
+pr:  978 ql:  1022
+Running experiment 658 of 1000
+pr:  1798 ql:  202
+Running experiment 659 of 1000
+pr:  1762 ql:  238
+Running experiment 660 of 1000
+pr:  1334 ql:  666
+Running experiment 661 of 1000
+pr:  1752 ql:  248
+Running experiment 662 of 1000
+pr:  876 ql:  1124
+Running experiment 663 of 1000
+pr:  1816 ql:  184
+Running experiment 664 of 1000
+pr:  1397 ql:  603
+Running experiment 665 of 1000
+pr:  726 ql:  1274
+Running experiment 666 of 1000
+pr:  1534 ql:  466
+Running experiment 667 of 1000
+pr:  1209 ql:  791
+Running experiment 668 of 1000
+pr:  1766 ql:  234
+Running experiment 669 of 1000
+pr:  1402 ql:  598
+Running experiment 670 of 1000
+pr:  782 ql:  1218
+Running experiment 671 of 1000
+pr:  1165 ql:  835
+Running experiment 672 of 1000
+pr:  1797 ql:  203
+Running experiment 673 of 1000
+pr:  1753 ql:  247
+Running experiment 674 of 1000
+pr:  860 ql:  1140
+Running experiment 675 of 1000
+pr:  987 ql:  1013
+Running experiment 676 of 1000
+pr:  1631 ql:  369
+Running experiment 677 of 1000
+pr:  1218 ql:  782
+Running experiment 678 of 1000
+pr:  1542 ql:  458
+Running experiment 679 of 1000
+pr:  1443 ql:  557
+Running experiment 680 of 1000
+pr:  837 ql:  1163
+Running experiment 681 of 1000
+pr:  801 ql:  1199
+Running experiment 682 of 1000
+pr:  1707 ql:  293
+Running experiment 683 of 1000
+pr:  1746 ql:  254
+Running experiment 684 of 1000
+pr:  878 ql:  1122
+Running experiment 685 of 1000
+pr:  989 ql:  1011
+Running experiment 686 of 1000
+pr:  1631 ql:  369
+Running experiment 687 of 1000
+pr:  1097 ql:  903
+Running experiment 688 of 1000
+pr:  1811 ql:  189
+Running experiment 689 of 1000
+pr:  1713 ql:  287
+Running experiment 690 of 1000
+pr:  1763 ql:  237
+Running experiment 691 of 1000
+pr:  1004 ql:  996
+Running experiment 692 of 1000
+pr:  1691 ql:  309
+Running experiment 693 of 1000
+pr:  1573 ql:  427
+Running experiment 694 of 1000
+pr:  1286 ql:  714
+Running experiment 695 of 1000
+pr:  1804 ql:  196
+Running experiment 696 of 1000
+pr:  1207 ql:  793
+Running experiment 697 of 1000
+pr:  1803 ql:  197
+Running experiment 698 of 1000
+pr:  1416 ql:  584
+Running experiment 699 of 1000
+pr:  1288 ql:  712
+Running experiment 700 of 1000
+pr:  1803 ql:  197
+Running experiment 701 of 1000
+pr:  622 ql:  1378
+Running experiment 702 of 1000
+pr:  1664 ql:  336
+Running experiment 703 of 1000
+pr:  896 ql:  1104
+Running experiment 704 of 1000
+pr:  498 ql:  1502
+Running experiment 705 of 1000
+pr:  1779 ql:  221
+Running experiment 706 of 1000
+pr:  1652 ql:  348
+Running experiment 707 of 1000
+pr:  1644 ql:  356
+Running experiment 708 of 1000
+pr:  1068 ql:  932
+Running experiment 709 of 1000
+pr:  925 ql:  1075
+Running experiment 710 of 1000
+pr:  1375 ql:  625
+Running experiment 711 of 1000
+pr:  788 ql:  1212
+Running experiment 712 of 1000
+pr:  1104 ql:  896
+Running experiment 713 of 1000
+pr:  1750 ql:  250
+Running experiment 714 of 1000
+pr:  1728 ql:  272
+Running experiment 715 of 1000
+pr:  635 ql:  1365
+Running experiment 716 of 1000
+pr:  1717 ql:  283
+Running experiment 717 of 1000
+pr:  1005 ql:  995
+Running experiment 718 of 1000
+pr:  1310 ql:  690
+Running experiment 719 of 1000
+pr:  715 ql:  1285
+Running experiment 720 of 1000
+pr:  1686 ql:  314
+Running experiment 721 of 1000
+pr:  1801 ql:  199
+Running experiment 722 of 1000
+pr:  1657 ql:  343
+Running experiment 723 of 1000
+pr:  1696 ql:  304
+Running experiment 724 of 1000
+pr:  811 ql:  1189
+Running experiment 725 of 1000
+pr:  1056 ql:  944
+Running experiment 726 of 1000
+pr:  1696 ql:  304
+Running experiment 727 of 1000
+pr:  1193 ql:  807
+Running experiment 728 of 1000
+pr:  1743 ql:  257
+Running experiment 729 of 1000
+pr:  1746 ql:  254
+Running experiment 730 of 1000
+pr:  1795 ql:  205
+Running experiment 731 of 1000
+pr:  1298 ql:  702
+Running experiment 732 of 1000
+pr:  1660 ql:  340
+Running experiment 733 of 1000
+pr:  1758 ql:  242
+Running experiment 734 of 1000
+pr:  834 ql:  1166
+Running experiment 735 of 1000
+pr:  1686 ql:  314
+Running experiment 736 of 1000
+pr:  1810 ql:  190
+Running experiment 737 of 1000
+pr:  1632 ql:  368
+Running experiment 738 of 1000
+pr:  1668 ql:  332
+Running experiment 739 of 1000
+pr:  638 ql:  1362
+Running experiment 740 of 1000
+pr:  1808 ql:  192
+Running experiment 741 of 1000
+pr:  1772 ql:  228
+Running experiment 742 of 1000
+pr:  839 ql:  1161
+Running experiment 743 of 1000
+pr:  1303 ql:  697
+Running experiment 744 of 1000
+pr:  1702 ql:  298
+Running experiment 745 of 1000
+pr:  1704 ql:  296
+Running experiment 746 of 1000
+pr:  1073 ql:  927
+Running experiment 747 of 1000
+pr:  772 ql:  1228
+Running experiment 748 of 1000
+pr:  1710 ql:  290
+Running experiment 749 of 1000
+pr:  1152 ql:  848
+Running experiment 750 of 1000
+pr:  1712 ql:  288
+Running experiment 751 of 1000
+pr:  1632 ql:  368
+Running experiment 752 of 1000
+pr:  1195 ql:  805
+Running experiment 753 of 1000
+pr:  1701 ql:  299
+Running experiment 754 of 1000
+pr:  902 ql:  1098
+Running experiment 755 of 1000
+pr:  1803 ql:  197
+Running experiment 756 of 1000
+pr:  1737 ql:  263
+Running experiment 757 of 1000
+pr:  949 ql:  1051
+Running experiment 758 of 1000
+pr:  950 ql:  1050
+Running experiment 759 of 1000
+pr:  1630 ql:  370
+Running experiment 760 of 1000
+pr:  721 ql:  1279
+Running experiment 761 of 1000
+pr:  1680 ql:  320
+Running experiment 762 of 1000
+pr:  1779 ql:  221
+Running experiment 763 of 1000
+pr:  1784 ql:  216
+Running experiment 764 of 1000
+pr:  1807 ql:  193
+Running experiment 765 of 1000
+pr:  1737 ql:  263
+Running experiment 766 of 1000
+pr:  1632 ql:  368
+Running experiment 767 of 1000
+pr:  1685 ql:  315
+Running experiment 768 of 1000
+pr:  1723 ql:  277
+Running experiment 769 of 1000
+pr:  998 ql:  1002
+Running experiment 770 of 1000
+pr:  1821 ql:  179
+Running experiment 771 of 1000
+pr:  1771 ql:  229
+Running experiment 772 of 1000
+pr:  779 ql:  1221
+Running experiment 773 of 1000
+pr:  1188 ql:  812
+Running experiment 774 of 1000
+pr:  913 ql:  1087
+Running experiment 775 of 1000
+pr:  580 ql:  1420
+Running experiment 776 of 1000
+pr:  1072 ql:  928
+Running experiment 777 of 1000
+pr:  1519 ql:  481
+Running experiment 778 of 1000
+pr:  839 ql:  1161
+Running experiment 779 of 1000
+pr:  736 ql:  1264
+Running experiment 780 of 1000
+pr:  1756 ql:  244
+Running experiment 781 of 1000
+pr:  1571 ql:  429
+Running experiment 782 of 1000
+pr:  1771 ql:  229
+Running experiment 783 of 1000
+pr:  1339 ql:  661
+Running experiment 784 of 1000
+pr:  688 ql:  1312
+Running experiment 785 of 1000
+pr:  1722 ql:  278
+Running experiment 786 of 1000
+pr:  1741 ql:  259
+Running experiment 787 of 1000
+pr:  698 ql:  1302
+Running experiment 788 of 1000
+pr:  1718 ql:  282
+Running experiment 789 of 1000
+pr:  952 ql:  1048
+Running experiment 790 of 1000
+pr:  1766 ql:  234
+Running experiment 791 of 1000
+pr:  517 ql:  1483
+Running experiment 792 of 1000
+pr:  1720 ql:  280
+Running experiment 793 of 1000
+pr:  524 ql:  1476
+Running experiment 794 of 1000
+pr:  1497 ql:  503
+Running experiment 795 of 1000
+pr:  1837 ql:  163
+Running experiment 796 of 1000
+pr:  1806 ql:  194
+Running experiment 797 of 1000
+pr:  1689 ql:  311
+Running experiment 798 of 1000
+pr:  888 ql:  1112
+Running experiment 799 of 1000
+pr:  1435 ql:  565
+Running experiment 800 of 1000
+pr:  979 ql:  1021
+Running experiment 801 of 1000
+pr:  857 ql:  1143
+Running experiment 802 of 1000
+pr:  1507 ql:  493
+Running experiment 803 of 1000
+pr:  1741 ql:  259
+Running experiment 804 of 1000
+pr:  796 ql:  1204
+Running experiment 805 of 1000
+pr:  1496 ql:  504
+Running experiment 806 of 1000
+pr:  1639 ql:  361
+Running experiment 807 of 1000
+pr:  1781 ql:  219
+Running experiment 808 of 1000
+pr:  821 ql:  1179
+Running experiment 809 of 1000
+pr:  1739 ql:  261
+Running experiment 810 of 1000
+pr:  1759 ql:  241
+Running experiment 811 of 1000
+pr:  1714 ql:  286
+Running experiment 812 of 1000
+pr:  1094 ql:  906
+Running experiment 813 of 1000
+pr:  1705 ql:  295
+Running experiment 814 of 1000
+pr:  1786 ql:  214
+Running experiment 815 of 1000
+pr:  1144 ql:  856
+Running experiment 816 of 1000
+pr:  1808 ql:  192
+Running experiment 817 of 1000
+pr:  1701 ql:  299
+Running experiment 818 of 1000
+pr:  1759 ql:  241
+Running experiment 819 of 1000
+pr:  1260 ql:  740
+Running experiment 820 of 1000
+pr:  898 ql:  1102
+Running experiment 821 of 1000
+pr:  1754 ql:  246
+Running experiment 822 of 1000
+pr:  1699 ql:  301
+Running experiment 823 of 1000
+pr:  1005 ql:  995
+Running experiment 824 of 1000
+pr:  898 ql:  1102
+Running experiment 825 of 1000
+pr:  1760 ql:  240
+Running experiment 826 of 1000
+pr:  1766 ql:  234
+Running experiment 827 of 1000
+pr:  1841 ql:  159
+Running experiment 828 of 1000
+pr:  1558 ql:  442
+Running experiment 829 of 1000
+pr:  778 ql:  1222
+Running experiment 830 of 1000
+pr:  816 ql:  1184
+Running experiment 831 of 1000
+pr:  1214 ql:  786
+Running experiment 832 of 1000
+pr:  1571 ql:  429
+Running experiment 833 of 1000
+pr:  745 ql:  1255
+Running experiment 834 of 1000
+pr:  1060 ql:  940
+Running experiment 835 of 1000
+pr:  1130 ql:  870
+Running experiment 836 of 1000
+pr:  926 ql:  1074
+Running experiment 837 of 1000
+pr:  1799 ql:  201
+Running experiment 838 of 1000
+pr:  1242 ql:  758
+Running experiment 839 of 1000
+pr:  1652 ql:  348
+Running experiment 840 of 1000
+pr:  748 ql:  1252
+Running experiment 841 of 1000
+pr:  1796 ql:  204
+Running experiment 842 of 1000
+pr:  1719 ql:  281
+Running experiment 843 of 1000
+pr:  1769 ql:  231
+Running experiment 844 of 1000
+pr:  1677 ql:  323
+Running experiment 845 of 1000
+pr:  1743 ql:  257
+Running experiment 846 of 1000
+pr:  672 ql:  1328
+Running experiment 847 of 1000
+pr:  523 ql:  1477
+Running experiment 848 of 1000
+pr:  1603 ql:  397
+Running experiment 849 of 1000
+pr:  661 ql:  1339
+Running experiment 850 of 1000
+pr:  1693 ql:  307
+Running experiment 851 of 1000
+pr:  1728 ql:  272
+Running experiment 852 of 1000
+pr:  1792 ql:  208
+Running experiment 853 of 1000
+pr:  1111 ql:  889
+Running experiment 854 of 1000
+pr:  1650 ql:  350
+Running experiment 855 of 1000
+pr:  1087 ql:  913
+Running experiment 856 of 1000
+pr:  1744 ql:  256
+Running experiment 857 of 1000
+pr:  623 ql:  1377
+Running experiment 858 of 1000
+pr:  1769 ql:  231
+Running experiment 859 of 1000
+pr:  1745 ql:  255
+Running experiment 860 of 1000
+pr:  479 ql:  1521
+Running experiment 861 of 1000
+pr:  1658 ql:  342
+Running experiment 862 of 1000
+pr:  1452 ql:  548
+Running experiment 863 of 1000
+pr:  1094 ql:  906
+Running experiment 864 of 1000
+pr:  1045 ql:  955
+Running experiment 865 of 1000
+pr:  959 ql:  1041
+Running experiment 866 of 1000
+pr:  1433 ql:  567
+Running experiment 867 of 1000
+pr:  1445 ql:  555
+Running experiment 868 of 1000
+pr:  1759 ql:  241
+Running experiment 869 of 1000
+pr:  1147 ql:  853
+Running experiment 870 of 1000
+pr:  1809 ql:  191
+Running experiment 871 of 1000
+pr:  1779 ql:  221
+Running experiment 872 of 1000
+pr:  1793 ql:  207
+Running experiment 873 of 1000
+pr:  559 ql:  1441
+Running experiment 874 of 1000
+pr:  1780 ql:  220
+Running experiment 875 of 1000
+pr:  839 ql:  1161
+Running experiment 876 of 1000
+pr:  1653 ql:  347
+Running experiment 877 of 1000
+pr:  1733 ql:  267
+Running experiment 878 of 1000
+pr:  1808 ql:  192
+Running experiment 879 of 1000
+pr:  648 ql:  1352
+Running experiment 880 of 1000
+pr:  1076 ql:  924
+Running experiment 881 of 1000
+pr:  1015 ql:  985
+Running experiment 882 of 1000
+pr:  1715 ql:  285
+Running experiment 883 of 1000
+pr:  1043 ql:  957
+Running experiment 884 of 1000
+pr:  1777 ql:  223
+Running experiment 885 of 1000
+pr:  1680 ql:  320
+Running experiment 886 of 1000
+pr:  1361 ql:  639
+Running experiment 887 of 1000
+pr:  1283 ql:  717
+Running experiment 888 of 1000
+pr:  1722 ql:  278
+Running experiment 889 of 1000
+pr:  1692 ql:  308
+Running experiment 890 of 1000
+pr:  1775 ql:  225
+Running experiment 891 of 1000
+pr:  1572 ql:  428
+Running experiment 892 of 1000
+pr:  1056 ql:  944
+Running experiment 893 of 1000
+pr:  944 ql:  1056
+Running experiment 894 of 1000
+pr:  1782 ql:  218
+Running experiment 895 of 1000
+pr:  1791 ql:  209
+Running experiment 896 of 1000
+pr:  1493 ql:  507
+Running experiment 897 of 1000
+pr:  1530 ql:  470
+Running experiment 898 of 1000
+pr:  1764 ql:  236
+Running experiment 899 of 1000
+pr:  1250 ql:  750
+Running experiment 900 of 1000
+pr:  897 ql:  1103
+Running experiment 901 of 1000
+pr:  1700 ql:  300
+Running experiment 902 of 1000
+pr:  480 ql:  1520
+Running experiment 903 of 1000
+pr:  647 ql:  1353
+Running experiment 904 of 1000
+pr:  1752 ql:  248
+Running experiment 905 of 1000
+pr:  1186 ql:  814
+Running experiment 906 of 1000
+pr:  1000 ql:  1000
+Running experiment 907 of 1000
+pr:  1446 ql:  554
+Running experiment 908 of 1000
+pr:  1680 ql:  320
+Running experiment 909 of 1000
+pr:  1071 ql:  929
+Running experiment 910 of 1000
+pr:  1659 ql:  341
+Running experiment 911 of 1000
+pr:  1616 ql:  384
+Running experiment 912 of 1000
+pr:  1801 ql:  199
+Running experiment 913 of 1000
+pr:  1350 ql:  650
+Running experiment 914 of 1000
+pr:  1798 ql:  202
+Running experiment 915 of 1000
+pr:  1049 ql:  951
+Running experiment 916 of 1000
+pr:  1709 ql:  291
+Running experiment 917 of 1000
+pr:  738 ql:  1262
+Running experiment 918 of 1000
+pr:  1152 ql:  848
+Running experiment 919 of 1000
+pr:  1413 ql:  587
+Running experiment 920 of 1000
+pr:  1022 ql:  978
+Running experiment 921 of 1000
+pr:  872 ql:  1128
+Running experiment 922 of 1000
+pr:  969 ql:  1031
+Running experiment 923 of 1000
+pr:  1329 ql:  671
+Running experiment 924 of 1000
+pr:  1678 ql:  322
+Running experiment 925 of 1000
+pr:  1764 ql:  236
+Running experiment 926 of 1000
+pr:  554 ql:  1446
+Running experiment 927 of 1000
+pr:  805 ql:  1195
+Running experiment 928 of 1000
+pr:  1615 ql:  385
+Running experiment 929 of 1000
+pr:  1777 ql:  223
+Running experiment 930 of 1000
+pr:  518 ql:  1482
+Running experiment 931 of 1000
+pr:  748 ql:  1252
+Running experiment 932 of 1000
+pr:  1667 ql:  333
+Running experiment 933 of 1000
+pr:  1685 ql:  315
+Running experiment 934 of 1000
+pr:  1641 ql:  359
+Running experiment 935 of 1000
+pr:  1422 ql:  578
+Running experiment 936 of 1000
+pr:  1765 ql:  235
+Running experiment 937 of 1000
+pr:  1663 ql:  337
+Running experiment 938 of 1000
+pr:  920 ql:  1080
+Running experiment 939 of 1000
+pr:  1722 ql:  278
+Running experiment 940 of 1000
+pr:  829 ql:  1171
+Running experiment 941 of 1000
+pr:  1772 ql:  228
+Running experiment 942 of 1000
+pr:  1294 ql:  706
+Running experiment 943 of 1000
+pr:  1697 ql:  303
+Running experiment 944 of 1000
+pr:  1724 ql:  276
+Running experiment 945 of 1000
+pr:  1764 ql:  236
+Running experiment 946 of 1000
+pr:  1673 ql:  327
+Running experiment 947 of 1000
+pr:  1721 ql:  279
+Running experiment 948 of 1000
+pr:  1086 ql:  914
+Running experiment 949 of 1000
+pr:  1105 ql:  895
+Running experiment 950 of 1000
+pr:  1685 ql:  315
+Running experiment 951 of 1000
+pr:  887 ql:  1113
+Running experiment 952 of 1000
+pr:  1710 ql:  290
+Running experiment 953 of 1000
+pr:  1770 ql:  230
+Running experiment 954 of 1000
+pr:  1244 ql:  756
+Running experiment 955 of 1000
+pr:  1810 ql:  190
+Running experiment 956 of 1000
+pr:  1744 ql:  256
+Running experiment 957 of 1000
+pr:  910 ql:  1090
+Running experiment 958 of 1000
+pr:  1692 ql:  308
+Running experiment 959 of 1000
+pr:  1002 ql:  998
+Running experiment 960 of 1000
+pr:  1141 ql:  859
+Running experiment 961 of 1000
+pr:  1738 ql:  262
+Running experiment 962 of 1000
+pr:  1747 ql:  253
+Running experiment 963 of 1000
+pr:  1644 ql:  356
+Running experiment 964 of 1000
+pr:  673 ql:  1327
+Running experiment 965 of 1000
+pr:  1806 ql:  194
+Running experiment 966 of 1000
+pr:  1570 ql:  430
+Running experiment 967 of 1000
+pr:  1722 ql:  278
+Running experiment 968 of 1000
+pr:  1792 ql:  208
+Running experiment 969 of 1000
+pr:  988 ql:  1012
+Running experiment 970 of 1000
+pr:  1035 ql:  965
+Running experiment 971 of 1000
+pr:  1660 ql:  340
+Running experiment 972 of 1000
+pr:  1788 ql:  212
+Running experiment 973 of 1000
+pr:  1730 ql:  270
+Running experiment 974 of 1000
+pr:  1770 ql:  230
+Running experiment 975 of 1000
+pr:  1057 ql:  943
+Running experiment 976 of 1000
+pr:  828 ql:  1172
+Running experiment 977 of 1000
+pr:  1776 ql:  224
+Running experiment 978 of 1000
+pr:  813 ql:  1187
+Running experiment 979 of 1000
+pr:  1202 ql:  798
+Running experiment 980 of 1000
+pr:  1641 ql:  359
+Running experiment 981 of 1000
+pr:  1118 ql:  882
+Running experiment 982 of 1000
+pr:  1666 ql:  334
+Running experiment 983 of 1000
+pr:  1741 ql:  259
+Running experiment 984 of 1000
+pr:  1712 ql:  288
+Running experiment 985 of 1000
+pr:  1544 ql:  456
+Running experiment 986 of 1000
+pr:  919 ql:  1081
+Running experiment 987 of 1000
+pr:  884 ql:  1116
+Running experiment 988 of 1000
+pr:  988 ql:  1012
+Running experiment 989 of 1000
+pr:  1713 ql:  287
+Running experiment 990 of 1000
+pr:  736 ql:  1264
+Running experiment 991 of 1000
+pr:  1786 ql:  214
+Running experiment 992 of 1000
+pr:  1160 ql:  840
+Running experiment 993 of 1000
+pr:  1685 ql:  315
+Running experiment 994 of 1000
+pr:  1650 ql:  350
+Running experiment 995 of 1000
+pr:  1817 ql:  183
+Running experiment 996 of 1000
+pr:  1723 ql:  277
+Running experiment 997 of 1000
+pr:  835 ql:  1165
+Running experiment 998 of 1000
+pr:  1699 ql:  301
+Running experiment 999 of 1000
+pr:  1699 ql:  301
+Running experiment 1000 of 1000
+pr:  873 ql:  1127
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/71/PRQL/  C-c C-c
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 

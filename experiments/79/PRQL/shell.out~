@@ -1,0 +1,262 @@
+rafaelbeirigo@LTI-PROJETO-TM:~$ cd ql
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments//PRQL
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 74, in <module>
+    main()
+  File "./RL-PRQL.py", line 13, in main
+    myMDP.carrega(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 24, in carrega
+    self.S = self.loadStates(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 35, in loadStates
+    f = open(filePath + '/states.in')
+IOError: [Errno 2] No such file or directory: 'experiments//PRQL/states.in'
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/79
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 74, in <module>
+    main()
+  File "./RL-PRQL.py", line 13, in main
+    myMDP.carrega(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 24, in carrega
+    self.S = self.loadStates(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 35, in loadStates
+    f = open(filePath + '/states.in')
+IOError: [Errno 2] No such file or directory: 'experiments/79/states.in'
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/79
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 74, in <module>
+    main()
+  File "./RL-PRQL.py", line 13, in main
+    myMDP.carrega(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 24, in carrega
+    self.S = self.loadStates(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 35, in loadStates
+    f = open(filePath + '/states.in')
+IOError: [Errno 2] No such file or directory: 'experiments/79/states.in'
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments//PRQL
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 74, in <module>
+    main()
+  File "./RL-PRQL.py", line 13, in main
+    myMDP.carrega(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 24, in carrega
+    self.S = self.loadStates(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 35, in loadStates
+    f = open(filePath + '/states.in')
+IOError: [Errno 2] No such file or directory: 'experiments//PRQL/states.in'
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/79
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 74, in <module>
+    main()
+  File "./RL-PRQL.py", line 13, in main
+    myMDP.carrega(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 24, in carrega
+    self.S = self.loadStates(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 35, in loadStates
+    f = open(filePath + '/states.in')
+IOError: [Errno 2] No such file or directory: 'experiments/79/states.in'
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/79/PRQL/
+Running experiment 1 of 100
+pr:  344 ql:  1656
+Running experiment 2 of 100
+pr:  346 ql:  1654
+Running experiment 3 of 100
+pr:  302 ql:  1698
+Running experiment 4 of 100
+pr:  288 ql:  1712
+Running experiment 5 of 100
+pr:  289 ql:  1711
+Running experiment 6 of 100
+pr:  283 ql:  1717
+Running experiment 7 of 100
+pr:  349 ql:  1651
+Running experiment 8 of 100
+pr:  268 ql:  1732
+Running experiment 9 of 100
+pr:  353 ql:  1647
+Running experiment 10 of 100
+pr:  317 ql:  1683
+Running experiment 11 of 100
+pr:  395 ql:  1605
+Running experiment 12 of 100
+pr:  529 ql:  1471
+Running experiment 13 of 100
+pr:  283 ql:  1717
+Running experiment 14 of 100
+pr:  338 ql:  1662
+Running experiment 15 of 100
+pr:  316 ql:  1684
+Running experiment 16 of 100
+pr:  514 ql:  1486
+Running experiment 17 of 100
+pr:  244 ql:  1756
+Running experiment 18 of 100
+pr:  380 ql:  1620
+Running experiment 19 of 100
+pr:  358 ql:  1642
+Running experiment 20 of 100
+pr:  312 ql:  1688
+Running experiment 21 of 100
+pr:  308 ql:  1692
+Running experiment 22 of 100
+pr:  298 ql:  1702
+Running experiment 23 of 100
+pr:  378 ql:  1622
+Running experiment 24 of 100
+pr:  286 ql:  1714
+Running experiment 25 of 100
+pr:  304 ql:  1696
+Running experiment 26 of 100
+pr:  330 ql:  1670
+Running experiment 27 of 100
+pr:  334 ql:  1666
+Running experiment 28 of 100
+pr:  371 ql:  1629
+Running experiment 29 of 100
+pr:  322 ql:  1678
+Running experiment 30 of 100
+pr:  314 ql:  1686
+Running experiment 31 of 100
+pr:  326 ql:  1674
+Running experiment 32 of 100
+pr:  438 ql:  1562
+Running experiment 33 of 100
+pr:  328 ql:  1672
+Running experiment 34 of 100
+pr:  237 ql:  1763
+Running experiment 35 of 100
+pr:  332 ql:  1668
+Running experiment 36 of 100
+pr:  386 ql:  1614
+Running experiment 37 of 100
+pr:  302 ql:  1698
+Running experiment 38 of 100
+pr:  297 ql:  1703
+Running experiment 39 of 100
+pr:  358 ql:  1642
+Running experiment 40 of 100
+pr:  267 ql:  1733
+Running experiment 41 of 100
+pr:  332 ql:  1668
+Running experiment 42 of 100
+pr:  292 ql:  1708
+Running experiment 43 of 100
+pr:  300 ql:  1700
+Running experiment 44 of 100
+pr:  365 ql:  1635
+Running experiment 45 of 100
+pr:  342 ql:  1658
+Running experiment 46 of 100
+pr:  251 ql:  1749
+Running experiment 47 of 100
+pr:  412 ql:  1588
+Running experiment 48 of 100
+pr:  315 ql:  1685
+Running experiment 49 of 100
+pr:  389 ql:  1611
+Running experiment 50 of 100
+pr:  494 ql:  1506
+Running experiment 51 of 100
+pr:  309 ql:  1691
+Running experiment 52 of 100
+pr:  283 ql:  1717
+Running experiment 53 of 100
+pr:  286 ql:  1714
+Running experiment 54 of 100
+pr:  345 ql:  1655
+Running experiment 55 of 100
+pr:  304 ql:  1696
+Running experiment 56 of 100
+pr:  323 ql:  1677
+Running experiment 57 of 100
+pr:  419 ql:  1581
+Running experiment 58 of 100
+pr:  393 ql:  1607
+Running experiment 59 of 100
+pr:  336 ql:  1664
+Running experiment 60 of 100
+pr:  352 ql:  1648
+Running experiment 61 of 100
+pr:  324 ql:  1676
+Running experiment 62 of 100
+pr:  296 ql:  1704
+Running experiment 63 of 100
+pr:  347 ql:  1653
+Running experiment 64 of 100
+pr:  376 ql:  1624
+Running experiment 65 of 100
+pr:  280 ql:  1720
+Running experiment 66 of 100
+pr:  348 ql:  1652
+Running experiment 67 of 100
+pr:  281 ql:  1719
+Running experiment 68 of 100
+pr:  400 ql:  1600
+Running experiment 69 of 100
+pr:  327 ql:  1673
+Running experiment 70 of 100
+pr:  336 ql:  1664
+Running experiment 71 of 100
+pr:  355 ql:  1645
+Running experiment 72 of 100
+pr:  338 ql:  1662
+Running experiment 73 of 100
+pr:  348 ql:  1652
+Running experiment 74 of 100
+pr:  284 ql:  1716
+Running experiment 75 of 100
+pr:  375 ql:  1625
+Running experiment 76 of 100
+pr:  341 ql:  1659
+Running experiment 77 of 100
+pr:  373 ql:  1627
+Running experiment 78 of 100
+pr:  389 ql:  1611
+Running experiment 79 of 100
+pr:  334 ql:  1666
+Running experiment 80 of 100
+pr:  259 ql:  1741
+Running experiment 81 of 100
+pr:  459 ql:  1541
+Running experiment 82 of 100
+pr:  282 ql:  1718
+Running experiment 83 of 100
+pr:  330 ql:  1670
+Running experiment 84 of 100
+pr:  270 ql:  1730
+Running experiment 85 of 100
+pr:  338 ql:  1662
+Running experiment 86 of 100
+pr:  446 ql:  1554
+Running experiment 87 of 100
+pr:  332 ql:  1668
+Running experiment 88 of 100
+pr:  402 ql:  1598
+Running experiment 89 of 100
+pr:  348 ql:  1652
+Running experiment 90 of 100
+pr:  311 ql:  1689
+Running experiment 91 of 100
+pr:  337 ql:  1663
+Running experiment 92 of 100
+pr:  315 ql:  1685
+Running experiment 93 of 100
+pr:  287 ql:  1713
+Running experiment 94 of 100
+pr:  374 ql:  1626
+Running experiment 95 of 100
+pr:  402 ql:  1598
+Running experiment 96 of 100
+pr:  332 ql:  1668
+Running experiment 97 of 100
+pr:  346 ql:  1654
+Running experiment 98 of 100
+pr:  347 ql:  1653
+Running experiment 99 of 100
+pr:  313 ql:  1687
+Running experiment 100 of 100
+pr:  393 ql:  1607
+
+real	219m19.765s
+user	47m41.770s
+sys	0m2.340s
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 

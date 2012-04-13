@@ -1,0 +1,203 @@
+rafaelbeirigo@LTI-PROJETO-TM:~$ cd ql
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/87/PRQL/
+Running experiment 1 of 100
+pr:  1918 ql:  82
+Running experiment 2 of 100
+pr:  1928 ql:  72
+Running experiment 3 of 100
+pr:  1924 ql:  76
+Running experiment 4 of 100
+pr:  1940 ql:  60
+Running experiment 5 of 100
+pr:  1925 ql:  75
+Running experiment 6 of 100
+pr:  1919 ql:  81
+Running experiment 7 of 100
+pr:  1936 ql:  64
+Running experiment 8 of 100
+pr:  1928 ql:  72
+Running experiment 9 of 100
+pr:  1935 ql:  65
+Running experiment 10 of 100
+pr:  1911 ql:  89
+Running experiment 11 of 100
+pr:  1904 ql:  96
+Running experiment 12 of 100
+pr:  1922 ql:  78
+Running experiment 13 of 100
+pr:  1907 ql:  93
+Running experiment 14 of 100
+pr:  1894 ql:  106
+Running experiment 15 of 100
+pr:  1907 ql:  93
+Running experiment 16 of 100
+pr:  1925 ql:  75
+Running experiment 17 of 100
+pr:  1929 ql:  71
+Running experiment 18 of 100
+pr:  1915 ql:  85
+Running experiment 19 of 100
+pr:  1912 ql:  88
+Running experiment 20 of 100
+pr:  1912 ql:  88
+Running experiment 21 of 100
+pr:  1930 ql:  70
+Running experiment 22 of 100
+pr:  1931 ql:  69
+Running experiment 23 of 100
+pr:  1931 ql:  69
+Running experiment 24 of 100
+pr:  1926 ql:  74
+Running experiment 25 of 100
+pr:  1920 ql:  80
+Running experiment 26 of 100
+pr:  1935 ql:  65
+Running experiment 27 of 100
+pr:  1917 ql:  83
+Running experiment 28 of 100
+pr:  1939 ql:  61
+Running experiment 29 of 100
+pr:  1911 ql:  89
+Running experiment 30 of 100
+pr:  1941 ql:  59
+Running experiment 31 of 100
+pr:  1921 ql:  79
+Running experiment 32 of 100
+pr:  1892 ql:  108
+Running experiment 33 of 100
+pr:  1901 ql:  99
+Running experiment 34 of 100
+pr:  1917 ql:  83
+Running experiment 35 of 100
+pr:  1928 ql:  72
+Running experiment 36 of 100
+pr:  1929 ql:  71
+Running experiment 37 of 100
+pr:  1902 ql:  98
+Running experiment 38 of 100
+pr:  1918 ql:  82
+Running experiment 39 of 100
+pr:  1936 ql:  64
+Running experiment 40 of 100
+pr:  1919 ql:  81
+Running experiment 41 of 100
+pr:  1900 ql:  100
+Running experiment 42 of 100
+pr:  1936 ql:  64
+Running experiment 43 of 100
+pr:  1876 ql:  124
+Running experiment 44 of 100
+pr:  1919 ql:  81
+Running experiment 45 of 100
+pr:  1921 ql:  79
+Running experiment 46 of 100
+pr:  1941 ql:  59
+Running experiment 47 of 100
+pr:  1920 ql:  80
+Running experiment 48 of 100
+pr:  1910 ql:  90
+Running experiment 49 of 100
+pr:  1924 ql:  76
+Running experiment 50 of 100
+pr:  1943 ql:  57
+Running experiment 51 of 100
+pr:  1911 ql:  89
+Running experiment 52 of 100
+pr:  1926 ql:  74
+Running experiment 53 of 100
+pr:  1902 ql:  98
+Running experiment 54 of 100
+pr:  1893 ql:  107
+Running experiment 55 of 100
+pr:  1921 ql:  79
+Running experiment 56 of 100
+pr:  1917 ql:  83
+Running experiment 57 of 100
+pr:  1925 ql:  75
+Running experiment 58 of 100
+pr:  1898 ql:  102
+Running experiment 59 of 100
+pr:  1937 ql:  63
+Running experiment 60 of 100
+pr:  1920 ql:  80
+Running experiment 61 of 100
+pr:  1901 ql:  99
+Running experiment 62 of 100
+pr:  1932 ql:  68
+Running experiment 63 of 100
+pr:  1924 ql:  76
+Running experiment 64 of 100
+pr:  1942 ql:  58
+Running experiment 65 of 100
+pr:  1892 ql:  108
+Running experiment 66 of 100
+pr:  1916 ql:  84
+Running experiment 67 of 100
+pr:  1935 ql:  65
+Running experiment 68 of 100
+pr:  1941 ql:  59
+Running experiment 69 of 100
+pr:  1864 ql:  136
+Running experiment 70 of 100
+pr:  1929 ql:  71
+Running experiment 71 of 100
+pr:  1942 ql:  58
+Running experiment 72 of 100
+pr:  1928 ql:  72
+Running experiment 73 of 100
+pr:  1929 ql:  71
+Running experiment 74 of 100
+pr:  1921 ql:  79
+Running experiment 75 of 100
+pr:  1914 ql:  86
+Running experiment 76 of 100
+pr:  1924 ql:  76
+Running experiment 77 of 100
+pr:  1935 ql:  65
+Running experiment 78 of 100
+pr:  1917 ql:  83
+Running experiment 79 of 100
+pr:  1915 ql:  85
+Running experiment 80 of 100
+pr:  1937 ql:  63
+Running experiment 81 of 100
+pr:  1923 ql:  77
+Running experiment 82 of 100
+pr:  1918 ql:  82
+Running experiment 83 of 100
+pr:  1937 ql:  63
+Running experiment 84 of 100
+pr:  1918 ql:  82
+Running experiment 85 of 100
+pr:  1918 ql:  82
+Running experiment 86 of 100
+pr:  1905 ql:  95
+Running experiment 87 of 100
+pr:  1889 ql:  111
+Running experiment 88 of 100
+pr:  1925 ql:  75
+Running experiment 89 of 100
+pr:  1943 ql:  57
+Running experiment 90 of 100
+pr:  1936 ql:  64
+Running experiment 91 of 100
+pr:  1919 ql:  81
+Running experiment 92 of 100
+pr:  1918 ql:  82
+Running experiment 93 of 100
+pr:  1935 ql:  65
+Running experiment 94 of 100
+pr:  1914 ql:  86
+Running experiment 95 of 100
+pr:  1930 ql:  70
+Running experiment 96 of 100
+pr:  1908 ql:  92
+Running experiment 97 of 100
+pr:  1921 ql:  79
+Running experiment 98 of 100
+pr:  1929 ql:  71
+Running experiment 99 of 100
+pr:  1917 ql:  83
+Running experiment 100 of 100
+pr:  1928 ql:  72
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 

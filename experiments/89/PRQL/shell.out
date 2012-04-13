@@ -1,0 +1,231 @@
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/89/PRQL/
+Running experiment 1 of 100
+pr:  1958 ql:  42
+Running experiment 2 of 100
+pr:  1947 ql:  53
+Running experiment 3 of 100
+pr:  1957 ql:  43
+Running experiment 4 of 100
+pr:  1956 ql:  44
+Running experiment 5 of 100
+pr:  1941 ql:  59
+Running experiment 6 of 100
+pr:  1953 ql:  47
+Running experiment 7 of 100
+pr:  1949 ql:  51
+Running experiment 8 of 100
+pr:  1940 ql:  60
+Running experiment 9 of 100
+pr:  1936 ql:  64
+Running experiment 10 of 100
+pr:  1948 ql:  52
+Running experiment 11 of 100
+pr:  1966 ql:  34
+Running experiment 12 of 100
+pr:  1944 ql:  56
+Running experiment 13 of 100
+pr:  1950 ql:  50
+Running experiment 14 of 100
+pr:  1967 ql:  33
+Running experiment 15 of 100
+pr:  1951 ql:  49
+Running experiment 16 of 100
+pr:  1949 ql:  51
+Running experiment 17 of 100
+pr:  1961 ql:  39
+Running experiment 18 of 100
+pr:  1949 ql:  51
+Running experiment 19 of 100
+pr:  1951 ql:  49
+Running experiment 20 of 100
+pr:  1962 ql:  38
+Running experiment 21 of 100
+pr:  1945 ql:  55
+Running experiment 22 of 100
+pr:  1946 ql:  54
+Running experiment 23 of 100
+pr:  1960 ql:  40
+Running experiment 24 of 100
+pr:  1936 ql:  64
+Running experiment 25 of 100
+pr:  1930 ql:  70
+Running experiment 26 of 100
+pr:  1956 ql:  44
+Running experiment 27 of 100
+pr:  1949 ql:  51
+Running experiment 28 of 100
+pr:  1952 ql:  48
+Running experiment 29 of 100
+pr:  1948 ql:  52
+Running experiment 30 of 100
+pr:  1949 ql:  51
+Running experiment 31 of 100
+pr:  1954 ql:  46
+Running experiment 32 of 100
+pr:  1935 ql:  65
+Running experiment 33 of 100
+pr:  1944 ql:  56
+Running experiment 34 of 100
+pr:  1955 ql:  45
+Running experiment 35 of 100
+pr:  1933 ql:  67
+Running experiment 36 of 100
+pr:  1951 ql:  49
+Running experiment 37 of 100
+pr:  1951 ql:  49
+Running experiment 38 of 100
+pr:  1951 ql:  49
+Running experiment 39 of 100
+pr:  1937 ql:  63
+Running experiment 40 of 100
+pr:  1960 ql:  40
+Running experiment 41 of 100
+pr:  1938 ql:  62
+Running experiment 42 of 100
+pr:  1962 ql:  38
+Running experiment 43 of 100
+pr:  1956 ql:  44
+Running experiment 44 of 100
+pr:  1950 ql:  50
+Running experiment 45 of 100
+pr:  1940 ql:  60
+Running experiment 46 of 100
+pr:  1926 ql:  74
+Running experiment 47 of 100
+pr:  1957 ql:  43
+Running experiment 48 of 100
+pr:  1941 ql:  59
+Running experiment 49 of 100
+pr:  1949 ql:  51
+Running experiment 50 of 100
+pr:  1934 ql:  66
+Running experiment 51 of 100
+pr:  1942 ql:  58
+Running experiment 52 of 100
+pr:  1961 ql:  39
+Running experiment 53 of 100
+pr:  1935 ql:  65
+Running experiment 54 of 100
+pr:  1961 ql:  39
+Running experiment 55 of 100
+pr:  1947 ql:  53
+Running experiment 56 of 100
+pr:  1942 ql:  58
+Running experiment 57 of 100
+pr:  1948 ql:  52
+Running experiment 58 of 100
+pr:  1934 ql:  66
+Running experiment 59 of 100
+pr:  1949 ql:  51
+Running experiment 60 of 100
+pr:  1928 ql:  72
+Running experiment 61 of 100
+pr:  1929 ql:  71
+Running experiment 62 of 100
+pr:  1948 ql:  52
+Running experiment 63 of 100
+pr:  1951 ql:  49
+Running experiment 64 of 100
+pr:  1950 ql:  50
+Running experiment 65 of 100
+pr:  1950 ql:  50
+Running experiment 66 of 100
+pr:  1949 ql:  51
+Running experiment 67 of 100
+pr:  1935 ql:  65
+Running experiment 68 of 100
+pr:  1949 ql:  51
+Running experiment 69 of 100
+pr:  1957 ql:  43
+Running experiment 70 of 100
+pr:  1948 ql:  52
+Running experiment 71 of 100
+pr:  1950 ql:  50
+Running experiment 72 of 100
+pr:  1948 ql:  52
+Running experiment 73 of 100
+pr:  1953 ql:  47
+Running experiment 74 of 100
+pr:  1953 ql:  47
+Running experiment 75 of 100
+pr:  1948 ql:  52
+Running experiment 76 of 100
+pr:  1948 ql:  52
+Running experiment 77 of 100
+pr:  1950 ql:  50
+Running experiment 78 of 100
+pr:  1967 ql:  33
+Running experiment 79 of 100
+pr:  1947 ql:  53
+Running experiment 80 of 100
+pr:  1962 ql:  38
+Running experiment 81 of 100
+pr:  1948 ql:  52
+Running experiment 82 of 100
+pr:  1928 ql:  72
+Running experiment 83 of 100
+pr:  1944 ql:  56
+Running experiment 84 of 100
+pr:  1942 ql:  58
+Running experiment 85 of 100
+pr:  1950 ql:  50
+Running experiment 86 of 100
+pr:  1966 ql:  34
+Running experiment 87 of 100
+pr:  1953 ql:  47
+Running experiment 88 of 100
+pr:  1958 ql:  42
+Running experiment 89 of 100
+pr:  1955 ql:  45
+Running experiment 90 of 100
+pr:  1946 ql:  54
+Running experiment 91 of 100
+pr:  1951 ql:  49
+Running experiment 92 of 100
+pr:  1953 ql:  47
+Running experiment 93 of 100
+pr:  1950 ql:  50
+Running experiment 94 of 100
+pr:  1950 ql:  50
+Running experiment 95 of 100
+pr:  1953 ql:  47
+Running experiment 96 of 100
+pr:  1947 ql:  53
+Running experiment 97 of 100
+pr:  1938 ql:  62
+Running experiment 98 of 100
+pr:  1938 ql:  62
+Running experiment 99 of 100
+pr:  1946 ql:  54
+Running experiment 100 of 100
+pr:  1950 ql:  50
+
+real	72m7.284s
+user	16m30.000s
+sys	0m1.020s
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/111/PRQL/
+Running experiment 1 of 10
+pr:  1943 ql:  57
+Running experiment 2 of 10
+pr:  1947 ql:  53
+Running experiment 3 of 10
+pr:  1942 ql:  58
+Running experiment 4 of 10
+pr:  1941 ql:  59
+Running experiment 5 of 10
+pr:  1958 ql:  42
+Running experiment 6 of 10
+pr:  1952 ql:  48
+Running experiment 7 of 10
+pr:  1943 ql:  57
+Running experiment 8 of 10
+pr:  1950 ql:  50
+Running experiment 9 of 10
+pr:  1941 ql:  59
+Running experiment 10 of 10
+pr:  1958 ql:  42
+
+real	8m30.175s
+user	1m39.440s
+sys	0m0.170s
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/111/PRQL/

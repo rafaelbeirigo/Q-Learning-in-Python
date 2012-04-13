@@ -1,0 +1,226 @@
+rafaelbeirigo@LTI-PROJETO-TM:~$ cd ql
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/81
+*** output flushed ***
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/81/PRQL/
+Running experiment 1 of 100
+pr:  431 ql:  1569
+Running experiment 2 of 100
+pr:  420 ql:  1580
+Running experiment 3 of 100
+pr:  466 ql:  1534
+Running experiment 4 of 100
+pr:  417 ql:  1583
+Running experiment 5 of 100
+pr:  653 ql:  1347
+Running experiment 6 of 100
+pr:  492 ql:  1508
+Running experiment 7 of 100
+pr:  518 ql:  1482
+Running experiment 8 of 100
+pr:  373 ql:  1627
+Running experiment 9 of 100
+pr:  475 ql:  1525
+Running experiment 10 of 100
+pr:  438 ql:  1562
+Running experiment 11 of 100
+pr:  347 ql:  1653
+Running experiment 12 of 100
+pr:  644 ql:  1356
+Running experiment 13 of 100
+pr:  510 ql:  1490
+Running experiment 14 of 100
+pr:  487 ql:  1513
+Running experiment 15 of 100
+pr:  287 ql:  1713
+Running experiment 16 of 100
+pr:  638 ql:  1362
+Running experiment 17 of 100
+pr:  428 ql:  1572
+Running experiment 18 of 100
+pr:  571 ql:  1429
+Running experiment 19 of 100
+pr:  391 ql:  1609
+Running experiment 20 of 100
+pr:  553 ql:  1447
+Running experiment 21 of 100
+pr:  353 ql:  1647
+Running experiment 22 of 100
+pr:  438 ql:  1562
+Running experiment 23 of 100
+pr:  638 ql:  1362
+Running experiment 24 of 100
+pr:  434 ql:  1566
+Running experiment 25 of 100
+pr:  371 ql:  1629
+Running experiment 26 of 100
+pr:  481 ql:  1519
+Running experiment 27 of 100
+pr:  450 ql:  1550
+Running experiment 28 of 100
+pr:  586 ql:  1414
+Running experiment 29 of 100
+pr:  407 ql:  1593
+Running experiment 30 of 100
+pr:  579 ql:  1421
+Running experiment 31 of 100
+pr:  377 ql:  1623
+Running experiment 32 of 100
+pr:  430 ql:  1570
+Running experiment 33 of 100
+pr:  283 ql:  1717
+Running experiment 34 of 100
+pr:  538 ql:  1462
+Running experiment 35 of 100
+pr:  488 ql:  1512
+Running experiment 36 of 100
+pr:  681 ql:  1319
+Running experiment 37 of 100
+pr:  520 ql:  1480
+Running experiment 38 of 100
+pr:  506 ql:  1494
+Running experiment 39 of 100
+pr:  364 ql:  1636
+Running experiment 40 of 100
+pr:  424 ql:  1576
+Running experiment 41 of 100
+pr:  404 ql:  1596
+Running experiment 42 of 100
+pr:  586 ql:  1414
+Running experiment 43 of 100
+pr:  409 ql:  1591
+Running experiment 44 of 100
+pr:  520 ql:  1480
+Running experiment 45 of 100
+pr:  388 ql:  1612
+Running experiment 46 of 100
+pr:  447 ql:  1553
+Running experiment 47 of 100
+pr:  396 ql:  1604
+Running experiment 48 of 100
+pr:  616 ql:  1384
+Running experiment 49 of 100
+pr:  352 ql:  1648
+Running experiment 50 of 100
+pr:  652 ql:  1348
+Running experiment 51 of 100
+pr:  506 ql:  1494
+Running experiment 52 of 100
+pr:  382 ql:  1618
+Running experiment 53 of 100
+pr:  555 ql:  1445
+Running experiment 54 of 100
+pr:  353 ql:  1647
+Running experiment 55 of 100
+pr:  461 ql:  1539
+Running experiment 56 of 100
+pr:  396 ql:  1604
+Running experiment 57 of 100
+pr:  413 ql:  1587
+Running experiment 58 of 100
+pr:  717 ql:  1283
+Running experiment 59 of 100
+pr:  719 ql:  1281
+Running experiment 60 of 100
+pr:  756 ql:  1244
+Running experiment 61 of 100
+pr:  441 ql:  1559
+Running experiment 62 of 100
+pr:  624 ql:  1376
+Running experiment 63 of 100
+pr:  626 ql:  1374
+Running experiment 64 of 100
+pr:  447 ql:  1553
+Running experiment 65 of 100
+pr:  653 ql:  1347
+Running experiment 66 of 100
+pr:  432 ql:  1568
+Running experiment 67 of 100
+pr:  480 ql:  1520
+Running experiment 68 of 100
+pr:  522 ql:  1478
+Running experiment 69 of 100
+pr:  438 ql:  1562
+Running experiment 70 of 100
+pr:  638 ql:  1362
+Running experiment 71 of 100
+pr:  368 ql:  1632
+Running experiment 72 of 100
+pr:  452 ql:  1548
+Running experiment 73 of 100
+pr:  416 ql:  1584
+Running experiment 74 of 100
+pr:  579 ql:  1421
+Running experiment 75 of 100
+pr:  490 ql:  1510
+Running experiment 76 of 100
+pr:  656 ql:  1344
+Running experiment 77 of 100
+pr:  519 ql:  1481
+Running experiment 78 of 100
+pr:  558 ql:  1442
+Running experiment 79 of 100
+pr:  922 ql:  1078
+Running experiment 80 of 100
+pr:  500 ql:  1500
+Running experiment 81 of 100
+pr:  614 ql:  1386
+Running experiment 82 of 100
+pr:  421 ql:  1579
+Running experiment 83 of 100
+pr:  511 ql:  1489
+Running experiment 84 of 100
+pr:  513 ql:  1487
+Running experiment 85 of 100
+pr:  387 ql:  1613
+Running experiment 86 of 100
+pr:  413 ql:  1587
+Running experiment 87 of 100
+pr:  351 ql:  1649
+Running experiment 88 of 100
+pr:  505 ql:  1495
+Running experiment 89 of 100
+pr:  388 ql:  1612
+Running experiment 90 of 100
+pr:  436 ql:  1564
+Running experiment 91 of 100
+pr:  368 ql:  1632
+Running experiment 92 of 100
+pr:  540 ql:  1460
+Running experiment 93 of 100
+pr:  584 ql:  1416
+Running experiment 94 of 100
+pr:  526 ql:  1474
+Running experiment 95 of 100
+pr:  410 ql:  1590
+Running experiment 96 of 100
+pr:  296 ql:  1704
+Running experiment 97 of 100
+pr:  503 ql:  1497
+Running experiment 98 of 100
+pr:  451 ql:  1549
+Running experiment 99 of 100
+pr:  382 ql:  1618
+Running experiment 100 of 100
+pr:  468 ql:  1532
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/103/PRQL/
+Running experiment 1 of 10
+pr:  697 ql:  1303
+Running experiment 2 of 10
+pr:  308 ql:  1692
+Running experiment 3 of 10
+pr:  623 ql:  1377
+Running experiment 4 of 10
+pr:  249 ql:  1751
+Running experiment 5 of 10
+pr:  380 ql:  1620
+Running experiment 6 of 10
+pr:  491 ql:  1509
+Running experiment 7 of 10
+pr:  377 ql:  1623
+Running experiment 8 of 10
+pr:  302 ql:  1698
+Running experiment 9 of 10
+pr:  400 ql:  1600
+Running experiment 10 of 10
+pr:  306 ql:  1694
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/103/PRQL/
