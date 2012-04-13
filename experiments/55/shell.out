@@ -1,0 +1,39 @@
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ /RL-PRQL.py experiments/51/PRQL/  C-c C-c
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ cd ql
+bash: cd: ql: No such file or directory
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/55/PRQL/
+Running experiment 1 of 10
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 73, in <module>
+    main()
+  File "./RL-PRQL.py", line 47, in main
+    filePath         = filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 41, in __init__
+    self.L = self.loadPolicies()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 250, in loadPolicies
+    Pi = self.loadPolicy(policiesPath + '/' + policyFile)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 270, in loadPolicy
+    s, a, p = line.rstrip('\n').split(' ')
+ValueError: need more than 2 values to unpack
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/55/PRQL/
+Running experiment 1 of 10
+pr:  1924 ql:  76
+Running experiment 2 of 10
+pr:  1909 ql:  91
+Running experiment 3 of 10
+pr:  1915 ql:  85
+Running experiment 4 of 10
+pr:  1925 ql:  75
+Running experiment 5 of 10
+pr:  1907 ql:  93
+Running experiment 6 of 10
+pr:  1913 ql:  87
+Running experiment 7 of 10
+pr:  1938 ql:  62
+Running experiment 8 of 10
+pr:  1909 ql:  91
+Running experiment 9 of 10
+pr:  1911 ql:  89
+Running experiment 10 of 10
+pr:  1925 ql:  75
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 

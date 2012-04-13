@@ -8,6 +8,7 @@ import pylab as pl
 
 def main():
     filePath = sys.argv[1]
+
     myMDP = MDP.MDP()
     myMDP.carrega(filePath)
 
@@ -25,7 +26,11 @@ def main():
 
     K                  = 2000     # number of episodes
     H                  = 100      # number of steps
+<<<<<<< HEAD
     numberOfExecutions = 100  
+=======
+    numberOfExecutions = 10
+>>>>>>> probabilistic
     
     Wacumulado = 0
     for i in range(numberOfExecutions):
@@ -55,11 +60,13 @@ def main():
     myPRQLearning.myQLearning.printQ(filePath + 'Q.out')
 
     f = open(filePath + 'parameters.out', 'w')
-    f.write('alpha =            ' + str(alpha) + '\n')
-    f.write('gamma =            ' + str(gamma) + '\n')
-    f.write('epsilon =          ' + str(epsilon) + '\n')
-    f.write('epsilonIncrement = ' + str(epsilonIncrement) + '\n')
-    f.write('numberOfSteps =    ' + str(K) + '\n')
+    f.write('alpha              = ' + str(alpha) + '\n')
+    f.write('gamma              = ' + str(gamma) + '\n')
+    f.write('epsilon            = ' + str(epsilon) + '\n')
+    f.write('epsilonIncrement   = ' + str(epsilonIncrement) + '\n')
+    f.write('K                  = ' + str(K) + '\n')
+    f.write('H                  = ' + str(H) + '\n')
+    f.write('numberOfExecutions = ' + str(numberOfExecutions) + '\n')
     f.close()
 
     f = open(filePath + 'w.out', 'w')

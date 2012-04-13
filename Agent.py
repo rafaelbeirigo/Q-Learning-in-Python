@@ -30,7 +30,7 @@ class Agent:
 
         return a
 
-    def selectBestActionByValue(self, s, Q):
+    def selectBestActionFromQTable(self, s, Q):
         A = self.obtainPossibleActions()
         
         # discover what is the best possible value considering
@@ -54,15 +54,15 @@ class Agent:
 
         return a
 
-    def selectBestActionByProbability(self, s, Q):
+    def selectBestActionFromProbPolicy(self, s, Pi):
         P = []
         acum = 0.0
 
-        for a in Q[s].iterkeys():
-            if Q[s][a] > 0.0:
+        for a in Pi[s].iterkeys():
+            if Pi[s][a] > 0.0:
                 p = []
                 p.append(a)
-                acum = acum + Q[s][a]
+                acum = acum + Pi[s][a]
                 p.append(acum)
                 P.append(p)
 
@@ -76,13 +76,14 @@ class Agent:
 
         return a
 
-    def selectBestAction(self, s, Q, selectionType = 'value'):
-        if selectionType == 'value':
-            # por valor
-            a = self.selectBestActionByValue(s, Q)
+    def selectBestAction(self, s, source = None, Q = None, Pi = None):
+        if source == 'Q-Table':
+            a = self.selectBestActionFromQTable(s, Q)
+        elif source == 'Probabilistic Policy':
+            a = self.selectBestActionFromProbPolicy(s, Pi)
         else:
-            # por probabilidade
-            a = self.selectBestActionByProbability(s, Q)
+            'ERROR: wrong source (' + source
+            sys.exit(1)
 
         return a
 

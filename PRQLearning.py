@@ -44,9 +44,8 @@ class PRQLearning:
     def execute(self):
         # Initialize
         # For each state-action pair (s, a), initialize the table
-        # entry Q_omega(s, a) to zero
-        # The W_omega from the article is W[omega], with omega == 0,
-        # and the same applies to U_omega
+        # entry Q_omega(s, a) to zero The W_omega from the article is
+        # W[omega], with omega == 0, and the same applies to U_omega
         L = self.loadPolicies()
 
         Q_omega, W, U = self.initializeQ_omegaWU()
@@ -116,13 +115,13 @@ class PRQLearning:
         return W[0], Ws
 
     def pi_reuse(self,
-                 Pi_past,
-                 K,
-                 H,
-                 psi,
-                 v,
-                 logStuff,
-                 Q_pi_new = None):
+             Pi_past,
+             K,
+             H,
+             psi,
+             v,
+             logStuff,
+             Q_pi_new = None):
 
         Q_pi_new = self.initializeQ_pi_new(Q_pi_new)
         
@@ -149,18 +148,16 @@ class PRQLearning:
 
                 randomNumber1 = random()
                 if randomNumber1 <= psi:
-                    # With a probability of psi, a = PI_past(s)
-                    # a = myAgent.selectBestAction(s, Q_pi_past)
-                    a = Pi_past[s]
+                    # With a probability of psi, use the policy from the library (a = Pi_past(s))
+                    a = self.Agent.selectBestAction(s, source = 'Probabilistic Policy', Pi = Pi_past)
                 else:
-                    # With a probability of (1 - psi), a =
-                    # epsilon_greedy(PI_new(s))
+                    # With a probability of (1 - psi), a = epsilon_greedy(PI_new(s))
                     randomNumber2 = random()
                     
                     epsilon = 1 - psi
                     if randomNumber2 <= epsilon:
                         # greedy
-                        a = self.Agent.selectBestAction(s, Q_pi_new)
+                        a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = Q_pi_new)
                     else:
                         #random
                         a = self.Agent.selectRandomAction()
@@ -253,8 +250,8 @@ class PRQLearning:
             Pi = self.loadPolicy(policiesPath + '/' + policyFile)
             L.append(Pi)
 
-        # free the first position in the library: put the policy
-        # that is current there after the last one
+        # free the first position in the library: put the policy that
+        # is current there after the last one
         # 
         # Note: the first position is used to store the policy
         #       that is being learned by the PRQL algorithm
@@ -265,11 +262,13 @@ class PRQLearning:
     
     def loadPolicy(self, filePath):
         Pi = {}
+        for s in self.MDP.S:
+            Pi[s] = {}
 
         f = open(filePath, 'r')
         for line in f:
-            s, a = line.rstrip('\n').split(' ')
-            Pi[s] = a
+            s, a, p = line.rstrip('\n').split(' ')
+            Pi[s][a] = float(p)
         f.close()
 
         return Pi
@@ -290,9 +289,9 @@ class PRQLearning:
 
     def initializeQ_pi_new(self, Q_pi_new):
         if Q_pi_new == None:
-            # Initialize Q_pi_new
-            # user didn't provide a table: will have to create one
-            # For each state-action pair (s, a), initialize the table entry Q(s, a) to zero
+            # Initialize Q_pi_new user didn't provide a table: will
+            # have to create one For each state-action pair (s, a),
+            # initialize the table entry Q(s, a) to zero
             Q_pi_new = {}
             for s in S:
                 Q_pi_new[s] = {}
