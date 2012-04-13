@@ -259,29 +259,4 @@ pr:  393 ql:  1607
 real	219m19.765s
 user	47m41.770s
 sys	0m2.340s
-rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/101/PRQL/
-Running experiment 1 of 10
-pr:  255 ql:  1745
-Running experiment 2 of 10
-pr:  381 ql:  1619
-Running experiment 3 of 10
-pr:  478 ql:  1522
-Running experiment 4 of 10
-pr:  358 ql:  1642
-Running experiment 5 of 10
-pr:  307 ql:  1693
-Running experiment 6 of 10
-pr:  275 ql:  1725
-Running experiment 7 of 10
-pr:  384 ql:  1616
-Running experiment 8 of 10
-pr:  403 ql:  1597
-Running experiment 9 of 10
-pr:  364 ql:  1636
-Running experiment 10 of 10
-pr:  373 ql:  1627
-
-real	21m47.591s
-user	4m49.060s
-sys	0m0.300s
-rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/101/PRQL/
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 

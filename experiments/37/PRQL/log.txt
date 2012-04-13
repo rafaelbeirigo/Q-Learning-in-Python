@@ -1,1 +1,0 @@
-"iteration","state","psi","randomNumber1","randomNumber2","epsilon","a","r","W"

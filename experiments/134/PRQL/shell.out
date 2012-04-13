@@ -1,0 +1,1439 @@
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ pwd
+/home/rafaelbeirigo/ql
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ls
+total 580K
+drwxr-xr-x   2 rafaelbeirigo rafaelbeirigo 4,0K 2012-04-13 12:27 [0m[01;34m00[0m
+drwxr-xr-x   2 rafaelbeirigo rafaelbeirigo 4,0K 2012-04-13 12:27 [01;34m100[0m
+drwxr-xr-x   2 rafaelbeirigo rafaelbeirigo 4,0K 2012-04-13 12:27 [01;34m25[0m
+drwxr-xr-x   2 rafaelbeirigo rafaelbeirigo 4,0K 2012-04-13 12:27 [01;34m50[0m
+drwxr-xr-x   2 rafaelbeirigo rafaelbeirigo 4,0K 2012-04-13 12:27 [01;34m75[0m
+drwxr-xr-x 142 rafaelbeirigo rafaelbeirigo 4,0K 2012-04-13 16:45 [01;34mexperiments[0m
+drwxr-xr-x   6 rafaelbeirigo rafaelbeirigo 4,0K 2012-04-13 12:27 [01;34mproblems[0m
+drwxr-xr-x   4 rafaelbeirigo rafaelbeirigo 4,0K 2012-04-13 16:39 [01;34mtools[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 138K 2012-03-30 14:33 [01;32ma.00[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 134K 2012-04-13 12:27 [01;32ma.01[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 149K 2012-04-13 12:27 [01;32ma.02[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 2,9K 2012-04-13 12:27 [01;32mAgent.py[0m
+-rw-r--r--   1 rafaelbeirigo rafaelbeirigo 3,0K 2012-04-13 13:27 Agent.pyc
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 1,8K 2012-03-19 23:58 [01;32mAgent (Valdinei Silva's conflicted copy 2012-03-20).pyc[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 3,5K 2012-03-26 20:08 [01;32mMDP.py[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 4,3K 2012-04-03 20:00 [01;32mMDP.pyc[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo    0 2012-03-20 21:19 [01;32mnotes[0m
+-rw-r--r--   1 rafaelbeirigo rafaelbeirigo  278 2012-04-13 14:09 prepareFolders.py
+-rw-r--r--   1 rafaelbeirigo rafaelbeirigo  623 2012-04-13 13:22 prepareFolders.py~
+-rw-r--r--   1 rafaelbeirigo rafaelbeirigo  566 2012-04-13 14:09 prepareFolders.pyc
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 9,3K 2012-04-13 12:27 [01;32mPRQLearning.py[0m
+-rw-r--r--   1 rafaelbeirigo rafaelbeirigo 6,6K 2012-04-13 14:18 PRQLearning.pyc
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 5,7K 2012-03-30 15:58 [01;32mPRQLearning (Valdinei Silva's conflicted copy 2012-04-02).pyc[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 2,2K 2012-03-08 15:23 [01;32mQabLearning.py[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 4,3K 2012-04-02 16:28 [01;32m#QLearning.py#[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 4,3K 2012-04-13 12:27 [01;32mQLearning.py[0m
+-rw-r--r--   1 rafaelbeirigo rafaelbeirigo 3,4K 2012-04-13 13:27 QLearning.pyc
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo    0 2012-03-06 14:51 [01;32mREADME[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 3,2K 2012-04-13 16:54 [01;32mRL-PRQL.py[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 2,6K 2012-04-13 16:54 [01;32mRL-QL.py[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo  723 2012-04-13 12:27 [01;32mRL-QL.pyc[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo    0 2012-03-28 18:53 [01;32mRL-QL (Valdinei Silva's conflicted copy 2012-03-30).py[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo   59 2012-04-13 12:27 [01;32msimple.dot[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo 8,1K 2012-04-13 12:27 [01;32msimple.png[0m
+-rwxr-xr-x   1 rafaelbeirigo rafaelbeirigo    6 2012-04-13 12:27 [01;32mteste.txt[0m
+[mrafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PR
+bash: ./RL-PR: No such file or directory
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py
+ERROR: Please inform the path to the experiment files.
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/134/PRQL/
+/home/rafaelbeirigo/ql/tools//prepareFolders.sh experiments/134/PRQL/
+[prepareFolders.sh] : Deleting output files...
+experiments/134/PRQL/Q.out
+experiments/134/PRQL/w.out
+experiments/134/PRQL/parameters.out
+experiments/134/PRQL/policy.out
+experiments/134/PRQL/.#shell.out
+experiments/134/PRQL/shell.out
+[prepareFolders.sh] : Deleting log file...
+experiments/134/PRQL//../PRQL/log.txt.gz
+[prepareFolders.sh] : Deleting graph files...
+experiments/134/PRQL//../w.png
+[prepareFolders.sh] : Deleting backup files...
+[prepareFolders.sh] : Deletion is done
+[prepareFolders.sh] : Uncompressing input files...
+./experiments/56/QL/rewards.in.gz
+./experiments/56/QL/transitions.in.gz
+./experiments/56/QL/states.in.gz
+./experiments/56/QL/actions.in.gz
+./experiments/56/QL/goals.in.gz
+./experiments/56/PRQL/rewards.in.gz
+./experiments/56/PRQL/transitions.in.gz
+./experiments/56/PRQL/states.in.gz
+./experiments/56/PRQL/policies/policy.pessimal.in.gz
+./experiments/56/PRQL/actions.in.gz
+./experiments/56/PRQL/goals.in.gz
+./experiments/17/rewards.in.gz
+./experiments/17/transitions.in.gz
+./experiments/17/states.in.gz
+./experiments/17/actions.in.gz
+./experiments/17/goals.in.gz
+./experiments/120/PRQL/rewards.in.gz
+./experiments/120/PRQL/transitions.in.gz
+./experiments/120/PRQL/states.in.gz
+./experiments/120/PRQL/policies/policy.prob.in.gz
+./experiments/120/PRQL/actions.in.gz
+./experiments/120/PRQL/goals.in.gz
+./experiments/20/QL/rewards.in.gz
+./experiments/20/QL/transitions.in.gz
+./experiments/20/QL/states.in.gz
+./experiments/20/QL/actions.in.gz
+./experiments/20/QL/goals.in.gz
+./experiments/20/PRQL/rewards.in.gz
+./experiments/20/PRQL/transitions.in.gz
+./experiments/20/PRQL/states.in.gz
+./experiments/20/PRQL/policies/policy.task2.in.gz
+./experiments/20/PRQL/policies/policy.task5.in.gz
+./experiments/20/PRQL/policies/policy.task3.in.gz
+./experiments/20/PRQL/policies/policy.task4.in.gz
+./experiments/20/PRQL/actions.in.gz
+./experiments/20/PRQL/goals.in.gz
+./experiments/62/PRQL/rewards.in.gz
+./experiments/62/PRQL/transitions.in.gz
+./experiments/62/PRQL/states.in.gz
+./experiments/62/PRQL/policies/policy.prob.in.gz
+./experiments/62/PRQL/actions.in.gz
+./experiments/62/PRQL/goals.in.gz
+./experiments/99/PRQL/rewards.in.gz
+./experiments/99/PRQL/transitions.in.gz
+./experiments/99/PRQL/states.in.gz
+./experiments/99/PRQL/policies/policy.prob.in.gz
+./experiments/99/PRQL/actions.in.gz
+./experiments/99/PRQL/goals.in.gz
+./experiments/108/PRQL/rewards.in.gz
+./experiments/108/PRQL/transitions.in.gz
+./experiments/108/PRQL/states.in.gz
+./experiments/108/PRQL/policies/policy.prob.in.gz
+./experiments/108/PRQL/actions.in.gz
+./experiments/108/PRQL/goals.in.gz
+./experiments/106/PRQL/rewards.in.gz
+./experiments/106/PRQL/transitions.in.gz
+./experiments/106/PRQL/states.in.gz
+./experiments/106/PRQL/policies/policy.prob.in.gz
+./experiments/106/PRQL/actions.in.gz
+./experiments/106/PRQL/goals.in.gz
+./experiments/97/PRQL/rewards.in.gz
+./experiments/97/PRQL/transitions.in.gz
+./experiments/97/PRQL/states.in.gz
+./experiments/97/PRQL/policies/policy.prob.in.gz
+./experiments/97/PRQL/actions.in.gz
+./experiments/97/PRQL/goals.in.gz
+./experiments/08/QL/rewards.in.gz
+./experiments/08/QL/transitions.in.gz
+./experiments/08/QL/states.in.gz
+./experiments/08/QL/actions.in.gz
+./experiments/08/QL/goals.in.gz
+./experiments/08/PRQL/rewards.in.gz
+./experiments/08/PRQL/transitions.in.gz
+./experiments/08/PRQL/states.in.gz
+./experiments/08/PRQL/policies/policy.in.gz
+./experiments/08/PRQL/actions.in.gz
+./experiments/08/PRQL/goals.in.gz
+./experiments/86/PRQL/rewards.in.gz
+./experiments/86/PRQL/transitions.in.gz
+./experiments/86/PRQL/states.in.gz
+./experiments/86/PRQL/policies/policy.prob.in.gz
+./experiments/86/PRQL/actions.in.gz
+./experiments/86/PRQL/goals.in.gz
+./experiments/38/PRQL/rewards.in.gz
+./experiments/38/PRQL/transitions.in.gz
+./experiments/38/PRQL/states.in.gz
+./experiments/38/PRQL/policies/policy.in.gz
+./experiments/38/PRQL/actions.in.gz
+./experiments/38/PRQL/goals.in.gz
+./experiments/05/QL/rewards.in.gz
+./experiments/05/QL/transitions.in.gz
+./experiments/05/QL/states.in.gz
+./experiments/05/QL/actions.in.gz
+./experiments/05/QL/goals.in.gz
+./experiments/05/PRQL/rewards.in.gz
+./experiments/05/PRQL/transitions.in.gz
+./experiments/05/PRQL/states.in.gz
+./experiments/05/PRQL/policies/policy.in.gz
+./experiments/05/PRQL/actions.in.gz
+./experiments/05/PRQL/goals.in.gz
+./experiments/93/PRQL/rewards.in.gz
+./experiments/93/PRQL/transitions.in.gz
+./experiments/93/PRQL/states.in.gz
+./experiments/93/PRQL/policies/policy.prob.in.gz
+./experiments/93/PRQL/actions.in.gz
+./experiments/93/PRQL/goals.in.gz
+./experiments/131/PRQL/rewards.in.gz
+./experiments/131/PRQL/transitions.in.gz
+./experiments/131/PRQL/states.in.gz
+./experiments/131/PRQL/policies/policy.prob.in.gz
+./experiments/131/PRQL/actions.in.gz
+./experiments/131/PRQL/goals.in.gz
+./experiments/31/QL/rewards.in.gz
+./experiments/31/QL/transitions.in.gz
+./experiments/31/QL/states.in.gz
+./experiments/31/QL/actions.in.gz
+./experiments/31/QL/goals.in.gz
+./experiments/31/PRQL/rewards.in.gz
+./experiments/31/PRQL/transitions.in.gz
+./experiments/31/PRQL/states.in.gz
+./experiments/31/PRQL/policies/policy.task5.in.gz
+./experiments/31/PRQL/actions.in.gz
+./experiments/31/PRQL/goals.in.gz
+./experiments/115/PRQL/rewards.in.gz
+./experiments/115/PRQL/transitions.in.gz
+./experiments/115/PRQL/states.in.gz
+./experiments/115/PRQL/policies/policy.prob.in.gz
+./experiments/115/PRQL/actions.in.gz
+./experiments/115/PRQL/goals.in.gz
+./experiments/16/rewards.in.gz
+./experiments/16/transitions.in.gz
+./experiments/16/states.in.gz
+./experiments/16/actions.in.gz
+./experiments/16/goals.in.gz
+./experiments/102/PRQL/rewards.in.gz
+./experiments/102/PRQL/transitions.in.gz
+./experiments/102/PRQL/states.in.gz
+./experiments/102/PRQL/policies/policy.prob.in.gz
+./experiments/102/PRQL/actions.in.gz
+./experiments/102/PRQL/goals.in.gz
+./experiments/33/PRQL/rewards.in.gz
+./experiments/33/PRQL/transitions.in.gz
+./experiments/33/PRQL/states.in.gz
+./experiments/33/PRQL/policies/policy.in.gz
+./experiments/33/PRQL/actions.in.gz
+./experiments/33/PRQL/goals.in.gz
+./experiments/74/PRQL/rewards.in.gz
+./experiments/74/PRQL/transitions.in.gz
+./experiments/74/PRQL/states.in.gz
+./experiments/74/PRQL/policies/policy.prob.in.gz
+./experiments/74/PRQL/actions.in.gz
+./experiments/74/PRQL/goals.in.gz
+./experiments/43/QL/rewards.in.gz
+./experiments/43/QL/transitions.in.gz
+./experiments/43/QL/states.in.gz
+./experiments/43/QL/actions.in.gz
+./experiments/43/QL/goals.in.gz
+./experiments/30/QL/rewards.in.gz
+./experiments/30/QL/transitions.in.gz
+./experiments/30/QL/states.in.gz
+./experiments/30/QL/actions.in.gz
+./experiments/30/QL/goals.in.gz
+./experiments/30/PRQL/rewards.in.gz
+./experiments/30/PRQL/transitions.in.gz
+./experiments/30/PRQL/states.in.gz
+./experiments/30/PRQL/policies/policy.task4.in.gz
+./experiments/30/PRQL/actions.in.gz
+./experiments/30/PRQL/goals.in.gz
+./experiments/75/PRQL/rewards.in.gz
+./experiments/75/PRQL/transitions.in.gz
+./experiments/75/PRQL/states.in.gz
+./experiments/75/PRQL/policies/policy.prob.in.gz
+./experiments/75/PRQL/actions.in.gz
+./experiments/75/PRQL/goals.in.gz
+./experiments/04/QL/rewards.in.gz
+./experiments/04/QL/transitions.in.gz
+./experiments/04/QL/states.in.gz
+./experiments/04/QL/actions.in.gz
+./experiments/04/QL/goals.in.gz
+./experiments/04/PRQL/rewards.in.gz
+./experiments/04/PRQL/transitions.in.gz
+./experiments/04/PRQL/states.in.gz
+./experiments/04/PRQL/policies/policy.in.gz
+./experiments/04/PRQL/actions.in.gz
+./experiments/04/PRQL/goals.in.gz
+./experiments/116/PRQL/rewards.in.gz
+./experiments/116/PRQL/transitions.in.gz
+./experiments/116/PRQL/states.in.gz
+./experiments/116/PRQL/policies/policy.prob.in.gz
+./experiments/116/PRQL/actions.in.gz
+./experiments/116/PRQL/goals.in.gz
+./experiments/126/PRQL/rewards.in.gz
+./experiments/126/PRQL/transitions.in.gz
+./experiments/126/PRQL/states.in.gz
+./experiments/126/PRQL/policies/policy.prob.in.gz
+./experiments/126/PRQL/actions.in.gz
+./experiments/126/PRQL/goals.in.gz
+./experiments/42/QL/rewards.in.gz
+./experiments/42/QL/transitions.in.gz
+./experiments/42/QL/states.in.gz
+./experiments/42/QL/actions.in.gz
+./experiments/42/QL/goals.in.gz
+./experiments/63/PRQL/rewards.in.gz
+./experiments/63/PRQL/transitions.in.gz
+./experiments/63/PRQL/states.in.gz
+./experiments/63/PRQL/policies/policy.prob.in.gz
+./experiments/63/PRQL/actions.in.gz
+./experiments/63/PRQL/goals.in.gz
+./experiments/89/PRQL/rewards.in.gz
+./experiments/89/PRQL/transitions.in.gz
+./experiments/89/PRQL/states.in.gz
+./experiments/89/PRQL/policies/policy.optimal.in.gz
+./experiments/89/PRQL/actions.in.gz
+./experiments/89/PRQL/goals.in.gz
+./experiments/25/QL/rewards.in.gz
+./experiments/25/QL/transitions.in.gz
+./experiments/25/QL/states.in.gz
+./experiments/25/QL/actions.in.gz
+./experiments/25/QL/goals.in.gz
+./experiments/25/PRQL/rewards.in.gz
+./experiments/25/PRQL/transitions.in.gz
+./experiments/25/PRQL/states.in.gz
+./experiments/25/PRQL/policies/policy.task2.in.gz
+./experiments/25/PRQL/policies/policy.task5.in.gz
+./experiments/25/PRQL/policies/policy.task3.in.gz
+./experiments/25/PRQL/policies/policy.task4.in.gz
+./experiments/25/PRQL/actions.in.gz
+./experiments/25/PRQL/goals.in.gz
+./experiments/104/PRQL/rewards.in.gz
+./experiments/104/PRQL/transitions.in.gz
+./experiments/104/PRQL/states.in.gz
+./experiments/104/PRQL/policies/policy.prob.in.gz
+./experiments/104/PRQL/actions.in.gz
+./experiments/104/PRQL/goals.in.gz
+./experiments/03/QL/rewards.in.gz
+./experiments/03/QL/transitions.in.gz
+./experiments/03/QL/states.in.gz
+./experiments/03/QL/actions.in.gz
+./experiments/03/QL/goals.in.gz
+./experiments/03/PRQL/rewards.in.gz
+./experiments/03/PRQL/transitions.in.gz
+./experiments/03/PRQL/states.in.gz
+./experiments/03/PRQL/policies/policy.in.gz
+./experiments/03/PRQL/actions.in.gz
+./experiments/03/PRQL/goals.in.gz
+./experiments/15/rewards.in.gz
+./experiments/15/transitions.in.gz
+./experiments/15/states.in.gz
+./experiments/15/actions.in.gz
+./experiments/15/goals.in.gz
+./experiments/91/PRQL/rewards.in.gz
+./experiments/91/PRQL/transitions.in.gz
+./experiments/91/PRQL/states.in.gz
+./experiments/91/PRQL/policies/policy.prob.in.gz
+./experiments/91/PRQL/actions.in.gz
+./experiments/91/PRQL/goals.in.gz
+./experiments/59/PRQL/rewards.in.gz
+./experiments/59/PRQL/transitions.in.gz
+./experiments/59/PRQL/states.in.gz
+./experiments/59/PRQL/policies/policy.prob.in.gz
+./experiments/59/PRQL/actions.in.gz
+./experiments/59/PRQL/goals.in.gz
+./experiments/61/PRQL/rewards.in.gz
+./experiments/61/PRQL/transitions.in.gz
+./experiments/61/PRQL/states.in.gz
+./experiments/61/PRQL/policies/policy.prob.in.gz
+./experiments/61/PRQL/actions.in.gz
+./experiments/61/PRQL/goals.in.gz
+./experiments/18/rewards.in.gz
+./experiments/18/transitions.in.gz
+./experiments/18/states.in.gz
+./experiments/18/actions.in.gz
+./experiments/18/goals.in.gz
+./experiments/51/QL/rewards.in.gz
+./experiments/51/QL/transitions.in.gz
+./experiments/51/QL/states.in.gz
+./experiments/51/QL/actions.in.gz
+./experiments/51/QL/goals.in.gz
+./experiments/51/PRQL/rewards.in.gz
+./experiments/51/PRQL/transitions.in.gz
+./experiments/51/PRQL/states.in.gz
+./experiments/51/PRQL/policies/policy.task1.in.gz
+./experiments/51/PRQL/actions.in.gz
+./experiments/51/PRQL/goals.in.gz
+./experiments/13/rewards.in.gz
+./experiments/13/transitions.in.gz
+./experiments/13/states.in.gz
+./experiments/13/QL/rewards.in.gz
+./experiments/13/QL/transitions.in.gz
+./experiments/13/QL/states.in.gz
+./experiments/13/QL/actions.in.gz
+./experiments/13/QL/goals.in.gz
+./experiments/13/PRQL/rewards.in.gz
+./experiments/13/PRQL/transitions.in.gz
+./experiments/13/PRQL/states.in.gz
+./experiments/13/PRQL/policies/policy.in.gz
+./experiments/13/PRQL/actions.in.gz
+./experiments/13/PRQL/goals.in.gz
+./experiments/13/actions.in.gz
+./experiments/13/goals.in.gz
+./experiments/26/QL/rewards.in.gz
+./experiments/26/QL/transitions.in.gz
+./experiments/26/QL/states.in.gz
+./experiments/26/QL/actions.in.gz
+./experiments/26/QL/goals.in.gz
+./experiments/26/PRQL/rewards.in.gz
+./experiments/26/PRQL/transitions.in.gz
+./experiments/26/PRQL/states.in.gz
+./experiments/26/PRQL/policies/policy.task2.in.gz
+./experiments/26/PRQL/policies/policy.task3.in.gz
+./experiments/26/PRQL/policies/policy.task4.in.gz
+./experiments/26/PRQL/actions.in.gz
+./experiments/26/PRQL/goals.in.gz
+./experiments/12/QL/rewards.in.gz
+./experiments/12/QL/transitions.in.gz
+./experiments/12/QL/states.in.gz
+./experiments/12/QL/actions.in.gz
+./experiments/12/QL/goals.in.gz
+./experiments/12/PRQL/rewards.in.gz
+./experiments/12/PRQL/transitions.in.gz
+./experiments/12/PRQL/states.in.gz
+./experiments/12/PRQL/policies/policy.in.gz
+./experiments/12/PRQL/actions.in.gz
+./experiments/12/PRQL/goals.in.gz
+./experiments/58/PRQL/rewards.in.gz
+./experiments/58/PRQL/transitions.in.gz
+./experiments/58/PRQL/states.in.gz
+./experiments/58/PRQL/policies/policy.prob.in.gz
+./experiments/58/PRQL/actions.in.gz
+./experiments/58/PRQL/goals.in.gz
+./experiments/47/QL/rewards.in.gz
+./experiments/47/QL/transitions.in.gz
+./experiments/47/QL/states.in.gz
+./experiments/47/QL/actions.in.gz
+./experiments/47/QL/goals.in.gz
+./experiments/47/PRQL/rewards.in.gz
+./experiments/47/PRQL/transitions.in.gz
+./experiments/47/PRQL/states.in.gz
+./experiments/47/PRQL/actions.in.gz
+./experiments/47/PRQL/goals.in.gz
+./experiments/138/QL/rewards.in.gz
+./experiments/138/QL/transitions.in.gz
+./experiments/138/QL/states.in.gz
+./experiments/138/QL/actions.in.gz
+./experiments/138/QL/goals.in.gz
+./experiments/138/PRQL/rewards.in.gz
+./experiments/138/PRQL/transitions.in.gz
+./experiments/138/PRQL/states.in.gz
+./experiments/138/PRQL/policies/policy.task5.in.gz
+./experiments/138/PRQL/actions.in.gz
+./experiments/138/PRQL/goals.in.gz
+./experiments/67/QL/rewards.in.gz
+./experiments/67/QL/transitions.in.gz
+./experiments/67/QL/states.in.gz
+./experiments/67/QL/actions.in.gz
+./experiments/67/QL/goals.in.gz
+./experiments/67/PRQL/rewards.in.gz
+./experiments/67/PRQL/transitions.in.gz
+./experiments/67/PRQL/states.in.gz
+./experiments/67/PRQL/policies/policy.pessimal.in.gz
+./experiments/67/PRQL/actions.in.gz
+./experiments/67/PRQL/goals.in.gz
+./experiments/105/PRQL/rewards.in.gz
+./experiments/105/PRQL/transitions.in.gz
+./experiments/105/PRQL/states.in.gz
+./experiments/105/PRQL/policies/policy.prob.in.gz
+./experiments/105/PRQL/actions.in.gz
+./experiments/105/PRQL/goals.in.gz
+./experiments/40/PRQL/rewards.in.gz
+./experiments/40/PRQL/transitions.in.gz
+./experiments/40/PRQL/states.in.gz
+./experiments/40/PRQL/policies/policy.in.gz
+./experiments/40/PRQL/actions.in.gz
+./experiments/40/PRQL/goals.in.gz
+./experiments/94/PRQL/rewards.in.gz
+./experiments/94/PRQL/transitions.in.gz
+./experiments/94/PRQL/states.in.gz
+./experiments/94/PRQL/policies/policy.prob.in.gz
+./experiments/94/PRQL/actions.in.gz
+./experiments/94/PRQL/goals.in.gz
+./experiments/124/PRQL/rewards.in.gz
+./experiments/124/PRQL/transitions.in.gz
+./experiments/124/PRQL/states.in.gz
+./experiments/124/PRQL/policies/policy.prob.in.gz
+./experiments/124/PRQL/actions.in.gz
+./experiments/124/PRQL/goals.in.gz
+./experiments/111/PRQL/rewards.in.gz
+./experiments/111/PRQL/transitions.in.gz
+./experiments/111/PRQL/states.in.gz
+./experiments/111/PRQL/policies/policy.optimal.in.gz
+./experiments/111/PRQL/actions.in.gz
+./experiments/111/PRQL/goals.in.gz
+./experiments/107/PRQL/rewards.in.gz
+./experiments/107/PRQL/transitions.in.gz
+./experiments/107/PRQL/states.in.gz
+./experiments/107/PRQL/policies/policy.prob.in.gz
+./experiments/107/PRQL/actions.in.gz
+./experiments/107/PRQL/goals.in.gz
+./experiments/78/QL/rewards.in.gz
+./experiments/78/QL/transitions.in.gz
+./experiments/78/QL/states.in.gz
+./experiments/78/QL/actions.in.gz
+./experiments/78/QL/goals.in.gz
+./experiments/78/PRQL/prob.det/rewards.in.gz
+./experiments/78/PRQL/prob.det/transitions.in.gz
+./experiments/78/PRQL/prob.det/states.in.gz
+./experiments/78/PRQL/prob.det/actions.in.gz
+./experiments/78/PRQL/prob.det/goals.in.gz
+./experiments/78/PRQL/det/rewards.in.gz
+./experiments/78/PRQL/det/transitions.in.gz
+./experiments/78/PRQL/det/states.in.gz
+./experiments/78/PRQL/det/actions.in.gz
+./experiments/78/PRQL/det/goals.in.gz
+./experiments/78/PRQL/prob/rewards.in.gz
+./experiments/78/PRQL/prob/transitions.in.gz
+./experiments/78/PRQL/prob/states.in.gz
+./experiments/78/PRQL/prob/actions.in.gz
+./experiments/78/PRQL/prob/goals.in.gz
+./experiments/27/QL/rewards.in.gz
+./experiments/27/QL/transitions.in.gz
+./experiments/27/QL/states.in.gz
+./experiments/27/QL/actions.in.gz
+./experiments/27/QL/goals.in.gz
+./experiments/27/PRQL/rewards.in.gz
+./experiments/27/PRQL/transitions.in.gz
+./experiments/27/PRQL/states.in.gz
+./experiments/27/PRQL/policies/policy.task1.in.gz
+./experiments/27/PRQL/actions.in.gz
+./experiments/27/PRQL/goals.in.gz
+./experiments/87/PRQL/rewards.in.gz
+./experiments/87/PRQL/transitions.in.gz
+./experiments/87/PRQL/states.in.gz
+./experiments/87/PRQL/policies/policy.prob.in.gz
+./experiments/87/PRQL/actions.in.gz
+./experiments/87/PRQL/goals.in.gz
+./experiments/44/QL/rewards.in.gz
+./experiments/44/QL/transitions.in.gz
+./experiments/44/QL/states.in.gz
+./experiments/44/QL/actions.in.gz
+./experiments/44/QL/goals.in.gz
+./experiments/65/PRQL/rewards.in.gz
+./experiments/65/PRQL/transitions.in.gz
+./experiments/65/PRQL/states.in.gz
+./experiments/65/PRQL/policies/policy.prob.in.gz
+./experiments/65/PRQL/actions.in.gz
+./experiments/65/PRQL/goals.in.gz
+./experiments/57/PRQL/rewards.in.gz
+./experiments/57/PRQL/transitions.in.gz
+./experiments/57/PRQL/states.in.gz
+./experiments/57/PRQL/policies/policy.prob.in.gz
+./experiments/57/PRQL/actions.in.gz
+./experiments/57/PRQL/goals.in.gz
+./experiments/01/04/QL/rewards.in.gz
+./experiments/01/04/QL/transitions.in.gz
+./experiments/01/04/QL/states.in.gz
+./experiments/01/04/QL/actions.in.gz
+./experiments/01/04/QL/goals.in.gz
+./experiments/01/04/PRQL/rewards.in.gz
+./experiments/01/04/PRQL/transitions.in.gz
+./experiments/01/04/PRQL/states.in.gz
+./experiments/01/04/PRQL/policies/policy.task2.in.gz
+./experiments/01/04/PRQL/policies/policy.task5.in.gz
+./experiments/01/04/PRQL/policies/policy.task3.in.gz
+./experiments/01/04/PRQL/policies/policy.task4.in.gz
+./experiments/01/04/PRQL/actions.in.gz
+./experiments/01/04/PRQL/goals.in.gz
+./experiments/01/03/QL/rewards.in.gz
+./experiments/01/03/QL/transitions.in.gz
+./experiments/01/03/QL/states.in.gz
+./experiments/01/03/QL/actions.in.gz
+./experiments/01/03/QL/goals.in.gz
+./experiments/01/03/PRQL/rewards.in.gz
+./experiments/01/03/PRQL/transitions.in.gz
+./experiments/01/03/PRQL/states.in.gz
+./experiments/01/03/PRQL/policies/policy.task2.in.gz
+./experiments/01/03/PRQL/policies/policy.task3.in.gz
+./experiments/01/03/PRQL/policies/policy.task1.in.gz
+./experiments/01/03/PRQL/policies/policy.task4.in.gz
+./experiments/01/03/PRQL/actions.in.gz
+./experiments/01/03/PRQL/goals.in.gz
+./experiments/01/01/QL/rewards.in.gz
+./experiments/01/01/QL/transitions.in.gz
+./experiments/01/01/QL/states.in.gz
+./experiments/01/01/QL/actions.in.gz
+./experiments/01/01/QL/goals.in.gz
+./experiments/01/01/PRQL/rewards.in.gz
+./experiments/01/01/PRQL/transitions.in.gz
+./experiments/01/01/PRQL/states.in.gz
+./experiments/01/01/PRQL/policies/policy.task2.in.gz
+./experiments/01/01/PRQL/policies/policy.task5.in.gz
+./experiments/01/01/PRQL/policies/policy.task3.in.gz
+./experiments/01/01/PRQL/policies/policy.task1.in.gz
+./experiments/01/01/PRQL/policies/policy.task4.in.gz
+./experiments/01/01/PRQL/actions.in.gz
+./experiments/01/01/PRQL/goals.in.gz
+./experiments/01/QL/rewards.in.gz
+./experiments/01/QL/transitions.in.gz
+./experiments/01/QL/goals.in.gz
+./experiments/01/PRQL/04/rewards.in.gz
+./experiments/01/PRQL/04/transitions.in.gz
+./experiments/01/PRQL/04/states.in.gz
+./experiments/01/PRQL/04/policies/policy.task2.in.gz
+./experiments/01/PRQL/04/policies/policy.task5.in.gz
+./experiments/01/PRQL/04/actions.in.gz
+./experiments/01/PRQL/04/goals.in.gz
+./experiments/01/PRQL/03/rewards.in.gz
+./experiments/01/PRQL/03/transitions.in.gz
+./experiments/01/PRQL/03/states.in.gz
+./experiments/01/PRQL/03/policies/policy.task2.in.gz
+./experiments/01/PRQL/03/policies/policy.task1.in.gz
+./experiments/01/PRQL/03/actions.in.gz
+./experiments/01/PRQL/03/goals.in.gz
+./experiments/01/PRQL/01/rewards.in.gz
+./experiments/01/PRQL/01/transitions.in.gz
+./experiments/01/PRQL/01/states.in.gz
+./experiments/01/PRQL/01/policies/policy.task2.in.gz
+./experiments/01/PRQL/01/policies/policy.task5.in.gz
+./experiments/01/PRQL/01/policies/policy.task1.in.gz
+./experiments/01/PRQL/01/actions.in.gz
+./experiments/01/PRQL/01/goals.in.gz
+./experiments/01/PRQL/02/rewards.in.gz
+./experiments/01/PRQL/02/transitions.in.gz
+./experiments/01/PRQL/02/states.in.gz
+./experiments/01/PRQL/02/policies/policy.task2.in.gz
+./experiments/01/PRQL/02/actions.in.gz
+./experiments/01/PRQL/02/goals.in.gz
+./experiments/01/02/QL/rewards.in.gz
+./experiments/01/02/QL/transitions.in.gz
+./experiments/01/02/QL/states.in.gz
+./experiments/01/02/QL/actions.in.gz
+./experiments/01/02/QL/goals.in.gz
+./experiments/01/02/PRQL/rewards.in.gz
+./experiments/01/02/PRQL/transitions.in.gz
+./experiments/01/02/PRQL/states.in.gz
+./experiments/01/02/PRQL/policies/policy.task2.in.gz
+./experiments/01/02/PRQL/policies/policy.task3.in.gz
+./experiments/01/02/PRQL/policies/policy.task4.in.gz
+./experiments/01/02/PRQL/actions.in.gz
+./experiments/01/02/PRQL/goals.in.gz
+./experiments/81/PRQL/rewards.in.gz
+./experiments/81/PRQL/transitions.in.gz
+./experiments/81/PRQL/states.in.gz
+./experiments/81/PRQL/policies/policy.prob.in.gz
+./experiments/81/PRQL/actions.in.gz
+./experiments/81/PRQL/goals.in.gz
+./experiments/96/PRQL/rewards.in.gz
+./experiments/96/PRQL/transitions.in.gz
+./experiments/96/PRQL/states.in.gz
+./experiments/96/PRQL/policies/policy.prob.in.gz
+./experiments/96/PRQL/actions.in.gz
+./experiments/96/PRQL/goals.in.gz
+./experiments/53/QL/rewards.in.gz
+./experiments/53/QL/transitions.in.gz
+./experiments/53/QL/states.in.gz
+./experiments/53/QL/actions.in.gz
+./experiments/53/QL/goals.in.gz
+./experiments/53/PRQL/rewards.in.gz
+./experiments/53/PRQL/transitions.in.gz
+./experiments/53/PRQL/states.in.gz
+./experiments/53/PRQL/policies/policy.task3.in.gz
+./experiments/53/PRQL/actions.in.gz
+./experiments/53/PRQL/goals.in.gz
+./experiments/123/QL/rewards.in.gz
+./experiments/123/QL/transitions.in.gz
+./experiments/123/QL/states.in.gz
+./experiments/123/QL/actions.in.gz
+./experiments/123/QL/goals.in.gz
+./experiments/123/PRQL/rewards.in.gz
+./experiments/123/PRQL/transitions.in.gz
+./experiments/123/PRQL/states.in.gz
+./experiments/123/PRQL/policies/policy.pessimal.in.gz
+./experiments/123/PRQL/actions.in.gz
+./experiments/123/PRQL/goals.in.gz
+./experiments/14/QL/rewards.in.gz
+./experiments/14/QL/transitions.in.gz
+./experiments/14/QL/states.in.gz
+./experiments/14/QL/actions.in.gz
+./experiments/14/QL/goals.in.gz
+./experiments/14/PRQL/rewards.in.gz
+./experiments/14/PRQL/transitions.in.gz
+./experiments/14/PRQL/states.in.gz
+./experiments/14/PRQL/policies/policy.in.gz
+./experiments/14/PRQL/actions.in.gz
+./experiments/14/PRQL/goals.in.gz
+./experiments/110/PRQL/rewards.in.gz
+./experiments/110/PRQL/transitions.in.gz
+./experiments/110/PRQL/states.in.gz
+./experiments/110/PRQL/policies/policy.prob.in.gz
+./experiments/110/PRQL/actions.in.gz
+./experiments/110/PRQL/goals.in.gz
+./experiments/122/PRQL/rewards.in.gz
+./experiments/122/PRQL/transitions.in.gz
+./experiments/122/PRQL/states.in.gz
+./experiments/122/PRQL/policies/policy.optimal.in.gz
+./experiments/122/PRQL/actions.in.gz
+./experiments/122/PRQL/goals.in.gz
+./experiments/117/PRQL/rewards.in.gz
+./experiments/117/PRQL/transitions.in.gz
+./experiments/117/PRQL/states.in.gz
+./experiments/117/PRQL/policies/policy.prob.in.gz
+./experiments/117/PRQL/actions.in.gz
+./experiments/117/PRQL/goals.in.gz
+./experiments/36/PRQL/rewards.in.gz
+./experiments/36/PRQL/transitions.in.gz
+./experiments/36/PRQL/states.in.gz
+./experiments/36/PRQL/policies/policy.in.gz
+./experiments/36/PRQL/actions.in.gz
+./experiments/36/PRQL/goals.in.gz
+./experiments/10/QL/rewards.in.gz
+./experiments/10/QL/transitions.in.gz
+./experiments/10/QL/states.in.gz
+./experiments/10/QL/actions.in.gz
+./experiments/10/QL/goals.in.gz
+./experiments/10/PRQL/rewards.in.gz
+./experiments/10/PRQL/transitions.in.gz
+./experiments/10/PRQL/states.in.gz
+./experiments/10/PRQL/policies/policy.in.gz
+./experiments/10/PRQL/actions.in.gz
+./experiments/10/PRQL/goals.in.gz
+./experiments/85/PRQL/rewards.in.gz
+./experiments/85/PRQL/transitions.in.gz
+./experiments/85/PRQL/states.in.gz
+./experiments/85/PRQL/policies/policy.prob.in.gz
+./experiments/85/PRQL/actions.in.gz
+./experiments/85/PRQL/goals.in.gz
+./experiments/06/QL/rewards.in.gz
+./experiments/06/QL/transitions.in.gz
+./experiments/06/QL/states.in.gz
+./experiments/06/QL/actions.in.gz
+./experiments/06/QL/goals.in.gz
+./experiments/06/PRQL/rewards.in.gz
+./experiments/06/PRQL/transitions.in.gz
+./experiments/06/PRQL/states.in.gz
+./experiments/06/PRQL/policies/policy.task2.in.gz
+./experiments/06/PRQL/policies/policy.task5.in.gz
+./experiments/06/PRQL/policies/policy.task3.in.gz
+./experiments/06/PRQL/actions.in.gz
+./experiments/06/PRQL/goals.in.gz
+./experiments/92/PRQL/rewards.in.gz
+./experiments/92/PRQL/transitions.in.gz
+./experiments/92/PRQL/states.in.gz
+./experiments/92/PRQL/policies/policy.prob.in.gz
+./experiments/92/PRQL/actions.in.gz
+./experiments/92/PRQL/goals.in.gz
+./experiments/90/QL/rewards.in.gz
+./experiments/90/QL/transitions.in.gz
+./experiments/90/QL/states.in.gz
+./experiments/90/QL/actions.in.gz
+./experiments/90/QL/goals.in.gz
+./experiments/90/PRQL/rewards.in.gz
+./experiments/90/PRQL/transitions.in.gz
+./experiments/90/PRQL/states.in.gz
+./experiments/90/PRQL/policies/policy.pessimal.in.gz
+./experiments/90/PRQL/actions.in.gz
+./experiments/90/PRQL/goals.in.gz
+./experiments/22/QL/rewards.in.gz
+./experiments/22/QL/transitions.in.gz
+./experiments/22/QL/states.in.gz
+./experiments/22/QL/actions.in.gz
+./experiments/22/QL/goals.in.gz
+./experiments/22/PRQL/rewards.in.gz
+./experiments/22/PRQL/transitions.in.gz
+./experiments/22/PRQL/states.in.gz
+./experiments/22/PRQL/policies/policy.task2.in.gz
+./experiments/22/PRQL/policies/policy.task3.in.gz
+./experiments/22/PRQL/policies/policy.task1.in.gz
+./experiments/22/PRQL/policies/policy.task4.in.gz
+./experiments/22/PRQL/actions.in.gz
+./experiments/22/PRQL/goals.in.gz
+./experiments/129/PRQL/rewards.in.gz
+./experiments/129/PRQL/transitions.in.gz
+./experiments/129/PRQL/states.in.gz
+./experiments/129/PRQL/policies/policy.prob.in.gz
+./experiments/129/PRQL/actions.in.gz
+./experiments/129/PRQL/goals.in.gz
+./experiments/35/PRQL/rewards.in.gz
+./experiments/35/PRQL/transitions.in.gz
+./experiments/35/PRQL/states.in.gz
+./experiments/35/PRQL/policies/policy.in.gz
+./experiments/35/PRQL/actions.in.gz
+./experiments/35/PRQL/goals.in.gz
+./experiments/113/PRQL/rewards.in.gz
+./experiments/113/PRQL/transitions.in.gz
+./experiments/113/PRQL/states.in.gz
+./experiments/113/PRQL/policies/policy.prob.in.gz
+./experiments/113/PRQL/actions.in.gz
+./experiments/113/PRQL/goals.in.gz
+./experiments/134/QL/rewards.in.gz
+./experiments/134/QL/transitions.in.gz
+./experiments/134/QL/states.in.gz
+./experiments/134/QL/actions.in.gz
+./experiments/134/QL/goals.in.gz
+./experiments/134/PRQL/rewards.in.gz
+./experiments/134/PRQL/transitions.in.gz
+./experiments/134/PRQL/states.in.gz
+./experiments/134/PRQL/policies/policy.task1.in.gz
+./experiments/134/PRQL/actions.in.gz
+./experiments/134/PRQL/goals.in.gz
+./experiments/130/PRQL/rewards.in.gz
+./experiments/130/PRQL/transitions.in.gz
+./experiments/130/PRQL/states.in.gz
+./experiments/130/PRQL/policies/policy.prob.in.gz
+./experiments/130/PRQL/actions.in.gz
+./experiments/130/PRQL/goals.in.gz
+./experiments/54/QL/rewards.in.gz
+./experiments/54/QL/transitions.in.gz
+./experiments/54/QL/states.in.gz
+./experiments/54/QL/actions.in.gz
+./experiments/54/QL/goals.in.gz
+./experiments/54/PRQL/rewards.in.gz
+./experiments/54/PRQL/transitions.in.gz
+./experiments/54/PRQL/states.in.gz
+./experiments/54/PRQL/policies/policy.task4.in.gz
+./experiments/54/PRQL/actions.in.gz
+./experiments/54/PRQL/goals.in.gz
+./experiments/121/PRQL/rewards.in.gz
+./experiments/121/PRQL/transitions.in.gz
+./experiments/121/PRQL/states.in.gz
+./experiments/121/PRQL/policies/policy.prob.in.gz
+./experiments/121/PRQL/actions.in.gz
+./experiments/121/PRQL/goals.in.gz
+./experiments/21/QL/rewards.in.gz
+./experiments/21/QL/transitions.in.gz
+./experiments/21/QL/states.in.gz
+./experiments/21/QL/actions.in.gz
+./experiments/21/QL/goals.in.gz
+./experiments/21/PRQL/rewards.in.gz
+./experiments/21/PRQL/transitions.in.gz
+./experiments/21/PRQL/states.in.gz
+./experiments/21/PRQL/policies/policy.task2.in.gz
+./experiments/21/PRQL/policies/policy.task3.in.gz
+./experiments/21/PRQL/policies/policy.task4.in.gz
+./experiments/21/PRQL/actions.in.gz
+./experiments/21/PRQL/goals.in.gz
+./experiments/60/PRQL/rewards.in.gz
+./experiments/60/PRQL/transitions.in.gz
+./experiments/60/PRQL/states.in.gz
+./experiments/60/PRQL/policies/policy.prob.in.gz
+./experiments/60/PRQL/actions.in.gz
+./experiments/60/PRQL/goals.in.gz
+./experiments/45/QL/rewards.in.gz
+./experiments/45/QL/transitions.in.gz
+./experiments/45/QL/states.in.gz
+./experiments/45/QL/actions.in.gz
+./experiments/45/QL/goals.in.gz
+./experiments/135/QL/rewards.in.gz
+./experiments/135/QL/transitions.in.gz
+./experiments/135/QL/states.in.gz
+./experiments/135/QL/actions.in.gz
+./experiments/135/QL/goals.in.gz
+./experiments/135/PRQL/rewards.in.gz
+./experiments/135/PRQL/transitions.in.gz
+./experiments/135/PRQL/states.in.gz
+./experiments/135/PRQL/policies/policy.task2.in.gz
+./experiments/135/PRQL/actions.in.gz
+./experiments/135/PRQL/goals.in.gz
+./experiments/76/PRQL/rewards.in.gz
+./experiments/76/PRQL/transitions.in.gz
+./experiments/76/PRQL/states.in.gz
+./experiments/76/PRQL/policies/policy.prob.in.gz
+./experiments/76/PRQL/actions.in.gz
+./experiments/76/PRQL/goals.in.gz
+./experiments/82/PRQL/rewards.in.gz
+./experiments/82/PRQL/transitions.in.gz
+./experiments/82/PRQL/states.in.gz
+./experiments/82/PRQL/policies/policy.prob.in.gz
+./experiments/82/PRQL/actions.in.gz
+./experiments/82/PRQL/goals.in.gz
+./experiments/55/QL/rewards.in.gz
+./experiments/55/QL/transitions.in.gz
+./experiments/55/QL/states.in.gz
+./experiments/55/QL/actions.in.gz
+./experiments/55/QL/goals.in.gz
+./experiments/55/PRQL/rewards.in.gz
+./experiments/55/PRQL/transitions.in.gz
+./experiments/55/PRQL/states.in.gz
+./experiments/55/PRQL/policies/policy.task5.in.gz
+./experiments/55/PRQL/actions.in.gz
+./experiments/55/PRQL/goals.in.gz
+./experiments/24/QL/rewards.in.gz
+./experiments/24/QL/transitions.in.gz
+./experiments/24/QL/states.in.gz
+./experiments/24/QL/actions.in.gz
+./experiments/24/QL/goals.in.gz
+./experiments/24/PRQL/rewards.in.gz
+./experiments/24/PRQL/transitions.in.gz
+./experiments/24/PRQL/states.in.gz
+./experiments/24/PRQL/policies/policy.task2.in.gz
+./experiments/24/PRQL/policies/policy.task3.in.gz
+./experiments/24/PRQL/policies/policy.task1.in.gz
+./experiments/24/PRQL/policies/policy.task4.in.gz
+./experiments/24/PRQL/actions.in.gz
+./experiments/24/PRQL/goals.in.gz
+./experiments/71/PRQL/rewards.in.gz
+./experiments/71/PRQL/transitions.in.gz
+./experiments/71/PRQL/states.in.gz
+./experiments/71/PRQL/policies/policy.prob.in.gz
+./experiments/71/PRQL/actions.in.gz
+./experiments/71/PRQL/goals.in.gz
+./experiments/114/PRQL/rewards.in.gz
+./experiments/114/PRQL/transitions.in.gz
+./experiments/114/PRQL/states.in.gz
+./experiments/114/PRQL/policies/policy.prob.in.gz
+./experiments/114/PRQL/actions.in.gz
+./experiments/114/PRQL/goals.in.gz
+./experiments/103/PRQL/rewards.in.gz
+./experiments/103/PRQL/transitions.in.gz
+./experiments/103/PRQL/states.in.gz
+./experiments/103/PRQL/policies/policy.prob.in.gz
+./experiments/103/PRQL/actions.in.gz
+./experiments/103/PRQL/goals.in.gz
+./experiments/100/PRQL/rewards.in.gz
+./experiments/100/PRQL/transitions.in.gz
+./experiments/100/PRQL/states.in.gz
+./experiments/100/PRQL/policies/policy.optimal.in.gz
+./experiments/100/PRQL/actions.in.gz
+./experiments/100/PRQL/goals.in.gz
+./experiments/137/QL/rewards.in.gz
+./experiments/137/QL/transitions.in.gz
+./experiments/137/QL/states.in.gz
+./experiments/137/QL/actions.in.gz
+./experiments/137/QL/goals.in.gz
+./experiments/137/PRQL/rewards.in.gz
+./experiments/137/PRQL/transitions.in.gz
+./experiments/137/PRQL/states.in.gz
+./experiments/137/PRQL/policies/policy.task4.in.gz
+./experiments/137/PRQL/actions.in.gz
+./experiments/137/PRQL/goals.in.gz
+./experiments/119/PRQL/rewards.in.gz
+./experiments/119/PRQL/transitions.in.gz
+./experiments/119/PRQL/states.in.gz
+./experiments/119/PRQL/policies/policy.prob.in.gz
+./experiments/119/PRQL/actions.in.gz
+./experiments/119/PRQL/goals.in.gz
+./experiments/19/rewards.in.gz
+./experiments/19/transitions.in.gz
+./experiments/19/states.in.gz
+./experiments/19/actions.in.gz
+./experiments/19/goals.in.gz
+./experiments/64/PRQL/rewards.in.gz
+./experiments/64/PRQL/transitions.in.gz
+./experiments/64/PRQL/states.in.gz
+./experiments/64/PRQL/policies/policy.prob.in.gz
+./experiments/64/PRQL/actions.in.gz
+./experiments/64/PRQL/goals.in.gz
+./experiments/09/QL/rewards.in.gz
+./experiments/09/QL/transitions.in.gz
+./experiments/09/QL/states.in.gz
+./experiments/09/QL/actions.in.gz
+./experiments/09/QL/goals.in.gz
+./experiments/09/PRQL/rewards.in.gz
+./experiments/09/PRQL/transitions.in.gz
+./experiments/09/PRQL/states.in.gz
+./experiments/09/PRQL/policies/policy.in.gz
+./experiments/09/PRQL/actions.in.gz
+./experiments/09/PRQL/goals.in.gz
+./experiments/41/PRQL/rewards.in.gz
+./experiments/41/PRQL/transitions.in.gz
+./experiments/41/PRQL/states.in.gz
+./experiments/41/PRQL/policies/policy.in.gz
+./experiments/41/PRQL/actions.in.gz
+./experiments/41/PRQL/goals.in.gz
+./experiments/70/PRQL/rewards.in.gz
+./experiments/70/PRQL/transitions.in.gz
+./experiments/70/PRQL/states.in.gz
+./experiments/70/PRQL/policies/policy.prob.in.gz
+./experiments/70/PRQL/actions.in.gz
+./experiments/70/PRQL/goals.in.gz
+./experiments/83/PRQL/rewards.in.gz
+./experiments/83/PRQL/transitions.in.gz
+./experiments/83/PRQL/states.in.gz
+./experiments/83/PRQL/policies/policy.prob.in.gz
+./experiments/83/PRQL/actions.in.gz
+./experiments/83/PRQL/goals.in.gz
+./experiments/128/PRQL/rewards.in.gz
+./experiments/128/PRQL/transitions.in.gz
+./experiments/128/PRQL/states.in.gz
+./experiments/128/PRQL/policies/policy.prob.in.gz
+./experiments/128/PRQL/actions.in.gz
+./experiments/128/PRQL/goals.in.gz
+./experiments/69/PRQL/rewards.in.gz
+./experiments/69/PRQL/transitions.in.gz
+./experiments/69/PRQL/states.in.gz
+./experiments/69/PRQL/policies/policy.prob.in.gz
+./experiments/69/PRQL/actions.in.gz
+./experiments/69/PRQL/goals.in.gz
+./experiments/48/QL/rewards.in.gz
+./experiments/48/QL/transitions.in.gz
+./experiments/48/QL/states.in.gz
+./experiments/48/QL/actions.in.gz
+./experiments/48/QL/goals.in.gz
+./experiments/48/PRQL/rewards.in.gz
+./experiments/48/PRQL/transitions.in.gz
+./experiments/48/PRQL/states.in.gz
+./experiments/48/PRQL/actions.in.gz
+./experiments/48/PRQL/goals.in.gz
+./experiments/101/QL/rewards.in.gz
+./experiments/101/QL/transitions.in.gz
+./experiments/101/QL/states.in.gz
+./experiments/101/QL/actions.in.gz
+./experiments/101/QL/goals.in.gz
+./experiments/101/PRQL/rewards.in.gz
+./experiments/101/PRQL/transitions.in.gz
+./experiments/101/PRQL/states.in.gz
+./experiments/101/PRQL/policies/policy.pessimal.in.gz
+./experiments/101/PRQL/actions.in.gz
+./experiments/101/PRQL/goals.in.gz
+./experiments/109/PRQL/rewards.in.gz
+./experiments/109/PRQL/transitions.in.gz
+./experiments/109/PRQL/states.in.gz
+./experiments/109/PRQL/policies/policy.prob.in.gz
+./experiments/109/PRQL/actions.in.gz
+./experiments/109/PRQL/goals.in.gz
+./experiments/79/QL/rewards.in.gz
+./experiments/79/QL/transitions.in.gz
+./experiments/79/QL/states.in.gz
+./experiments/79/QL/actions.in.gz
+./experiments/79/QL/goals.in.gz
+./experiments/79/PRQL/rewards.in.gz
+./experiments/79/PRQL/transitions.in.gz
+./experiments/79/PRQL/states.in.gz
+./experiments/79/PRQL/policies/policy.pessimal.in.gz
+./experiments/79/PRQL/actions.in.gz
+./experiments/79/PRQL/goals.in.gz
+./experiments/46/QL/rewards.in.gz
+./experiments/46/QL/transitions.in.gz
+./experiments/46/QL/states.in.gz
+./experiments/46/QL/actions.in.gz
+./experiments/46/QL/goals.in.gz
+./experiments/118/PRQL/rewards.in.gz
+./experiments/118/PRQL/transitions.in.gz
+./experiments/118/PRQL/states.in.gz
+./experiments/118/PRQL/policies/policy.prob.in.gz
+./experiments/118/PRQL/actions.in.gz
+./experiments/118/PRQL/goals.in.gz
+./experiments/50/PRQL det/rewards.in.gz
+./experiments/50/PRQL det/transitions.in.gz
+./experiments/50/PRQL det/states.in.gz
+./experiments/50/PRQL det/policies/policy.in.gz
+./experiments/50/PRQL det/actions.in.gz
+./experiments/50/PRQL det/goals.in.gz
+./experiments/50/QL/rewards.in.gz
+./experiments/50/QL/transitions.in.gz
+./experiments/50/QL/states.in.gz
+./experiments/50/QL/actions.in.gz
+./experiments/50/QL/goals.in.gz
+./experiments/50/PRQL/rewards.in.gz
+./experiments/50/PRQL/transitions.in.gz
+./experiments/50/PRQL/states.in.gz
+./experiments/50/PRQL/policies/policy.in.gz
+./experiments/50/PRQL/actions.in.gz
+./experiments/50/PRQL/goals.in.gz
+./experiments/127/PRQL/rewards.in.gz
+./experiments/127/PRQL/transitions.in.gz
+./experiments/127/PRQL/states.in.gz
+./experiments/127/PRQL/policies/policy.prob.in.gz
+./experiments/127/PRQL/actions.in.gz
+./experiments/127/PRQL/goals.in.gz
+./experiments/11/QL/rewards.in.gz
+./experiments/11/QL/transitions.in.gz
+./experiments/11/QL/states.in.gz
+./experiments/11/QL/actions.in.gz
+./experiments/11/QL/goals.in.gz
+./experiments/11/PRQL/rewards.in.gz
+./experiments/11/PRQL/transitions.in.gz
+./experiments/11/PRQL/states.in.gz
+./experiments/11/PRQL/policies/policy.task2.in.gz
+./experiments/11/PRQL/policies/policy.task5.in.gz
+./experiments/11/PRQL/policies/policy.task3.in.gz
+./experiments/11/PRQL/policies/policy.task4.in.gz
+./experiments/11/PRQL/actions.in.gz
+./experiments/11/PRQL/goals.in.gz
+./experiments/52/QL/rewards.in.gz
+./experiments/52/QL/transitions.in.gz
+./experiments/52/QL/states.in.gz
+./experiments/52/QL/actions.in.gz
+./experiments/52/QL/goals.in.gz
+./experiments/52/PRQL/rewards.in.gz
+./experiments/52/PRQL/transitions.in.gz
+./experiments/52/PRQL/states.in.gz
+./experiments/52/PRQL/policies/policy.task2.in.gz
+./experiments/52/PRQL/actions.in.gz
+./experiments/52/PRQL/goals.in.gz
+./experiments/72/PRQL/rewards.in.gz
+./experiments/72/PRQL/transitions.in.gz
+./experiments/72/PRQL/states.in.gz
+./experiments/72/PRQL/policies/policy.prob.in.gz
+./experiments/72/PRQL/actions.in.gz
+./experiments/72/PRQL/goals.in.gz
+./experiments/95/PRQL/rewards.in.gz
+./experiments/95/PRQL/transitions.in.gz
+./experiments/95/PRQL/states.in.gz
+./experiments/95/PRQL/policies/policy.prob.in.gz
+./experiments/95/PRQL/actions.in.gz
+./experiments/95/PRQL/goals.in.gz
+./experiments/07/QL/rewards.in.gz
+./experiments/07/QL/transitions.in.gz
+./experiments/07/QL/states.in.gz
+./experiments/07/QL/actions.in.gz
+./experiments/07/QL/goals.in.gz
+./experiments/07/PRQL/rewards.in.gz
+./experiments/07/PRQL/transitions.in.gz
+./experiments/07/PRQL/states.in.gz
+./experiments/07/PRQL/policies/policy.task2.in.gz
+./experiments/07/PRQL/policies/policy.task5.in.gz
+./experiments/07/PRQL/policies/policy.task3.in.gz
+./experiments/07/PRQL/actions.in.gz
+./experiments/07/PRQL/goals.in.gz
+./experiments/29/QL/rewards.in.gz
+./experiments/29/QL/transitions.in.gz
+./experiments/29/QL/states.in.gz
+./experiments/29/QL/actions.in.gz
+./experiments/29/QL/goals.in.gz
+./experiments/29/PRQL/rewards.in.gz
+./experiments/29/PRQL/transitions.in.gz
+./experiments/29/PRQL/states.in.gz
+./experiments/29/PRQL/policies/policy.task3.in.gz
+./experiments/29/PRQL/actions.in.gz
+./experiments/29/PRQL/goals.in.gz
+./experiments/88/PRQL/rewards.in.gz
+./experiments/88/PRQL/transitions.in.gz
+./experiments/88/PRQL/states.in.gz
+./experiments/88/PRQL/policies/policy.prob.in.gz
+./experiments/88/PRQL/actions.in.gz
+./experiments/88/PRQL/goals.in.gz
+./experiments/37/QL/rewards.in.gz
+./experiments/37/QL/transitions.in.gz
+./experiments/37/QL/states.in.gz
+./experiments/37/QL/actions.in.gz
+./experiments/37/QL/goals.in.gz
+./experiments/37/PRQL/rewards.in.gz
+./experiments/37/PRQL/transitions.in.gz
+./experiments/37/PRQL/states.in.gz
+./experiments/37/PRQL/policies/policy.in.gz
+./experiments/37/PRQL/actions.in.gz
+./experiments/37/PRQL/goals.in.gz
+./experiments/34/PRQL/rewards.in.gz
+./experiments/34/PRQL/transitions.in.gz
+./experiments/34/PRQL/states.in.gz
+./experiments/34/PRQL/policies/policy.in.gz
+./experiments/34/PRQL/actions.in.gz
+./experiments/34/PRQL/goals.in.gz
+./experiments/28/QL/rewards.in.gz
+./experiments/28/QL/transitions.in.gz
+./experiments/28/QL/states.in.gz
+./experiments/28/QL/actions.in.gz
+./experiments/28/QL/goals.in.gz
+./experiments/28/PRQL/rewards.in.gz
+./experiments/28/PRQL/transitions.in.gz
+./experiments/28/PRQL/states.in.gz
+./experiments/28/PRQL/policies/policy.task2.in.gz
+./experiments/28/PRQL/actions.in.gz
+./experiments/28/PRQL/goals.in.gz
+./experiments/23/QL/rewards.in.gz
+./experiments/23/QL/transitions.in.gz
+./experiments/23/QL/states.in.gz
+./experiments/23/QL/actions.in.gz
+./experiments/23/QL/goals.in.gz
+./experiments/23/PRQL/rewards.in.gz
+./experiments/23/PRQL/transitions.in.gz
+./experiments/23/PRQL/states.in.gz
+./experiments/23/PRQL/policies/policy.in.gz
+./experiments/23/PRQL/actions.in.gz
+./experiments/23/PRQL/goals.in.gz
+./experiments/49/QL/rewards.in.gz
+./experiments/49/QL/transitions.in.gz
+./experiments/49/QL/states.in.gz
+./experiments/49/QL/actions.in.gz
+./experiments/49/QL/goals.in.gz
+./experiments/49/PRQL/rewards.in.gz
+./experiments/49/PRQL/transitions.in.gz
+./experiments/49/PRQL/states.in.gz
+./experiments/49/PRQL/policies/badPolicy.in.gz
+./experiments/49/PRQL/actions.in.gz
+./experiments/49/PRQL/goals.in.gz
+./experiments/68/PRQL/rewards.in.gz
+./experiments/68/PRQL/transitions.in.gz
+./experiments/68/PRQL/states.in.gz
+./experiments/68/PRQL/policies/policy.prob.in.gz
+./experiments/68/PRQL/actions.in.gz
+./experiments/68/PRQL/goals.in.gz
+./experiments/32/QL/rewards.in.gz
+./experiments/32/QL/transitions.in.gz
+./experiments/32/QL/states.in.gz
+./experiments/32/QL/actions.in.gz
+./experiments/32/QL/goals.in.gz
+./experiments/32/PRQL/rewards.in.gz
+./experiments/32/PRQL/transitions.in.gz
+./experiments/32/PRQL/states.in.gz
+./experiments/32/PRQL/policies/policy.in.gz
+./experiments/32/PRQL/actions.in.gz
+./experiments/32/PRQL/goals.in.gz
+./experiments/132/PRQL/rewards.in.gz
+./experiments/132/PRQL/transitions.in.gz
+./experiments/132/PRQL/states.in.gz
+./experiments/132/PRQL/policies/policy.prob.in.gz
+./experiments/132/PRQL/actions.in.gz
+./experiments/132/PRQL/goals.in.gz
+./experiments/73/PRQL/rewards.in.gz
+./experiments/73/PRQL/transitions.in.gz
+./experiments/73/PRQL/states.in.gz
+./experiments/73/PRQL/policies/policy.prob.in.gz
+./experiments/73/PRQL/actions.in.gz
+./experiments/73/PRQL/goals.in.gz
+./experiments/02/QL/rewards.in.gz
+./experiments/02/QL/transitions.in.gz
+./experiments/02/QL/states.in.gz
+./experiments/02/QL/actions.in.gz
+./experiments/02/QL/goals.in.gz
+./experiments/02/PRQL/rewards.in.gz
+./experiments/02/PRQL/transitions.in.gz
+./experiments/02/PRQL/states.in.gz
+./experiments/02/PRQL/policies/policy.in.gz
+./experiments/02/PRQL/actions.in.gz
+./experiments/02/PRQL/goals.in.gz
+./experiments/98/PRQL/rewards.in.gz
+./experiments/98/PRQL/transitions.in.gz
+./experiments/98/PRQL/states.in.gz
+./experiments/98/PRQL/policies/policy.prob.in.gz
+./experiments/98/PRQL/actions.in.gz
+./experiments/98/PRQL/goals.in.gz
+./experiments/136/QL/rewards.in.gz
+./experiments/136/QL/transitions.in.gz
+./experiments/136/QL/states.in.gz
+./experiments/136/QL/actions.in.gz
+./experiments/136/QL/goals.in.gz
+./experiments/136/PRQL/rewards.in.gz
+./experiments/136/PRQL/transitions.in.gz
+./experiments/136/PRQL/states.in.gz
+./experiments/136/PRQL/policies/policy.task3.in.gz
+./experiments/136/PRQL/actions.in.gz
+./experiments/136/PRQL/goals.in.gz
+./experiments/39/PRQL/rewards.in.gz
+./experiments/39/PRQL/transitions.in.gz
+./experiments/39/PRQL/states.in.gz
+./experiments/39/PRQL/policies/policy.in.gz
+./experiments/39/PRQL/actions.in.gz
+./experiments/39/PRQL/goals.in.gz
+./experiments/84/PRQL/rewards.in.gz
+./experiments/84/PRQL/transitions.in.gz
+./experiments/84/PRQL/states.in.gz
+./experiments/84/PRQL/policies/policy.prob.in.gz
+./experiments/84/PRQL/actions.in.gz
+./experiments/84/PRQL/goals.in.gz
+./experiments/133/PRQL/rewards.in.gz
+./experiments/133/PRQL/transitions.in.gz
+./experiments/133/PRQL/states.in.gz
+./experiments/133/PRQL/policies/policy.optimal.in.gz
+./experiments/133/PRQL/actions.in.gz
+./experiments/133/PRQL/goals.in.gz
+./experiments/125/PRQL/rewards.in.gz
+./experiments/125/PRQL/transitions.in.gz
+./experiments/125/PRQL/states.in.gz
+./experiments/125/PRQL/policies/policy.prob.in.gz
+./experiments/125/PRQL/actions.in.gz
+./experiments/125/PRQL/goals.in.gz
+./experiments/77/PRQL/rewards.in.gz
+./experiments/77/PRQL/transitions.in.gz
+./experiments/77/PRQL/states.in.gz
+./experiments/77/PRQL/policies/policy.optimal.in.gz
+./experiments/77/PRQL/actions.in.gz
+./experiments/77/PRQL/goals.in.gz
+./experiments/80/PRQL/rewards.in.gz
+./experiments/80/PRQL/transitions.in.gz
+./experiments/80/PRQL/states.in.gz
+./experiments/80/PRQL/policies/policy.prob.in.gz
+./experiments/80/PRQL/actions.in.gz
+./experiments/80/PRQL/goals.in.gz
+./experiments/112/QL/rewards.in.gz
+./experiments/112/QL/transitions.in.gz
+./experiments/112/QL/states.in.gz
+./experiments/112/QL/actions.in.gz
+./experiments/112/QL/goals.in.gz
+./experiments/112/PRQL/rewards.in.gz
+./experiments/112/PRQL/transitions.in.gz
+./experiments/112/PRQL/states.in.gz
+./experiments/112/PRQL/policies/policy.pessimal.in.gz
+./experiments/112/PRQL/actions.in.gz
+./experiments/112/PRQL/goals.in.gz
+./experiments/66/PRQL/rewards.in.gz
+./experiments/66/PRQL/transitions.in.gz
+./experiments/66/PRQL/states.in.gz
+./experiments/66/PRQL/policies/policy.optimal.in.gz
+./experiments/66/PRQL/actions.in.gz
+./experiments/66/PRQL/goals.in.gz
+./problems/mitchell/rewards.in.gz
+./problems/mitchell/transitions.in.gz
+./problems/mitchell/states.in.gz
+./problems/mitchell/actions.in.gz
+./problems/mitchell/goals.in.gz
+./problems/tests/01x05/rewards.in.gz
+./problems/tests/01x05/transitions.in.gz
+./problems/tests/01x05/states.in.gz
+./problems/tests/01x05/initialStateProb.in.gz
+./problems/tests/01x05/actions.in.gz
+./problems/tests/01x05/goals.in.gz
+./problems/tests/05x05/rewards.in.gz
+./problems/tests/05x05/transitions.in.gz
+./problems/tests/05x05/states.in.gz
+./problems/tests/05x05/rewards (Tiago Matos's conflicted copy 2012-03-23).in.gz
+./problems/tests/05x05/goals (Tiago Matos's conflicted copy 2012-03-23).in.gz
+./problems/tests/05x05/actions.in.gz
+./problems/tests/05x05/goals.in.gz
+./problems/tests/05x05/states (Tiago Matos's conflicted copy 2012-03-23).in.gz
+./problems/tests/04x04/rewards.in.gz
+./problems/tests/04x04/transitions.in.gz
+./problems/tests/04x04/states.in.gz
+./problems/tests/04x04/spiral/rewards.in.gz
+./problems/tests/04x04/spiral/transitions.in.gz
+./problems/tests/04x04/spiral/states.in.gz
+./problems/tests/04x04/spiral/actions.in.gz
+./problems/tests/04x04/spiral/goals.in.gz
+./problems/tests/04x04/actions.in.gz
+./problems/tests/04x04/goals.in.gz
+./problems/tests/01x05rewards.in.gz
+./problems/tests/06x06/rewards.in.gz
+./problems/tests/06x06/transitions.in.gz
+./problems/tests/06x06/states.in.gz
+./problems/tests/06x06/actions.in.gz
+./problems/tests/06x06/goals.in.gz
+./problems/tests/01x05goals.in.gz
+./problems/tests/10x10/noWalls/rewards.in.gz
+./problems/tests/10x10/noWalls/transitions.in.gz
+./problems/tests/10x10/noWalls/states.in.gz
+./problems/tests/10x10/noWalls/actions.in.gz
+./problems/tests/10x10/noWalls/goals.in.gz
+./problems/tests/01x05actions.in.gz
+./problems/tests/01x11/rewards.in.gz
+./problems/tests/01x11/transitions.in.gz
+./problems/tests/01x11/states.in.gz
+./problems/tests/01x11/actions.in.gz
+./problems/tests/01x11/goals.in.gz
+./problems/tests/spiral-giant/rewards.in.gz
+./problems/tests/spiral-giant/transitions.in.gz
+./problems/tests/spiral-giant/states.in.gz
+./problems/tests/spiral-giant/rewards (Tiago Matos's conflicted copy 2012-03-23).in.gz
+./problems/tests/spiral-giant/actions.in.gz
+./problems/tests/spiral-giant/goals.in.gz
+./problems/tests/02x02/rewards.in.gz
+./problems/tests/02x02/transitions.in.gz
+./problems/tests/02x02/states.in.gz
+./problems/tests/02x02/transitions (Valdinei Silva's conflicted copy 2012-03-18).in.gz
+./problems/tests/02x02/rewards (Valdinei Silva's conflicted copy 2012-03-18).in.gz
+./problems/tests/02x02/actions.in.gz
+./problems/tests/02x02/goals (Valdinei Silva's conflicted copy 2012-03-18).in.gz
+./problems/tests/02x02/states (Valdinei Silva's conflicted copy 2012-03-18).in.gz
+./problems/tests/02x02/goals.in.gz
+./problems/tests/01x05transitions.in.gz
+./problems/tests/11x11/rewards.in.gz
+./problems/tests/11x11/transitions.in.gz
+./problems/tests/11x11/states.in.gz
+./problems/tests/11x11/spiral/rewards.in.gz
+./problems/tests/11x11/spiral/transitions.in.gz
+./problems/tests/11x11/spiral/states.in.gz
+./problems/tests/11x11/spiral/actions.in.gz
+./problems/tests/11x11/spiral/goals.in.gz
+./problems/tests/11x11/actions.in.gz
+./problems/tests/11x11/goals.in.gz
+./problems/tests/19x22 (AAMAS06)/noWalls/rewards.in.gz
+./problems/tests/19x22 (AAMAS06)/noWalls/transitions.in.gz
+./problems/tests/19x22 (AAMAS06)/noWalls/states.in.gz
+./problems/tests/19x22 (AAMAS06)/noWalls/actions.in.gz
+./problems/tests/19x22 (AAMAS06)/noWalls/goals.in.gz
+./problems/tests/01x05states.in.gz
+./problems/tests/aamas06.vazio/rewards.in.gz
+./problems/tests/01x99/rewards.in.gz
+./problems/tests/01x99/transitions.in.gz
+./problems/tests/01x99/states.in.gz
+./problems/tests/01x99/actions.in.gz
+./problems/tests/01x99/goals.in.gz
+./problems/wta/19/rewards.in.gz
+./problems/wta/19/transitions.in.gz
+./problems/wta/19/states.in.gz
+./problems/wta/19/actions.in.gz
+./problems/wta/19/goals.in.gz
+./problems/aamas06/task1/rewards.in.gz
+./problems/aamas06/task1/transitions.in.gz
+./problems/aamas06/task1/states.in.gz
+./problems/aamas06/task1/actions.in.gz
+./problems/aamas06/task1/goals.in.gz
+./problems/aamas06/task2/rewards.in.gz
+./problems/aamas06/task2/transitions.in.gz
+./problems/aamas06/task2/goals.in.gz
+./problems/aamas06/task3/rewards.in.gz
+./problems/aamas06/task3/transitions.in.gz
+./problems/aamas06/task3/goals.in.gz
+./problems/aamas06/task0/rewards.in.gz
+./problems/aamas06/task0/transitions.in.gz
+./problems/aamas06/task0/goals.in.gz
+./problems/aamas06/task5/rewards.in.gz
+./problems/aamas06/task5/transitions.in.gz
+./problems/aamas06/task5/goals.in.gz
+[prepareFolders.sh] : Uncompression is done
+Running experiment 1 of 10
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 84, in <module>
+    main()
+  File "./RL-PRQL.py", line 56, in main
+    filePath         = filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 41, in __init__
+    self.L = self.loadPolicies()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 250, in loadPolicies
+    Pi = self.loadPolicy(policiesPath + '/' + policyFile)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 270, in loadPolicy
+    s, a, p = line.rstrip('\n').split(' ')
+ValueError: need more than 2 values to unpack
+
+real	0m1.597s
+user	0m2.000s
+sys	0m0.310s
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/134/PRQL/
+/home/rafaelbeirigo/ql/tools//prepareFolders.sh experiments/134/PRQL/
+[prepareFolders.sh] : Deleting output files...
+[prepareFolders.sh] : Deleting log file...
+[prepareFolders.sh] : Deleting graph files...
+[prepareFolders.sh] : Deleting backup files...
+[prepareFolders.sh] : Deletion is done
+[prepareFolders.sh] : Uncompressing input files...
+experiments/134/PRQL/rewards.in.gz
+experiments/134/PRQL/transitions.in.gz
+experiments/134/PRQL/states.in.gz
+experiments/134/PRQL/policies/policy.task1.in.gz
+experiments/134/PRQL/actions.in.gz
+experiments/134/PRQL/goals.in.gz
+[prepareFolders.sh] : Uncompression is done
+Running experiment 1 of 10
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 84, in <module>
+    main()
+  File "./RL-PRQL.py", line 56, in main
+    filePath         = filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 41, in __init__
+    self.L = self.loadPolicies()
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 250, in loadPolicies
+    Pi = self.loadPolicy(policiesPath + '/' + policyFile)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/PRQLearning.py", line 270, in loadPolicy
+    s, a, p = line.rstrip('\n').split(' ')
+ValueError: need more than 2 values to unpack
+
+real	0m0.359s
+user	0m0.350s
+sys	0m0.070s
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/134/PRQL/
+/home/rafaelbeirigo/ql/tools//prepareFolders.sh experiments/134/PRQL/
+[prepareFolders.sh] : Deleting output files...
+[prepareFolders.sh] : Deleting log file...
+[prepareFolders.sh] : Deleting graph files...
+[prepareFolders.sh] : Deleting backup files...
+experiments/134/PRQL/policies/policy.task1.in~
+[prepareFolders.sh] : Deletion is done
+[prepareFolders.sh] : Uncompressing input files...
+[prepareFolders.sh] : Uncompression is done
+Running experiment 1 of 10
+pr:  171 ql:  1829
+Running experiment 2 of 10
+pr:  156 ql:  1844
+Running experiment 3 of 10
+pr:  166 ql:  1834
+Running experiment 4 of 10
+pr:  137 ql:  1863
+Running experiment 5 of 10
+pr:  139 ql:  1861
+Running experiment 6 of 10
+pr:  178 ql:  1822
+Running experiment 7 of 10
+pr:  160 ql:  1840
+Running experiment 8 of 10
+pr:  164 ql:  1836
+Running experiment 9 of 10
+pr:  194 ql:  1806
+Running experiment 10 of 10
+pr:  145 ql:  1855
+
+real	4m25.149s
+user	2m36.520s
+sys	0m0.130s
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 

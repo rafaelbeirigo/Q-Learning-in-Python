@@ -200,27 +200,4 @@ Running experiment 99 of 100
 pr:  1446 ql:  554
 Running experiment 100 of 100
 pr:  1263 ql:  737
-rafaelbeirigo@LTI-PROJETO-TM:~/ql$ Running experiment 99 of 100
-Running: command not found
-rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/105/PRQL/
-Running experiment 1 of 10
-pr:  1813 ql:  187
-Running experiment 2 of 10
-pr:  1802 ql:  198
-Running experiment 3 of 10
-pr:  500 ql:  1500
-Running experiment 4 of 10
-pr:  1439 ql:  561
-Running experiment 5 of 10
-pr:  1012 ql:  988
-Running experiment 6 of 10
-pr:  1738 ql:  262
-Running experiment 7 of 10
-pr:  1759 ql:  241
-Running experiment 8 of 10
-pr:  1428 ql:  572
-Running experiment 9 of 10
-pr:  1280 ql:  720
-Running experiment 10 of 10
-pr:  809 ql:  1191
-rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/105/PRQL/
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 

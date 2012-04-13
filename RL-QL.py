@@ -6,9 +6,18 @@ import QLearning
 import time
 import sys
 import pylab as pl
+from prepareFolders import prepareFolders
 
 def main():
+    if len(sys.argv) < 2:
+        print 'ERROR: Please inform the path to the experiment files.'
+        sys.exit(1)
+        
     filePath = sys.argv[1]
+
+    commandPath = '/home/rafaelbeirigo/ql/tools/'
+    prepareFolders(commandPath, filePath)
+    
     myMDP = MDP.MDP()
     myMDP.carrega(filePath)
 
@@ -22,7 +31,7 @@ def main():
 
     K                  = 2000       # number of episodes
     H                  = 100        # number of steps
-    numberOfExecutions = 10
+    numberOfExecutions = 1000
 
     Wacumulado = 0
     for i in range(numberOfExecutions):

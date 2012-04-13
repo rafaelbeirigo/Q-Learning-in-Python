@@ -5,10 +5,18 @@ import PRQLearning
 import time
 import sys
 import pylab as pl
+from prepareFolders import prepareFolders
 
 def main():
+    if len(sys.argv) < 2:
+        print 'ERROR: Please inform the path to the experiment files.'
+        sys.exit(1)
+        
     filePath = sys.argv[1]
 
+    commandPath = '/home/rafaelbeirigo/ql/tools/'
+    prepareFolders(commandPath, filePath)
+    
     myMDP = MDP.MDP()
     myMDP.carrega(filePath)
 
@@ -16,8 +24,8 @@ def main():
     
     alpha              = 0.05
     gamma              = 0.95
-    epsilon            = 0.0
-    epsilonIncrement   = 0.0005
+    epsilon            = 1.0
+    epsilonIncrement   = 0.0000
     gammaPRQL          = 0.95
     tau                = 0.0
     deltaTau           = 0.05
@@ -26,7 +34,7 @@ def main():
 
     K                  = 2000     # number of episodes
     H                  = 100      # number of steps
-    numberOfExecutions = 10
+    numberOfExecutions = 1000
     
     Wacumulado = 0
     for i in range(numberOfExecutions):

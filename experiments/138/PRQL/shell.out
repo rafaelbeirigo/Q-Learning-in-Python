@@ -1,0 +1,47 @@
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ time ./RL-PRQL.py experiments/138/PRQL/
+/home/rafaelbeirigo/ql/tools//prepareFolders.sh experiments/138/PRQL/
+[prepareFolders.sh] : Deleting output files...
+experiments/138/PRQL/Q.out
+experiments/138/PRQL/w.out
+experiments/138/PRQL/parameters.out
+experiments/138/PRQL/policy.out
+experiments/138/PRQL/shell.out.gz
+[prepareFolders.sh] : Deleting log file...
+experiments/138/PRQL//../PRQL/log.txt.gz
+[prepareFolders.sh] : Deleting graph files...
+[prepareFolders.sh] : Deleting backup files...
+experiments/138/PRQL/policies/policy.task5.in.gz~
+[prepareFolders.sh] : Deletion is done
+[prepareFolders.sh] : Uncompressing input files...
+experiments/138/PRQL/rewards.in.gz
+experiments/138/PRQL/transitions.in.gz
+experiments/138/PRQL/states.in.gz
+experiments/138/PRQL/policies/policy.task5.in.gz
+experiments/138/PRQL/actions.in.gz
+experiments/138/PRQL/goals.in.gz
+[prepareFolders.sh] : Uncompression is done
+Running experiment 1 of 10
+pr:  178 ql:  1822
+Running experiment 2 of 10
+pr:  238 ql:  1762
+Running experiment 3 of 10
+pr:  262 ql:  1738
+Running experiment 4 of 10
+pr:  165 ql:  1835
+Running experiment 5 of 10
+pr:  291 ql:  1709
+Running experiment 6 of 10
+pr:  187 ql:  1813
+Running experiment 7 of 10
+pr:  279 ql:  1721
+Running experiment 8 of 10
+pr:  216 ql:  1784
+Running experiment 9 of 10
+pr:  169 ql:  1831
+Running experiment 10 of 10
+pr:  297 ql:  1703
+
+real	3m18.771s
+user	2m25.880s
+sys	0m0.200s
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 

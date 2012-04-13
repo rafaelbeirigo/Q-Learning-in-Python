@@ -192,24 +192,31 @@ baixo, superado pelo Q-Learning durante os experimentos.
 ** Discussão
 PRQL apresenta desempenho inferior ao de QL, o oposto do esperado.
 
-
-** 12 Repetição de 11 reutilizando somente a policy obtida em 11 pelo QLearning (ótima para o problema)
+** 12 Repetição
+Reutilizando somente a policy obtida em 11 pelo QLearning (ótima para o problema)
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/12/w.png]]
 
-
-
-** 13 Repetição de 12, só que chamei o solveMDP... pra criar os arquivos (tirar a dúvida se
-  arquivos estão corretos)
+** 13 Repetição
+Chamei o solveMDP... pra criar os arquivos (tirar a dúvida se arquivos estão corretos)
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/13/w.png]]
 Pude perceber a partir desse experimento que as políticas que estavam
 sendo reutilizadas eram subótimas.
 
-
-** 14 Repetição do 13, só que agora utilizando a política ótima
+** 14 Repetição
+Agora utilizando a política ótima
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/14/w.png]]
+
+** 20 Repetição
+#+ATTR_HTML: height="240" style="border:2px solid black;"
+[[/home/rafaelbeirigo/ql/experiments/20/w.png]]
+
+** 25 Repetição
+Repetição do 20
+#+ATTR_HTML: height="240" style="border:2px solid black;"
+[[/home/rafaelbeirigo/ql/experiments/25/w.png]]
 
 
 * Obtenção das políticas ótimas para as tasks de 1 a 5
@@ -241,15 +248,6 @@ sendo reutilizadas eram subótimas.
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/19/w.png]]
   Consumo de tempo: ~ 10'
-
-
-* 20 Resolver task \Omega utilizando \Pi_2, \Pi_3, \Pi_4, \Pi_5 (Repetição do 11)
-#+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/20/w.png]]
-
-
-** 25 Repetição do 20
-#+ATTR_HTML: height="240" style="border:2px solid black;"
 
 
 * 21 Resolver task \Omega utilizando \Pi_2, \Pi_3, \Pi_4
@@ -453,6 +451,59 @@ Isso foi feito nos experimentos de /67/ a /77/.
 Esse experimento é uma repetição do /56/ a /66/, para testar se está tudo OK.
 O resultado correspondeu ao esperado.
 
+******* 112 a 122
+#+ATTR_HTML: height="640" style="border:2px solid black;"
+[[/home/rafaelbeirigo/ql/experiments/112/w.png]]
+
+******** Parâmetros: [[/home/rafaelbeirigo/ql/experiments/112/PRQL/parameters.out]]
+******** QLearning: 112
+******** Discussão:
+Esse experimento foi realizado para testar se o /merge/ via /git/ do /branch/
+/probabilistic/ havia sido realizado com sucesso.
+
+Os resultados estão muito próximos dos obtidos no mesmo experimento quando
+executados com a versão anterior ao /merge/, o que sugere que tenha ocorrido
+tudo bem no processo de /merge/.
+
+******* 123 a 133
+#+ATTR_HTML: height="640" style="border:2px solid black;"
+[[/home/rafaelbeirigo/ql/experiments/123/w.png]]
+
+******** Parâmetros: [[/home/rafaelbeirigo/ql/experiments/123/PRQL/parameters.out]]
+******** QLearning: 123
+******** Discussão:
+Esse experimento foi realizado para testar se a estratégia de full-greedy implica
+em alguma melhoria no desempenho do algoritmo.
+
+O resultado esperado é que não haja melhorias, pelo contrário, que o fato de o
+agente não poder realizar a exploração durante o episódio de Q-Learning implique
+em uma queda do desempenho no aprendizado.
+
+Algo que pude observar foi uma marcante queda na quantidade de /policy-reuse/:
+| Execução | Policy Reuse | Q-Learning |
+|----------+--------------+------------|
+|        1 |         1958 |         42 |
+|        2 |         1958 |         42 |
+|        3 |         1951 |         49 |
+|        4 |         1949 |         51 |
+|        5 |         1946 |         54 |
+|        6 |         1952 |         48 |
+|        7 |         1957 |         43 |
+|        8 |         1963 |         37 |
+|        9 |         1950 |         50 |
+|       10 |         1935 |         65 |
+
+Podemos verificar que o resultado foi o oposto do esperado, e houve um aumento
+significativo do desempenho do agente no aprendizado.
+
+Dúvidas que surgiram:
+
+1) Por que isso aconteceu?
+
+2) Qual foi a modificação, na média, de aplicação de \pi-reuse?
+
+3) Por que a política com 100% de ótimo não teve o melhor desempenho de todas?
+
 ****** 100 execuções
 ******* 79 a 89
 #+ATTR_HTML: height="640" style="border:2px solid black;"
@@ -497,7 +548,18 @@ desempenho inferior ao da execução do QL.
 
 ******** Parâmetros: [[/home/rafaelbeirigo/ql/experiments/90/PRQL/parameters.out]]
 ******** QLearning: 90
+******** Discussão:
 O resultado correspondeu ao esperado.
+
+******* 139 a 149
+#+ATTR_HTML: height="640" style="border:2px solid black;"
+[[/home/rafaelbeirigo/ql/experiments/139/w.png]]
+
+******** Parâmetros: [[/home/rafaelbeirigo/ql/experiments/139/PRQL/parameters.out]]
+******** QLearning: 139
+******** Discussão:
+Esse experimento foi realizado para verificar o impacto da correção em relação ao
+/full-greedy/ (detalhes no grupo de experimentos de /123/ a /133/).
 
 
 * IPMU
@@ -549,3 +611,29 @@ Vale notar que estou supondo que existe uma linha s a s' t para todas
 *** QL
 ***** Task: IPMU
 ***** Parâmetros: [[/home/rafaelbeirigo/ql/experiments/78/QL/parameters.out]]
+
+
+* Repetindo após correção /full-greedy/
+Percebi  que houve uma melhora significativa no desempenho do aprendizado
+e estou repetindo alguns experimentos cujos resultados foram díspares do
+esperado.
+
+Os experimentos que marcaram a descoberta foram os do grupo de 123 a 133.
+
+** Aprendizado de \Pi_\Omega com reutilização individual de políticas
+Esse experimento me deixou bastante intrigado, porque o resultado foi
+significativamente (quanto?) díspare do apresentado no artigo.
+
+#+ATTR_HTML: height="240" style="border:2px solid black;"
+[[/home/rafaelbeirigo/ql/experiments/27/map.png]]
+
+#+ATTR_HTML: height="240" style="border:2px solid black;"
+[[/home/rafaelbeirigo/ql/experiments/27/w.png]]
+
+No gráfico, os valores referentes ao Q-Learning foram obtidos no experimento 37.
+
+*** 134 Reutilizando \Pi_1
+*** 135 Reutilizando \Pi_2
+*** 136 Reutilizando \Pi_3
+*** 137 Reutilizando \Pi_4
+*** 138 Reutilizando \Pi_5

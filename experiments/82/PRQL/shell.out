@@ -200,25 +200,4 @@ Running experiment 99 of 100
 pr:  753 ql:  1247
 Running experiment 100 of 100
 pr:  736 ql:  1264
-rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/104/PRQL/
-Running experiment 1 of 10
-pr:  1682 ql:  318
-Running experiment 2 of 10
-pr:  726 ql:  1274
-Running experiment 3 of 10
-pr:  674 ql:  1326
-Running experiment 4 of 10
-pr:  736 ql:  1264
-Running experiment 5 of 10
-pr:  704 ql:  1296
-Running experiment 6 of 10
-pr:  323 ql:  1677
-Running experiment 7 of 10
-pr:  877 ql:  1123
-Running experiment 8 of 10
-pr:  491 ql:  1509
-Running experiment 9 of 10
-pr:  519 ql:  1481
-Running experiment 10 of 10
-pr:  890 ql:  1110
-rafaelbeirigo@LTI-PROJETO-TM:~/ql$ ./RL-PRQL.py experiments/104/PRQL/
+rafaelbeirigo@LTI-PROJETO-TM:~/ql$ 
