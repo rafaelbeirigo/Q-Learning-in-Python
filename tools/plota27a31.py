@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import pylab as pl
 
-def plota27a31():
+def plot():
     experimento = '/home/rafaelbeirigo/ql/experiments/'
     
     pi1 = pl.loadtxt(experimento + "/27/PRQL/w.out")
@@ -15,11 +15,11 @@ def plota27a31():
     pl.xlabel("Episodes")
     pl.ylabel("W")
 
-    pl.plot(pi1,  'o', label = r'Reutilizando $\Pi_1$)')
-    pl.plot(pi2,  '+', label = r'Reutilizando $\Pi_2$)')
-    pl.plot(pi3, '--', label = r'Reutilizando $\Pi_3$)')
-    pl.plot(pi4, '-.', label = r'Reutilizando $\Pi_4$)')
-    pl.plot(pi5,  ':', label = r'Reutilizando $\Pi_5$)')
+    pl.plot(pi1,  'o', label = r'Reutilizando $\Pi_1$')
+    pl.plot(pi2,  '+', label = r'Reutilizando $\Pi_2$')
+    pl.plot(pi3, '--', label = r'Reutilizando $\Pi_3$')
+    pl.plot(pi4, '-.', label = r'Reutilizando $\Pi_4$')
+    pl.plot(pi5,  ':', label = r'Reutilizando $\Pi_5$')
 
     pl.plot(ql, label = 'Q-Learning')
 
