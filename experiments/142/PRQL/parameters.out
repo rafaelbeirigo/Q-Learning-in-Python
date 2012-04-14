@@ -1,0 +1,7 @@
+alpha              = 0.05
+gamma              = 0.95
+epsilon            = 1.0
+epsilonIncrement   = 0.0
+K                  = 2000
+H                  = 100
+numberOfExecutions = 1000

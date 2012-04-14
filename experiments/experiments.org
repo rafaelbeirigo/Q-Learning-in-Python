@@ -3,29 +3,17 @@
 Esse experimento não está no artigo. Fiz para fins de testes.
 
 #+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/00/01/map.png]]
-
-#+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/00/01/w.png]]
 
 ** 02 Utilizando \Pi_2, \Pi_3, \Pi_4
-#+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/00/02/map.png]]
-
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/00/02/w.png]]
 
 ** 03 Utilizando \Pi_1, \Pi_2, \Pi_3, \Pi_4
 #+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/00/03/map.png]]
-
-#+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/00/03/w.png]]
 
 ** 04 Utilizando \Pi_2, \Pi_3, \Pi_4, \Pi_5
-#+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/00/04/map.png]]
-
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/00/04/w.png]]
 
@@ -39,29 +27,17 @@ PRQ-Learning, o que prejudicava o desempenho desse algoritmo.
 Repetição de 00 após correção do problema.
 ** 01 Utilizando \Pi_1, \Pi_2, \Pi_3, \Pi_4, \Pi_5
 #+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/00/01/map.png]]
-
-#+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/01/01/w.png]]
 
 ** 02 Utilizando \Pi_2, \Pi_3, \Pi_4
-#+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/00/02/map.png]]
-
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/01/02/w.png]]
 
 ** 03 Utilizando \Pi_1, \Pi_2, \Pi_3, \Pi_4
 #+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/00/03/map.png]]
-
-#+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/01/03/w.png]]
 
 ** 04 Utilizando \Pi_2, \Pi_3, \Pi_4, \Pi_5
-#+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/00/04/map.png]]
-
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/01/04/w.png]]
 
@@ -262,9 +238,6 @@ Repetição do 20
 
 
 * Aprendizado de \Pi_\Omega com reutilização individual de políticas
-#+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/27/map.png]]
-
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/27/w.png]]
 
@@ -623,9 +596,6 @@ Os experimentos que marcaram a descoberta foram os do grupo de 123 a 133.
 ** Aprendizado de \Pi_\Omega com reutilização individual de políticas
 Esse experimento me deixou bastante intrigado, porque o resultado foi
 significativamente (quanto?) díspare do apresentado no artigo.
-
-#+ATTR_HTML: height="240" style="border:2px solid black;"
-[[/home/rafaelbeirigo/ql/experiments/27/map.png]]
 
 #+ATTR_HTML: height="240" style="border:2px solid black;"
 [[/home/rafaelbeirigo/ql/experiments/27/w.png]]
