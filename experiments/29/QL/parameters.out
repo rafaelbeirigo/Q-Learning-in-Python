@@ -1,0 +1,7 @@
+alpha            = 0.05
+gamma            = 0.95
+epsilon          = 0.0
+epsilonIncrement = 0.0005
+K                = 2000
+H                = 100
+gammaPRQL        = 0.95

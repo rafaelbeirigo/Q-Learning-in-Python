@@ -1,0 +1,3 @@
+"iteration","state","psi","randomNumber1","randomNumber2","epsilon","a","r","W"
+2,"row1col5",0.95,0.942483917663,-1.0,-1,"North",0.0,0.0
+3,"row1col5",0.9025,0.942837599921,-1.0,-1,"North",0.0,0.0

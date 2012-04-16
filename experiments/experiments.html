@@ -1,0 +1,1700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>experiments</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-04-13 18:24:57 BRT"/>
+<meta name="author" content="Rafael Lemes Beirigo"/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color:lightblue; font-weight:normal }
+  .target { }
+  .timestamp { color: grey }
+  .timestamp-kwd { color: CadetBlue }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*/-->
+</script>
+</head><body>
+<h1 class="title">experiments</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Experimento 00 Experimento da seção 4.3 do artigo: resolver task &Omega; </a>
+<ul>
+<li><a href="#sec-1.1">1.1 01 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-1.2">1.2 02 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-1.3">1.3 03 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-1.4">1.4 04 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-1.5">1.5 Discussão </a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Experimento 01 </a>
+<ul>
+<li><a href="#sec-2.1">2.1 01 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-2.2">2.2 02 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-2.3">2.3 03 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-2.4">2.4 04 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a></li>
+<li><a href="#sec-2.5">2.5 Discussão </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Experimento 02 QL vs PRQL no mundo 05x05 </a>
+<ul>
+<li><a href="#sec-3.1">3.1 Discussão </a></li>
+<li><a href="#sec-3.2">3.2 03 Repetição de 02, só que para o mundo 06x06 </a></li>
+<li><a href="#sec-3.3">3.3 Discussão </a></li>
+<li><a href="#sec-3.4">3.4 04 Repetição de 02, só que para a task &Omega; do artigo </a></li>
+<li><a href="#sec-3.5">3.5 Discussão: </a></li>
+<li><a href="#sec-3.6">3.6 05 Repetição de 04, só que dessa vez ativando o &pi;-reuse </a></li>
+<li><a href="#sec-3.7">3.7 06 Repetição de 05 para task &Omega; do artigo reutilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub> e &Pi;<sub>5</sub> (são as que mais ajudam o agente) </a></li>
+<li><a href="#sec-3.8">3.8 09 Repetição de 02 </a></li>
+<li><a href="#sec-3.9">3.9 Discussão </a></li>
+<li><a href="#sec-3.10">3.10 23 Repetição do 02 </a></li>
+<li><a href="#sec-3.11">3.11 10 Repetição de 09, mas reutilizando uma política ótima para o problema de chegar à localização oposta (pior política que poderia reutilizar) </a></li>
+<li><a href="#sec-3.12">3.12 Discussão </a></li>
+<li><a href="#sec-3.13">3.13 Discussão </a></li>
+<li><a href="#sec-3.14">3.14 Discussão </a></li>
+<li><a href="#sec-3.15">3.15 07 Repetição de 06 </a></li>
+<li><a href="#sec-3.16">3.16 Discussão </a></li>
+<li><a href="#sec-3.17">3.17 08 Repetição de 06, mas reutilizando somente a política ótima </a></li>
+<li><a href="#sec-3.18">3.18 Discussão </a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 11 Resolver task &Omega; utilizando  &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </a>
+<ul>
+<li><a href="#sec-4.1">4.1 Discussão </a></li>
+<li><a href="#sec-4.2">4.2 12 Repetição </a></li>
+<li><a href="#sec-4.3">4.3 13 Repetição </a></li>
+<li><a href="#sec-4.4">4.4 14 Repetição </a></li>
+<li><a href="#sec-4.5">4.5 20 Repetição </a></li>
+<li><a href="#sec-4.6">4.6 25 Repetição </a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 Obtenção das políticas ótimas para as tasks de 1 a 5 </a>
+<ul>
+<li><a href="#sec-5.1">5.1 15 Obtenção de &Pi;<sub>1</sub> </a></li>
+<li><a href="#sec-5.2">5.2 16 Obtenção de &Pi;<sub>2</sub> </a></li>
+<li><a href="#sec-5.3">5.3 17 Obtenção de &Pi;<sub>3</sub> </a></li>
+<li><a href="#sec-5.4">5.4 18 Obtenção de &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-5.5">5.5 19 Obtenção de &Pi;<sub>5</sub> </a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 21 Resolver task &Omega; utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a>
+<ul>
+<li><a href="#sec-6.1">6.1 26 Repetição do 21 </a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 22 Resolver task &Omega; utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </a>
+<ul>
+<li><a href="#sec-7.1">7.1 24 Repetição do 22 </a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 Aprendizado de &Pi;<sub>&Omega;</sub> com reutilização individual de políticas </a>
+<ul>
+<li><a href="#sec-8.1">8.1 27 Reutilizando &Pi;<sub>1</sub> </a></li>
+<li><a href="#sec-8.2">8.2 28 Reutilizando &Pi;<sub>2</sub> </a></li>
+<li><a href="#sec-8.3">8.3 29 Reutilizando &Pi;<sub>3</sub> </a></li>
+<li><a href="#sec-8.4">8.4 30 Reutilizando &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-8.5">8.5 31 Reutilizando &Pi;<sub>5</sub> </a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 Resolver task1 utilizando &pi;-reuse(&Pi;<sub>1</sub>) </a>
+<ul>
+<li><a href="#sec-9.1">9.1 10 execuções </a>
+<ul>
+<li><a href="#sec-9.1.1">9.1.1 Experimento 32 - em 100% dos episódios - 10 execuções </a></li>
+<li><a href="#sec-9.1.2">9.1.2 Experimento 33 - em  75% dos episódios - 10 execuções </a></li>
+<li><a href="#sec-9.1.3">9.1.3 Experimento 34 - em  50% dos episódios - 10 execuções </a></li>
+<li><a href="#sec-9.1.4">9.1.4 Experimento 35 - em  25% dos episódios - 10 execuções </a></li>
+<li><a href="#sec-9.1.5">9.1.5 Experimento 36 - em   0% dos episódios - 10 execuções </a></li>
+</ul>
+</li>
+<li><a href="#sec-9.2">9.2 100 execuções </a>
+<ul>
+<li><a href="#sec-9.2.1">9.2.1 Experimento 37 - em   0% dos episódios </a></li>
+<li><a href="#sec-9.2.2">9.2.2 Experimento 38 - em  25% dos episódios </a></li>
+<li><a href="#sec-9.2.3">9.2.3 Experimento 39 - em  50% dos episódios </a></li>
+<li><a href="#sec-9.2.4">9.2.4 Experimento 40 - em  75% dos episódios </a></li>
+<li><a href="#sec-9.2.5">9.2.5 Experimento 41 - em 100% dos episódios </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-10">10 Testes da versão probabilística do PRQL (PRQL<sub>prob</sub>) </a>
+<ul>
+<li><a href="#sec-10.1">10.1 PRQL<sub>prob</sub> <i>versus</i> PRQL </a>
+<ul>
+<li><a href="#sec-10.1.1">10.1.1 Conservador: política determinística com 1.0 em tudo </a></li>
+<li><a href="#sec-10.1.2">10.1.2 Menos conservador: PRQL<sub>prob</sub> vs QL </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-11">11 IPMU </a>
+<ul>
+<li><a href="#sec-11.1">11.1 42 Com arquivos originais - 2000 episódios, 100 passos </a></li>
+<li><a href="#sec-11.2">11.2 43 Com arquivos originais - 1e05 episódios, 1000 passos </a></li>
+<li><a href="#sec-11.3">11.3 44 Modifiquei o transitions.in </a></li>
+<li><a href="#sec-11.4">11.4 78 Reutilizando políticas probabilísticas </a>
+<ul>
+<li><a href="#sec-11.4.1">11.4.1 PRQL </a></li>
+<li><a href="#sec-11.4.2">11.4.2 QL </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-12">12 Repetindo após correção <i>full-greedy</i> </a>
+<ul>
+<li><a href="#sec-12.1">12.1 Aprendizado de &Pi;<sub>&Omega;</sub> com reutilização individual de políticas </a>
+<ul>
+<li><a href="#sec-12.1.1">12.1.1 134 Reutilizando &Pi;<sub>1</sub> </a></li>
+<li><a href="#sec-12.1.2">12.1.2 135 Reutilizando &Pi;<sub>2</sub> </a></li>
+<li><a href="#sec-12.1.3">12.1.3 136 Reutilizando &Pi;<sub>3</sub> </a></li>
+<li><a href="#sec-12.1.4">12.1.4 137 Reutilizando &Pi;<sub>4</sub> </a></li>
+<li><a href="#sec-12.1.5">12.1.5 138 Reutilizando &Pi;<sub>5</sub> </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">1 Experimento 00 Experimento da seção 4.3 do artigo: resolver task &Omega; </h2>
+<div id="text-1">
+
+
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1">1.1 01 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h3>
+<div id="text-1.1">
+
+<p>Esse experimento não está no artigo. Fiz para fins de testes.
+</p>
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/00/01/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/00/01/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2">1.2 02 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h3>
+<div id="text-1.2">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/00/02/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/00/02/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3">1.3 03 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h3>
+<div id="text-1.3">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/00/03/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/00/03/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4" class="outline-3">
+<h3 id="sec-1.4">1.4 04 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h3>
+<div id="text-1.4">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/00/04/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/00/04/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-1.5" class="outline-3">
+<h3 id="sec-1.5">1.5 Discussão </h3>
+<div id="text-1.5">
+
+<p>Q-Learning apresentou um desempenho superior ao de PRQ-Learning.
+Posteriormente descobri que o motivo era que a tabela Q era reiniciada somente para o 
+PRQ-Learning, o que prejudicava o desempenho desse algoritmo.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">2 Experimento 01 </h2>
+<div id="text-2">
+
+<p>Repetição de 00 após correção do problema.
+</p>
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1">2.1 01 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h3>
+<div id="text-2.1">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/01/01/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/01/01/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2">2.2 02 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h3>
+<div id="text-2.2">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/01/02/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/01/02/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-2.3" class="outline-3">
+<h3 id="sec-2.3">2.3 03 Utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h3>
+<div id="text-2.3">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/01/03/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/01/03/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-2.4" class="outline-3">
+<h3 id="sec-2.4">2.4 04 Utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h3>
+<div id="text-2.4">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/01/04/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/01/04/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-2.5" class="outline-3">
+<h3 id="sec-2.5">2.5 Discussão </h3>
+<div id="text-2.5">
+
+<p>O PRQL apresenta um desempenho similar ao do QL.
+O resultado não foi o esperado: esperava-se um desempenho melhor por parte do PRQL,
+dado que esse possui a reutilização de políticas.
+Hipótese: não está utilizando as políticas antigas
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">3 Experimento 02 QL vs PRQL no mundo 05x05 </h2>
+<div id="text-3">
+
+<p>Motivo: queria rodar o PRQL sem a parte PR, ou seja, só utilizando
+QLearning, pra ver se estava tudo OK.
+</p>
+<p>
+Nesse experimento, o PRQL NÃO utilizava &pi;-reuse, somente QL
+</p>
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/02/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/02/w.png" /></p>
+</div>
+
+
+</div>
+
+<div id="outline-container-3.1" class="outline-3">
+<h3 id="sec-3.1">3.1 Discussão </h3>
+<div id="text-3.1">
+
+<p>PRQL apresentou um desempenho bastante similar ao do QL, o que sugere que a execução
+do PRQL sem &pi;-reuse equivale à execução do QL.
+</p>
+<p>
+Isso já era esperado, pois o elemento do PRQL que acelera o aprendizado é justamente
+o &pi;-reuse
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.2" class="outline-3">
+<h3 id="sec-3.2">3.2 03 Repetição de 02, só que para o mundo 06x06 </h3>
+<div id="text-3.2">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/03/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/03/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.3" class="outline-3">
+<h3 id="sec-3.3">3.3 Discussão </h3>
+<div id="text-3.3">
+
+<p>O resultado foi compatível com o obtido no experimento 02, conforme esperado
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.4" class="outline-3">
+<h3 id="sec-3.4">3.4 04 Repetição de 02, só que para a task &Omega; do artigo </h3>
+<div id="text-3.4">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/04/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/04/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.5" class="outline-3">
+<h3 id="sec-3.5">3.5 Discussão: </h3>
+<div id="text-3.5">
+
+<p>PRQL e QL apresentaram desempenhos compatíveis, o que era esperado
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.6" class="outline-3">
+<h3 id="sec-3.6">3.6 05 Repetição de 04, só que dessa vez ativando o &pi;-reuse </h3>
+<div id="text-3.6">
+
+<p>A bilioteca de políticas continha somente a &Pi;<sup>*</sup><sub>&Omega;</sub>.
+</p>
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/05/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/05/w.png" /></p>
+</div>
+<p>
+Sucesso: PRQL acelerou QLearning
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.7" class="outline-3">
+<h3 id="sec-3.7">3.7 06 Repetição de 05 para task &Omega; do artigo reutilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub> e &Pi;<sub>5</sub> (são as que mais ajudam o agente) </h3>
+<div id="text-3.7">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/06/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/06/w.png" /></p>
+</div>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.8" class="outline-3">
+<h3 id="sec-3.8">3.8 09 Repetição de 02 </h3>
+<div id="text-3.8">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/02/w.png" title="02" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/02/w.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/09/w.png" title="09" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/09/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.9" class="outline-3">
+<h3 id="sec-3.9">3.9 Discussão </h3>
+<div id="text-3.9">
+
+<p>O desempenho do PRQL aumentou em relação ao experimento 02. Isso pode
+ser explicado pelo fato de que foi utilizado &pi;-reuse nesse
+experimento, o que contribui para acelerar o aprendizado.
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.10" class="outline-3">
+<h3 id="sec-3.10">3.10 23 Repetição do 02 </h3>
+<div id="text-3.10">
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3.11" class="outline-3">
+<h3 id="sec-3.11">3.11 10 Repetição de 09, mas reutilizando uma política ótima para o problema de chegar à localização oposta (pior política que poderia reutilizar) </h3>
+<div id="text-3.11">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/09/w.png" height="240" style="border:2px solid black;" title="09" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/09/w.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/10/w.png" title="10" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/10/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.12" class="outline-3">
+<h3 id="sec-3.12">3.12 Discussão </h3>
+<div id="text-3.12">
+
+<p>O resultado foi de acordo com o esperado, pois o desempenho do PRQL
+cai quando a política que está sendo reutilizada atrapalharia na
+solução do problema.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3.13" class="outline-3">
+<h3 id="sec-3.13">3.13 Discussão </h3>
+<div id="text-3.13">
+
+<p>O elevado desempenho do PRQL pode ser explicado pelo fato de que a
+política utilizada é justamente a ótima para o problema.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3.14" class="outline-3">
+<h3 id="sec-3.14">3.14 Discussão </h3>
+<div id="text-3.14">
+
+<p>Problema: plotando W[ 1]
+</p>
+<p>
+Foi plotado somente a recompensa acumulada quando se reutilizava uma
+das políticas possíveis, L[ 1]para uma das políticas
+reutilizadas.
+</p>
+<p>
+Como espera-se um aumento gradual da utilização da política &Pi;<sub>new</sub>, e
+a recompensa acumulada pela utilização de &Pi;<sub>new</sub> se encontra em W[
+0], o valor plotado em W[ 1] não reflete o que esperamos.
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.15" class="outline-3">
+<h3 id="sec-3.15">3.15 07 Repetição de 06 </h3>
+<div id="text-3.15">
+
+<p>A repetição foi feita para testes
+</p>
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/07/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/07/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.16" class="outline-3">
+<h3 id="sec-3.16">3.16 Discussão </h3>
+<div id="text-3.16">
+
+<p>Problema: plotando W[ 1]
+A repetição foi feita antes da detecção do problema descrito em 05.
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.17" class="outline-3">
+<h3 id="sec-3.17">3.17 08 Repetição de 06, mas reutilizando somente a política ótima </h3>
+<div id="text-3.17">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/08/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/08/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-3.18" class="outline-3">
+<h3 id="sec-3.18">3.18 Discussão </h3>
+<div id="text-3.18">
+
+<p>O resultado foi diverso do esperado.
+</p>
+<p>
+A recompensa acumulada estaciona em ~ 0.13, um valor extremamente
+baixo, superado pelo Q-Learning durante os experimentos.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">4 11 Resolver task &Omega; utilizando  &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> </h2>
+<div id="text-4">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/11/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/11/w.png" /></p>
+</div>
+
+
+</div>
+
+<div id="outline-container-4.1" class="outline-3">
+<h3 id="sec-4.1">4.1 Discussão </h3>
+<div id="text-4.1">
+
+<p>PRQL apresenta desempenho inferior ao de QL, o oposto do esperado.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.2" class="outline-3">
+<h3 id="sec-4.2">4.2 12 Repetição </h3>
+<div id="text-4.2">
+
+<p>Reutilizando somente a policy obtida em 11 pelo QLearning (ótima para o problema)
+</p>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/12/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/12/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-4.3" class="outline-3">
+<h3 id="sec-4.3">4.3 13 Repetição </h3>
+<div id="text-4.3">
+
+<p>Chamei o solveMDP&hellip; pra criar os arquivos (tirar a dúvida se arquivos estão corretos)
+</p>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/13/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/13/w.png" /></p>
+</div>
+<p>
+Pude perceber a partir desse experimento que as políticas que estavam
+sendo reutilizadas eram subótimas.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-4.4" class="outline-3">
+<h3 id="sec-4.4">4.4 14 Repetição </h3>
+<div id="text-4.4">
+
+<p>Agora utilizando a política ótima
+</p>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/14/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/14/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-4.5" class="outline-3">
+<h3 id="sec-4.5">4.5 20 Repetição </h3>
+<div id="text-4.5">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/20/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/20/w.png" /></p>
+</div>
+
+</div>
+
+</div>
+
+<div id="outline-container-4.6" class="outline-3">
+<h3 id="sec-4.6">4.6 25 Repetição </h3>
+<div id="text-4.6">
+
+<p>Repetição do 20
+</p>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/25/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/25/w.png" /></p>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">5 Obtenção das políticas ótimas para as tasks de 1 a 5 </h2>
+<div id="text-5">
+
+
+</div>
+
+<div id="outline-container-5.1" class="outline-3">
+<h3 id="sec-5.1">5.1 15 Obtenção de &Pi;<sub>1</sub> </h3>
+<div id="text-5.1">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/15/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/15/w.png" /></p>
+</div>
+<p>
+Consumo de tempo: ~ 10'
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-5.2" class="outline-3">
+<h3 id="sec-5.2">5.2 16 Obtenção de &Pi;<sub>2</sub> </h3>
+<div id="text-5.2">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/16/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/16/w.png" /></p>
+</div>
+<p>
+Consumo de tempo: ~ 10'
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-5.3" class="outline-3">
+<h3 id="sec-5.3">5.3 17 Obtenção de &Pi;<sub>3</sub> </h3>
+<div id="text-5.3">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/17/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/17/w.png" /></p>
+</div>
+<p>
+Consumo de tempo: ~ 10'
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-5.4" class="outline-3">
+<h3 id="sec-5.4">5.4 18 Obtenção de &Pi;<sub>4</sub> </h3>
+<div id="text-5.4">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/18/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/18/w.png" /></p>
+</div>
+<p>
+Consumo de tempo: ~ 10'
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-5.5" class="outline-3">
+<h3 id="sec-5.5">5.5 19 Obtenção de &Pi;<sub>5</sub> </h3>
+<div id="text-5.5">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/19/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/19/w.png" /></p>
+</div>
+<p>
+Consumo de tempo: ~ 10'
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6">6 21 Resolver task &Omega; utilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h2>
+<div id="text-6">
+
+
+</div>
+
+<div id="outline-container-6.1" class="outline-3">
+<h3 id="sec-6.1">6.1 26 Repetição do 21 </h3>
+<div id="text-6.1">
+
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7">7 22 Resolver task &Omega; utilizando &Pi;<sub>1</sub>, &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub> </h2>
+<div id="text-7">
+
+
+</div>
+
+<div id="outline-container-7.1" class="outline-3">
+<h3 id="sec-7.1">7.1 24 Repetição do 22 </h3>
+<div id="text-7.1">
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8">8 Aprendizado de &Pi;<sub>&Omega;</sub> com reutilização individual de políticas </h2>
+<div id="text-8">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/27/w.png" height="240" style="border:2px solid black;" height="240" style="border:2px solid black;" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/27/w.png" /></p>
+</div>
+
+<p>
+No gráfico, os valores referentes ao Q-Learning foram obtidos no experimento 37.
+</p>
+
+</div>
+
+<div id="outline-container-8.1" class="outline-3">
+<h3 id="sec-8.1">8.1 27 Reutilizando &Pi;<sub>1</sub> </h3>
+<div id="text-8.1">
+
+<p>Consumo de tempo: 5m20.356s
+</p></div>
+
+</div>
+
+<div id="outline-container-8.2" class="outline-3">
+<h3 id="sec-8.2">8.2 28 Reutilizando &Pi;<sub>2</sub> </h3>
+<div id="text-8.2">
+
+<p>Consumo de tempo: 7m53.056s
+</p></div>
+
+</div>
+
+<div id="outline-container-8.3" class="outline-3">
+<h3 id="sec-8.3">8.3 29 Reutilizando &Pi;<sub>3</sub> </h3>
+<div id="text-8.3">
+
+<p>Consumo de tempo: 9m8.582s
+</p></div>
+
+</div>
+
+<div id="outline-container-8.4" class="outline-3">
+<h3 id="sec-8.4">8.4 30 Reutilizando &Pi;<sub>4</sub> </h3>
+<div id="text-8.4">
+
+<p>Consumo de tempo: 10m19.403s
+</p></div>
+
+</div>
+
+<div id="outline-container-8.5" class="outline-3">
+<h3 id="sec-8.5">8.5 31 Reutilizando &Pi;<sub>5</sub> </h3>
+<div id="text-8.5">
+
+<p>Consumo de tempo: 6m8.686s
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9">9 Resolver task1 utilizando &pi;-reuse(&Pi;<sub>1</sub>) </h2>
+<div id="text-9">
+
+
+</div>
+
+<div id="outline-container-9.1" class="outline-3">
+<h3 id="sec-9.1">9.1 10 execuções </h3>
+<div id="text-9.1">
+
+<p>Política reutilizada: &Pi;<sub>1</sub>, obtida no experimento 15
+</p>
+<p>
+w.32.png - dados do Q-Learning obtidos no experimento 32
+</p>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/32/w.32.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/32/w.32.png" /></p>
+</div>
+
+<p>
+w.37.png - dados do Q-Learning obtidos no experimento 37
+</p>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/32/w.37.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/32/w.37.png" /></p>
+</div>
+
+
+</div>
+
+<div id="outline-container-9.1.1" class="outline-4">
+<h4 id="sec-9.1.1">9.1.1 Experimento 32 - em 100% dos episódios - 10 execuções </h4>
+<div id="text-9.1.1">
+
+</div>
+
+</div>
+
+<div id="outline-container-9.1.2" class="outline-4">
+<h4 id="sec-9.1.2">9.1.2 Experimento 33 - em  75% dos episódios - 10 execuções </h4>
+<div id="text-9.1.2">
+
+</div>
+
+</div>
+
+<div id="outline-container-9.1.3" class="outline-4">
+<h4 id="sec-9.1.3">9.1.3 Experimento 34 - em  50% dos episódios - 10 execuções </h4>
+<div id="text-9.1.3">
+
+</div>
+
+</div>
+
+<div id="outline-container-9.1.4" class="outline-4">
+<h4 id="sec-9.1.4">9.1.4 Experimento 35 - em  25% dos episódios - 10 execuções </h4>
+<div id="text-9.1.4">
+
+</div>
+
+</div>
+
+<div id="outline-container-9.1.5" class="outline-4">
+<h4 id="sec-9.1.5">9.1.5 Experimento 36 - em   0% dos episódios - 10 execuções </h4>
+<div id="text-9.1.5">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9.2" class="outline-3">
+<h3 id="sec-9.2">9.2 100 execuções </h3>
+<div id="text-9.2">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/37/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/37/w.png" /></p>
+</div>
+
+<p>
+Política reutilizada: &Pi;<sub>1</sub>, obtida no experimento 15
+</p>
+<p>
+Dados do Q-Learning obtidos no experimento 37
+</p>
+
+</div>
+
+<div id="outline-container-9.2.1" class="outline-4">
+<h4 id="sec-9.2.1">9.2.1 Experimento 37 - em   0% dos episódios </h4>
+<div id="text-9.2.1">
+
+</div>
+
+</div>
+
+<div id="outline-container-9.2.2" class="outline-4">
+<h4 id="sec-9.2.2">9.2.2 Experimento 38 - em  25% dos episódios </h4>
+<div id="text-9.2.2">
+
+</div>
+
+</div>
+
+<div id="outline-container-9.2.3" class="outline-4">
+<h4 id="sec-9.2.3">9.2.3 Experimento 39 - em  50% dos episódios </h4>
+<div id="text-9.2.3">
+
+</div>
+
+</div>
+
+<div id="outline-container-9.2.4" class="outline-4">
+<h4 id="sec-9.2.4">9.2.4 Experimento 40 - em  75% dos episódios </h4>
+<div id="text-9.2.4">
+
+</div>
+
+</div>
+
+<div id="outline-container-9.2.5" class="outline-4">
+<h4 id="sec-9.2.5">9.2.5 Experimento 41 - em 100% dos episódios </h4>
+<div id="text-9.2.5">
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10">10 Testes da versão probabilística do PRQL (PRQL<sub>prob</sub>) </h2>
+<div id="text-10">
+
+
+</div>
+
+<div id="outline-container-10.1" class="outline-3">
+<h3 id="sec-10.1">10.1 PRQL<sub>prob</sub> <i>versus</i> PRQL </h3>
+<div id="text-10.1">
+
+
+</div>
+
+<div id="outline-container-10.1.1" class="outline-4">
+<h4 id="sec-10.1.1">10.1.1 Conservador: política determinística com 1.0 em tudo </h4>
+<div id="text-10.1.1">
+
+<p>Reutilizar uma política determinística ótima e sua versão probabilística (1.0 de probabilidade para cada ação ótima)
+</p>
+<ul>
+<li id="sec-10.1.1.1">Task 1 reutilizando &Pi;<sup>*</sup><sub>1</sub> <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/49/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/49/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.1.1.1">Experimentos <br/>
+<ul>
+<li id="sec-10.1.1.1.1.1">49 <br/>
+<ul>
+<li id="sec-10.1.1.1.1.1.1">Algoritmo: PRQL<sub>prob</sub> <br/>
+</li>
+<li id="sec-10.1.1.1.1.1.2">Task: 1 <br/>
+</li>
+<li id="sec-10.1.1.1.1.1.3">Políticas reutilizadas: &Pi;<sub>1</sub><sup>*</sup><sub>prob1</sub> <br/>
+<ul>
+<li id="sec-10.1.1.1.1.1.3.1">&Pi;<sub>1</sub><sup>*</sup><sub>prob1</sub> foi obtida colocando 1.0 em cada linha da política ótima determinística induzida por &Pi;<sub>1</sub><sup>*</sup><sub>prob</sub> <br/>
+</li>
+</ul>
+</li>
+<li id="sec-10.1.1.1.1.1.4">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/49/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/49/PRQL/parameters.out</a> <br/>
+
+</li>
+</ul>
+</li>
+<li id="sec-10.1.1.1.1.2">50 <br/>
+<ul>
+<li id="sec-10.1.1.1.1.2.1">Algoritmo: PRQL <br/>
+</li>
+<li id="sec-10.1.1.1.1.2.2">Task: 1 <br/>
+</li>
+<li id="sec-10.1.1.1.1.2.3">Políticas reutilizadas: &Pi;<sub>1</sub><sup>*</sup> <br/>
+</li>
+<li id="sec-10.1.1.1.1.2.4">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/50/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/50/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.1.1.1.2.5">Discussão: <br/>
+Os resultados corresponderam ao esperado, pois adicionar a probabilida
+de 1.0 a cada ação da política determinística deveria gerar um resultado
+equivalente na versão probabilística.
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li id="sec-10.1.1.2">Task &Omega; reutilizando &Pi;<sub>2</sub>, &Pi;<sub>3</sub>, &Pi;<sub>4</sub>, &Pi;<sub>5</sub> <br/>
+<ul>
+<li id="sec-10.1.1.2.1">PRQL <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/27/w.png" height="320" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/27/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.1.2.1.1">Experimentos: 27 a 31 <br/>
+</li>
+<li id="sec-10.1.1.2.1.2">Observações: Utilizando como referência aprendizado com QL do Experimento 37 <br/>
+
+
+</li>
+</ul>
+</li>
+<li id="sec-10.1.1.2.2">PRQL<sub>prob</sub> <br/>
+<ul>
+<li id="sec-10.1.1.2.2.1">Experimentos: 51 a 55 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/51/w.png" height="320" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/51/w.png" /></p>
+</div>
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-10.1.2" class="outline-4">
+<h4 id="sec-10.1.2">10.1.2 Menos conservador: PRQL<sub>prob</sub> vs QL </h4>
+<div id="text-10.1.2">
+
+<ul>
+<li id="sec-10.1.2.1">Task 1 cada vez mais probabilístico <br/>
+Utilização incremental de política probabilística ótima <i>versus</i> <i>péssima</i>
+(PRQL<sub>prob</sub> cada vez mais prob)
+
+<ul>
+<li id="sec-10.1.2.1.1">Algoritmo: PRQL<sub>prob</sub> <br/>
+</li>
+<li id="sec-10.1.2.1.2">Políticas reutilizadas: <br/>
+A partir de  &Pi;<sub>1</sub>, foi gerada uma nova política, em que para cada par estado-ação (s, a), geraram-se duas ênuplas:
+
+<p>
+<i>s, a, p</i>
+</p>
+<p>
+e
+</p>
+<p>
+<i>s, a<sup>-1</sup>, (1 - p)</i>, em que 
+</p>
+<p>
+<i>a<sup>-1</sup></i> é a ação <i>inversa</i> de <i>a</i>, ou seja, se <i>a</i> = <i>East</i>, <i>a<sup>-1</sup></i> = <i>West</i>, se  <i>a</i> = <i>North</i>, <i>a<sup>-1</sup></i> = <i>South</i>, e assim por diante.
+</p>
+<p>
+O valor de p varia por experimento, valendo <i>0.1</i> no experimento <i>56</i>, <i>0.1</i> no experimento <i>57</i>, e assim por diante, até atingir <i>1.0</i> no experimento <i>66</i>.
+</p>
+<p>
+No experimento <i>57</i>, <i>a</i> vale <i>0.0</i>, logo, a linha <i>s, a, p</i> é omitida.
+</p>
+<p>
+Um análogo disso ocorre para o experimento <i>66</i>, onde <i>p</i> vale <i>1.0</i>, portanto <i>1 - p</i> = <i>0</i> e, dessa forma, a linha <i>s, a<sup>-1</sup>, (1 - p)</i> pode ser omitida.
+</p>
+<p>
+Exemplo:
+</p>
+<p>
+<i>row1col1 East</i> <b>(linha original na &Pi;<sub>1</sub>)</b>
+</p>
+<p>
+linhas geradas a partir dessa:
+</p>
+<p>
+<i>row1col1 East 0.7</i> <b>(ação ótima, por ter a maior probabilidade de escolha originalmente em &Pi;<sub>1</sub> - 30% de chance de ser a escolhida)</b>
+</p>
+<p>
+<i>row1col1 East 0.3</i> <b>(ação "péssima" - 70% de chance de ser a escolhida)</b>
+</p>
+<p>
+Ou seja, geramos políticas probabilísticas que variam da pior possível (a <i>péssima</i>), que somente possui ações opostas àquelas da política ótima, até a ótima.
+</p>
+<p>
+Intermediariamente, temos políticas "sujas", onde as ações ótimas são intercaladas por ações <i>péssimas</i>.
+</p>
+<p>
+Na tabela abaixo, temos a listagem completa dos valores de <i>p</i> para cada experimento realizado.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<col align="right"></col><col align="right"></col><col align="right"></col>
+<thead>
+<tr><th>Experimento</th><th>Percentual de uso da ação <i>ótima</i> (<i>p</i>)</th><th>Percentual de uso da ação <i>péssima</i> <i>(1 - p)</i></th></tr>
+</thead>
+<tbody>
+<tr><td>56</td><td>0%</td><td>100%</td></tr>
+<tr><td>57</td><td>10%</td><td>90%</td></tr>
+<tr><td>58</td><td>20%</td><td>80%</td></tr>
+<tr><td>59</td><td>30%</td><td>70%</td></tr>
+<tr><td>60</td><td>40%</td><td>60%</td></tr>
+<tr><td>61</td><td>50%</td><td>50%</td></tr>
+<tr><td>62</td><td>60%</td><td>40%</td></tr>
+<tr><td>63</td><td>70%</td><td>30%</td></tr>
+<tr><td>64</td><td>80%</td><td>20%</td></tr>
+<tr><td>65</td><td>90%</td><td>10%</td></tr>
+<tr><td>66</td><td>100%</td><td>0%</td></tr>
+</tbody>
+</table>
+
+
+</li>
+<li id="sec-10.1.2.1.3">Experimentos <br/>
+<ul>
+<li id="sec-10.1.2.1.3.1">10 execuções <br/>
+<ul>
+<li id="sec-10.1.2.1.3.1.1">56 a 66 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/56/w.png" height="640" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/56/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.2.1.3.1.1.1">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/56/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/56/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.2.1.3.1.1.2">QLearning: 56 <br/>
+</li>
+<li id="sec-10.1.2.1.3.1.1.3">Discussão: <br/>
+Podemos verificar que a política que gerou o melhor resultado na reutilização
+foi a que possui 70% de <i>ótimo</i> e 30% de <i>péssimo</i> (&Pi;<sub>70-30</sub>).
+
+<p>
+Isso foi uma surpresa, já que o natural seria esperar que a reutilização de
+uma política que contenha somente ações ótimas gerasse um desempenho melhor
+do que a reutilização de uma política que contivesse 30% de ações <i>péssimas</i>.
+</p>
+<p>
+Entretanto podemos ver que a &Pi;<sub>70-30</sub> possui um <i>jumpstart</i> significativo,
+o que poderia jogar a média de W (que é justamente o que é mostrado no gráfico)
+para cima.
+</p>
+<p>
+Para testar se esse foi realmente o motivo, o experimento foi repetido, só que
+dessa vez com 1000 execuções ao invés de 100 (experimentos de <i>67</i> a <i>77</i> e <i>90</i>
+a <i>100</i>).
+</p>
+<p>
+Com isso, esperamos diminuir o impacto que a <i>sorte</i> de ter tido um bom
+desempenho nos episódios iniciais pudesse ter sobre a recompensa média
+alcançada.
+</p>
+<p>
+Isso foi feito nos experimentos de <i>67</i> a <i>77</i>.
+</p>
+</li>
+</ul>
+</li>
+<li id="sec-10.1.2.1.3.1.2">101 a 111 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/101/w.png" height="640" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/101/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.2.1.3.1.2.1">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/101/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/101/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.2.1.3.1.2.2">QLearning: 101 <br/>
+</li>
+<li id="sec-10.1.2.1.3.1.2.3">Discussão: <br/>
+Esse experimento é uma repetição do <i>56</i> a <i>66</i>, para testar se está tudo OK.
+O resultado correspondeu ao esperado.
+
+</li>
+</ul>
+</li>
+<li id="sec-10.1.2.1.3.1.3">112 a 122 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/112/w.png" height="640" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/112/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.2.1.3.1.3.1">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/112/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/112/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.2.1.3.1.3.2">QLearning: 112 <br/>
+</li>
+<li id="sec-10.1.2.1.3.1.3.3">Discussão: <br/>
+Esse experimento foi realizado para testar se o <i>merge</i> via <i>git</i> do <i>branch</i>
+<i>probabilistic</i> havia sido realizado com sucesso.
+
+<p>
+Os resultados estão muito próximos dos obtidos no mesmo experimento quando
+executados com a versão anterior ao <i>merge</i>, o que sugere que tenha ocorrido
+tudo bem no processo de <i>merge</i>.
+</p>
+</li>
+</ul>
+</li>
+<li id="sec-10.1.2.1.3.1.4">123 a 133 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/123/w.png" height="640" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/123/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.2.1.3.1.4.1">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/123/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/123/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.2.1.3.1.4.2">QLearning: 123 <br/>
+</li>
+<li id="sec-10.1.2.1.3.1.4.3">Discussão: <br/>
+Esse experimento foi realizado para testar se a estratégia de full-greedy implica
+em alguma melhoria no desempenho do algoritmo.
+
+<p>
+O resultado esperado é que não haja melhorias, pelo contrário, que o fato de o
+agente não poder realizar a exploração durante o episódio de Q-Learning implique
+em uma queda do desempenho no aprendizado.
+</p>
+<p>
+Algo que pude observar foi uma marcante queda na quantidade de <i>policy-reuse</i>:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<col align="right"></col><col align="right"></col><col align="right"></col>
+<thead>
+<tr><th>Execução</th><th>Policy Reuse</th><th>Q-Learning</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>1958</td><td>42</td></tr>
+<tr><td>2</td><td>1958</td><td>42</td></tr>
+<tr><td>3</td><td>1951</td><td>49</td></tr>
+<tr><td>4</td><td>1949</td><td>51</td></tr>
+<tr><td>5</td><td>1946</td><td>54</td></tr>
+<tr><td>6</td><td>1952</td><td>48</td></tr>
+<tr><td>7</td><td>1957</td><td>43</td></tr>
+<tr><td>8</td><td>1963</td><td>37</td></tr>
+<tr><td>9</td><td>1950</td><td>50</td></tr>
+<tr><td>10</td><td>1935</td><td>65</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Podemos verificar que o resultado foi o oposto do esperado, e houve um aumento
+significativo do desempenho do agente no aprendizado.
+</p>
+<p>
+Dúvidas que surgiram:
+</p>
+<ol>
+<li>
+Por que isso aconteceu?
+
+</li>
+<li>
+Qual foi a modificação, na média, de aplicação de &pi;-reuse?
+
+</li>
+<li>
+Por que a política com 100% de ótimo não teve o melhor desempenho de todas?
+
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li id="sec-10.1.2.1.3.2">100 execuções <br/>
+<ul>
+<li id="sec-10.1.2.1.3.2.1">79 a 89 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/79/w.png" height="640" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/79/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.2.1.3.2.1.1">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/79/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/79/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.2.1.3.2.1.2">QLearning: 79 <br/>
+
+</li>
+<li id="sec-10.1.2.1.3.2.1.3">Discussão: <br/>
+O resultado correspondeu ao esperado.
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li id="sec-10.1.2.1.3.3">1000 execuções <br/>
+<ul>
+<li id="sec-10.1.2.1.3.3.1">67 a 77 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/67/w.png" height="640" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/67/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.2.1.3.3.1.1">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/67/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/67/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.2.1.3.3.1.2">QLearning: 67 <br/>
+</li>
+<li id="sec-10.1.2.1.3.3.1.3">Discussão: <br/>
+O objetivo desse experimento era veriricar se o melhor desempenho obtido
+com a reutilização de uma política com 30% de ações <i>péssimas</i> poderia
+ser explicado por um desempenho extremamente bom no início, que jogaria
+a média <i>para cima</i>.
+
+<p>
+RESULTADOS: Podemos ver que os resultados corresponderam ao esperado, ou seja, quanto
+mais probabilidade o agente tem de reutilizar uma ação ótima através do
+&pi;-reuse, melhor é o seu desempenho no aprendizado (medido pela média
+cumulativa do <i>W</i>).
+</p>
+<p>
+Futuramente, pude ver que meu erro na verdade foi não ter percebido que
+o experimento correspondente ao <i>70-3-</i> na verdade terminou anormalmente.
+Dessa forma, o <i>w.out</i> plotado correspondia a um experimento realizado
+anteriormente, o que explica seu comportamento de <i>outlier</i>.
+</p>
+<p>
+Através da análise do gráfico, podemos ver que uma adição igual ou superior
+a 40% de probabilidade de utilização de ações <i>péssimas</i> implica em um
+desempenho inferior ao da execução do QL.
+</p>
+</li>
+</ul>
+</li>
+<li id="sec-10.1.2.1.3.3.2">90 a 100 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/90/w.png" height="640" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/90/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.2.1.3.3.2.1">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/90/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/90/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.2.1.3.3.2.2">QLearning: 90 <br/>
+</li>
+<li id="sec-10.1.2.1.3.3.2.3">Discussão: <br/>
+O resultado correspondeu ao esperado.
+
+</li>
+</ul>
+</li>
+<li id="sec-10.1.2.1.3.3.3">139 a 149 <br/>
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/139/w.png" height="640" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/139/w.png" /></p>
+</div>
+
+<ul>
+<li id="sec-10.1.2.1.3.3.3.1">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/139/PRQL/parameters.out">/home/rafaelbeirigo/ql/experiments/139/PRQL/parameters.out</a> <br/>
+</li>
+<li id="sec-10.1.2.1.3.3.3.2">QLearning: 139 <br/>
+</li>
+<li id="sec-10.1.2.1.3.3.3.3">Discussão: <br/>
+Esse experimento foi realizado para verificar o impacto da correção em relação ao
+<i>full-greedy</i> (detalhes no grupo de experimentos de <i>123</i> a <i>133</i>).
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11">11 IPMU </h2>
+<div id="text-11">
+
+
+</div>
+
+<div id="outline-container-11.1" class="outline-3">
+<h3 id="sec-11.1">11.1 42 Com arquivos originais - 2000 episódios, 100 passos </h3>
+<div id="text-11.1">
+
+<p>w.out completamente zerado.
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-11.2" class="outline-3">
+<h3 id="sec-11.2">11.2 43 Com arquivos originais - 1e05 episódios, 1000 passos </h3>
+<div id="text-11.2">
+
+<p>Supondo que o problema relatado em 42 fosse a quantidade de episódios
+e/ou passos, rodei novamente, com 
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-11.3" class="outline-3">
+<h3 id="sec-11.3">11.3 44 Modifiquei o transitions.in </h3>
+<div id="text-11.3">
+
+<p>Modificação realizada:
+Para cada linha do arquivo, o valor da transição foi alterado para
+1.0 / 136, sendo que 136 é o número total de estados.
+Com isso, espero ter um grafo completo de transições, logo, poderei
+verificar se foi esse o problema que impediu o agente de receber
+recompensas nos experimentos 42 e 43.
+Vale notar que estou supondo que existe uma linha s a s' t para todas
+as combinações de s a s' possíveis.
+É bem provável que isso seja verdade já que a quantidade de linhas do
+arquivo transitions.in é 73984 = 136 * 4 * 136 (|S| * |A| * |S|).
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-11.4" class="outline-3">
+<h3 id="sec-11.4">11.4 78 Reutilizando políticas probabilísticas </h3>
+<div id="text-11.4">
+
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/78/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/78/w.png" /></p>
+</div>
+
+
+</div>
+
+<div id="outline-container-11.4.1" class="outline-4">
+<h4 id="sec-11.4.1">11.4.1 PRQL </h4>
+<div id="text-11.4.1">
+
+<ul>
+<li id="sec-11.4.1.1"><i>prob</i>: reutilizando pol. prob. enviada pelo Marcelo <br/>
+<ul>
+<li id="sec-11.4.1.1.1">Algoritmo: PRQL<sub>prob</sub> <br/>
+</li>
+<li id="sec-11.4.1.1.2">Task: IPMU <br/>
+</li>
+<li id="sec-11.4.1.1.3">Políticas reutilizadas: &Pi;<sub>IPMU</sub><sub>prob</sub> <br/>
+</li>
+<li id="sec-11.4.1.1.4">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/78/PRQL/prob/parameters.out">/home/rafaelbeirigo/ql/experiments/78/PRQL/prob/parameters.out</a> <br/>
+
+</li>
+</ul>
+</li>
+<li id="sec-11.4.1.2"><i>prob.det</i>: pol. ótima induzida pela pol. enviada pelo Marcelo <br/>
+<ul>
+<li id="sec-11.4.1.2.1">Algoritmo: PRQL<sub>prob</sub> <br/>
+</li>
+<li id="sec-11.4.1.2.2">Task: IPMU <br/>
+</li>
+<li id="sec-11.4.1.2.3">Políticas reutilizadas: &Pi;<sub>IPMU</sub><sub>prob1</sub> (1.0 para cada ação "ótima" (a que tinha a maior probabilidade no arquivo original)) <br/>
+</li>
+<li id="sec-11.4.1.2.4">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/78/PRQL/prob.det/parameters.out">/home/rafaelbeirigo/ql/experiments/78/PRQL/prob.det/parameters.out</a> <br/>
+
+</li>
+</ul>
+</li>
+<li id="sec-11.4.1.3"><i>det</i>: reutilizando pol. ótima induzida, só que na versão antiga do PRQL (a versão determinística) <br/>
+<ul>
+<li id="sec-11.4.1.3.1">Algoritmo: PRQL <br/>
+</li>
+<li id="sec-11.4.1.3.2">Task: IPMU <br/>
+</li>
+<li id="sec-11.4.1.3.3">Políticas reutilizadas: &Pi;<sub>IPMU</sub><sub>det</sub> <br/>
+</li>
+<li id="sec-11.4.1.3.4">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/78/PRQL/det/parameters.out">/home/rafaelbeirigo/ql/experiments/78/PRQL/det/parameters.out</a> <br/>
+
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-11.4.2" class="outline-4">
+<h4 id="sec-11.4.2">11.4.2 QL </h4>
+<div id="text-11.4.2">
+
+<ul>
+<li id="sec-11.4.2.1">Task: IPMU <br/>
+</li>
+<li id="sec-11.4.2.2">Parâmetros: <a href="/home/rafaelbeirigo/ql/experiments/78/QL/parameters.out">/home/rafaelbeirigo/ql/experiments/78/QL/parameters.out</a> <br/>
+
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12">12 Repetindo após correção <i>full-greedy</i> </h2>
+<div id="text-12">
+
+<p>Percebi  que houve uma melhora significativa no desempenho do aprendizado
+e estou repetindo alguns experimentos cujos resultados foram díspares do
+esperado.
+</p>
+<p>
+Os experimentos que marcaram a descoberta foram os do grupo de 123 a 133.
+</p>
+
+</div>
+
+<div id="outline-container-12.1" class="outline-3">
+<h3 id="sec-12.1">12.1 Aprendizado de &Pi;<sub>&Omega;</sub> com reutilização individual de políticas </h3>
+<div id="text-12.1">
+
+<p>Esse experimento me deixou bastante intrigado, porque o resultado foi
+significativamente (quanto?) díspare do apresentado no artigo.
+</p>
+
+<div class="figure">
+<p><img src="/home/rafaelbeirigo/ql/experiments/27/w.png" height="240" style="border:2px solid black;" alt="/home/rafaelbeirigo/ql/experiments/27/w.png" /></p>
+</div>
+
+<p>
+No gráfico, os valores referentes ao Q-Learning foram obtidos no experimento 37.
+</p>
+
+</div>
+
+<div id="outline-container-12.1.1" class="outline-4">
+<h4 id="sec-12.1.1">12.1.1 134 Reutilizando &Pi;<sub>1</sub> </h4>
+<div id="text-12.1.1">
+
+</div>
+
+</div>
+
+<div id="outline-container-12.1.2" class="outline-4">
+<h4 id="sec-12.1.2">12.1.2 135 Reutilizando &Pi;<sub>2</sub> </h4>
+<div id="text-12.1.2">
+
+</div>
+
+</div>
+
+<div id="outline-container-12.1.3" class="outline-4">
+<h4 id="sec-12.1.3">12.1.3 136 Reutilizando &Pi;<sub>3</sub> </h4>
+<div id="text-12.1.3">
+
+</div>
+
+</div>
+
+<div id="outline-container-12.1.4" class="outline-4">
+<h4 id="sec-12.1.4">12.1.4 137 Reutilizando &Pi;<sub>4</sub> </h4>
+<div id="text-12.1.4">
+
+</div>
+
+</div>
+
+<div id="outline-container-12.1.5" class="outline-4">
+<h4 id="sec-12.1.5">12.1.5 138 Reutilizando &Pi;<sub>5</sub> </h4>
+<div id="text-12.1.5">
+
+</div>
+</div>
+</div>
+</div>
+<div id="postamble"><p class="author"> Author: Rafael Lemes Beirigo
+<a href="mailto:rafaelbeirigo@LTI-PROJETO-TM">&lt;rafaelbeirigo@LTI-PROJETO-TM&gt;</a>
+</p>
+<p class="date"> Date: 2012-04-13 18:24:57 BRT</p>
+<p>HTML generated by org-mode 6.21b in emacs 23</p>
+</div></body>
+</html>

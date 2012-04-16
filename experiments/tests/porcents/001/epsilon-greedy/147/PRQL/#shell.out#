@@ -1,0 +1,48 @@
+O programa 'xtermset' não está instalado no momento.  Para executar 'xtermset' por favor peça ao seu administrador para instalar o pacote 'xtermset'
+rafaelbeirigo@laplace:~/ql$ time ./RL-PRQL.py --filePath='experiments/tests/porcents/147/PRQL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --epsilon=1.0 --epsilonIncrement=0.0000 --gammaPRQL=0.95 --tau=0.0 --deltaTau=0.05 --psi=1.0 --v=0.95 --K=2000 --H=100 --numberOfExecutions=1000
+/home/rafaelbeirigo/ql/tools//prepareFolders.sh experiments/tests/porcents/147/PRQL/
+[prepareFolders.sh] : Deleting output files...
+[prepareFolders.sh] : Deleting log file...
+experiments/tests/porcents/147/PRQL//../PRQL/log.txt.gz
+[prepareFolders.sh] : Deleting graph files...
+[prepareFolders.sh] : Deleting backup files...
+[prepareFolders.sh] : Deletion is done
+[prepareFolders.sh] : Uncompressing input files...
+experiments/tests/porcents/147/PRQL/states.in.gz
+experiments/tests/porcents/147/PRQL/transitions.in.gz
+experiments/tests/porcents/147/PRQL/rewards.in.gz
+experiments/tests/porcents/147/PRQL/goals.in.gz
+experiments/tests/porcents/147/PRQL/policies/policy.prob.in.gz
+experiments/tests/porcents/147/PRQL/actions.in.gz
+[prepareFolders.sh] : Uncompression is done
+Running experiment 1 of 1000
+pr:  227 ql:  1773
+Running experiment 2 of 1000
+pr:  205 ql:  1795
+Running experiment 3 of 1000
+pr:  229 ql:  1771
+Running experiment 4 of 1000
+pr:  185 ql:  1815
+Running experiment 5 of 1000
+pr:  140 ql:  1860
+Running experiment 6 of 1000
+pr:  227 ql:  1773
+Running experiment 7 of 1000
+pr:  314 ql:  1686
+Running experiment 8 of 1000
+pr:  219 ql:  1781
+Running experiment 9 of 1000
+pr:  161 ql:  1839
+Running experiment 10 of 1000
+pr:  368 ql:  1632
+Running experiment 11 of 1000
+pr:  254 ql:  1746
+Running experiment 12 of 1000
+pr:  211 ql:  1789
+Running experiment 13 of 1000
+pr:  278 ql:  1722
+Running experiment 14 of 1000
+pr:  224 ql:  1776
+Running experiment 15 of 1000
+pr:  446 ql:  1554
+Running experiment 16 of 1000

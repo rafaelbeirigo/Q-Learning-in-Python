@@ -1,0 +1,12 @@
+alpha              = 0.05
+gamma              = 0.95
+epsilon            = 1.0
+epsilonIncrement   = 0.0000
+gammaPRQL          = 0.95
+tau                = 0.0
+deltaTau           = 0.05
+psi                = 1.0
+v                  = 0.95
+K                  = 2000
+H                  = 100
+numberOfExecutions = 10
