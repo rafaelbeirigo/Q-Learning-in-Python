@@ -6,7 +6,8 @@ import random
 
 class MDP:
     # filePath e o caminho para a pasta que contem os arquivos de configuracao
-    def __init__ (self, 
+    def __init__ (self,
+                  filePath,
                   S = None, 
                   A = None, 
                   T = None, 
@@ -19,6 +20,8 @@ class MDP:
         self.R = R
         self.G = G
         self.P = P
+
+        self.carrega(filePath)
 
     def carrega(self, filePath):
         self.S = self.loadStates(filePath)

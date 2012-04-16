@@ -46,6 +46,8 @@ class PRQLearning:
         # For each state-action pair (s, a), initialize the table
         # entry Q_omega(s, a) to zero The W_omega from the article is
         # W[omega], with omega == 0, and the same applies to U_omega
+
+        # TODO: inverter 2 proximas linhas
         L = self.loadPolicies()
 
         Q_omega, W, U = self.initializeQ_omegaWU()
@@ -53,6 +55,7 @@ class PRQLearning:
         myQLearning = self.initializeQLearning(Q = Q_omega)
         self.myQLearning = myQLearning
 
+        # TODO: colocar isso de log em uma funcao a parte
         logStuff = []
         logStuffTitle = []
 
@@ -96,7 +99,8 @@ class PRQLearning:
 
             W[k] = ( (W[k] * U[k]) + R ) / ( U[k] + 1 )
             U[k] = U[k] + 1
-            
+
+            # TODO: verificar isso
             self.myQLearning.epsilon = self.myQLearning.epsilon + \
                                        self.myQLearning.epsilonIncrement
 
@@ -163,9 +167,12 @@ class PRQLearning:
                         a = self.Agent.selectRandomAction()
 
                 # Execute action
+
+                # TODO: modificar para r_{k, h}
                 # Receive the next state s' and reward r_k_h
                 s2, r = self.Agent.executeAction(a)
 
+                # TODO: manter um vetor V com os maximos
                 maxValue = -1.0
                 for a2 in self.MDP.A:
                     if Q_pi_new[s2][a2] > maxValue:

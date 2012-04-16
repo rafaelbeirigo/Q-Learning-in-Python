@@ -1,76 +1,78 @@
 #!/usr/bin/env python
-import MDP
-import Agent
-import PRQLearning
+from Agent import Agent
+from MDP import MDP
+from PRQLearning import PRQLearning
+from prepareFolders import prepareFolders
 import time
 import sys
-import pylab as pl
-from prepareFolders import prepareFolders
+from pylab import array
+import getopt
 
-def main():
-    if len(sys.argv) < 2:
-        print 'ERROR: Please inform the path to the experiment files.'
-        sys.exit(1)
+def usage():
+    print 'Soon there will be a help message here.'
+
+def obtainParameters():
+    try:
+        optNames = ['filePath=', \
+                    'commandPath=', \
+                    'alpha=', \
+                    'gamma=', \
+                    'epsilon=', \
+                    'epsilonIncrement=', \
+                    'gammaPRQL=', \
+                    'K=', \
+                    'H=', \
+                    'numberOfExecutions=', \
+                    'tau=', \
+                    'deltaTau=', \
+                    'psi=', \
+                    'v=']
+
+        if len(sys.argv[1:]) != len(optNames):
+            print 'error: please inform the parameters correctly'
+            print len(optNames), len(sys.argv[1:])
+            print sys.argv[1:]
+            sys.exit(1)
+            
+        opts, args = getopt.getopt(sys.argv[1:], "", optNames)
+    except getopt.GetoptError, err:
+        usage()
+        print str(err) # will print something like "option -a not recognized"
+        sys.exit(2)
+
+    params = {}
+    for optName in optNames:
+        params[optName[:-1]] = None
         
-    filePath = sys.argv[1]
+    for opt, arg in opts:
+        # The first two characters are '--', therefore, they are ignored
+        params[opt[2:]] = arg
 
-    commandPath = '/home/rafaelbeirigo/ql/tools/'
-    prepareFolders(commandPath, filePath)
-    
-    myMDP = MDP.MDP()
-    myMDP.carrega(filePath)
+        if opt in ("-h", "--help"):
+            usage()
+            sys.exit()
 
-    myAgent = Agent.Agent(myMDP)
-    
-    alpha              = 0.05
-    gamma              = 0.95
-    epsilon            = 1.0
-    epsilonIncrement   = 0.0000
-    gammaPRQL          = 0.95
-    tau                = 0.0
-    deltaTau           = 0.05
-    psi                = 1.0
-    v                  = 0.95
+    return params
 
-    K                  = 2000     # number of episodes
-    H                  = 100      # number of steps
-    numberOfExecutions = 1000
-    
-    Wacumulado = 0
-    for i in range(numberOfExecutions):
-        print 'Running experiment ' + str(i + 1) + ' of ' + str(numberOfExecutions)
-        myPRQLearning = None
-        myPRQLearning = PRQLearning.PRQLearning(myMDP,                               \
-                                                myAgent,                             \
-                                                alpha            = alpha,            \
-                                                gamma            = gamma,            \
-                                                epsilon          = epsilon,          \
-                                                epsilonIncrement = epsilonIncrement, \
-                                                K                = K,                \
-                                                H                = H,                \
-                                                gammaPRQL        = gammaPRQL,        \
-                                                tau              = tau,              \
-                                                deltaTau         = deltaTau,         \
-                                                psi              = psi,              \
-                                                v                = v,                \
-                                                filePath         = filePath)
-        W, Ws = myPRQLearning.execute()
-        Wacumulado += pl.array(Ws)
-        
-    Ws = Wacumulado / numberOfExecutions
-    
-    myPRQLearning.myQLearning.obtainPolicy()
-    myPRQLearning.myQLearning.printPolicy(filePath + 'policy.out')
-    myPRQLearning.myQLearning.printQ(filePath + 'Q.out')
+def saveOutputFiles(myQLearning, params, Ws):
+    filePath = params['filePath']
+    myQLearning.obtainPolicy()
+    myQLearning.printPolicy(filePath + 'policy.out')
+    myQLearning.printQ(filePath + 'Q.out')
 
     f = open(filePath + 'parameters.out', 'w')
-    f.write('alpha              = ' + str(alpha) + '\n')
-    f.write('gamma              = ' + str(gamma) + '\n')
-    f.write('epsilon            = ' + str(epsilon) + '\n')
-    f.write('epsilonIncrement   = ' + str(epsilonIncrement) + '\n')
-    f.write('K                  = ' + str(K) + '\n')
-    f.write('H                  = ' + str(H) + '\n')
-    f.write('numberOfExecutions = ' + str(numberOfExecutions) + '\n')
+    f.write('alpha              = ' + params['alpha']              + '\n')
+    f.write('gamma              = ' + params['gamma']              + '\n')
+    f.write('epsilon            = ' + params['epsilon']            + '\n')
+    f.write('epsilonIncrement   = ' + params['epsilonIncrement']   + '\n')
+    f.write('gammaPRQL          = ' + params['gammaPRQL']          + '\n')
+    f.write('tau                = ' + params['tau']                + '\n')
+    f.write('deltaTau           = ' + params['deltaTau']           + '\n')
+    f.write('psi                = ' + params['psi']                + '\n')
+    f.write('v                  = ' + params['v']                  + '\n')
+    f.write('K                  = ' + params['K']                  + '\n')
+    f.write('H                  = ' + params['H']                  + '\n')
+    f.write('numberOfExecutions = ' + params['numberOfExecutions'] + '\n')
     f.close()
 
     f = open(filePath + 'w.out', 'w')
@@ -78,7 +80,57 @@ def main():
         f.write(str(w) + '\n')
     f.close()
 
-    #pl.plot(range(len(Ws)), Ws)
-    #pl.show()
+def main():
+    # resolve the parameters sent from the command line call
+    params = obtainParameters()
+
+    # resolve file issues regarding the execution of the algorithm
+    prepareFolders(params['commandPath'], params['filePath'])
+
+    myMDP = MDP(params['filePath'])
+    myAgent = Agent(myMDP)
     
-main()
+    Wacumulado = 0
+    for i in range(int(params['numberOfExecutions'])):
+        print 'Running experiment ' + str(i + 1) + ' of ' + str(params['numberOfExecutions'])
+
+        myPRQLearning = PRQLearning(myMDP,                                         \
+                                    myAgent,                                       \
+                                    alpha            = float(params['alpha']),            \
+                                    gamma            = float(params['gamma']),            \
+                                    epsilon          = float(params['epsilon']),          \
+                                    epsilonIncrement = float(params['epsilonIncrement']), \
+                                    K                = int(params['K']),                  \
+                                    H                = int(params['H']),                  \
+                                    gammaPRQL        = float(params['gammaPRQL']),        \
+                                    tau              = float(params['tau']),              \
+                                    deltaTau         = float(params['deltaTau']),         \
+                                    psi              = float(params['psi']),              \
+                                    v                = float(params['v']),                \
+                                    filePath         = params['filePath'])
+
+        W, Ws = myPRQLearning.execute()
+        Wacumulado += array(Ws)
+
+    Ws = Wacumulado / float(params['numberOfExecutions'])
+    saveOutputFiles(myPRQLearning.myQLearning, params, Ws)
+
+if __name__ == "__main__":
+    main()
+
+# ./RL-PRQL.py --filePath='/home/rafaelbeirigo/ql/experiments/tests/PRQL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --epsilon=1.0 --epsilonIncrement=0.0000 --gammaPRQL=0.95 --tau=0.0 --deltaTau=0.05 --psi=1.0 --v=0.95 --K=2000 --H=100 --numberOfExecutions=1000
+
+
+# old list of standard parameters:
+#    alpha              = 0.05
+#    gamma              = 0.95
+#    epsilon            = 1.0
+#    epsilonIncrement   = 0.0000
+#    gammaPRQL          = 0.95
+#    tau                = 0.0
+#    deltaTau           = 0.05
+#    psi                = 1.0
+#    v                  = 0.95
+#    K                  = 2000     # number of episodes
+#    H                  = 100      # number of steps
+#    numberOfExecutions = 1000

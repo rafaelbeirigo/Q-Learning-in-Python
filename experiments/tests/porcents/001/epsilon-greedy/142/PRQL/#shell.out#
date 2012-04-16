@@ -1,0 +1,38 @@
+O programa 'xtermset' não está instalado no momento.  Para executar 'xtermset' por favor peça ao seu administrador para instalar o pacote 'xtermset'
+rafaelbeirigo@laplace:~/ql$ time ./RL-PRQL.py --filePath='experiments/tests/porcents/142/PRQL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --epsilon=1.0 --epsilonIncrement=0.0000 --gammaPRQL=0.95 --tau=0.0 --deltaTau=0.05 --psi=1.0 --v=0.95 --K=2000 --H=100 --numberOfExecutions=1000
+/home/rafaelbeirigo/ql/tools//prepareFolders.sh experiments/tests/porcents/142/PRQL/
+[prepareFolders.sh] : Deleting output files...
+experiments/tests/porcents/142/PRQL/w.out
+experiments/tests/porcents/142/PRQL/Q.out
+experiments/tests/porcents/142/PRQL/parameters.out
+experiments/tests/porcents/142/PRQL/policy.out
+[prepareFolders.sh] : Deleting log file...
+experiments/tests/porcents/142/PRQL//../PRQL/log.txt.gz
+[prepareFolders.sh] : Deleting graph files...
+[prepareFolders.sh] : Deleting backup files...
+[prepareFolders.sh] : Deletion is done
+[prepareFolders.sh] : Uncompressing input files...
+experiments/tests/porcents/142/PRQL/states.in.gz
+experiments/tests/porcents/142/PRQL/transitions.in.gz
+experiments/tests/porcents/142/PRQL/rewards.in.gz
+experiments/tests/porcents/142/PRQL/goals.in.gz
+experiments/tests/porcents/142/PRQL/policies/policy.prob.in.gz
+experiments/tests/porcents/142/PRQL/actions.in.gz
+[prepareFolders.sh] : Uncompression is done
+Running experiment 1 of 1000
+pr:  169 ql:  1831
+Running experiment 2 of 1000
+pr:  160 ql:  1840
+Running experiment 3 of 1000
+pr:  230 ql:  1770
+Running experiment 4 of 1000
+pr:  211 ql:  1789
+Running experiment 5 of 1000
+pr:  171 ql:  1829
+Running experiment 6 of 1000
+pr:  208 ql:  1792
+Running experiment 7 of 1000
+pr:  183 ql:  1817
+Running experiment 8 of 1000
+pr:  340 ql:  1660
+Running experiment 9 of 1000

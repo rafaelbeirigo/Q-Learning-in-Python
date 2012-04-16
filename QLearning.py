@@ -53,6 +53,7 @@ class QLearning:
             W = 0
             myAgent.setInitialState()
             for h in range(self.H):
+                # TODO: remover os '---'
                 # ---Observe the current state s
                 s = myAgent.state
 
@@ -73,6 +74,7 @@ class QLearning:
 
                 s2, r = myAgent.executeAction(a)
 
+                # TODO: manter um vetor V com os maximos
                 maxValue = -1.0
                 for a2 in A:
                     if Q[s2][a2] > maxValue:

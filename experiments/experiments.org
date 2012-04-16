@@ -302,7 +302,7 @@ Reutilizar uma política determinística ótima e sua versão probabilística (1
 ******* Algoritmo: PRQL_prob
 ******* Task: 1
 ******* Políticas reutilizadas: \Pi_1^*_prob1
-******** \Pi_1^*_prob1 foi obtida colocando 1.0 em cada linha da política ótima determinística induzida por \Pi_1^*_prob
+\Pi_1^*_prob1 foi obtida colocando 1.0 em cada linha da política ótima determinística induzida por \Pi_1^*_prob
 ******* Parâmetros: [[/home/rafaelbeirigo/ql/experiments/49/PRQL/parameters.out]]
 
 ****** 50
@@ -311,7 +311,7 @@ Reutilizar uma política determinística ótima e sua versão probabilística (1
 ******* Políticas reutilizadas: \Pi_1^*
 ******* Parâmetros: [[/home/rafaelbeirigo/ql/experiments/50/PRQL/parameters.out]]
 ******* Discussão:
-Os resultados corresponderam ao esperado, pois adicionar a probabilida
+Os resultados corresponderam ao esperado, pois adicionar a probabilidade
 de 1.0 a cada ação da política determinística deveria gerar um resultado
 equivalente na versão probabilística.
 
@@ -539,11 +539,9 @@ Esse experimento foi realizado para verificar o impacto da correção em relaç�
 ** 42 Com arquivos originais - 2000 episódios, 100 passos
 w.out completamente zerado.
 
-
 ** 43 Com arquivos originais - 1e05 episódios, 1000 passos
 Supondo que o problema relatado em 42 fosse a quantidade de episódios
 e/ou passos, rodei novamente, com 
-
 
 ** 44 Modifiquei o transitions.in
    Modificação realizada:
@@ -556,7 +554,6 @@ Vale notar que estou supondo que existe uma linha s a s' t para todas
    as combinações de s a s' possíveis.
 É bem provável que isso seja verdade já que a quantidade de linhas do
    arquivo transitions.in é 73984 = 136 * 4 * 136 (|S| * |A| * |S|).
-
 
 ** 78 Reutilizando políticas probabilísticas
 #+ATTR_HTML: height="240" style="border:2px solid black;"
