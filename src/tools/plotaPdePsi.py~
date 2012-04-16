@@ -1,0 +1,34 @@
+import pylab as pl
+
+def main():
+    psi = 1.0
+    v = 1.0
+
+
+    for d in range(1):
+        P_PI_past = []
+        P_PI_new = []
+        P_PI_r = []
+        P_PI_r_bottom = []
+
+        psi = 1.0
+        #v = v - 0.001
+        v = 0.997
+        qtd = 2000
+        for i in range(qtd):
+            P_PI_past.append(psi)
+            P_PI_new.append (psi - (psi * psi))
+            P_PI_r.append   (1.0 - (2.0 * psi) + (psi * psi))
+
+            P_PI_r_bottom.append(P_PI_past[i] + P_PI_new[i])
+            psi = psi * v
+
+        pl.bar(range(qtd), P_PI_past, color='blue', label='P_PI_past', linewidth=0)
+        pl.bar(range(qtd), P_PI_new, bottom=P_PI_past, color='green', label='P_PI_new', linewidth=0)
+        pl.bar(range(qtd), P_PI_r, bottom=P_PI_r_bottom, color='red', label='P_PI_r', linewidth=0)
+        #pl.plot(P_PI_past, label='P_PI_past - ' + str(v))
+        #pl.plot(P_PI_new, label='P_PI_new')
+        #pl.plot(P_PI_r, label='P_PI_r')
+        pl.show()
+        pl.legend()
+main()

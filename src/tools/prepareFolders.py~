@@ -1,0 +1,15 @@
+def prepareFolders(filePath):
+    ## deletion
+    #
+    # old output files
+    call(["/home/rafaelbeirigo/ql/tools/delOutputFiles.sh", filePath])
+    call(["find ./ -name '*~' -exec rm '{}' \; -print -or -name \".*~\" -exec rm {} \; -print"
+
+    # images
+    call(["/home/rafaelbeirigo/ql/tools/delOutputFiles.sh", filePath])
+
+    # backup files (they can interfere with some of the functions in
+    # the PRQL algorithm)
+    call(["/home/rafaelbeirigo/ql/tools/delBackupFiles.sh", filePath])
+    #
+    ## end of deletion

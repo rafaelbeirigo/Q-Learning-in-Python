@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+import pylab as pl
+import matplotlib.font_manager
+
+def plot():
+    experimento = '/home/rafaelbeirigo/ql/experiments/'
+    
+    pi0  = pl.loadtxt(experimento + "/78/PRQL/prob/w.out")
+    pi0  = pl.loadtxt(experimento + "/78/PRQL/prob.det/w.out")
+    pi0  = pl.loadtxt(experimento + "/78/PRQL/det/w.out")
+    pi4  = pl.loadtxt(experimento + "/60/PRQL/w.out")
+    pi5  = pl.loadtxt(experimento + "/61/PRQL/w.out")
+    pi6  = pl.loadtxt(experimento + "/62/PRQL/w.out")
+    pi7  = pl.loadtxt(experimento + "/63/PRQL/w.out")
+    pi8  = pl.loadtxt(experimento + "/64/PRQL/w.out")
+    pi9  = pl.loadtxt(experimento + "/65/PRQL/w.out")
+    pi10 = pl.loadtxt(experimento + "/66/PRQL/w.out")
+
+    ql = pl.loadtxt(experimento +   "/56/QL/w.out")
+
+    pl.xlabel("Episodes")
+    pl.ylabel("W")
+
+    pl.plot(pi10, '-.', label = 'Otima: 100% Pessima:   0%')
+    pl.plot(pi9,  '-.', label = 'Otima:  90% Pessima:  10%')
+    pl.plot(pi8,  '-.', label = 'Otima:  80% Pessima:  20%')
+    pl.plot(pi7,  '-.', label = 'Otima:  70% Pessima:  30%')
+    pl.plot(pi6,  '-.', label = 'Otima:  60% Pessima:  40%')
+    pl.plot(pi5,  '-.', label = 'Otima:  50% Pessima:  50%')
+    pl.plot(pi4,  '-', label = 'Otima:  40% Pessima:  60%')
+    pl.plot(pi3,  '-', label = 'Otima:  30% Pessima:  70%')
+    pl.plot(pi2,  '-', label = 'Otima:  20% Pessima:  80%')
+    pl.plot(pi1,  '-', label = 'Otima:  10% Pessima:  90%')
+    pl.plot(pi0,  '-', label = 'Otima:   0% Pessima: 100%')
+    pl.plot(ql,    ':', label = 'Q-Learning')
+
+    leg_prop = matplotlib.font_manager.FontProperties(size = 8)
+    pl.legend(loc = 4, prop=leg_prop)
