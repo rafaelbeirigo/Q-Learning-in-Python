@@ -1,0 +1,28 @@
+O programa 'xtermset' não está instalado no momento.  Para executar 'xtermset' por favor peça ao seu administrador para instalar o pacote 'xtermset'
+rafaelbeirigo@laplace:~/ql$ time ./RL-PRQL.py --filePath='experiments/tests/porcents/145/PRQL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --epsilon=1.0 --epsilonIncrement=0.0000 --gammaPRQL=0.95 --tau=0.0 --deltaTau=0.05 --psi=1.0 --v=0.95 --K=2000 --H=100 --numberOfExecutions=1000
+/home/rafaelbeirigo/ql/tools//prepareFolders.sh experiments/tests/porcents/145/PRQL/
+[prepareFolders.sh] : Deleting output files...
+[prepareFolders.sh] : Deleting log file...
+experiments/tests/porcents/145/PRQL//../PRQL/log.txt.gz
+[prepareFolders.sh] : Deleting graph files...
+[prepareFolders.sh] : Deleting backup files...
+[prepareFolders.sh] : Deletion is done
+[prepareFolders.sh] : Uncompressing input files...
+experiments/tests/porcents/145/PRQL/states.in.gz
+experiments/tests/porcents/145/PRQL/transitions.in.gz
+experiments/tests/porcents/145/PRQL/rewards.in.gz
+experiments/tests/porcents/145/PRQL/goals.in.gz
+experiments/tests/porcents/145/PRQL/policies/policy.prob.in.gz
+experiments/tests/porcents/145/PRQL/actions.in.gz
+[prepareFolders.sh] : Uncompression is done
+Running experiment 1 of 1000
+pr:  206 ql:  1794
+Running experiment 2 of 1000
+pr:  194 ql:  1806
+Running experiment 3 of 1000
+pr:  164 ql:  1836
+Running experiment 4 of 1000
+pr:  204 ql:  1796
+Running experiment 5 of 1000
+pr:  276 ql:  1724
+Running experiment 6 of 1000

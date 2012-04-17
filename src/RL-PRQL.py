@@ -7,6 +7,7 @@ import time
 import sys
 from pylab import array
 import getopt
+import numpy as np
 
 def usage():
     print 'Soon there will be a help message here.'
@@ -54,7 +55,7 @@ def obtainParameters():
 
     return params
 
-def saveOutputFiles(myQLearning, params, Ws):
+def saveOutputFiles(myQLearning, params, output):
     filePath = params['filePath']
     myQLearning.obtainPolicy()
     myQLearning.printPolicy(filePath + 'policy.out')
@@ -75,10 +76,25 @@ def saveOutputFiles(myQLearning, params, Ws):
     f.write('numberOfExecutions = ' + params['numberOfExecutions'] + '\n')
     f.close()
 
-    f = open(filePath + 'w.out', 'w')
-    for w in Ws:
-        f.write(str(w) + '\n')
-    f.close()
+    For name in output.iterkeys():
+        d = output[name]
+        d = np.asarray(d)
+        d.T
+        np.savetxt(filePath + '/' + name + '.out', d)
+
+def meanMultiDim(L):
+    # discovering how many rows and columns do we have
+    rows = len(L[0])
+    cols = len(L[0][0])
+
+    mRow = []
+    mList = []
+    for row in range(rows):
+        for col in range(cols):
+            m = np.mean(L[row][col])
+            mRow.append(m)
+        mList.append(mRow)
+    return mList
 
 def main():
     # resolve the parameters sent from the command line call
@@ -90,12 +106,12 @@ def main():
     myMDP = MDP(params['filePath'])
     myAgent = Agent(myMDP)
     
-    Wacumulado = 0
+    W_avg_list_accum = 0
     for i in range(int(params['numberOfExecutions'])):
-        print 'Running experiment ' + str(i + 1) + ' of ' + str(params['numberOfExecutions'])
+        print 'Running experiment ' + str(i + 1) + ' of ' + str(params['numberOfExecutions']); sys.stdout.flush()
 
-        myPRQLearning = PRQLearning(myMDP,                                         \
-                                    myAgent,                                       \
+        myPRQLearning = PRQLearning(myMDP,                                                \
+                                    myAgent,                                              \
                                     alpha            = float(params['alpha']),            \
                                     gamma            = float(params['gamma']),            \
                                     epsilon          = float(params['epsilon']),          \
@@ -109,11 +125,13 @@ def main():
                                     v                = float(params['v']),                \
                                     filePath         = params['filePath'])
 
-        W, Ws = myPRQLearning.execute()
-        Wacumulado += array(Ws)
+        output = myPRQLearning.execute()
 
-    Ws = Wacumulado / float(params['numberOfExecutions'])
-    saveOutputFiles(myPRQLearning.myQLearning, params, Ws)
+        W_avg_list = output['W_avg_list']
+        W_avg_list_accum += array(W_avg_list)
+
+    W_avg_list = W_avg_list_accum / float(params['numberOfExecutions'])
+    saveOutputFiles(myPRQLearning.myQLearning, params, output)
 
 if __name__ == "__main__":
     main()

@@ -22,9 +22,9 @@ until [ $START -gt $END ]; do
                        --epsilon=0.0 \
                        --epsilonIncrement=0.0005 \
                        --gammaPRQL=0.95 \
-                       --K=2 \
-                       --H=2 \
-                       --numberOfExecutions=2 \
+                       --K=2000 \
+                       --H=100 \
+                       --numberOfExecutions=1 \
                        --tau=0.0 \
                        --deltaTau=0.05 \
                        --psi=1.0 \

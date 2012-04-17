@@ -1,0 +1,15 @@
+import numpy as np
+
+def meanMultiDim(L):
+    # discovering how many rows and columns do we have
+    rows = len(L[0])
+    cols = len(L[0][0])
+
+    mRow = []
+    mList = []
+    for row in range(rows):
+        for col in range(cols):
+            m = np.mean(L[row][col])
+            mRow.append(m)
+        mList.append(mRow)
+    return mList

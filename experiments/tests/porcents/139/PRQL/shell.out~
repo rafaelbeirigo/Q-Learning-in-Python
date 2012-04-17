@@ -1,0 +1,61 @@
+O programa 'xtermset' não está instalado no momento.  Para executar 'xtermset' por favor peça ao seu administrador para instalar o pacote 'xtermset'
+rafaelbeirigo@laplace:~/ql$ time ./RL-PRQL.py --filePath='experiments/tests/porcents/porcents/139PRQL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --epsilon=1.0 --epsilonIncrement=0.0000 --gammaPRQL=0.95 --tau=0.0 --deltaTau=0.05 --psi=1.0 --v=0.95 --K=2000 --H=100 --numberOfExecutions=1000
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 117, in <module>
+    main()
+  File "./RL-PRQL.py", line 88, in main
+    myMDP = MDP(params['filePath'])
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 24, in __init__
+    self.carrega(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 27, in carrega
+    self.S = self.loadStates(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 38, in loadStates
+    f = open(filePath + '/states.in')
+IOError: [Errno 2] No such file or directory: 'experiments/tests/porcents/139PRQL//states.in'
+
+real	0m1.017s
+user	0m0.290s
+sys	0m0.040s
+rafaelbeirigo@laplace:~/ql$ time ./RL-PRQL.py --filePath='experiments/tests/porcents/139/PRQL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --epsilon=1.0 --epsilonIncrement=0.0000 --gammaPRQL=0.95 --tau=0.0 --deltaTau=0.05 --psi=1.0 --v=0.95 --K=2000 --H=100 --numberOfExecutions=1000
+Traceback (most recent call last):
+  File "./RL-PRQL.py", line 117, in <module>
+    main()
+  File "./RL-PRQL.py", line 88, in main
+    myMDP = MDP(params['filePath'])
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 24, in __init__
+    self.carrega(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 27, in carrega
+    self.S = self.loadStates(filePath)
+  File "/home/rafaelbeirigo/Dropbox/IC-Rafael/QLearning/python/MDP.py", line 38, in loadStates
+    f = open(filePath + '/states.in')
+IOError: [Errno 2] No such file or directory: 'experiments/tests/porcents/139/PRQL//states.in'
+
+real	0m0.752s
+user	0m0.250s
+sys	0m0.080s
+rafaelbeirigo@laplace:~/ql$ time ./RL-PRQL.py --filePath='experiments/tests/porcents/139/PRQL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --epsilon=1.0 --epsilonIncrement=0.0000 --gammaPRQL=0.95 --tau=0.0 --deltaTau=0.05 --psi=1.0 --v=0.95 --K=2000 --H=100 --numberOfExecutions=1000
+/home/rafaelbeirigo/ql/tools//prepareFolders.sh experiments/tests/porcents/139/PRQL/
+[prepareFolders.sh] : Deleting output files...
+experiments/tests/porcents/139/PRQL/w.out
+experiments/tests/porcents/139/PRQL/Q.out
+experiments/tests/porcents/139/PRQL/parameters.out
+experiments/tests/porcents/139/PRQL/policy.out
+[prepareFolders.sh] : Deleting log file...
+[prepareFolders.sh] : Deleting graph files...
+[prepareFolders.sh] : Deleting backup files...
+[prepareFolders.sh] : Deletion is done
+[prepareFolders.sh] : Uncompressing input files...
+experiments/tests/porcents/139/PRQL/states.in.gz
+experiments/tests/porcents/139/PRQL/transitions.in.gz
+experiments/tests/porcents/139/PRQL/rewards.in.gz
+experiments/tests/porcents/139/PRQL/goals.in.gz
+experiments/tests/porcents/139/PRQL/policies/policy.pessimal.in.gz
+experiments/tests/porcents/139/PRQL/actions.in.gz
+[prepareFolders.sh] : Uncompression is done
+Running experiment 1 of 1000
+pr:  179 ql:  1821
+Running experiment 2 of 1000
+pr:  156 ql:  1844
+Running experiment 3 of 1000
+pr:  200 ql:  1800
+Running experiment 4 of 1000

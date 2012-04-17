@@ -6,6 +6,7 @@ from math import exp
 from random import random
 from numpy import cumsum
 from os import listdir
+import sys
 
 class PRQLearning:
     def __init__(self, \
@@ -69,17 +70,27 @@ class PRQLearning:
         logStuffTitle.append('r')
         logStuffTitle.append('W')
         logStuff.append(logStuffTitle)
-        
+
+        # used for log purposes
+        # TODO: give better names to these lists
+        # they're gonna be collections of the values
+        W_avg_list = [] # list with average W from each episode
         Ws = []
-        R_avg = 0.0
-        pr = 0
-        ql = 0
+        Ps = [] # list containing the P from each episode
+        Ks = [] # list containing the chosen policy from each episode
+        PRvsQLs = [] # contains the quantity of episodes in which policy reuse (PR) and QLearning (QL) were used
+        output = {'W_avg_list' : W_avg_list, 'Ws' : Ws, 'Ps' : Ps, 'Ks' : Ks, 'PRvsQL' : PRvsQLs}
+        
+        w_avg = 0.0 # average cummulative reward received (independently of the policy used)
+        pr = 0; ql = 0
         for episode in range(self.K):
             # Assign to each policy the probability of being selected
             P = self.assignProbsToPolicies(W, self.tau)
+            Ps.append(P)
 
             # Choose an action policy PI_k
             k = self.choosePolicy(P)
+            Ks.append(k)
 
             # Execute the learning episode k
             # Receive R and the updated Q function (Q_omega)
@@ -98,6 +109,9 @@ class PRQLearning:
                 pr += 1
 
             W[k] = ( (W[k] * U[k]) + R ) / ( U[k] + 1 )
+            Ws.append(W[:])
+            print W; sys.stdout.flush()
+            
             U[k] = U[k] + 1
 
             # TODO: verificar isso
@@ -106,17 +120,18 @@ class PRQLearning:
 
             self.tau = self.tau + self.deltaTau
 
-            R_avg = ( (R_avg * episode) + R ) / ( episode + 1 )
-            Ws.append(R_avg)
+            w_avg = ( (w_avg * episode) + R ) / ( episode + 1 )
+            W_avg_list.append(w_avg)
 
-        print 'pr: ', pr, 'ql: ', ql
+        print 'pr: ', pr, 'ql: ', ql; sys.stdout.flush()
+        PRvsQLs.append([pr, ql])
 
         f=open(self.filePath + '/log.txt', 'w')
         wr = csv.writer(f, quoting=csv.QUOTE_NONNUMERIC)
         wr.writerows(logStuff)
         f.close()
         
-        return W[0], Ws
+        return output
 
     def pi_reuse(self,
              Pi_past,
