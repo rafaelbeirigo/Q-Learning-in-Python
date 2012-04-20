@@ -1,11 +1,21 @@
 #!/bin/bash
 
-FILENAME=$1
-START=$2
-END=$3
+ALGORITHM=$1
+PREFIX=$2
+SUFFIX=$3
+START=$4
+END=$5
 
-until [  $START -gt $END ]; do
-    echo '/home/rafaelbeirigo/ql/experiments/tests/porcents/eGreedy/'$START'/'$FILENAME:
-    tail '/home/rafaelbeirigo/ql/experiments/tests/porcents/eGreedy/'$START'/'$FILENAME
+echo ALGORITHM:$ALGORITHM PREFIX:$PREFIX SUFFIX:$SUFFIX START:$START END:$END
+
+if [[ -z "$ALGORITHM" || -z "$PREFIX" || -z "$SUFFIX" || -z "$START" || -z "$END" ]]
+then
+    echo usage: RL.sh [ALGORITHM] [PREFIX] [SUFFIX] [START] [END] [COMMANDPATH]
+fi
+
+until [ $START -gt $END ]; do
+    echo $PREFIX/$START/$SUFFIX/shell.output:
+    tail -n 2 $PREFIX/$START/$SUFFIX/shell.output
+    sleep 0.5
     let START+=1
 done

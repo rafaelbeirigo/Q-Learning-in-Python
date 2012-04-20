@@ -1,5 +1,0 @@
-QL:	azul
-01:	verde
-02:	vermelho
-03:	ciano
-04:	magenta

@@ -104,7 +104,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-# ./RL-QL.py --filePath='/home/rafaelbeirigo/ql/experiments/tests/QL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --gammaPRQL=0.95 --epsilon=0.0 --epsilonIncrement=0.0005 --K=2000 --H=100 --numberOfExecutions=1000
+# ./RL-QL.py --filePath='/home/rafaelbeirigo/ql/experiments/tests/QL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --gammaPRQL=0.95 --epsilon=0.0 --epsilonIncrement=0.0005 --K=2000 --H=100 --numberOfExecutions=10
 
 # old list of standard parameters:
 #    alpha              = 0.05

@@ -1,0 +1,27 @@
+# resolve arquivos do MDP
+faz uma pasta para cada experimento
+goals = [107, 110, 113, 119, 17, 20, 23, 26, 29, 62, 74]
+
+
+# resolve arquivos de politicas abs-prob
+entra na pasta
+
+pega o arquivo
+
+descobre o numero do experimento
+
+coloca na pasta do experimento
+
+a regra é todo mundo com esse número de experimento vai pra pasta
+
+
+# resolve arquivos de politicas manu1
+para cada pasta de experimento
+    para cada arquivo de manu1 arqExp
+        descobre o experimento do arquivo
+            se experimento do arquivo é DIFERENTE do experimento da pasta
+                coloca o arquivo na pasta
+
+
+# resolve arquivos de politicas manu2 e absprob
+mesma coisa do manu2

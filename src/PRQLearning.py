@@ -90,7 +90,7 @@ class PRQLearning:
 
             # Choose an action policy PI_k
             k = self.choosePolicy(P)
-            Ks.append(k)
+            Ks.append([k])
 
             # Execute the learning episode k
             # Receive R and the updated Q function (Q_omega)
@@ -110,7 +110,6 @@ class PRQLearning:
 
             W[k] = ( (W[k] * U[k]) + R ) / ( U[k] + 1 )
             Ws.append(W[:])
-            print W; sys.stdout.flush()
             
             U[k] = U[k] + 1
 
@@ -121,7 +120,7 @@ class PRQLearning:
             self.tau = self.tau + self.deltaTau
 
             w_avg = ( (w_avg * episode) + R ) / ( episode + 1 )
-            W_avg_list.append(w_avg)
+            W_avg_list.append([w_avg])
 
         print 'pr: ', pr, 'ql: ', ql; sys.stdout.flush()
         PRvsQLs.append([pr, ql])

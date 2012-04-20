@@ -8,6 +8,7 @@ import sys
 from pylab import array
 import getopt
 import numpy as np
+import meanError
 
 def usage():
     print 'Soon there will be a help message here.'
@@ -55,6 +56,15 @@ def obtainParameters():
 
     return params
 
+def accumulateOutput(outputAccum, output):
+    if not outputAccum:
+        # dictionary outputAccum is empty
+        for name in output.iterkeys():
+            outputAccum[name] = []
+            
+    for name in output.iterkeys():
+        outputAccum[name].append(output[name])
+
 def saveOutputFiles(myQLearning, params, output):
     filePath = params['filePath']
     myQLearning.obtainPolicy()
@@ -76,25 +86,27 @@ def saveOutputFiles(myQLearning, params, output):
     f.write('numberOfExecutions = ' + params['numberOfExecutions'] + '\n')
     f.close()
 
-    For name in output.iterkeys():
+    #names = ['Ps']
+    for name in output.iterkeys():
+        #if name not in names: continue
+        print name
         d = output[name]
-        d = np.asarray(d)
-        d.T
-        np.savetxt(filePath + '/' + name + '.out', d)
+        if len(d) > 1:
+            dMean = meanError.meanMultiDim(d)
+            dCfdInt = meanError.confidenceIntervalMultiDim(d, dMean)
 
-def meanMultiDim(L):
-    # discovering how many rows and columns do we have
-    rows = len(L[0])
-    cols = len(L[0][0])
+            dMean = np.asarray(dMean)
+            dCfdInt = np.asarray(dCfdInt)
 
-    mRow = []
-    mList = []
-    for row in range(rows):
-        for col in range(cols):
-            m = np.mean(L[row][col])
-            mRow.append(m)
-        mList.append(mRow)
-    return mList
+            dMean.T
+            dCfdInt.T
+
+            np.savetxt(filePath + '/' + name + '_mean.out', dMean)
+            np.savetxt(filePath + '/' + name + '_cfdInt.out', dCfdInt)
+        else:
+            d = np.asarray(d)
+            d.T
+            np.savetxt(filePath + '/' + name + '.out', d)
 
 def main():
     # resolve the parameters sent from the command line call
@@ -107,6 +119,7 @@ def main():
     myAgent = Agent(myMDP)
     
     W_avg_list_accum = 0
+    outputAccum = {}
     for i in range(int(params['numberOfExecutions'])):
         print 'Running experiment ' + str(i + 1) + ' of ' + str(params['numberOfExecutions']); sys.stdout.flush()
 
@@ -126,12 +139,13 @@ def main():
                                     filePath         = params['filePath'])
 
         output = myPRQLearning.execute()
+        accumulateOutput(outputAccum, output)
 
         W_avg_list = output['W_avg_list']
         W_avg_list_accum += array(W_avg_list)
 
     W_avg_list = W_avg_list_accum / float(params['numberOfExecutions'])
-    saveOutputFiles(myPRQLearning.myQLearning, params, output)
+    saveOutputFiles(myPRQLearning.myQLearning, params, outputAccum)
 
 if __name__ == "__main__":
     main()

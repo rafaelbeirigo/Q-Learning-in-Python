@@ -1,0 +1,25 @@
+    1 S = 5;
+    2 T = rand(5)
+    3 for i=1:5
+    4 T(i,:) = T(i,:)/sum(T(i,:));
+    5 end
+    6 T
+    7 sum(T,2)
+    8 sum(T)
+    9 R = rand(5,1)
+   10 T
+   11 R
+   12 V = (eye(5) - .9*T)\R
+   13 R * .9*T*V
+   14 R + .9*T*V
+   15 V = (eye(5) - .9*T)\R
+   16 history
+   17 history > a.txt
+   18 pwd
+   19 history > ./a.txt
+   20 history >> ./a.txt
+   21 save history 
+   22 save history a.txt
+   23 load(a.txt)
+   24 load('a.txt')
+   25 x=history
