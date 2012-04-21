@@ -1,0 +1,13 @@
+# Lines starting with '#' are considered comments.
+
+# Ignore any file named foo.txt.
+experiments/.
+
+# Ignore emacs backup files
+*~
+
+# except foo.html which is maintained by hand.
+!foo.html
+
+# Ignore objects and archives.
+*.[oa]
