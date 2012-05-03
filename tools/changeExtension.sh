@@ -1,1 +1,0 @@
-find $1 -wholename '*policies/*.old' -exec rename -v 's/\.old$/\.new/i' {} \;

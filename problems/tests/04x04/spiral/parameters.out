@@ -1,5 +1,0 @@
-alpha =            0.75
-gamma =            0.9
-epsilon =          0.0
-epsilonIncrement = 9.9e-05
-numberOfSteps =    100000
