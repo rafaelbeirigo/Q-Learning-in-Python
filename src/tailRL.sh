@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ALGORITHM=$1
+PREFIX=$2
+SUFFIX=$3
+START=$4
+END=$5
+COMMANDPATH=$6
+
+echo ALGORITHM:$ALGORITHM PREFIX:$PREFIX SUFFIX:$SUFFIX START:$START END:$END COMMANDPATH:$COMMANDPATH
+
+if [[ -z "$ALGORITHM" || -z "$PREFIX" || -z "$SUFFIX" || -z "$START" || -z "$END" || -z "$COMMANDPATH" ]]
+then
+    echo usage: RL.sh [ALGORITHM] [PREFIX] [SUFFIX] [START] [END] [COMMANDPATH]
+fi
+
+until [ $START -gt $END ]; do
+    tail $PREFIX/$START/$SUFFIX/shell.out
+    
+    let START+=1
+done

@@ -1,0 +1,103 @@
+O programa 'xtermset' não está instalado no momento.  Para executar 'xtermset' por favor peça ao seu administrador para instalar o pacote 'xtermset'
+rafaelbeirigo@laplace:~$ ipython
+WARNING: Configuration file ipythonrc not found. Ignoring request.
+------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/pymodules/python2.6/IPython/ConfigLoader.py", line 66, in load
+    fname = filefind(fname,incpath)
+  File "/usr/lib/pymodules/python2.6/IPython/genutils.py", line 555, in filefind
+    ' not found in current or supplied directories:' + `alt_dirs`
+IOError: File'ipythonrc' not found in current or supplied directories:u'/home/rafaelbeirigo/.ipython'
+
+WARNING: Problems loading configuration file 'ipythonrc'
+Starting with default -bare bones- configuration.
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/usr/lib/pymodules/python2.6/IPython/ipmaker.pyc in force_import(modname, force_reload)
+     61         reload(sys.modules[modname])
+     62     else:
+---> 63         __import__(modname)
+     64         
+     65 
+
+/home/rafaelbeirigo/.ipython/ipy_user_conf.py in <module>()
+----> 1 
+      2 
+      3 ipy_greedycompleter
+      4 
+      5 
+
+NameError: name 'ipy_greedycompleter' is not defined
+WARNING: Loading of ipy_user_conf failed.
+
+Python 2.6.5 (r265:79063, Apr 16 2010, 13:57:41) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 0.10 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object'. ?object also works, ?? prints more.
+
+In [1]: 
+Do you really want to exit ([y]/n)? 
+rafaelbeirigo@laplace:~$ ipython --pylab
+*** output flushed ***
+In [1]: a=[[a11, a12, a13], [a21, a22, a23],[a31, a32, a33]]
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+
+/home/rafaelbeirigo/<ipython console> in <module>()
+
+NameError: name 'a11' is not defined
+
+In [2]: a=[['a11', 'a12', 'a13'], ['a21', 'a22', 'a23'],['a31', 'a32', 'a33']]
+
+In [3]: a
+
+Out[3]: [['a11', 'a12', 'a13'], ['a21', 'a22', 'a23'], ['a31', 'a32', 'a33']]
+
+In [4]: b=[['b11', 'b12', 'b13'], ['b21', 'b22', 'b23'],['b31', 'b32', 'b33']]
+
+In [5]: v=[a,b]
+
+In [6]: v
+
+Out[6]: [[['a11', 'a12', 'a13'], ['a21', 'a22', 'a23'], ['a31', 'a32', 'a33']], [['b11', 'b12', 'b13'], ['b21', 'b22', 'b23'], ['b31', 'b32', 'b33']]]
+
+In [7]: [l[0] for l in v]
+
+Out[7]: [['a11', 'a12', 'a13'], ['b11', 'b12', 'b13']]
+
+In [8]: [l[0][0] for l in v]
+
+Out[8]: ['a11', 'b11']
+
+In [9]: mean
+
+Out[9]: <function mean at 0x1c155f0>
+
+In [10]: mean([l[0][0] for l in v])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+
+/home/rafaelbeirigo/<ipython console> in <module>()
+
+/usr/lib/python2.6/dist-packages/numpy/core/fromnumeric.pyc in mean(a, axis, dtype, out)
+   2089         mean = a.mean
+   2090     except AttributeError:
+-> 2091         return _wrapit(a, 'mean', axis, dtype, out)
+   2092     return mean(axis, dtype, out)
+   2093 
+
+/usr/lib/python2.6/dist-packages/numpy/core/fromnumeric.pyc in _wrapit(obj, method, *args, **kwds)
+     35     except AttributeError:
+     36         wrap = None
+---> 37     result = getattr(asarray(obj),method)(*args, **kwds)
+     38     if wrap:
+     39         if not isinstance(result, mu.ndarray):
+
+TypeError: cannot perform reduce with flexible type
+
+In [11]: 
