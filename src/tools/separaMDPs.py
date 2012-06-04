@@ -1,8 +1,8 @@
-## # resolve arquivos do MDP
+## Resolve arquivos do MDP
 ## faz uma pasta para cada experimento
 
 
-## # resolve arquivos de politicas abs-prob
+## Resolve arquivos de politicas abs-prob
 ## entra na pasta
 
 ## pega o arquivo

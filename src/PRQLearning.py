@@ -268,7 +268,7 @@ class PRQLearning:
 
         # save the policies' names for later use when they
         # are used to plot the P[policies] per episode
-        f = open(filePath + '/Ps.legent.out')
+        f = open(self.filePath + '/Ps.legend.out', 'w')
         
         L = []
         for policyFile in dirList:
