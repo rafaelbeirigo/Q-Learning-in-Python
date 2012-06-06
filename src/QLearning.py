@@ -51,7 +51,8 @@ class QLearning:
         Ws = []
         for k in range(self.K):
             W = 0
-            myAgent.setInitialState()
+            #myAgent.setInitialState()
+            myAgent.state = '1'
             for h in range(self.H):
                 # TODO: remover os '---'
                 # ---Observe the current state s
