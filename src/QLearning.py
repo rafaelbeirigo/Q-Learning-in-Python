@@ -51,8 +51,8 @@ class QLearning:
         Ws = []
         for k in range(self.K):
             W = 0
-            #myAgent.setInitialState()
-            myAgent.state = '1'
+            myAgent.setInitialState()
+            #myAgent.state = '1'
             for h in range(self.H):
                 # TODO: remover os '---'
                 # ---Observe the current state s
@@ -84,7 +84,7 @@ class QLearning:
                 # ---Update the table entry for Q(s, a)
                 Q[s][a] = (1.0 - float(alpha)) * float(Q[s][a]) + \
                           float(alpha) * (float(r) + float(gamma) * float(maxValue))
-
+				
                 # ---s=s'
                 myAgent.state = s2
 

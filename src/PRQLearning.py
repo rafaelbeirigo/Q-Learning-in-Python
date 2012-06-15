@@ -151,8 +151,8 @@ class PRQLearning:
         numLine = 0
         for k in range(K):
             # Set the initial state, s, randomly
-            #self.Agent.setInitialState()
-            self.Agent.state = '1'
+            self.Agent.setInitialState()
+            #self.Agent.state = '1'
             psi = self.psi
             
             for h in range(1, H + 1):
