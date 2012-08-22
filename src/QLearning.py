@@ -3,7 +3,7 @@
 # Well, I have then the choice given by the modularity
 import operator
 import numpy as np
-
+# teste
 from random import random
 
 class QLearning:
