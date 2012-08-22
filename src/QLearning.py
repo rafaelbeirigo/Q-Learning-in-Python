@@ -152,5 +152,5 @@ class QLearning:
             for s in S:
                 Q[s] = {}
                 for a in A:
-                    Q[s][a] = 0.00001717
+                    Q[s][a] = 0.0
             self.Q = Q
