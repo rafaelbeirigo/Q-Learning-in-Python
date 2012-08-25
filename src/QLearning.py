@@ -14,15 +14,7 @@ class QLearning:
                  epsilonIncrement,
                  K,
                  H,
-                 # FIXME: realmente preciso inicializa-los como None
-                 # aqui?
-                 Q = None,
-                 gammaPRQL = None): # FIXME: melhorar esse comentatio
-                                    # (de repente fazer uma
-                                    # documentacao?).
-                                    #
-                                    # gamma used for PRQLearning
-                                    # algorithm
+                 Q=None):
 
         # Internal objects used in the algorithm
         #
@@ -40,7 +32,6 @@ class QLearning:
         #Learning parameters
         self.alpha = alpha
         self.gamma = gamma
-        self.gammaPRQL = gammaPRQL
         self.epsilon = epsilon
         self.epsilonIncrement = epsilonIncrement
         self.K = K
