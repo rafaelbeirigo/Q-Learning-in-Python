@@ -67,11 +67,11 @@ class QLearning:
                 # ---Observe the new state s2
                 randomNumber = random()
                 if randomNumber <= epsilon:
-                    # greedy
-                    a = myAgent.selectBestAction(s, source = 'Q-Table', Q = Q)
-                else:
                     # random
                     a = myAgent.selectRandomAction()
+                else:
+                    # greedy
+                    a = myAgent.selectBestAction(s, source = 'Q-Table', Q = Q)
 
                 s2, r = myAgent.executeAction(a)
 
