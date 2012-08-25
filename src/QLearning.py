@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # This is going to be one of the learning algorithms that I will use
 # Well, I have then the choice given by the modularity
 import operator
