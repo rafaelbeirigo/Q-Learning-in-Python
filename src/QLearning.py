@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 #!/usr/bin/env python2
 import operator
 import numpy as np
@@ -44,13 +45,6 @@ class QLearning:
 
     def execute(self):
         self.initializeQ()
-        Q = self.Q
-
-        alpha            = self.alpha
-        gamma            = self.gamma
-        gammaPRQL        = self.gammaPRQL
-        epsilon          = self.epsilon
-        epsilonIncrement = self.epsilonIncrement
 
         # FIXME: choose better names and eventualy add some explanation
         # about W2 and Ws
@@ -72,50 +66,47 @@ class QLearning:
                 # 
                 # FIXME: clarify this if and the meaning behind it in
                 # the context of our work in LTI
-                if randomNumber <= epsilon:
+                if randomNumber <= self.epsilon:
                     # random
                     a = self.Agent.selectRandomAction()
                 else:
                     # greedy
-                    a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = Q)
+                    a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = self.Q)
 
                 # Executes the action, observes the reward received
                 # and the new state
                 s2, r = self.Agent.executeAction(a)
 
-                # FIXME: manter um vetor V com os maximos. Aqui acho
-                # que seria interessante ter uma classe so para o V,
-                # que teria um metodo de obtencao de V*(a)
+                # FIXME: manter os maximos. Aqui acho que seria
+                # interessante ter uma classe so para a Q, que teria
+                # um metodo de obtencao de de V*(s)
+                # idéias:
+                # Q.optimal_action_value(s)
+                # ter o vetor V_star[] e ir atualizando
                 maxValue = -1.0
                 for a2 in self.MDP.A:
-                    if Q[s2][a2] > maxValue:
-                        maxValue = Q[s2][a2]
+                    if self.Q[s2][a2] > maxValue:
+                        maxValue = self.Q[s2][a2]
 
                 # Update the table entry for Q(s, a)
                 # FIXME: quebrar essa conta em duas partes, uma do
                 # alpha, outra sem. Guardar esses dois valores em
                 # variavies com nomes significativos ()
-                Q[s][a] = (1.0 - float(alpha)) * float(Q[s][a]) + \
-                          float(alpha) * (float(r) + float(gamma) * float(maxValue))
+                self.Q[s][a] = (1.0 - float(self.alpha)) * float(self.Q[s][a]) + \
+                               float(self.alpha) * (float(r) + float(self.gamma) * float(maxValue))
 
                 # Sets the current state as the new one
                 self.Agent.state = s2
 
-                # FIXME: Add some comment here!
-                # FIXME: Does it make sense for gammaPRQL to be different
-                # from gamma in any circumstance? If not, delete this
-                # and use gamma here.
-                if gammaPRQL != None:
-                    # FIXME: put a better comment here
-                    # accumulate gamma on W (this value is used only in PRQLearning)
-                    W = float(W) + pow(gammaPRQL, h) * r
+                # FIXME: put a better comment here
+                # accumulate gamma on W (this value is used only in PRQLearning)
+                W = float(W) + pow(self.gamma, h) * r
 
-            epsilon = epsilon + epsilonIncrement
+            self.epsilon += self.epsilonIncrement
 
             W2 = ( (W2 * k) + W ) / (k + 1)
             Ws.append(W2)
 
-        self.Q = Q
         return W2, Ws
 
     def obtainPolicy(self):
