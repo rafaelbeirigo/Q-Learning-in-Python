@@ -20,7 +20,7 @@ class QLearning:
                  gammaPRQL = None): # FIXME: melhorar esse comentatio
                                     # (de repente fazer uma
                                     # documentacao?).
-                                    # 
+                                    #
                                     # gamma used for PRQLearning
                                     # algorithm
 
@@ -32,7 +32,10 @@ class QLearning:
         self.MDP = MDP
         self.Agent = Agent
         self.Q = Q
-        self.V_star = None
+
+        self.V_star = {}
+        for s in self.MDP.S:
+            self.V_star[s] = 0.0
 
         #Learning parameters
         self.alpha = alpha
@@ -63,7 +66,7 @@ class QLearning:
                 randomNumber = random()
                 # Chooses an action following a epsilon-greedy
                 # strategy.
-                # 
+                #
                 # FIXME: clarify this if and the meaning behind it in
                 # the context of our work in LTI
                 if randomNumber <= self.epsilon:
@@ -71,35 +74,27 @@ class QLearning:
                     a = self.Agent.selectRandomAction()
                 else:
                     # greedy
-                    a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = self.Q)
+                    a = self.Agent.selectBestAction(s, source='Q-Table',
+                                                    Q=self.Q)
 
                 # Executes the action, observes the reward received
                 # and the new state
                 s2, r = self.Agent.executeAction(a)
 
-                # FIXME: manter os maximos. Aqui acho que seria
-                # interessante ter uma classe so para a Q, que teria
-                # um metodo de obtencao de de V*(s)
-                # idéias:
-                # Q.optimal_action_value(s)
-                # ter o vetor V_star[] e ir atualizando
-                maxValue = -1.0
-                for a2 in self.MDP.A:
-                    if self.Q[s2][a2] > maxValue:
-                        maxValue = self.Q[s2][a2]
-
                 # Update the table entry for Q(s, a)
-                # FIXME: quebrar essa conta em duas partes, uma do
-                # alpha, outra sem. Guardar esses dois valores em
-                # variavies com nomes significativos ()
+                # (1 - alpha) * Q[s][a] + alpha  * (r + gamma * V_star[s2])
                 self.Q[s][a] = (1.0 - float(self.alpha)) * float(self.Q[s][a]) + \
-                               float(self.alpha) * (float(r) + float(self.gamma) * float(maxValue))
+                               float(self.alpha) * (float(r) + float(self.gamma) * float(self.V_star[s2]))
+
+                # If this is the case, updates V_star[s]
+                if self.Q[s][a] > self.V_star[s]:
+                    self.V_star[s] = self.Q[s][a]
 
                 # Sets the current state as the new one
                 self.Agent.state = s2
 
-                # FIXME: put a better comment here
-                # accumulate gamma on W (this value is used only in PRQLearning)
+                # Calculates the cummulative discounted reward gained
+                # so far
                 W = float(W) + pow(self.gamma, h) * r
 
             self.epsilon += self.epsilonIncrement
