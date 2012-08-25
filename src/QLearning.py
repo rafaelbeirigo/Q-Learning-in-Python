@@ -1,9 +1,6 @@
 #!/usr/bin/env python
-# This is going to be one of the learning algorithms that I will use
-# Well, I have then the choice given by the modularity
 import operator
 import numpy as np
-# teste.a
 from random import random
 
 class QLearning:
@@ -16,9 +13,21 @@ class QLearning:
                  epsilonIncrement,
                  K,
                  H,
+                 # FIXME: realmente preciso inicializa-los como None
+                 # aqui?
                  Q = None,
-                 gammaPRQL = None): #gamma used for PRQLearning algorithm
-        
+                 gammaPRQL = None): # FIXME: melhorar esse comentatio
+                                    # (de repente fazer uma
+                                    # documentacao?).
+                                    # 
+                                    # gamma used for PRQLearning
+                                    # algorithm
+
+        # Internal objects used in the algorithm
+        #
+        # FIXME: talvez fosse mais interessante haver um metodo que
+        # inicializa todos esses objetos internamente (mais "clean",
+        # talvez? - o que o PEP fala sobre isso?)
         self.MDP = MDP
         self.Agent = Agent
         self.Q = Q
@@ -32,8 +41,10 @@ class QLearning:
         self.epsilonIncrement = epsilonIncrement
         self.K = K
         self.H = H
-        
+
     def execute(self):
+        # FIXME: utilizar tudo a partir do "self": evitar
+        # ambiguidades. (nao vai ficar muito poluido desse jeito?)
         myAgent = self.Agent
         myMDP = self.MDP
         A = self.MDP.A
@@ -47,56 +58,69 @@ class QLearning:
         epsilon          = self.epsilon
         epsilonIncrement = self.epsilonIncrement
 
+        # FIXME: choose better names and eventualy add some explanation
+        # about W2 and Ws
         W2 = 0
         Ws = []
         for k in range(self.K):
             W = 0
             myAgent.setInitialState()
-            #myAgent.state = '1'
             for h in range(self.H):
-                # TODO: remover os '---'
-                # ---Observe the current state s
+                # Observes the current state
                 s = myAgent.state
 
-                # if a goal state is reached the episode ends
+                # If it is a goal state, the episode ends
                 if s in myMDP.G: break
 
-                # ---Following epsilon-greedy strategy,
-                # ---Select an action a and execute it
-                # ---Receive immediate reward r
-                # ---Observe the new state s2
                 randomNumber = random()
-                if randomNumber <= epsilon:
+                # Chooses an action following a epsilon-greedy
+                # strategy.
+                # 
+                # FIXME: clarify this if and the meaning behind it in
+                # the context of our work in LTI
+                if randomNumber > epsilon:
                     # greedy
                     a = myAgent.selectBestAction(s, source = 'Q-Table', Q = Q)
                 else:
                     # random
                     a = myAgent.selectRandomAction()
 
+                # Executes the action, observes the reward received
+                # and the new state
                 s2, r = myAgent.executeAction(a)
 
-                # TODO: manter um vetor V com os maximos
+                # FIXME: manter um vetor V com os maximos. Aqui acho
+                # que seria interessante ter uma classe so para o V,
+                # que teria um metodo de obtencao de V*(a)
                 maxValue = -1.0
                 for a2 in A:
                     if Q[s2][a2] > maxValue:
                         maxValue = Q[s2][a2]
 
-                # ---Update the table entry for Q(s, a)
+                # Update the table entry for Q(s, a)
+                # FIXME: quebrar essa conta em duas partes, uma do
+                # alpha, outra sem. Guardar esses dois valores em
+                # variavies com nomes significativos ()
                 Q[s][a] = (1.0 - float(alpha)) * float(Q[s][a]) + \
                           float(alpha) * (float(r) + float(gamma) * float(maxValue))
-				
-                # ---s=s'
+
+                # Sets the current state as the new one
                 myAgent.state = s2
 
+                # FIXME: Add some comment here!
+                # FIXME: Does it make sense for gammaPRQL to be different
+                # from gamma in any circumstance? If not, delete this
+                # and use gamma here.
                 if gammaPRQL != None:
+                    # FIXME: put a better comment here
                     # accumulate gamma on W (this value is used only in PRQLearning)
                     W = float(W) + pow(gammaPRQL, h) * r
 
             epsilon = epsilon + epsilonIncrement
-            
+
             W2 = ( (W2 * k) + W ) / (k + 1)
             Ws.append(W2)
-                
+
         self.Q = Q
         return W2, Ws
 
@@ -120,7 +144,7 @@ class QLearning:
                 f.write('\n' + s + '\n')
             else:
                 print '\n', s
-                
+
             for a in Q[s].iterkeys():
                 if fileName != None:
                     f.write(a + ' ' + str(Q[s][a]) + '\n')
@@ -145,7 +169,8 @@ class QLearning:
 
     def initializeQ(self):
         if self.Q == None:
-            # For each state-action pair (s, a), initialize the table entry Q(s, a) to zero
+            # For each state-action pair (s, a), initialize the table
+            # entry Q(s, a) to zero
             Q = {}
             S = self.MDP.S
             A = self.MDP.A
