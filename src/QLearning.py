@@ -43,12 +43,6 @@ class QLearning:
         self.H = H
 
     def execute(self):
-        # FIXME: utilizar tudo a partir do "self": evitar
-        # ambiguidades. (nao vai ficar muito poluido desse jeito?)
-        myAgent = self.Agent
-        myMDP = self.MDP
-        A = self.MDP.A
-
         self.initializeQ()
         Q = self.Q
 
@@ -64,13 +58,13 @@ class QLearning:
         Ws = []
         for k in range(self.K):
             W = 0
-            myAgent.setInitialState()
+            self.Agent.setInitialState()
             for h in range(self.H):
                 # Observes the current state
-                s = myAgent.state
+                s = self.Agent.state
 
                 # If it is a goal state, the episode ends
-                if s in myMDP.G: break
+                if s in self.MDP.G: break
 
                 randomNumber = random()
                 # Chooses an action following a epsilon-greedy
@@ -80,20 +74,20 @@ class QLearning:
                 # the context of our work in LTI
                 if randomNumber > epsilon:
                     # greedy
-                    a = myAgent.selectBestAction(s, source = 'Q-Table', Q = Q)
+                    a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = Q)
                 else:
                     # random
-                    a = myAgent.selectRandomAction()
+                    a = self.Agent.selectRandomAction()
 
                 # Executes the action, observes the reward received
                 # and the new state
-                s2, r = myAgent.executeAction(a)
+                s2, r = self.Agent.executeAction(a)
 
                 # FIXME: manter um vetor V com os maximos. Aqui acho
                 # que seria interessante ter uma classe so para o V,
                 # que teria um metodo de obtencao de V*(a)
                 maxValue = -1.0
-                for a2 in A:
+                for a2 in self.MDP.A:
                     if Q[s2][a2] > maxValue:
                         maxValue = Q[s2][a2]
 
@@ -105,7 +99,7 @@ class QLearning:
                           float(alpha) * (float(r) + float(gamma) * float(maxValue))
 
                 # Sets the current state as the new one
-                myAgent.state = s2
+                self.Agent.state = s2
 
                 # FIXME: Add some comment here!
                 # FIXME: Does it make sense for gammaPRQL to be different
