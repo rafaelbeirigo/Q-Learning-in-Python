@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 from Agent import Agent
 from MDP import MDP
 from PRQLearning import PRQLearning
