@@ -72,12 +72,12 @@ class QLearning:
                 # 
                 # FIXME: clarify this if and the meaning behind it in
                 # the context of our work in LTI
-                if randomNumber > epsilon:
-                    # greedy
-                    a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = Q)
-                else:
+                if randomNumber <= epsilon:
                     # random
                     a = self.Agent.selectRandomAction()
+                else:
+                    # greedy
+                    a = self.Agent.selectBestAction(s, source = 'Q-Table', Q = Q)
 
                 # Executes the action, observes the reward received
                 # and the new state

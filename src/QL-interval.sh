@@ -21,8 +21,8 @@ until [ $START -gt $END ]; do
                --commandPath=$COMMANDPATH/ \
                --alpha=0.05 \
                --gamma=0.95 \
-               --epsilon=0.0 \
-               --epsilonIncrement=0.0005 \
+               --epsilon=0.05 \
+               --epsilonIncrement=0.0 \
                --gammaPRQL=0.95 \
                --K=$K \
                --H=$H \
