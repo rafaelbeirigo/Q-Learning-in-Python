@@ -19,7 +19,6 @@ def obtainParameters():
                     'gamma=', \
                     'epsilon=', \
                     'epsilonIncrement=', \
-                    'gammaPRQL=', \
                     'K=', \
                     'H=', \
                     'numberOfExecutions=']
@@ -91,8 +90,7 @@ def main():
                                 epsilon          = float(params['epsilon']),          \
                                 epsilonIncrement = float(params['epsilonIncrement']), \
                                 K                = int(params['K']),                  \
-                                H                = int(params['H']),                  \
-                                gammaPRQL        = float(params['gammaPRQL']))
+                                H                = int(params['H']))
 
         W, Ws = myQLearning.execute()
         Wacumulado += array(Ws)
@@ -103,15 +101,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
-# ./RL-QL.py --filePath='/home/rafaelbeirigo/ql/experiments/tests/QL/' --commandPath='/home/rafaelbeirigo/ql/tools/' --alpha=0.05 --gamma=0.95 --gammaPRQL=0.95 --epsilon=0.0 --epsilonIncrement=0.0005 --K=2000 --H=100 --numberOfExecutions=10
-
-# old list of standard parameters:
-#    alpha              = 0.05
-#    gamma              = 0.95
-#    epsilon            = 0.0
-#    epsilonIncrement   = 0.0005
-#    gammaPRQL          = 0.95
-#    K                  = 2000       # number of episodes
-#    H                  = 100        # number of steps
-#    numberOfExecutions = 1000

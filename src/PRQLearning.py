@@ -18,7 +18,6 @@ class PRQLearning:
                  epsilonIncrement, \
                  K, \
                  H, \
-                 gammaPRQL,
                  tau, \
                  deltaTau, \
                  psi, \
@@ -33,7 +32,6 @@ class PRQLearning:
         self.epsilonIncrement = epsilonIncrement
         self.K = K
         self.H = H
-        self.gammaPRQL = gammaPRQL
         self.tau = tau
         self.deltaTau = deltaTau
         self.psi = psi
@@ -310,8 +308,7 @@ class PRQLearning:
                                           self.epsilonIncrement,    \
                                           1,                        \
                                           self.H,                   \
-                                          Q          = Q,           \
-                                          gammaPRQL  = self.gammaPRQL)
+                                          Q)
 
         return myQLearning
 

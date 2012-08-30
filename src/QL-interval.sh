@@ -23,7 +23,6 @@ until [ $START -gt $END ]; do
                --gamma=0.95 \
                --epsilon=0.05 \
                --epsilonIncrement=0.0 \
-               --gammaPRQL=0.95 \
                --K=$K \
                --H=$H \
                --numberOfExecutions=10
