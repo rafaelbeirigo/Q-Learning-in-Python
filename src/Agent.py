@@ -6,49 +6,31 @@ class Agent:
         self.MDP = MDP
         self.state = None
 
-    def obtainPossibleActions(self):
-        # look at all the possible transitions T[s][a][s']
-        # where s == self.state and then gather the possible
-        # actions for the current state
-        T = self.MDP.T
-        s = self.state
-        A = []
-        for a in T[s].iterkeys():
-            for s2 in T[s][a].iterkeys():
-                if T[s][a][s2] > 0:
-                    A.append(a)
-
-        return A
-        
     def executeAction(self, a):
         s2, r = self.MDP.executeAction(a, self.state)
         return s2, r
 
     def selectRandomAction(self):
-        A = self.obtainPossibleActions()
-        a = random.choice(A)
-
-        return a
+        return random.choice(self.MDP.A_s[self.state])
 
     def selectBestActionFromQTable(self, s, Q):
-        A = self.obtainPossibleActions()
-        
         # discover what is the best possible value considering
         # all possible actions for the state
-        maxValue = -1.0
-        for a in A:
-            if Q[s][a] > maxValue:
-                maxValue = Q[s][a]
+        maxValue = 0.0
+        for a in self.MDP.A_s[self.state]:
+            maxValue = max(maxValue, Q[s][a])
 
         # obtain all the actions whose value equals the maximum
-        B = []
-        for a in A:
-            if Q[s][a] == maxValue:
-                B.append(a)
+        A = []
+        for a in self.MDP.A_s[self.state]:
+            # FIXME: make it a parameter
+            delta = 1e-10
+            if abs(Q[s][a] - maxValue) <= delta:
+                A.append(a)
 
         # obtain a random action from all the possible ones
-        if len(B) > 0:
-            a = random.choice(B)
+        if len(A) > 0:
+            a = random.choice(A)
         else:
             a = '---'
 
@@ -58,6 +40,15 @@ class Agent:
         P = []
         acum = 0.0
 
+        # FIXME: Fazer essa checagem na leitura da politica agregar
+        # uma lista de pares ordenados ja com a probabilidade
+        # acumulada.  Sortear e somente buscar na lista ate encontrar
+        # a acao da vez.
+        #
+        # PROBLEMA: a politica pode mudar!
+        # Alternativa: mudar a forma como a politica e carregada:
+        # Fazer chegar aqui ja uma Pi[s] = [(action, cumsum)]
+        
         for a in Pi[s].iterkeys():
             if Pi[s][a] > 0.0:
                 p = []
@@ -94,21 +85,9 @@ class Agent:
             self.state = self.setInitialStateByProb()
 
     def setInitialStateByProb(self):
-        P = self.MDP.P
-        P2 = []
-        acum = 0.0
-
-        for s in self.MDP.S:
-            if P[s] > 0.0:
-                p = []
-                p.append(s)
-                acum = acum + P[s]
-                p.append(acum)
-                P2.append(p)
-
         x = random.random()
 
-        for p in P2:
+        for p in self.MDP.P:
             if x <= p[1]:
                 s = p[0]
                 break

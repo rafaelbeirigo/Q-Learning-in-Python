@@ -16,6 +16,7 @@ class MDP:
                   P = None):
         self.S = S
         self.A = A
+        self.A_s = {} # List of all possible actions that can be executed in the state <s>
         self.T = T
         self.R = R
         self.G = G
@@ -38,7 +39,10 @@ class MDP:
         f = open(filePath + '/states.in')
         S = []
         for line in f:
-            S.append(line.strip())
+            s = line.strip()
+            S.append(s)
+            # initializes the list of possible actions for the state
+            self.A_s[s] = []
 
         f.close()
 
@@ -68,7 +72,10 @@ class MDP:
         f = open(filePath + '/transitions.in')
         for line in f:
             s, a, s2, t = line.rstrip('\n').split(' ')
-            T[s][a][s2] = float(t)
+            t = float(t)
+            T[s][a][s2] = t
+            if t > 0:
+                self.A_s[s].append(a)
 
         f.close()
 
@@ -108,14 +115,25 @@ class MDP:
         for s in self.S:
             P[s] = 0.0
 
+        # reads the probabilities
         f = open(filePath + '/initialStateProb.in')
         for line in f:
             s, p = line.rstrip('\n').split(' ')
             P[s] = float(p)
-
         f.close()
 
-        return P
+        # puts the probabilities in a list, which is used in
+        # Agent.setInitialStateByProb
+        P2 = []
+        acum = 0.0
+        for s in self.S:
+            if P[s] > 0.0:
+                p = []
+                p.append(s)
+                acum = acum + P[s]
+                p.append(acum)
+                P2.append(p)
+        return P2
 
     def isFinalState(self, s):
         return s in self.G
@@ -124,7 +142,8 @@ class MDP:
         T = self.T
         P = []
         acum = 0.0
-
+        # FIXME: implementar a mesma ideia de par ordenado utilizada
+        # em Agent.py
         for s1 in T[s][a].iterkeys():
             if T[s][a][s1] > 0.0:
                 p = []
