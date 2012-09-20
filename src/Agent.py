@@ -16,6 +16,8 @@ class Agent:
     def selectBestActionFromQTable(self, s, Q):
         # discover what is the best possible value considering
         # all possible actions for the state
+
+        # FIXME: usar a tabela V
         maxValue = 0.0
         for a in self.MDP.A_s[self.state]:
             maxValue = max(maxValue, Q[s][a])
@@ -40,14 +42,17 @@ class Agent:
         P = []
         acum = 0.0
 
-        # FIXME: Fazer essa checagem na leitura da politica agregar
-        # uma lista de pares ordenados ja com a probabilidade
-        # acumulada.  Sortear e somente buscar na lista ate encontrar
-        # a acao da vez.
+        # FIXME: eliminar a necessidade de ter que rodar a soma
+        # cumulativa a toda chamada
         #
-        # PROBLEMA: a politica pode mudar!
-        # Alternativa: mudar a forma como a politica e carregada:
-        # Fazer chegar aqui ja uma Pi[s] = [(action, cumsum)]
+        # Fazer essa checagem na leitura da politica agregar uma lista
+        # de pares ordenados ja com a probabilidade acumulada.
+        # Sortear e somente buscar na lista ate encontrar a acao da
+        # vez.
+        #
+        # PROBLEMA: a politica pode mudar!  Alternativa: mudar a forma
+        # como a politica e carregada: Fazer chegar aqui ja uma Pi[s]
+        # = [(action, cumsum)]
         
         for a in Pi[s].iterkeys():
             if Pi[s][a] > 0.0:

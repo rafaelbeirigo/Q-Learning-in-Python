@@ -239,6 +239,12 @@ class PRQLearning:
         randomNumber = random()
         k = 0
         for i in range(len(P)):
+            # FIXME: menor estrito, pois random.random() gera numero
+            # em [0, 1). Uma diferenca acontece quando P[i] for zero:
+            # nesse caso, o if nunca pode evaluate to true, pois a
+            # chance de a politica ser escolhida e nula. Para o limite
+            # superior, 1, eh indiferente utilizar menor estrito ou
+            # menor-igual.
             if randomNumber <= P[i]:
                 k = i
                 break
